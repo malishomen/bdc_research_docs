@@ -1,0 +1,29 @@
+{
+  "task_id": "TASK-7160-USAGE-TELEMETRY-AND-FEEDBACK-LOOP",
+  "project": "Bio Digital Core",
+  "phase": 29,
+  "status": "planned",
+  "priority": "high",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Design the telemetry, issue classification, and feedback loop needed to learn from real pilot usage of BDC Designer.",
+  "research_question": "What minimum telemetry and structured feedback should be collected to improve BDC Designer without violating trust posture?",
+  "runner": {
+    "script": "scripts/analysis/run_phase29_usage_telemetry_and_feedback_loop.py"
+  },
+  "outputs": [
+    "results/telemetry/event_schema.json",
+    "results/telemetry/issue_taxonomy.csv",
+    "results/telemetry/feedback_form.json",
+    "results/telemetry/review_rhythm.md",
+    "reports/analysis/TASK-7160-USAGE-TELEMETRY-AND-FEEDBACK-LOOP/TASK-7160_BRIEF_REPORT.md"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "event_schema_defined": true,
+      "issue_taxonomy_defined": true,
+      "feedback_form_defined": true,
+      "review_rhythm_defined": true
+    }
+  }
+}

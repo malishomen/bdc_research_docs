@@ -1,0 +1,56 @@
+{
+  "task_id": "TASK-7540-BDC-REAL-CASE-BENCHMARK-SUITE",
+  "project": "Bio Digital Core",
+  "phase": 45,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-14",
+  "objective": "Benchmark BDC CLI v2 against v1, empirical winners, and expert memos on a minimum five-case real workflow suite before any release decision is allowed.",
+  "research_question": "Does BDC CLI v2 materially improve architecture agreement, role-count agreement, and strategy-mode agreement relative to v1 across real benchmark cases, including TextAI_Auto?",
+  "depends_on": [
+    "TASK-7530-BDC-LLM-ADAPTER-LAYER"
+  ],
+  "execution_rules": {
+    "phase_gate": "May start only after TASK-7530 is SUCCESS.",
+    "parallel_execution_allowed": false,
+    "scope_expansion_forbidden": true
+  },
+  "runner": {
+    "script": "scripts/analysis/run_phase45_bdc_real_case_benchmark_suite.py"
+  },
+  "outputs": [
+    "results/bdc_cli_v2_benchmark/benchmark_case_manifest.csv",
+    "results/bdc_cli_v2_benchmark/agreement_summary.csv",
+    "results/bdc_cli_v2_benchmark/v1_vs_v2_comparison.csv",
+    "results/bdc_cli_v2_benchmark/benchmark_verdict.json",
+    "reports/analysis/TASK-7540-BDC-REAL-CASE-BENCHMARK-SUITE/TASK-7540_BRIEF_REPORT.md"
+  ],
+  "tests_required": [
+    "benchmark harness regression tests",
+    "case fixture stability tests",
+    "v2 beats v1 on agreement for the majority of cases",
+    "TextAI_Auto failure corrected in v2"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "minimum_five_real_cases_benchmarked": true,
+      "v2_better_aligned_with_empirical_winners_than_v1": true,
+      "textai_auto_failure_corrected": true,
+      "benchmark_verdict_generated": true
+    }
+  },
+  "definition_of_done": [
+    "minimum five real cases benchmarked",
+    "agreement metrics computed for empirical winner, expert memo, v1, and v2",
+    "v2 outperforms v1 on the majority of cases",
+    "TextAI_Auto failure corrected and documented",
+    "brief report generated",
+    "append-only logs updated"
+  ],
+  "out_of_scope": [
+    "release packaging before benchmark success",
+    "changing benchmark winner labels without evidence"
+  ]
+}
+

@@ -1,0 +1,55 @@
+{
+  "task_id": "TASK-7520-BDC-CLI-V2-SURFACE",
+  "project": "Bio Digital Core",
+  "phase": 43,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-14",
+  "objective": "Expose the v2 system as a stable CLI with command-level workflows for recommend, validate, compare, explain, build-packet, and benchmark.",
+  "research_question": "What CLI surface is required so operators can use BDC CLI v2 end-to-end without custom internal scripts?",
+  "depends_on": [
+    "TASK-7510-BDC-EXPLANATION-LAYER"
+  ],
+  "execution_rules": {
+    "phase_gate": "May start only after TASK-7510 is SUCCESS.",
+    "parallel_execution_allowed": false,
+    "scope_expansion_forbidden": true
+  },
+  "runner": {
+    "script": "scripts/analysis/run_phase43_bdc_cli_v2_surface.py"
+  },
+  "outputs": [
+    "src/bdc_designer_v2/cli.py",
+    "tools/bdc_designer_v2.py",
+    "docs/BDC_CLI_V2_USAGE.md",
+    "examples/bdc_cli_v2_example_packets.json",
+    "results/bdc_cli_v2_surface/command_validation_matrix.csv",
+    "reports/analysis/TASK-7520-BDC-CLI-V2-SURFACE/TASK-7520_BRIEF_REPORT.md"
+  ],
+  "tests_required": [
+    "command-level integration tests for recommend, validate, compare, explain, build-packet, and benchmark",
+    "output schema snapshot tests",
+    "compare mode shows memo vs v1 vs v2 when artifacts are provided"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "v2_cli_callable_end_to_end": true,
+      "input_output_contracts_stable": true,
+      "docs_updated": true
+    }
+  },
+  "definition_of_done": [
+    "v2 CLI surface implemented",
+    "entrypoint script implemented",
+    "command-level integration tests pass",
+    "usage docs and example packets added",
+    "brief report generated",
+    "append-only logs updated"
+  ],
+  "out_of_scope": [
+    "LLM adapter behavior",
+    "release packaging"
+  ]
+}
+

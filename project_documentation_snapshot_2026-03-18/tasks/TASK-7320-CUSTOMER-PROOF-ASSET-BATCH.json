@@ -1,0 +1,35 @@
+{
+  "task_id": "TASK-7320-CUSTOMER-PROOF-ASSET-BATCH",
+  "project": "Bio Digital Core",
+  "phase": 32,
+  "status": "planned",
+  "priority": "high",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Produce a batch of standardized customer proof assets from successful pilots and workflow validations for reuse in sales, authority, and conversion flows.",
+  "research_question": "Can BDC Designer proof creation become systematic enough to compound trust and shorten future sales cycles?",
+  "runner": {
+    "script": "scripts/analysis/run_phase32_customer_proof_asset_batch.py"
+  },
+  "outputs": [
+    "results/proof_batch/proof_asset_index.csv",
+    "results/proof_batch/testimonial_capture_status.csv",
+    "results/proof_batch/objection_to_proof_mapping.csv",
+    "reports/analysis/TASK-7320-CUSTOMER-PROOF-ASSET-BATCH/TASK-7320_BRIEF_REPORT.md",
+    "reports/public_release/TASK-7320-CUSTOMER-PROOF-ASSET-BATCH/BDC_PROOF_ASSET_BATCH.md"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "minimum_proof_assets_created": true,
+      "testimonial_status_tracked": true,
+      "objection_mapping_created": true
+    }
+  },
+  "definition_of_done": [
+    "proof assets created",
+    "testimonial status tracked",
+    "objection mapping prepared",
+    "brief report generated",
+    "append-only logs updated"
+  ]
+}

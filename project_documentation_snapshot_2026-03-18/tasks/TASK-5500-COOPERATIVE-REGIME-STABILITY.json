@@ -1,0 +1,134 @@
+{
+  "task_id": "TASK-5500",
+  "title": "COOPERATIVE REGIME STABILITY VERIFICATION",
+  "phase": 5,
+  "priority": "critical",
+  "status": "planned",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-05",
+  "project": "Bio Digital Core",
+  "objective": "Verify long-run stability of the cooperative regime discovered in TASK-5400 and determine whether the cooperative advantage persists across seeds, extended training time, and perturbations of role weights.",
+  "background": {
+    "reference_task": "TASK-5400",
+    "key_result": {
+      "cooperation_region_detected": true,
+      "best_config": {
+        "predictor": 0.25,
+        "critic": 0.625,
+        "aggregator": 0.125,
+        "interaction": 0.0,
+        "strategy": "weighted_sum",
+        "ci95_low": 0.002274
+      }
+    },
+    "core_question": "Is the discovered cooperative regime stable or only a transient phenomenon of training dynamics?"
+  },
+  "reference_configuration": {
+    "predictor_weight": 0.25,
+    "critic_weight": 0.625,
+    "aggregator_weight": 0.125,
+    "interaction_strength": 0.0,
+    "aggregation_strategy": "weighted_sum"
+  },
+  "experimental_design": {
+    "seeds": {
+      "start": 1337,
+      "end": 1386,
+      "count": 50
+    },
+    "training_length_multiplier": 3,
+    "evaluation_frequency": "every_epoch",
+    "metrics": [
+      "collective_score",
+      "single_score",
+      "delta_advantage",
+      "role_divergence",
+      "task_accuracy_cloze",
+      "task_accuracy_entity",
+      "task_accuracy_category"
+    ]
+  },
+  "stability_tests": [
+    {
+      "test_id": "STABILITY-LONGRUN",
+      "description": "Run the cooperative configuration with extended training time to verify that delta_advantage remains positive.",
+      "success_condition": "mean_delta_advantage > 0 and ci95_low > 0"
+    },
+    {
+      "test_id": "SEED-ROBUSTNESS",
+      "description": "Check that cooperative advantage persists across a large seed population.",
+      "success_condition": "positive_delta_fraction >= 0.7"
+    },
+    {
+      "test_id": "ROLE-COLLAPSE-DETECTION",
+      "description": "Detect whether critic collapses into predictor behavior during training.",
+      "success_condition": "role_divergence_mean > 0.05"
+    },
+    {
+      "test_id": "WEIGHT-PERTURBATION",
+      "description": "Perturb weights around optimal ratio to verify robustness of cooperative regime.",
+      "perturbation_range": {
+        "predictor": [
+          0.2,
+          0.3
+        ],
+        "critic": [
+          0.55,
+          0.7
+        ],
+        "aggregator": [
+          0.05,
+          0.2
+        ]
+      },
+      "success_condition": "cooperative_advantage persists in >= 60% of perturbed configs"
+    }
+  ],
+  "analysis_outputs": {
+    "directory": "results/cooperation_stability/",
+    "files": [
+      "per_seed_dynamics.csv",
+      "cooperation_delta_timeseries.csv",
+      "role_divergence_timeseries.csv",
+      "weight_perturbation_results.csv",
+      "stability_summary.json"
+    ]
+  },
+  "report": {
+    "path": "reports/analysis/TASK-5500-COOPERATIVE-STABILITY/TASK-5500_BRIEF_REPORT.md",
+    "sections": [
+      "Objective",
+      "Experimental Setup",
+      "Long-run Stability Results",
+      "Seed Robustness Analysis",
+      "Role Collapse Analysis",
+      "Weight Perturbation Results",
+      "Conclusion"
+    ]
+  },
+  "success_criteria": {
+    "cooperative_regime_confirmed": {
+      "mean_delta_advantage": "> 0",
+      "ci95_low": "> 0",
+      "positive_seed_fraction": ">= 0.7"
+    },
+    "role_specialization_stable": true,
+    "weight_perturbation_resilience": true
+  },
+  "artifacts_contract": {
+    "append_only_logs": [
+      "AGENTS_LOG.md",
+      "WEEKLY_STATUS.md"
+    ],
+    "git_branch": "origin/test",
+    "results_not_committed": true
+  },
+  "definition_of_done": [
+    "All 50 seeds executed with extended training.",
+    "Timeseries metrics generated.",
+    "Weight perturbation experiments completed.",
+    "Stability summary produced.",
+    "Brief report written.",
+    "Logs updated in append-only mode."
+  ]
+}

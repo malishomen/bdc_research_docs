@@ -1,0 +1,13 @@
+{
+  "task_id": "TASK-6950-REAL-WORLD-ADAPTATION-PILOT",
+  "project": "Bio Digital Core",
+  "phase": 23,
+  "status": "planned",
+  "priority": "high",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Pilot restricted BDC architecture prior and hybrid rulebook on practical multi-agent workflows.",
+  "runner": {
+    "script": "scripts/analysis/run_phase23_real_world_adaptation_pilot.py"
+  }
+}

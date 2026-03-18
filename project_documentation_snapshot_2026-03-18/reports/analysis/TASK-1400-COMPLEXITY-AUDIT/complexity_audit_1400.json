@@ -1,0 +1,64 @@
+{
+  "task_id": "TASK-1400-COMPLEXITY-REGIME-AUDIT",
+  "lambda_complexity": 0.01,
+  "baseline_architecture": "v1_speciation",
+  "baseline_final_max_fitness_mean": 0.7881661019442968,
+  "rows": [
+    {
+      "architecture": "v1_speciation",
+      "final_max_accuracy_mean": NaN,
+      "final_max_fitness_mean": 0.7881661019442968,
+      "final_max_complexity_mean": NaN,
+      "penalty_mean": NaN,
+      "theoretical_max_fitness": NaN,
+      "required_accuracy_to_beat_v1": NaN,
+      "feasibility_flag": false,
+      "feasibility_reason": "insufficient_complexity_data"
+    },
+    {
+      "architecture": "v1_5",
+      "final_max_accuracy_mean": 0.8117838541666667,
+      "final_max_fitness_mean": 0.7637578865767252,
+      "final_max_complexity_mean": 13.950665321506293,
+      "penalty_mean": 0.13950665321506292,
+      "theoretical_max_fitness": 0.860493346784937,
+      "required_accuracy_to_beat_v1": 0.9276727551593598,
+      "feasibility_flag": true,
+      "feasibility_reason": "required_accuracy<=1.0"
+    },
+    {
+      "architecture": "v2",
+      "final_max_accuracy_mean": NaN,
+      "final_max_fitness_mean": 0.5356865515715755,
+      "final_max_complexity_mean": NaN,
+      "penalty_mean": NaN,
+      "theoretical_max_fitness": NaN,
+      "required_accuracy_to_beat_v1": NaN,
+      "feasibility_flag": false,
+      "feasibility_reason": "insufficient_complexity_data"
+    },
+    {
+      "architecture": "v2_prior",
+      "final_max_accuracy_mean": 0.790234375,
+      "final_max_fitness_mean": 0.5531664379938884,
+      "final_max_complexity_mean": NaN,
+      "penalty_mean": NaN,
+      "theoretical_max_fitness": NaN,
+      "required_accuracy_to_beat_v1": NaN,
+      "feasibility_flag": false,
+      "feasibility_reason": "insufficient_complexity_data"
+    },
+    {
+      "architecture": "v2_staged",
+      "final_max_accuracy_mean": 0.7884765625,
+      "final_max_fitness_mean": 0.5524726487966959,
+      "final_max_complexity_mean": NaN,
+      "penalty_mean": NaN,
+      "theoretical_max_fitness": NaN,
+      "required_accuracy_to_beat_v1": NaN,
+      "feasibility_flag": false,
+      "feasibility_reason": "insufficient_complexity_data"
+    }
+  ],
+  "note": "No experiment recompute; aggregates only. Feasibility false when complexity data is missing."
+}

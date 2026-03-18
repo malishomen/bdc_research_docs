@@ -1,0 +1,189 @@
+{
+  "task": "TASK-1103-LTF-CEILING-PROOF",
+  "dataset": {
+    "type": "full_exhaustive_bits",
+    "bit_len": 9,
+    "size": 512,
+    "rule": "hidden_rule"
+  },
+  "method": {
+    "type": "MILP_over_phase_space",
+    "description": "For each threshold_count, solve exact max classification of linear threshold over Genome v1 features.",
+    "eps": 0.0001,
+    "max_abs_weight": 1.0
+  },
+  "best": {
+    "threshold_count": 6,
+    "accuracy": 0.837890625,
+    "weights": {
+      "w_count": 0.0007999999999990677,
+      "w_pattern_101": -0.0,
+      "w_first_bit": 0.00019999999999976693,
+      "w_last_bit": -0.00019999999999976693,
+      "w_pos3": -0.00039999999999953387,
+      "w_pos7": -0.00039999999999953387,
+      "bias": 0.0002999999999995339
+    },
+    "solver_status": 0
+  },
+  "all_threshold_results": [
+    {
+      "threshold_count": 0,
+      "accuracy": 0.80859375,
+      "weights": {
+        "w_count": -0.9997000000000005,
+        "w_pattern_101": 0.00019999999999976688,
+        "w_first_bit": 0.00039999999999953387,
+        "w_last_bit": -0.00019999999999976693,
+        "w_pos3": 0.0005999999999993007,
+        "w_pos7": -0.0005999999999993007,
+        "bias": 1.0
+      },
+      "solver_status": 0
+    },
+    {
+      "threshold_count": 1,
+      "accuracy": 0.80859375,
+      "weights": {
+        "w_count": 0.00019999999999976693,
+        "w_pattern_101": 0.00019999999999976688,
+        "w_first_bit": 0.00039999999999953387,
+        "w_last_bit": -0.00019999999999976693,
+        "w_pos3": 0.0005999999999993007,
+        "w_pos7": -0.0005999999999993007,
+        "bias": 9.999999999976694e-05
+      },
+      "solver_status": 0
+    },
+    {
+      "threshold_count": 2,
+      "accuracy": 0.80859375,
+      "weights": {
+        "w_count": -0.9995999999977803,
+        "w_pattern_101": 0.9996000000000008,
+        "w_first_bit": 0.9998000000000004,
+        "w_last_bit": -0.00019999999999942286,
+        "w_pos3": 1.0,
+        "w_pos7": -1.0,
+        "bias": 0.9998999999977795
+      },
+      "solver_status": 0
+    },
+    {
+      "threshold_count": 3,
+      "accuracy": 0.80859375,
+      "weights": {
+        "w_count": 2.5988100560425664e-12,
+        "w_pattern_101": 0.0002000000000239674,
+        "w_first_bit": 0.0003999999999964024,
+        "w_last_bit": -0.0002000000000055291,
+        "w_pos3": 0.0006000000000043275,
+        "w_pos7": -0.0005999999999907876,
+        "bias": 0.00029999999739004605
+      },
+      "solver_status": 0
+    },
+    {
+      "threshold_count": 4,
+      "accuracy": 0.80859375,
+      "weights": {
+        "w_count": -0.0,
+        "w_pattern_101": 0.00019999999999953388,
+        "w_first_bit": 0.00039999999999918134,
+        "w_last_bit": -0.0001999999999994254,
+        "w_pos3": 0.0005999999999986017,
+        "w_pos7": -1.0,
+        "bias": 0.9997000000000005
+      },
+      "solver_status": 0
+    },
+    {
+      "threshold_count": 5,
+      "accuracy": 0.8125,
+      "weights": {
+        "w_count": 0.00019999999999953388,
+        "w_pattern_101": 0.00019999999999976677,
+        "w_first_bit": 0.0005999999999990678,
+        "w_last_bit": -0.0003999999999993008,
+        "w_pos3": 0.0010000000044394497,
+        "w_pos7": -0.0009999999999983685,
+        "bias": 0.0004999999999990678
+      },
+      "solver_status": 0
+    },
+    {
+      "threshold_count": 6,
+      "accuracy": 0.837890625,
+      "weights": {
+        "w_count": 0.0007999999999990677,
+        "w_pattern_101": -0.0,
+        "w_first_bit": 0.00019999999999976693,
+        "w_last_bit": -0.00019999999999976693,
+        "w_pos3": -0.00039999999999953387,
+        "w_pos7": -0.00039999999999953387,
+        "bias": 0.0002999999999995339
+      },
+      "solver_status": 0
+    },
+    {
+      "threshold_count": 7,
+      "accuracy": 0.810546875,
+      "weights": {
+        "w_count": 0.9994000000000053,
+        "w_pattern_101": 0.00019999999999553621,
+        "w_first_bit": 0.0004000000000005119,
+        "w_last_bit": -0.9996,
+        "w_pos3": 1.0,
+        "w_pos7": -1.0,
+        "bias": 0.9996999999999984
+      },
+      "solver_status": 0
+    },
+    {
+      "threshold_count": 8,
+      "accuracy": 0.80859375,
+      "weights": {
+        "w_count": -0.0,
+        "w_pattern_101": 0.00019999999999975593,
+        "w_first_bit": 0.000400000000000178,
+        "w_last_bit": -0.00019999999999975593,
+        "w_pos3": 0.0005999999999999339,
+        "w_pos7": -1.0,
+        "bias": 0.9996999999999996
+      },
+      "solver_status": 0
+    },
+    {
+      "threshold_count": 9,
+      "accuracy": 0.80859375,
+      "weights": {
+        "w_count": -0.9998000000000001,
+        "w_pattern_101": 0.00019999999999988045,
+        "w_first_bit": 0.9998000000000002,
+        "w_last_bit": -0.00019999999999985345,
+        "w_pos3": 1.0,
+        "w_pos7": -1.0,
+        "bias": 0.0002999999999996204
+      },
+      "solver_status": 0
+    },
+    {
+      "threshold_count": 10,
+      "accuracy": 0.80859375,
+      "weights": {
+        "w_count": -1.0,
+        "w_pattern_101": 0.00019999999999953388,
+        "w_first_bit": 0.0004000000000008441,
+        "w_last_bit": -0.00019999999999686935,
+        "w_pos3": 0.0006000000000003775,
+        "w_pos7": -1.0,
+        "bias": 0.9996999999999989
+      },
+      "solver_status": 0
+    }
+  ],
+  "comparison": {
+    "experimental_max_accuracy_mean_exp0200": 0.849609375,
+    "delta_theory_minus_experiment": -0.01171875
+  }
+}

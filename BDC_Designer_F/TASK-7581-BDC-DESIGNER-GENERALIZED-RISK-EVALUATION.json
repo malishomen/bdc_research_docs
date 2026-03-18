@@ -1,0 +1,53 @@
+{
+  "task_id": "TASK-7581-BDC-DESIGNER-GENERALIZED-RISK-EVALUATION",
+  "project": "Bio Digital Core",
+  "phase": 48,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-18",
+  "objective": "Add generalized-risk and coverage-risk evaluation to BDC Designer so that confidence systems can be judged across thresholds rather than only at fixed working points.",
+  "research_question": "Can BDC Designer benchmark and expose generalized-risk outputs that are reproducible, interpretable, and useful for comparing selective-decision quality?",
+  "depends_on": [
+    "TASK-7580-BDC-DESIGNER-SELECTIVE-PREDICTION-CONTRACT"
+  ],
+  "execution_rules": {
+    "phase_gate": "May start only after the selective-prediction contract is finalized and machine-readable outcome classes are available.",
+    "parallel_execution_allowed": false,
+    "scope_expansion_forbidden": true
+  },
+  "runner": {
+    "script": "scripts/analysis/run_phase55_bdc_designer_generalized_risk_evaluation.py"
+  },
+  "outputs": [
+    "src/bdc_designer_v2/generalized_risk.py",
+    "docs/BDC_DESIGNER_GENERALIZED_RISK_EVALUATION.md",
+    "results/bdc_designer_generalized_risk/generalized_risk_summary.json",
+    "reports/analysis/TASK-7581-BDC-DESIGNER-GENERALIZED-RISK-EVALUATION/TASK-7581_BRIEF_REPORT.md"
+  ],
+  "tests_required": [
+    "generalized-risk metric tests",
+    "coverage-risk aggregation tests",
+    "benchmark fixture summary tests",
+    "CLI parseability tests"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "generalized_risk_outputs_present": true,
+      "coverage_risk_summary_present": true,
+      "multi_threshold_reporting_reproducible": true,
+      "benchmark_surface_extended": true
+    }
+  },
+  "definition_of_done": [
+    "generalized-risk module implemented",
+    "threshold-aggregated outputs exposed",
+    "benchmark reporting extended",
+    "brief report generated",
+    "append-only logs updated"
+  ],
+  "out_of_scope": [
+    "full plotting/visual analytics package",
+    "evidence-state semantics changes beyond necessary integration"
+  ]
+}

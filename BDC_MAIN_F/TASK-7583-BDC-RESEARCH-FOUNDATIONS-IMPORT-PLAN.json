@@ -1,0 +1,53 @@
+{
+  "task_id": "TASK-7583-BDC-RESEARCH-FOUNDATIONS-IMPORT-PLAN",
+  "project": "Bio Digital Core",
+  "phase": 48,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-18",
+  "objective": "Define the strict documentation-first execution package for importing Belnap alignment, diversity taxonomy, error/erasure modeling, and channel-aware memory into the rebooted BDC scientific line.",
+  "research_question": "Can BDC convert the strongest external scientific inputs into a bounded and ordered reboot-line work package before implementation begins?",
+  "depends_on": [
+    "TASK-7577-BDC-SELECTION-PHYSICS-REBOOT-PACKAGE"
+  ],
+  "execution_rules": {
+    "phase_gate": "May start only after the research reboot line is documented through the reboot plan and charter.",
+    "parallel_execution_allowed": false,
+    "scope_expansion_forbidden": true
+  },
+  "outputs": [
+    "docs/project/BDC_RESEARCH_FOUNDATIONS_IMPORT_PLAN.md",
+    "tasks/TASK-7583-BDC-RESEARCH-FOUNDATIONS-IMPORT-PLAN.json",
+    "tasks/TASK-7584-BDC-BELNAP-ALIGNMENT-NOTE.json",
+    "tasks/TASK-7585-BDC-DIVERSITY-TAXONOMY-NOTE.json",
+    "tasks/TASK-7586-BDC-ERROR-ERASURE-MODEL-NOTE.json",
+    "tasks/TASK-7587-BDC-CHANNEL-AWARE-MEMORY-NOTE.json",
+    "reports/analysis/TASK-7583-BDC-RESEARCH-FOUNDATIONS-IMPORT-PLAN/TASK-7583_BRIEF_REPORT.md"
+  ],
+  "tests_required": [
+    "plan document existence check",
+    "task JSON parse checks",
+    "project docs reference checks"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "foundations_plan_written": true,
+      "strict_task_order_defined": true,
+      "phase_level_dod_defined": true,
+      "scientific_boundaries_defined": true
+    }
+  },
+  "definition_of_done": [
+    "master scientific import plan written",
+    "strict ordered task packets written",
+    "project docs references updated",
+    "brief report generated",
+    "append-only logs updated"
+  ],
+  "out_of_scope": [
+    "implementation of semantics or memory mechanisms",
+    "selection-physics experiment execution",
+    "new scientific claims beyond the planning package"
+  ]
+}

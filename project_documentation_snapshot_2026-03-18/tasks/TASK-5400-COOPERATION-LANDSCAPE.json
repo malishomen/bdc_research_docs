@@ -1,0 +1,29 @@
+{
+  "task_id": "TASK-5400",
+  "title": "COOPERATION LANDSCAPE ANALYSIS",
+  "phase": 5,
+  "status": "planned",
+  "priority": "critical",
+  "objective": "Determine whether cooperative advantage exists in parameter space or whether cooperative architectures collapse to single predictor regime.",
+  "reference_profile": "gpu_profile_v4_reference",
+  "seed_range": [
+    1337,
+    1366
+  ],
+  "analysis_components": [
+    "parameter_landscape_sampling",
+    "role_divergence_tracking",
+    "task_advantage_surface",
+    "cooperation_region_detection"
+  ],
+  "outputs": [
+    "landscape_samples.csv",
+    "cooperation_regions.json",
+    "role_divergence_surface.csv",
+    "task_advantage_surface.csv"
+  ],
+  "success_criteria": {
+    "cooperation_region_found": true,
+    "or_cooperation_impossible_proven": true
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "task_id": "TASK-7110-REAL-TASK-VALIDATION-SUITE",
+  "project": "Bio Digital Core",
+  "phase": 28,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Validate BDC Designer and the hybrid playbook on a structured suite of real-world tasks beyond the single flagship case, using frozen baselines and consistent outcome reporting.",
+  "research_question": "Does BDC Designer produce repeatable and practically useful architecture guidance across multiple real workflow problems rather than only one flagship case?",
+  "validation_goals": [
+    "minimum 5 real tasks",
+    "minimum 3 workflow families",
+    "frozen baseline for each task",
+    "CLI recommendation recorded",
+    "hybrid refinement recorded",
+    "common metric template across tasks"
+  ],
+  "candidate_workflow_families": [
+    "planner-executor-checker",
+    "proposer-verifier-judge",
+    "retriever-reasoner-critic",
+    "content-draft-review",
+    "lead-triage-proposal-review"
+  ],
+  "runner": {
+    "script": "scripts/analysis/run_phase28_real_task_validation_suite.py"
+  },
+  "analysis_pipeline": [
+    {
+      "block_id": "TASK-7111",
+      "title": "TASK SET SELECTION AND BASELINE FREEZE",
+      "outputs": [
+        "results/real_task_suite/task_manifest.csv",
+        "results/real_task_suite/baseline_freeze.csv"
+      ]
+    },
+    {
+      "block_id": "TASK-7112",
+      "title": "CLI RECOMMENDATION RUNS",
+      "outputs": [
+        "results/real_task_suite/cli_outputs.csv"
+      ]
+    },
+    {
+      "block_id": "TASK-7113",
+      "title": "HYBRID REFINEMENT RUNS",
+      "outputs": [
+        "results/real_task_suite/hybrid_results.csv"
+      ]
+    },
+    {
+      "block_id": "TASK-7114",
+      "title": "CROSS-TASK COMPARISON",
+      "outputs": [
+        "results/real_task_suite/cross_task_summary.csv",
+        "results/real_task_suite/validation_summary.json"
+      ]
+    }
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "minimum_five_tasks_completed": true,
+      "minimum_three_families_covered": true,
+      "bdc_guided_hybrid_beats_baseline_on_majority_of_tasks": true,
+      "all_task_outputs_recorded_in_common_schema": true
+    }
+  },
+  "definition_of_done": [
+    "task suite frozen",
+    "CLI runs completed",
+    "hybrid runs completed",
+    "cross-task analysis completed",
+    "brief report generated",
+    "append-only logs updated"
+  ]
+}

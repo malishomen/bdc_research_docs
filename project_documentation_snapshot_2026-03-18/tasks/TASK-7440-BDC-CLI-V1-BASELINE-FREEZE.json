@@ -1,0 +1,53 @@
+{
+  "task_id": "TASK-7440-BDC-CLI-V1-BASELINE-FREEZE",
+  "project": "Bio Digital Core",
+  "phase": 35,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-14",
+  "objective": "Freeze BDC CLI v1 behavior as the non-negotiable regression baseline and document its known limitations and canonical failure cases before any v2 work starts.",
+  "research_question": "What exactly does BDC CLI v1 do today, where does it fail, and which benchmark fixtures must remain available for all later v2 comparisons?",
+  "depends_on": [],
+  "execution_rules": {
+    "phase_gate": "Package start task.",
+    "parallel_execution_allowed": false,
+    "scope_expansion_forbidden": true
+  },
+  "runner": {
+    "script": "scripts/analysis/run_phase35_freeze_bdc_cli_v1_baseline.py"
+  },
+  "outputs": [
+    "docs/BDC_CLI_V1_LIMITATIONS_AND_GAPS.md",
+    "docs/BDC_CLI_V1_CANONICAL_FAILURE_CASES.md",
+    "results/bdc_cli_v1_baseline/v1_golden_outputs_manifest.csv",
+    "results/bdc_cli_v1_baseline/textai_auto_v1_failure_snapshot.json",
+    "reports/analysis/TASK-7440-BDC-CLI-V1-BASELINE-FREEZE/TASK-7440_BRIEF_REPORT.md"
+  ],
+  "tests_required": [
+    "snapshot tests for current v1 outputs on at least 5 benchmark cases",
+    "regression test confirming TextAI_Auto still fails under v1 in the currently known way",
+    "fixture integrity test for frozen v1 benchmark packets and outputs"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "v1_behavior_frozen": true,
+      "canonical_failure_cases_documented": true,
+      "minimum_five_v1_golden_cases_created": true,
+      "textai_auto_failure_snapshot_recorded": true
+    }
+  },
+  "definition_of_done": [
+    "v1 baseline behavior frozen",
+    "limitations and canonical failures documented",
+    "minimum five golden v1 outputs captured",
+    "TextAI_Auto failure fixture recorded",
+    "brief report generated",
+    "append-only logs updated"
+  ],
+  "out_of_scope": [
+    "changing any v1 behavior",
+    "implementing any v2 logic"
+  ]
+}
+

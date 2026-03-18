@@ -1,0 +1,6 @@
+architecture,final_max_accuracy_mean,final_max_fitness_mean,final_max_complexity_mean,penalty_mean,theoretical_max_fitness,required_accuracy_to_beat_v1,feasibility_flag,feasibility_reason
+v1_speciation,nan,0.7881661019442968,nan,nan,nan,nan,False,insufficient_complexity_data
+v1_5,0.8117838541666667,0.7637578865767252,13.950665321506293,0.13950665321506292,0.860493346784937,0.9276727551593598,True,required_accuracy<=1.0
+v2,nan,0.5356865515715755,nan,nan,nan,nan,False,insufficient_complexity_data
+v2_prior,0.790234375,0.5531664379938884,nan,nan,nan,nan,False,insufficient_complexity_data
+v2_staged,0.7884765625,0.5524726487966959,nan,nan,nan,nan,False,insufficient_complexity_data

@@ -1,0 +1,13 @@
+{
+  "task_id": "TASK-7030-CASE-STUDY-REAL-DEPLOYMENT",
+  "project": "Bio Digital Core",
+  "phase": 26,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Execute one end-to-end real deployment case using BDC Designer CLI plus hybrid playbook and publish flagship case study.",
+  "runner": {
+    "script": "scripts/analysis/run_phase26_case_study_real_deployment.py"
+  }
+}

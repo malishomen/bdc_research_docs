@@ -1,0 +1,29 @@
+{
+  "task_id": "TASK-6800-NONLINEAR-ROLE-DYNAMICS-IDENTIFICATION",
+  "project": "Bio Digital Core",
+  "phase": 18,
+  "status": "planned",
+  "priority": "critical",
+  "objective": "Identify the true transition law governing role weight dynamics in cooperative evolution after replicator dynamics was falsified.",
+  "runner": {
+    "script": "scripts/analysis/run_phase18_role_dynamics_identification.py"
+  },
+  "outputs": [
+    "results/role_dynamics/weight_dynamics.csv",
+    "results/role_dynamics/lag_analysis.csv",
+    "results/role_dynamics/regime_transitions.csv",
+    "results/role_dynamics/partner_effects.csv",
+    "results/role_dynamics/model_comparison.csv",
+    "results/role_dynamics/identified_transition_law.json"
+  ],
+  "report": "reports/analysis/TASK-6800-ROLE-DYNAMICS/TASK-6800_BRIEF_REPORT.md",
+  "artifacts_contract": {
+    "results_directory": "results/role_dynamics/",
+    "append_only_logs": [
+      "AGENTS_LOG.md",
+      "WEEKLY_STATUS.md"
+    ],
+    "git_branch": "origin/test",
+    "results_not_committed": true
+  }
+}

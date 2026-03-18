@@ -1,0 +1,37 @@
+{
+  "captured_at_utc": "2026-02-25T17:22:00Z",
+  "local_workspace_host": {
+    "os_version": "Windows 11 Pro 10.0.22631 (64-bit)",
+    "python_version": "Python 3.11.9",
+    "node_version": "v22.18.0",
+    "cuda_version": "12.7 (from nvidia-smi)",
+    "gpu_model": "NVIDIA GeForce GTX 1080 Ti",
+    "cpu_model": "Intel(R) Core(TM) i7-6700 CPU @ 3.40GHz",
+    "ram_total_gib_approx": 23.94,
+    "disk_free": {
+      "C": "120328441856 bytes",
+      "D": "361976979456 bytes",
+      "E": "119403483136 bytes"
+    },
+    "docker_version": "Docker version 29.1.3, build f52814d"
+  },
+  "queen_host": {
+    "hostname": "bdc-queen",
+    "os_version": "Ubuntu 24.04.4 LTS (Noble)",
+    "python_version": "Python 3.12.3",
+    "node_version": "UNVERIFIED",
+    "cuda_version": "UNVERIFIED (nvidia-smi not available in SSH output)",
+    "gpu_model": "UNVERIFIED",
+    "cpu_model": "Intel(R) Core(TM) i5-4200U CPU @ 1.60GHz",
+    "ram": {
+      "total": "11Gi",
+      "free": "8.4Gi",
+      "swap_total": "4.0Gi"
+    },
+    "disk_free": {
+      "/": "84G available",
+      "/mnt/HIVE": "932G available"
+    },
+    "docker_version": "Docker version 28.2.2, build 28.2.2-0ubuntu1~24.04.1"
+  }
+}

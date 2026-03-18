@@ -1,0 +1,48 @@
+{
+  "task_id": "TASK-5300",
+  "title": "PHASE-4 COOPERATION ROOT-CAUSE DATASET",
+  "phase": 5,
+  "status": "planned",
+  "created_at": "2026-03-06",
+  "priority": "critical",
+  "objective": "Collect structured diagnostics to determine why cooperative architecture does not produce advantage over single model in Phase-4 experiments.",
+  "reference_profile": "gpu_profile_v4_reference",
+  "input_sources": {
+    "seed_range": [
+      1337,
+      1366
+    ],
+    "phase4_results": "results/repro_run/",
+    "phase4_manifest": "experiments/PHASE4_MANIFEST.json",
+    "metrics": "reports/metrics.json"
+  },
+  "analysis_layers": [
+    "per_seed_decomposition",
+    "role_contribution_ablation",
+    "specialization_metrics",
+    "training_dynamics"
+  ],
+  "output_bundle": "results/phase4_rootcause/",
+  "deliverables": [
+    "per_seed_gains.csv",
+    "per_seed_bottleneck.json",
+    "per_seed_ablation_deltas.csv",
+    "role_prediction_correlation_matrices/",
+    "specialization_summary.json",
+    "per_task_js_divergence.csv",
+    "training_dynamics/"
+  ],
+  "success_criteria": {
+    "root_cause_identified": true,
+    "task_bottleneck_identified": true,
+    "role_redundancy_measured": true,
+    "specialization_detected_or_ruled_out": true
+  },
+  "dependencies": [
+    "TASK-4100",
+    "TASK-4200",
+    "TASK-4500",
+    "TASK-5100"
+  ],
+  "report": "reports/analysis/TASK-5300-COOPERATION-ROOTCAUSE/TASK-5300_BRIEF_REPORT.md"
+}

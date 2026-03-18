@@ -1,0 +1,24 @@
+{
+  "task_id": "TASK-6850-EQUILIBRIUM-GUIDED-ARCHITECTURE-DESIGN-VALUE",
+  "project": "Bio Digital Core",
+  "phase": 20,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Evaluate practical engineering value of equilibrium-guided architecture design under matched-budget comparison arms.",
+  "runner": {
+    "script": "scripts/analysis/run_phase20_equilibrium_guided_architecture_value.py"
+  },
+  "artifacts_contract": {
+    "results_directory": "results/equilibrium_design_value/",
+    "reports_directory": "reports/analysis/",
+    "append_only_logs": [
+      "AGENTS_LOG.md",
+      "WEEKLY_STATUS.md"
+    ],
+    "git_branch": "origin/test",
+    "results_not_committed": true
+  }
+}
+

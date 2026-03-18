@@ -1,0 +1,47 @@
+{
+  "task_id": "TASK-7584-BDC-BELNAP-ALIGNMENT-NOTE",
+  "project": "Bio Digital Core",
+  "phase": 48,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-18",
+  "objective": "Write a bounded research note aligning BDC quaternary logic with a Belnap-style four-valued frame and define what this alignment means for reboot-line semantics.",
+  "research_question": "Can BDC formalize its quaternary states with a Belnap-style semantics without overstating the equivalence or rewriting qcore prematurely?",
+  "depends_on": [
+    "TASK-7583-BDC-RESEARCH-FOUNDATIONS-IMPORT-PLAN"
+  ],
+  "execution_rules": {
+    "phase_gate": "May start only after the scientific import plan is approved.",
+    "parallel_execution_allowed": false,
+    "scope_expansion_forbidden": true
+  },
+  "outputs": [
+    "docs/BDC_QCORE_BELNAP_ALIGNMENT.md",
+    "reports/analysis/TASK-7584-BDC-BELNAP-ALIGNMENT-NOTE/TASK-7584_BRIEF_REPORT.md"
+  ],
+  "tests_required": [
+    "document existence check",
+    "alignment note includes mapping and limits",
+    "alignment note states designated action/evidence implications"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "belnap_alignment_note_written": true,
+      "mapping_defined": true,
+      "limits_of_alignment_stated": true,
+      "reboot_semantic_implications_defined": true
+    }
+  },
+  "definition_of_done": [
+    "Belnap alignment note written",
+    "mapping and caveats written",
+    "brief report generated",
+    "append-only logs updated"
+  ],
+  "out_of_scope": [
+    "qcore implementation changes",
+    "full bilattice implementation",
+    "claiming BDC is already fully Belnap-complete"
+  ]
+}

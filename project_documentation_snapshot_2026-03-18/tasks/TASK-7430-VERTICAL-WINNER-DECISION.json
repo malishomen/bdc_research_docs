@@ -1,0 +1,26 @@
+{
+  "task_id": "TASK-7430-VERTICAL-WINNER-DECISION",
+  "project": "Bio Digital Core",
+  "phase": 34,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Make a hard strategic decision on which vertical becomes the primary wedge for the next 90 days based on real execution data rather than preference.",
+  "research_question": "Which vertical should become the primary go-to-market wedge for BDC Designer over the next execution window?",
+  "runner": {
+    "script": "scripts/analysis/run_phase34_vertical_winner_decision.py"
+  },
+  "outputs": [
+    "results/vertical_winner/winner_decision_matrix.csv",
+    "results/vertical_winner/90_day_focus_plan.json",
+    "reports/analysis/TASK-7430-VERTICAL-WINNER-DECISION/TASK-7430_BRIEF_REPORT.md"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "winner_selected": true,
+      "decision_rationale_written": true,
+      "90_day_focus_plan_defined": true
+    }
+  }
+}

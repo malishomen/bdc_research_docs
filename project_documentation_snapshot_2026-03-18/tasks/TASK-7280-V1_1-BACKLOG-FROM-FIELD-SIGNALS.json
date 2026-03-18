@@ -1,0 +1,34 @@
+{
+  "task_id": "TASK-7280-V1_1-BACKLOG-FROM-FIELD-SIGNALS",
+  "project": "Bio Digital Core",
+  "phase": 31,
+  "status": "planned",
+  "priority": "high",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Build the BDC Designer v1.1 product backlog from real field usage, telemetry, pilot friction, and repeated operator confusion rather than internal intuition.",
+  "research_question": "What product improvements should enter v1.1 first based on real pilot usage and feedback signals?",
+  "runner": {
+    "script": "scripts/analysis/run_phase31_v1_1_backlog_from_field_signals.py"
+  },
+  "outputs": [
+    "results/v1_1_backlog/field_signal_summary.csv",
+    "results/v1_1_backlog/prioritized_backlog.csv",
+    "results/v1_1_backlog/release_candidate_scope.json",
+    "reports/analysis/TASK-7280-V1_1-BACKLOG-FROM-FIELD-SIGNALS/TASK-7280_BRIEF_REPORT.md"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "field_signals_aggregated": true,
+      "prioritized_backlog_defined": true,
+      "v1_1_scope_proposed": true
+    }
+  },
+  "definition_of_done": [
+    "field signals aggregated",
+    "backlog prioritized",
+    "v1.1 scope proposed",
+    "brief report generated",
+    "append-only logs updated"
+  ]
+}

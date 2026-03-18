@@ -1,0 +1,47 @@
+{
+  "task_id": "TASK-7585-BDC-DIVERSITY-TAXONOMY-NOTE",
+  "project": "Bio Digital Core",
+  "phase": 48,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-18",
+  "objective": "Write a reboot-facing diversity taxonomy note that translates external diversity-preservation literature into a practical policy for BDC selection physics and speciation work.",
+  "research_question": "Can BDC replace its older informal diversity reasoning with an explicit taxonomy that is useful for the rebooted selection-physics line?",
+  "depends_on": [
+    "TASK-7584-BDC-BELNAP-ALIGNMENT-NOTE"
+  ],
+  "execution_rules": {
+    "phase_gate": "May start only after the semantic note is written so the reboot line already has explicit state reasoning.",
+    "parallel_execution_allowed": false,
+    "scope_expansion_forbidden": true
+  },
+  "outputs": [
+    "docs/BDC_SELECTION_DIVERSITY_POLICY_NOTE.md",
+    "reports/analysis/TASK-7585-BDC-DIVERSITY-TAXONOMY-NOTE/TASK-7585_BRIEF_REPORT.md"
+  ],
+  "tests_required": [
+    "document existence check",
+    "taxonomy note includes lineage/genotype/phenotype distinction",
+    "note includes reboot implications and non-import warnings"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "diversity_taxonomy_note_written": true,
+      "three_level_taxonomy_defined": true,
+      "selection_reboot_implications_written": true,
+      "blind_import_warnings_written": true
+    }
+  },
+  "definition_of_done": [
+    "diversity taxonomy note written",
+    "reboot policy implications defined",
+    "brief report generated",
+    "append-only logs updated"
+  ],
+  "out_of_scope": [
+    "selection-physics code changes",
+    "niching/crowding algorithm implementation",
+    "new empirical diversity experiment"
+  ]
+}

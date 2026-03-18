@@ -1,0 +1,10 @@
+{
+  "dataset_alignment": {
+    "type": "full_exhaustive_bits",
+    "bit_len": 9,
+    "size": 512
+  },
+  "best_single_genome_accuracy_on_ltf_dataset": 0.78125,
+  "theoretical_ltf_ceiling": 0.837890625,
+  "delta_single_minus_theory": -0.056640625
+}

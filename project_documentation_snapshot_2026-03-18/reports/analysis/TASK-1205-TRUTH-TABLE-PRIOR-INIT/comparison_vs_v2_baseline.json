@@ -1,0 +1,43 @@
+{
+  "task_id": "TASK-1205-TRUTH-TABLE-PRIOR-INIT",
+  "baseline_v2": {
+    "runs_total": "30",
+    "runs_pass": "0",
+    "runs_fail": "30",
+    "pass_rate": "0.0",
+    "final_max_fitness_mean": "0.5356865515715755",
+    "final_max_fitness_median": "0.5362029706576338",
+    "final_diversity_mean": "1.0",
+    "final_lineage_persistence_mean": "1.0",
+    "final_rule_entropy_mean": "4.605170185988082"
+  },
+  "v2_prior": {
+    "runs_total": "30",
+    "runs_pass": "0",
+    "runs_fail": "30",
+    "pass_rate": "0.0",
+    "final_max_fitness_mean": "0.5531664379938884",
+    "final_max_fitness_median": "0.5530038818022092",
+    "final_diversity_mean": "1.0",
+    "final_lineage_persistence_mean": "1.0",
+    "final_rule_entropy_mean": "4.605170185988082"
+  },
+  "delta": {
+    "final_max_fitness_mean": 0.017479886422312907,
+    "final_max_fitness_median": 0.01680091114457538,
+    "pass_rate": 0.0,
+    "final_diversity_mean": 0.0,
+    "final_lineage_persistence_mean": 0.0
+  },
+  "proxy_best_single_final_max_fitness": {
+    "baseline_v2_max": 0.5843267225725519,
+    "v2_prior_max": 0.6004559948155073,
+    "baseline_v2_gt_0_68_count": 0,
+    "v2_prior_gt_0_68_count": 0
+  },
+  "criteria_evaluation": {
+    "final_max_fitness_mean_gt_0_68": false,
+    "seeds_final_max_fitness_gt_0_68_count": 0,
+    "seeds_final_max_fitness_gt_0_68_at_least_10": false
+  }
+}

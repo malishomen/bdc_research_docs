@@ -1,0 +1,172 @@
+{
+  "task_id": "TASK-6300-TASK-STRUCTURE-ARCHITECTURE-MAPPING",
+  "project": "Bio Digital Core",
+  "phase": 13,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Determine whether emergent cooperative architecture depends on task information structure rather than algorithmic parameters.",
+  "background": {
+    "previous_tasks": [
+      "TASK-5700-COOPERATIVE-COEVOLUTION-ARCHITECTURE",
+      "TASK-5800-RISK-ADJUSTED-WEIGHT-LAW",
+      "TASK-5900-GENERALIZED-WEIGHT-LAW-DISCOVERY",
+      "TASK-6000-LAW-INJECTION-VALIDATION",
+      "TASK-6100-SURVIVAL-PRESSURE-INJECTION",
+      "TASK-6200-NOISE-REGIME-MAPPING"
+    ],
+    "key_findings": [
+      "Predictor-dominant architecture emerges consistently (~0.63 / 0.33 / 0.04).",
+      "Architecture invariant across selection scaling, weight injection, and evaluation-noise regimes.",
+      "Empirical weight law strongly describes equilibrium but does not control dynamics."
+    ],
+    "working_hypothesis": "Emergent cooperative architecture is determined by task information structure rather than algorithm parameters."
+  },
+  "research_hypothesis": {
+    "statement": "Different task information structures produce different cooperative role architectures.",
+    "mapping_target": "task_information_structure \u2192 emergent_role_ratio"
+  },
+  "task_families": [
+    {
+      "task_family_id": "predictor_dominant",
+      "description": "Tasks where direct prediction contains most information (baseline family).",
+      "examples": [
+        "cloze",
+        "entity_prediction",
+        "token_completion"
+      ]
+    },
+    {
+      "task_family_id": "symmetric_information",
+      "description": "Tasks where all roles contribute equally to solution quality.",
+      "examples": [
+        "balanced multi-label classification",
+        "ensemble majority voting"
+      ]
+    },
+    {
+      "task_family_id": "critic_dominant",
+      "description": "Tasks where error detection dominates solution improvement.",
+      "examples": [
+        "adversarial filtering",
+        "constraint validation tasks"
+      ]
+    },
+    {
+      "task_family_id": "aggregator_dominant",
+      "description": "Tasks requiring integration of multiple weak signals.",
+      "examples": [
+        "signal aggregation",
+        "ensemble consensus tasks"
+      ]
+    }
+  ],
+  "experiment_configuration": {
+    "seeds_per_task": 20,
+    "generations": 120,
+    "population_size": 64,
+    "partners_per_evaluation": 5,
+    "evaluation_samples_per_genome": 10
+  },
+  "runner": {
+    "script": "scripts/edp1/run_phase13_task_structure_mapping.py",
+    "engine": "evolution/coevolution_engine.py"
+  },
+  "metrics_collected": [
+    "mean_delta_advantage",
+    "positive_seed_fraction",
+    "role_ratio_predictor",
+    "role_ratio_critic",
+    "role_ratio_aggregator",
+    "role_ratio_variance",
+    "fitness_variance",
+    "generation_to_plateau"
+  ],
+  "experiment_blocks": [
+    {
+      "block_id": "TASK-6301",
+      "title": "TASK FAMILY IMPLEMENTATION",
+      "goal": "Implement synthetic task families with controlled information structures.",
+      "target_directory": "tasks/synthetic/"
+    },
+    {
+      "block_id": "TASK-6302",
+      "title": "TASK FAMILY EXECUTION",
+      "goal": "Run coevolution experiments for each task family.",
+      "outputs": [
+        "results/task_structure_mapping/per_seed_metrics.csv",
+        "results/task_structure_mapping/task_family_summary.csv"
+      ]
+    },
+    {
+      "block_id": "TASK-6303",
+      "title": "ROLE ARCHITECTURE EXTRACTION",
+      "goal": "Compute emergent role ratios for each task family.",
+      "outputs": [
+        "results/task_structure_mapping/role_ratio_by_task.csv"
+      ]
+    },
+    {
+      "block_id": "TASK-6304",
+      "title": "ARCHITECTURE COMPARISON",
+      "goal": "Compare role architectures across task families.",
+      "analysis_metrics": [
+        "role_ratio_difference",
+        "architecture_cluster_distance",
+        "variance_explained_by_task_type"
+      ],
+      "outputs": [
+        "results/task_structure_mapping/architecture_comparison.csv"
+      ]
+    },
+    {
+      "block_id": "TASK-6305",
+      "title": "ARCHITECTURE CLUSTERING",
+      "goal": "Cluster cooperative architectures by task structure.",
+      "outputs": [
+        "results/task_structure_mapping/architecture_clusters.csv"
+      ]
+    },
+    {
+      "block_id": "TASK-6306",
+      "title": "TASK-ARCHITECTURE MAP",
+      "goal": "Construct mapping between task structure and cooperative architecture.",
+      "outputs": [
+        "results/task_structure_mapping/task_architecture_map.csv"
+      ]
+    },
+    {
+      "block_id": "TASK-6307",
+      "title": "FINAL REPORT",
+      "goal": "Document relationship between task information structure and emergent cooperative architecture.",
+      "report": "reports/analysis/TASK-6300-TASK-STRUCTURE/TASK-6300_BRIEF_REPORT.md"
+    }
+  ],
+  "evaluation_criteria": {
+    "hypothesis_supported_if": {
+      "architecture_variation_detected": true,
+      "distinct_role_patterns_across_tasks": true,
+      "variance_explained_by_task_structure_min": 0.5
+    }
+  },
+  "definition_of_done": [
+    "All synthetic task families implemented.",
+    "Experiments executed for each task family.",
+    "Emergent role ratios computed.",
+    "Architecture clusters identified.",
+    "Task-to-architecture mapping constructed.",
+    "Final report produced.",
+    "Append-only logs updated."
+  ],
+  "artifacts_contract": {
+    "results_directory": "results/task_structure_mapping/",
+    "reports_directory": "reports/analysis/",
+    "append_only_logs": [
+      "AGENTS_LOG.md",
+      "WEEKLY_STATUS.md"
+    ],
+    "git_branch": "origin/test",
+    "results_not_committed": true
+  }
+}

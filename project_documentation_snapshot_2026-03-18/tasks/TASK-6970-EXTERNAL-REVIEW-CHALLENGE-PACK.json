@@ -1,0 +1,13 @@
+{
+  "task_id": "TASK-6970-EXTERNAL-REVIEW-CHALLENGE-PACK",
+  "project": "Bio Digital Core",
+  "phase": 24,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Prepare adversarial reviewer attack/defense package for restricted BDC submission.",
+  "runner": {
+    "script": "scripts/analysis/run_phase24_external_review_challenge_pack.py"
+  }
+}

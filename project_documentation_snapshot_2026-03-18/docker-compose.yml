@@ -1,0 +1,14 @@
+services:
+  bdc-sim:
+    image: bdc-sim
+    container_name: bdc-sim
+    working_dir: /app
+    restart: on-failure
+    volumes:
+      - ./logs:/app/logs
+      - ./results:/app/results
+    command: >
+      bash -lc "mkdir -p /app/logs /app/results &&
+      scripts/run_exp_multigeneration.sh --generations 25 --seeds 100 --duration 7200 --verbose
+      2> /app/logs/exp_0004_multigeneration_error.log
+      | tee /app/logs/exp_0004_multigeneration_full.log"

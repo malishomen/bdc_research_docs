@@ -1,0 +1,70 @@
+{
+  "task_id": "TASK-7100-WINDOWS-ONE-CLICK-LAUNCHER",
+  "project": "Bio Digital Core",
+  "phase": 28,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Provide a Windows-friendly one-click launch experience for BDC Designer so that a user can run the system without manual Python command composition.",
+  "research_question": "Can BDC Designer be exposed as a one-click runnable Windows asset while preserving the same validated logic and output schema as the release CLI?",
+  "target_modes": [
+    "double-click launcher script",
+    "interactive batch or PowerShell launcher",
+    "optional packaged executable if feasible"
+  ],
+  "runner": {
+    "script": "scripts/analysis/run_phase28_windows_one_click_launcher.py"
+  },
+  "artifacts": [
+    "launchers/bdc_designer_launcher.bat",
+    "launchers/bdc_designer_launcher.ps1",
+    "docs/BDC_WINDOWS_QUICKSTART.md",
+    "reports/analysis/TASK-7100-WINDOWS-ONE-CLICK-LAUNCHER/TASK-7100_BRIEF_REPORT.md"
+  ],
+  "analysis_pipeline": [
+    {
+      "block_id": "TASK-7101",
+      "title": "LAUNCHER FLOW DESIGN",
+      "outputs": [
+        "results/windows_launcher/launcher_flow_manifest.csv"
+      ]
+    },
+    {
+      "block_id": "TASK-7102",
+      "title": "ONE-CLICK EXECUTION VALIDATION",
+      "outputs": [
+        "results/windows_launcher/one_click_validation.csv"
+      ]
+    },
+    {
+      "block_id": "TASK-7103",
+      "title": "SCHEMA CONSISTENCY CHECK",
+      "outputs": [
+        "results/windows_launcher/schema_consistency.json"
+      ]
+    },
+    {
+      "block_id": "TASK-7104",
+      "title": "QUICKSTART DOCS",
+      "outputs": [
+        "results/windows_launcher/quickstart_manifest.csv"
+      ]
+    }
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "double_click_or_single_launcher_run_passes": true,
+      "launcher_output_matches_cli_schema": true,
+      "windows_quickstart_complete": true
+    }
+  },
+  "definition_of_done": [
+    "launcher created",
+    "one-click flow validated",
+    "schema consistency verified",
+    "quickstart docs written",
+    "brief report generated",
+    "append-only logs updated"
+  ]
+}

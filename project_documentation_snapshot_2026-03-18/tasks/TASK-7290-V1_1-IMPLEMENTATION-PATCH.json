@@ -1,0 +1,41 @@
+{
+  "task_id": "TASK-7290-V1_1-IMPLEMENTATION-PATCH",
+  "project": "Bio Digital Core",
+  "phase": 32,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Implement the highest-priority BDC Designer v1.1 improvements from validated field signals, operator friction, caution-flag patterns, and pilot delivery feedback.",
+  "research_question": "Can the most important v1.1 product improvements be shipped in one focused patch that measurably improves operator usability and pilot readiness without destabilizing the validated core?",
+  "runner": {
+    "script": "scripts/analysis/run_phase32_v1_1_implementation_patch.py"
+  },
+  "inputs": [
+    "results/v1_1_backlog/prioritized_backlog.csv",
+    "results/telemetry/event_schema.json",
+    "results/real_task_suite/validation_summary.json",
+    "results/customer_proof/proof_reuse_matrix.csv"
+  ],
+  "outputs": [
+    "results/v1_1_patch/implemented_items.csv",
+    "results/v1_1_patch/regression_check_summary.json",
+    "results/v1_1_patch/usability_delta_summary.json",
+    "reports/analysis/TASK-7290-V1_1-IMPLEMENTATION-PATCH/TASK-7290_BRIEF_REPORT.md",
+    "docs/BDC_V1_1_RELEASE_NOTES_DRAFT.md"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "top_priority_items_implemented": true,
+      "no_regression_on_validated_core": true,
+      "operator_usability_improved": true
+    }
+  },
+  "definition_of_done": [
+    "v1.1 patch implemented",
+    "regression checks completed",
+    "usability delta summarized",
+    "brief report generated",
+    "append-only logs updated"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "schema_version": "task2112-protocol-equivalence-v1",
+  "run_index": "D:\\projects\\Bio_Digital_Core\\Bio_digital_core\\results\\.tmp_task2112_equiv_diag\\diagnostic\\aggregates\\run_index_v3.json",
+  "pair_count": 2,
+  "critical_fail_count": 0,
+  "critical_equivalence_pass": true,
+  "pairs": [
+    {
+      "pilot": "cpu",
+      "seed": 1337,
+      "population_equal": true,
+      "generations_equal": true,
+      "subset_equal": true,
+      "complexity_lambda_equal": true,
+      "stochastic_layers_equivalent": true,
+      "baseline_population": 60,
+      "optimized_population": 60,
+      "baseline_generations": 30,
+      "optimized_generations": 30,
+      "critical_equivalence_ok": true
+    },
+    {
+      "pilot": "gpu",
+      "seed": 1337,
+      "effective_batch_size_equal": false,
+      "steps_equal": false,
+      "token_budget_equal": true,
+      "lr_scaled_with_batch": true,
+      "stochastic_layers_equivalent": true,
+      "baseline_batch": 12,
+      "optimized_batch": 8,
+      "baseline_steps": 80,
+      "optimized_steps": 120,
+      "baseline_lr": 3e-05,
+      "optimized_lr": 2e-05,
+      "critical_equivalence_ok": true
+    }
+  ]
+}

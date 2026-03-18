@@ -1,0 +1,152 @@
+{
+  "task_id": "TASK-6500-CAUSAL-ROLE-CONTRIBUTION-VALIDATION",
+  "project": "Bio Digital Core",
+  "phase": 15,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Empirically validate that emergent role weights correspond to causal contribution of each role to the task outcome.",
+  "principle_under_test": "Role weight in cooperative evolution is proportional to causal influence on final task success.",
+  "formal_hypothesis": {
+    "statement": "Emergent role weights match normalized causal contribution measured via counterfactual role interventions.",
+    "formal_law": "w_r \u2248 C_r / \u03a3 C_r",
+    "where": {
+      "C_r": "expected fitness drop when role r is removed or randomized"
+    }
+  },
+  "background": {
+    "previous_tasks": [
+      "TASK-5700-COOPERATIVE-COEVOLUTION-ARCHITECTURE",
+      "TASK-6300-TASK-STRUCTURE-ARCHITECTURE-MAPPING",
+      "TASK-6400-ROLE-INFORMATION-LAW-VALIDATION"
+    ],
+    "key_findings": [
+      "Task structure explains cooperative architecture.",
+      "Mutual information does not explain role weights.",
+      "Architecture likely depends on causal control of outcome."
+    ]
+  },
+  "experiment_design": {
+    "causal_measurements": [
+      "role_ablation",
+      "role_output_randomization",
+      "role_output_permutation",
+      "role_swap_intervention"
+    ],
+    "causal_metrics": [
+      "fitness_drop_after_ablation",
+      "fitness_drop_after_randomization",
+      "counterfactual_delta_fitness",
+      "role_shapley_value"
+    ],
+    "roles": [
+      "predictor",
+      "critic",
+      "aggregator"
+    ]
+  },
+  "experiment_configuration": {
+    "task_families": [
+      "predictor_dominant",
+      "symmetric_information",
+      "critic_dominant",
+      "aggregator_dominant"
+    ],
+    "seeds_per_family": 20,
+    "generations": 120,
+    "population_size": 64,
+    "partners_per_evaluation": 5,
+    "evaluation_samples_per_genome": 10
+  },
+  "runner": {
+    "script": "scripts/analysis/run_phase15_causal_role_analysis.py",
+    "engine_dependency": "evolution/coevolution_engine.py"
+  },
+  "analysis_pipeline": [
+    {
+      "block_id": "TASK-6501",
+      "title": "ROLE INTERVENTION DATA COLLECTION",
+      "goal": "Run counterfactual interventions by ablating or randomizing role outputs.",
+      "outputs": [
+        "results/causal_law/intervention_metrics.csv"
+      ]
+    },
+    {
+      "block_id": "TASK-6502",
+      "title": "CAUSAL CONTRIBUTION ESTIMATION",
+      "goal": "Compute causal contribution of each role using delta fitness and Shapley estimation.",
+      "outputs": [
+        "results/causal_law/causal_contributions.csv"
+      ]
+    },
+    {
+      "block_id": "TASK-6503",
+      "title": "NORMALIZED CAUSAL WEIGHTS",
+      "goal": "Normalize causal contributions to produce theoretical role weights.",
+      "outputs": [
+        "results/causal_law/theoretical_causal_weights.csv"
+      ]
+    },
+    {
+      "block_id": "TASK-6504",
+      "title": "EMPIRICAL VS CAUSAL COMPARISON",
+      "goal": "Compare emergent role ratios with causal weights.",
+      "metrics": [
+        "pearson_correlation",
+        "mean_absolute_error",
+        "rank_consistency"
+      ],
+      "outputs": [
+        "results/causal_law/weight_causal_comparison.csv"
+      ]
+    },
+    {
+      "block_id": "TASK-6505",
+      "title": "LAW VALIDATION",
+      "goal": "Validate whether causal law explains cooperative architecture.",
+      "outputs": [
+        "results/causal_law/causal_law_validation.json"
+      ]
+    },
+    {
+      "block_id": "TASK-6506",
+      "title": "FINAL REPORT",
+      "goal": "Produce formal report validating or rejecting causal role law.",
+      "report": "reports/analysis/TASK-6500-CAUSAL-LAW/TASK-6500_BRIEF_REPORT.md"
+    }
+  ],
+  "evaluation_criteria": {
+    "law_confirmed_if": {
+      "pearson_correlation_min": 0.85,
+      "mean_absolute_error_max": 0.08,
+      "rank_consistency": true
+    }
+  },
+  "definition_of_done": [
+    "Role interventions executed.",
+    "Causal contributions computed.",
+    "Normalized causal weights derived.",
+    "Empirical role ratios compared to causal predictions.",
+    "Law validation metrics computed.",
+    "Final report generated.",
+    "Append-only logs updated."
+  ],
+  "artifacts_contract": {
+    "results_directory": "results/causal_law/",
+    "reports_directory": "reports/analysis/",
+    "append_only_logs": [
+      "AGENTS_LOG.md",
+      "WEEKLY_STATUS.md"
+    ],
+    "git_branch": "origin/test",
+    "results_not_committed": true
+  },
+  "expected_outputs": [
+    "intervention_metrics.csv",
+    "causal_contributions.csv",
+    "theoretical_causal_weights.csv",
+    "weight_causal_comparison.csv",
+    "causal_law_validation.json"
+  ]
+}

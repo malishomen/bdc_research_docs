@@ -1,0 +1,13 @@
+{
+  "task_id": "TASK-7070-BDC-USER-GUIDE-V1",
+  "project": "Bio Digital Core",
+  "phase": 27,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Produce first complete user guide for BDC Designer CLI with explicit scope and interpretation guidance.",
+  "runner": {
+    "script": "scripts/analysis/run_phase27_bdc_user_guide_v1.py"
+  }
+}

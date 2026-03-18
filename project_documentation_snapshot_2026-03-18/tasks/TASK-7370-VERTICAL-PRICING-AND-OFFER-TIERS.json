@@ -1,0 +1,27 @@
+{
+  "task_id": "TASK-7370-VERTICAL-PRICING-AND-OFFER-TIERS",
+  "project": "Bio Digital Core",
+  "phase": 33,
+  "status": "planned",
+  "priority": "high",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Define vertical-specific offer tiers and pricing logic for BDC Designer across audit, pilot, and hybrid redesign engagements.",
+  "research_question": "Can BDC Designer pricing become more credible and easier to close when tied to the economics and workflow structure of specific verticals?",
+  "runner": {
+    "script": "scripts/analysis/run_phase33_vertical_pricing_and_offer_tiers.py"
+  },
+  "outputs": [
+    "results/vertical_pricing/offer_tiers.csv",
+    "results/vertical_pricing/pricing_logic.json",
+    "results/vertical_pricing/value_anchor_matrix.csv",
+    "reports/analysis/TASK-7370-VERTICAL-PRICING-AND-OFFER-TIERS/TASK-7370_BRIEF_REPORT.md"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "offer_tiers_defined": true,
+      "pricing_logic_defined": true,
+      "value_anchor_matrix_defined": true
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "task_id": "TASK-7060-BDC-LANDING-PAGE-COPY",
+  "project": "Bio Digital Core",
+  "phase": 27,
+  "status": "planned",
+  "priority": "high",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Write landing-page copy for BDC Designer and Restricted BDC that communicates value clearly, preserves claim discipline, and converts interested technical and business readers into demos, pilots, or audit inquiries.",
+  "research_question": "Can BDC's theory, tool, and flagship case be translated into concise landing-page messaging that is understandable, credible, and commercially useful?",
+  "copy_requirements": [
+    "clear headline and subheadline",
+    "what it does",
+    "what it does not do",
+    "why hybrid beats naive design",
+    "flagship case proof block",
+    "how it works",
+    "who it is for",
+    "cta blocks",
+    "faq block",
+    "claim-safe copy"
+  ],
+  "runner": {
+    "script": "scripts/analysis/run_phase27_bdc_landing_page_copy.py"
+  },
+  "outputs": [
+    "results/landing_copy/section_manifest.csv",
+    "results/landing_copy/message_hierarchy.json",
+    "results/landing_copy/cta_matrix.csv",
+    "reports/analysis/TASK-7060-BDC-LANDING-PAGE-COPY/TASK-7060_BRIEF_REPORT.md",
+    "reports/public_release/TASK-7060-BDC-LANDING-PAGE-COPY/BDC_LANDING_PAGE_COPY.md"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "all_required_sections_written": true,
+      "flagship_case_block_included": true,
+      "nonclaims_explicit": true,
+      "cta_options_present": true,
+      "copy_is_scope_safe": true
+    }
+  },
+  "definition_of_done": [
+    "landing page copy drafted",
+    "message hierarchy defined",
+    "CTA matrix prepared",
+    "scope-safe claims checked",
+    "brief report generated",
+    "append-only logs updated"
+  ],
+  "artifacts_contract": {
+    "results_directory": "results/landing_copy/",
+    "reports_directory": "reports/analysis/",
+    "public_reports_directory": "reports/public_release/",
+    "append_only_logs": [
+      "AGENTS_LOG.md",
+      "WEEKLY_STATUS.md"
+    ],
+    "git_branch": "origin/test",
+    "results_not_committed": true
+  }
+}

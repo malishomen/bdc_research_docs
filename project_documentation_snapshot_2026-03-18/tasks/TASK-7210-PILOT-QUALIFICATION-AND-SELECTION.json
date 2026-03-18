@@ -1,0 +1,20 @@
+{
+  "task_id": "TASK-7210-PILOT-QUALIFICATION-AND-SELECTION",
+  "project": "Bio Digital Core",
+  "phase": 30,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Select strongest pilot candidates from outreach and discovery activity using qualification criteria.",
+  "research_question": "Which prospects are genuinely suitable for a BDC pilot based on fit, urgency, measurability and readiness?",
+  "runner": {
+    "script": "scripts/analysis/run_phase30_pilot_qualification_and_selection.py"
+  },
+  "outputs": [
+    "results/pilot_selection/candidate_scorecard.csv",
+    "results/pilot_selection/qualification_decisions.csv",
+    "results/pilot_selection/top_pilot_candidates.json",
+    "reports/analysis/TASK-7210-PILOT-QUALIFICATION-AND-SELECTION/TASK-7210_BRIEF_REPORT.md"
+  ]
+}

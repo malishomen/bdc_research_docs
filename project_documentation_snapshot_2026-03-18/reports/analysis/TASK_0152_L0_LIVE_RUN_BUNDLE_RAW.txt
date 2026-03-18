@@ -1,0 +1,106 @@
+TASK-0152_L0_LIVE_RUN_HARVEST_FOR_REVIEW (RAW)
+Repo: D:\projects\Bio_Digital_Core\Bio_digital_core
+Mode: read_only_audit_no_interference
+
+NOTE: No training/snapshot_daemon/server/sidecar-loop processes were stopped or restarted in this task.
+
+== S1_detect_latest_run_dir ==
+runs_root: logs\exp_0017_comprehension_v0_cloze
+
+Top by LastWriteTimeUtc:
+- run_20260209T161052Z_4c913b3_task0149_live_45m_viz (LastWriteTimeUtc=2026-02-09 18:09:11Z)
+
+CHOSEN_RUN_DIR=D:\projects\Bio_Digital_Core\Bio_digital_core\logs\exp_0017_comprehension_v0_cloze\run_20260209T161052Z_4c913b3_task0149_live_45m_viz
+
+Artifacts in chosen run_dir (Name, Length, LastWriteTimeUtc):
+- policy_eval.json 2017 2026-02-09 18:09:11Z
+- RUN_STATUS.json 294 2026-02-09 16:56:41Z
+- metrics.json 841 2026-02-09 16:56:41Z
+- metrics_by_step.jsonl 5047 2026-02-09 16:54:45Z
+- RUN_METADATA.json 1050 2026-02-09 16:10:55Z
+
+== S2_run_artifact_integrity_and_hashes ==
+exp0017_artifact_integrity_check.py:
+- ok=true
+- INTEGRITY_EXIT_CODE=0
+- sha256 (from tool):
+  - RUN_METADATA.json: 89da49c59aa41b4bed42ce807698ffe4fdc27a3bde4243a128d0bfbb9700595a
+  - RUN_STATUS.json: ad8d34305d9c6d5fd8896df6019f006c22e596001edc33741e078149d1db233b
+  - metrics_by_step.jsonl: 35ae3881d410dfbc6d4274c3106feb6d349bdbdd56bc49819268fd68721739f9
+  - metrics.json: 7dc5110749e12971c1cc1be191fc18c4db333f1f8df5beeca032b0485ce42985
+
+Get-FileHash SHA256 (PowerShell) observed:
+- RUN_METADATA.json: 89DA49C59AA41B4BED42CE807698FFE4FDC27A3BDE4243A128D0BFBB9700595A
+- RUN_STATUS.json: AD8D34305D9C6D5FD8896DF6019F006C22E596001EDC33741E078149D1DB233B
+- metrics_by_step.jsonl: 35AE3881D410DFBC6D4274C3106FEB6D349BDBDD56BC49819268FD68721739F9
+- metrics.json: 7DC5110749E12971C1CC1BE191FC18C4DB333F1F8DF5BEECA032B0485CE42985
+- policy_eval.json: CF9FCB5BAD50D2F1B0C7E60571522E14C2CCA9A7B80EB803B9D5CB41B6E12C7B
+
+policy_eval.json sha256 (python read at 2026-02-09T18:10Z):
+- b1e036d3825585cd44dfb540d0eb603411a2d13936f591c77f054d28f0b2d53a
+
+policy_eval.json (Get-FileHash) at 2026-02-09T18:12:24Z:
+- sha256 8945adbbe7e48f5fc6adea8d64ef01a1403515cb7b3eef4576699a2862769cf1
+- LastWriteTimeUtc 2026-02-09 18:12:24Z
+
+== S3_extract_key_fields_L0 ==
+RUN_METADATA.json:
+- git_head: 4c913b3e22eaa840f7d95e9695feecd9ea99749b
+- run_tag: null
+- device: cuda
+- seed: 12345
+- dataset_root: D:\datasets\bdc\simplified_wiki_v0\20260201\full_build
+- training:
+  {batch_size:32, eval_every:1000, eval_max_docs:2000, lr:0.0003, max_steps:100000000, seq_len:256, num_workers:4, pin_memory:true, prefetch_factor:2, persistent_workers:true, weight_decay:0.01, ...}
+
+RUN_STATUS.json:
+- state: COMPLETED
+- step: 30827
+- last_eval_step: 30827
+- ts_utc: 2026-02-09T16:56:41Z
+- wall_s: 2750.039653
+
+metrics.json:
+- final_step: 30827
+- val.masked_accuracy: 0.4811008153250761
+- test.masked_accuracy: 0.4637265515179913
+- baseline_shuffled_val.masked_accuracy: 0.027646855475831133
+- verdict_kc_sanity: PASS
+
+== S4_policy_eval_presence_and_mapping ==
+policy_eval.json: PRESENT
+Excerpt (first lines): (see bundle report for full file path + hashes)
+
+== S5_snapshots_status ==
+snapshot_root: ui\pacman_viz\_snapshots\task0149_live_45m_viz
+LATEST.json:
+- LATEST.ts_utc 2026-02-09T18:09:49Z
+- LATEST.step 30827
+- LATEST.data_status complete
+- LATEST.quat_source policy_eval
+- LATEST.quat_state YES
+
+snapshot_count_strict (regex snapshot_YYYYmmddTHHMMSSZ.json): 119
+last_snapshot: snapshot_20260209T180949Z.json
+last_snapshot_sha256: ce40c662cddd8436fa439bf660f3b2e7253b9d4f48f031af18a0126e58f8db6f
+latest_sha256: ce40c662cddd8436fa439bf660f3b2e7253b9d4f48f031af18a0126e58f8db6f
+
+== S6_localhost_server_health ==
+GET http://127.0.0.1:8848/viewer.html:
+- HTTP/1.0 200 OK
+- Content-Type: text/html; charset=utf-8
+- Cache-Control: no-store
+
+GET http://127.0.0.1:8848/LATEST.json:
+- HTTP/1.0 200 OK
+- Content-Type: application/json; charset=utf-8
+- Cache-Control: no-store
+
+netstat -ano | findstr :8848:
+- TCP 127.0.0.1:8848 LISTENING (pid=21472)
+
+== S7_policy_eval_tool_stdout_snapshot ==
+python tools/analysis/exp0017_progress_policy_eval.py ...:
+- POLICY_EVAL_EXIT=0
+- verdict PASS
+- JSON stdout snapshot was printed (see report md for embedded JSON).

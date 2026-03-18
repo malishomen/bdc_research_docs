@@ -1,0 +1,31 @@
+{
+  "task_id": "TASK-6700-CAUSAL-GRADIENT-DYNAMICS",
+  "phase": 17,
+  "project": "Bio Digital Core",
+  "priority": "critical",
+  "status": "planned",
+  "objective": "Validate that role weight dynamics follow replicator equation driven by causal contributions.",
+  "hypothesis": {
+    "statement": "Role weight updates follow replicator dynamics with causal contribution acting as fitness.",
+    "equation": "Δw_r ≈ w_r (C_r - mean(C))"
+  },
+  "runner": {
+    "script": "scripts/analysis/run_phase17_gradient_dynamics.py"
+  },
+  "outputs": [
+    "results/causal_dynamics/weight_dynamics.csv",
+    "results/causal_dynamics/replicator_fit.csv",
+    "results/causal_dynamics/lyapunov_curve.csv",
+    "results/causal_dynamics/dynamics_validation.json"
+  ],
+  "report": "reports/analysis/TASK-6700-CAUSAL-DYNAMICS/TASK-6700_BRIEF_REPORT.md",
+  "artifacts_contract": {
+    "results_directory": "results/causal_dynamics/",
+    "append_only_logs": [
+      "AGENTS_LOG.md",
+      "WEEKLY_STATUS.md"
+    ],
+    "git_branch": "origin/test",
+    "results_not_committed": true
+  }
+}

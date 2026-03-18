@@ -1,0 +1,267 @@
+{
+  "task_id": "TASK-1207A-METRICS-REPRO",
+  "root": "results\\edp1_exp0200_v2_staged",
+  "seeds_found": 30,
+  "rows_with_metrics": 30,
+  "computed": {
+    "mean_final_max_accuracy": 0.7884765625,
+    "mean_final_mean_accuracy": 0.5883697916666667,
+    "mean_final_max_fitness": 0.5524726487966959,
+    "mean_final_max_complexity": "UNVERIFIED",
+    "mean_final_max_penalty": "UNVERIFIED"
+  },
+  "declared": {
+    "report_max_accuracy_mean": 0.6904947916666666,
+    "comparison_max_accuracy_mean": 0.7884765625
+  },
+  "discrepancy": {
+    "report_mismatch": true,
+    "comparison_mismatch": false
+  },
+  "reporting_status": "FAIL",
+  "reporting_status_reasons": [
+    "TASK-1206_BRIEF_REPORT max_accuracy label/value mismatch"
+  ],
+  "per_seed_final": [
+    {
+      "seed_dir": "seed_1337",
+      "final_max_accuracy": 0.759765625,
+      "final_mean_accuracy": 0.55966796875,
+      "final_max_fitness": 0.5397224385258322,
+      "final_complexity": "UNVERIFIED",
+      "final_penalty": "UNVERIFIED"
+    },
+    {
+      "seed_dir": "seed_1338",
+      "final_max_accuracy": 0.796875,
+      "final_mean_accuracy": 0.5744921875,
+      "final_max_fitness": 0.5812162576179807,
+      "final_complexity": "UNVERIFIED",
+      "final_penalty": "UNVERIFIED"
+    },
+    {
+      "seed_dir": "seed_1339",
+      "final_max_accuracy": 0.818359375,
+      "final_mean_accuracy": 0.56111328125,
+      "final_max_fitness": 0.5783677959636917,
+      "final_complexity": "UNVERIFIED",
+      "final_penalty": "UNVERIFIED"
+    },
+    {
+      "seed_dir": "seed_1340",
+      "final_max_accuracy": 0.751953125,
+      "final_mean_accuracy": 0.5752734375,
+      "final_max_fitness": 0.5037186931178552,
+      "final_complexity": "UNVERIFIED",
+      "final_penalty": "UNVERIFIED"
+    },
+    {
+      "seed_dir": "seed_1341",
+      "final_max_accuracy": 0.806640625,
+      "final_mean_accuracy": 0.62888671875,
+      "final_max_fitness": 0.5768299503260995,
+      "final_complexity": "UNVERIFIED",
+      "final_penalty": "UNVERIFIED"
+    },
+    {
+      "seed_dir": "seed_1342",
+      "final_max_accuracy": 0.775390625,
+      "final_mean_accuracy": 0.58912109375,
+      "final_max_fitness": 0.5630273932454458,
+      "final_complexity": "UNVERIFIED",
+      "final_penalty": "UNVERIFIED"
+    },
+    {
+      "seed_dir": "seed_1343",
+      "final_max_accuracy": 0.779296875,
+      "final_mean_accuracy": 0.58736328125,
+      "final_max_fitness": 0.5358181421718479,
+      "final_complexity": "UNVERIFIED",
+      "final_penalty": "UNVERIFIED"
+    },
+    {
+      "seed_dir": "seed_1344",
+      "final_max_accuracy": 0.783203125,
+      "final_mean_accuracy": 0.58513671875,
+      "final_max_fitness": 0.578403002003575,
+      "final_complexity": "UNVERIFIED",
+      "final_penalty": "UNVERIFIED"
+    },
+    {
+      "seed_dir": "seed_1345",
+      "final_max_accuracy": 0.7734375,
+      "final_mean_accuracy": 0.57876953125,
+      "final_max_fitness": 0.5082989731916543,
+      "final_complexity": "UNVERIFIED",
+      "final_penalty": "UNVERIFIED"
+    },
+    {
+      "seed_dir": "seed_1346",
+      "final_max_accuracy": 0.787109375,
+      "final_mean_accuracy": 0.561875,
+      "final_max_fitness": 0.5441050073727194,
+      "final_complexity": "UNVERIFIED",
+      "final_penalty": "UNVERIFIED"
+    },
+    {
+      "seed_dir": "seed_1347",
+      "final_max_accuracy": 0.77734375,
+      "final_mean_accuracy": 0.5992578125,
+      "final_max_fitness": 0.5652122120592267,
+      "final_complexity": "UNVERIFIED",
+      "final_penalty": "UNVERIFIED"
+    },
+    {
+      "seed_dir": "seed_1348",
+      "final_max_accuracy": 0.796875,
+      "final_mean_accuracy": 0.625078125,
+      "final_max_fitness": 0.5611582836857185,
+      "final_complexity": "UNVERIFIED",
+      "final_penalty": "UNVERIFIED"
+    },
+    {
+      "seed_dir": "seed_1349",
+      "final_max_accuracy": 0.814453125,
+      "final_mean_accuracy": 0.56216796875,
+      "final_max_fitness": 0.6004559948155073,
+      "final_complexity": "UNVERIFIED",
+      "final_penalty": "UNVERIFIED"
+    },
+    {
+      "seed_dir": "seed_1350",
+      "final_max_accuracy": 0.76953125,
+      "final_mean_accuracy": 0.58447265625,
+      "final_max_fitness": 0.5618072728297916,
+      "final_complexity": "UNVERIFIED",
+      "final_penalty": "UNVERIFIED"
+    },
+    {
+      "seed_dir": "seed_1351",
+      "final_max_accuracy": 0.80859375,
+      "final_mean_accuracy": 0.6402734375,
+      "final_max_fitness": 0.5473225362650985,
+      "final_complexity": "UNVERIFIED",
+      "final_penalty": "UNVERIFIED"
+    },
+    {
+      "seed_dir": "seed_1352",
+      "final_max_accuracy": 0.810546875,
+      "final_mean_accuracy": 0.5747265625,
+      "final_max_fitness": 0.5395354257472579,
+      "final_complexity": "UNVERIFIED",
+      "final_penalty": "UNVERIFIED"
+    },
+    {
+      "seed_dir": "seed_1353",
+      "final_max_accuracy": 0.798828125,
+      "final_mean_accuracy": 0.60759765625,
+      "final_max_fitness": 0.5512294235554211,
+      "final_complexity": "UNVERIFIED",
+      "final_penalty": "UNVERIFIED"
+    },
+    {
+      "seed_dir": "seed_1354",
+      "final_max_accuracy": 0.763671875,
+      "final_mean_accuracy": 0.5628125,
+      "final_max_fitness": 0.5408624118658997,
+      "final_complexity": "UNVERIFIED",
+      "final_penalty": "UNVERIFIED"
+    },
+    {
+      "seed_dir": "seed_1355",
+      "final_max_accuracy": 0.787109375,
+      "final_mean_accuracy": 0.61720703125,
+      "final_max_fitness": 0.5338106734754378,
+      "final_complexity": "UNVERIFIED",
+      "final_penalty": "UNVERIFIED"
+    },
+    {
+      "seed_dir": "seed_1356",
+      "final_max_accuracy": 0.82421875,
+      "final_mean_accuracy": 0.57255859375,
+      "final_max_fitness": 0.5792596251174615,
+      "final_complexity": "UNVERIFIED",
+      "final_penalty": "UNVERIFIED"
+    },
+    {
+      "seed_dir": "seed_1357",
+      "final_max_accuracy": 0.7890625,
+      "final_mean_accuracy": 0.59380859375,
+      "final_max_fitness": 0.5677947015104285,
+      "final_complexity": "UNVERIFIED",
+      "final_penalty": "UNVERIFIED"
+    },
+    {
+      "seed_dir": "seed_1358",
+      "final_max_accuracy": 0.771484375,
+      "final_mean_accuracy": 0.59755859375,
+      "final_max_fitness": 0.5539027966590568,
+      "final_complexity": "UNVERIFIED",
+      "final_penalty": "UNVERIFIED"
+    },
+    {
+      "seed_dir": "seed_1359",
+      "final_max_accuracy": 0.794921875,
+      "final_mean_accuracy": 0.5921875,
+      "final_max_fitness": 0.5769572941963611,
+      "final_complexity": "UNVERIFIED",
+      "final_penalty": "UNVERIFIED"
+    },
+    {
+      "seed_dir": "seed_1360",
+      "final_max_accuracy": 0.80078125,
+      "final_mean_accuracy": 0.61572265625,
+      "final_max_fitness": 0.5485267878340434,
+      "final_complexity": "UNVERIFIED",
+      "final_penalty": "UNVERIFIED"
+    },
+    {
+      "seed_dir": "seed_1361",
+      "final_max_accuracy": 0.7890625,
+      "final_mean_accuracy": 0.58265625,
+      "final_max_fitness": 0.5394831448507766,
+      "final_complexity": "UNVERIFIED",
+      "final_penalty": "UNVERIFIED"
+    },
+    {
+      "seed_dir": "seed_1362",
+      "final_max_accuracy": 0.783203125,
+      "final_mean_accuracy": 0.56474609375,
+      "final_max_fitness": 0.5283222566384258,
+      "final_complexity": "UNVERIFIED",
+      "final_penalty": "UNVERIFIED"
+    },
+    {
+      "seed_dir": "seed_1363",
+      "final_max_accuracy": 0.787109375,
+      "final_mean_accuracy": 0.567890625,
+      "final_max_fitness": 0.5260787477612214,
+      "final_complexity": "UNVERIFIED",
+      "final_penalty": "UNVERIFIED"
+    },
+    {
+      "seed_dir": "seed_1364",
+      "final_max_accuracy": 0.78515625,
+      "final_mean_accuracy": 0.59916015625,
+      "final_max_fitness": 0.5543934482968906,
+      "final_complexity": "UNVERIFIED",
+      "final_penalty": "UNVERIFIED"
+    },
+    {
+      "seed_dir": "seed_1365",
+      "final_max_accuracy": 0.775390625,
+      "final_mean_accuracy": 0.57330078125,
+      "final_max_fitness": 0.5387388257498043,
+      "final_complexity": "UNVERIFIED",
+      "final_penalty": "UNVERIFIED"
+    },
+    {
+      "seed_dir": "seed_1366",
+      "final_max_accuracy": 0.794921875,
+      "final_mean_accuracy": 0.6162109375,
+      "final_max_fitness": 0.5498199474503469,
+      "final_complexity": "UNVERIFIED",
+      "final_penalty": "UNVERIFIED"
+    }
+  ]
+}

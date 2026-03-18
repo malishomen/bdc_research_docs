@@ -1,0 +1,56 @@
+{
+  "task_id": "TASK-7460-BDC-PACKET-V2-VALIDATOR-AND-QUALITY-ENGINE",
+  "project": "Bio Digital Core",
+  "phase": 37,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-14",
+  "objective": "Implement packet validation, contradiction detection, and packet quality scoring so v2 never reasons over malformed or weakly specified inputs without explicit downgrade.",
+  "research_question": "How should BDC CLI v2 quantify packet quality and expose contradictions before any architecture recommendation is produced?",
+  "depends_on": [
+    "TASK-7450-BDC-PACKET-V2-SCHEMA-AND-DATA-MODELS"
+  ],
+  "execution_rules": {
+    "phase_gate": "May start only after TASK-7450 is SUCCESS.",
+    "parallel_execution_allowed": false,
+    "scope_expansion_forbidden": true
+  },
+  "runner": {
+    "script": "scripts/analysis/run_phase37_bdc_packet_v2_validator_and_quality_engine.py"
+  },
+  "outputs": [
+    "src/bdc_designer_v2/validator.py",
+    "schemas/BDC_PACKET_VALIDATION_REPORT_V2.json",
+    "results/bdc_cli_v2_validation/validator_case_matrix.csv",
+    "results/bdc_cli_v2_validation/packet_quality_examples.json",
+    "reports/analysis/TASK-7460-BDC-PACKET-V2-VALIDATOR-AND-QUALITY-ENGINE/TASK-7460_BRIEF_REPORT.md"
+  ],
+  "tests_required": [
+    "missing required fields produce deterministic errors",
+    "contradictory packet facts produce contradiction flags",
+    "weak evidence packets are downgraded to lower packet quality",
+    "validator emits machine-readable reports with no silent acceptance of malformed packets"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "machine_readable_validation_report_exists": true,
+      "packet_quality_score_emitted": true,
+      "contradiction_detection_works": true,
+      "malformed_packets_never_pass_silently": true
+    }
+  },
+  "definition_of_done": [
+    "validator implemented",
+    "validation report schema implemented",
+    "contradiction detection implemented",
+    "packet quality score emitted deterministically",
+    "brief report generated",
+    "append-only logs updated"
+  ],
+  "out_of_scope": [
+    "role reasoning",
+    "final recommendation logic"
+  ]
+}
+

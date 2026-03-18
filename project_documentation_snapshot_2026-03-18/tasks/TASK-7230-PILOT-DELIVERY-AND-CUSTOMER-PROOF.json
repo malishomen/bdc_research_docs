@@ -1,0 +1,21 @@
+{
+  "task_id": "TASK-7230-PILOT-DELIVERY-AND-CUSTOMER-PROOF",
+  "project": "Bio Digital Core",
+  "phase": 30,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Deliver the first formal pilot, measure outcomes against agreed criteria, and extract customer-facing proof assets.",
+  "research_question": "Can BDC create a successful pilot outcome yielding credible external proof without overstating result?",
+  "runner": {
+    "script": "scripts/analysis/run_phase30_pilot_delivery_and_customer_proof.py"
+  },
+  "outputs": [
+    "results/pilot_delivery/pilot_execution_log.csv",
+    "results/pilot_delivery/outcome_vs_success_criteria.csv",
+    "results/pilot_delivery/customer_proof_summary.json",
+    "reports/analysis/TASK-7230-PILOT-DELIVERY-AND-CUSTOMER-PROOF/TASK-7230_BRIEF_REPORT.md",
+    "reports/public_release/TASK-7230-PILOT-DELIVERY-AND-CUSTOMER-PROOF/PILOT_PROOF_ASSET.md"
+  ]
+}

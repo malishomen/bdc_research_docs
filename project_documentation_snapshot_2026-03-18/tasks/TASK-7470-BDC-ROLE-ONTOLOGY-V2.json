@@ -1,0 +1,56 @@
+{
+  "task_id": "TASK-7470-BDC-ROLE-ONTOLOGY-V2",
+  "project": "Bio Digital Core",
+  "phase": 38,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-14",
+  "objective": "Replace toy role abstractions with a real role ontology that encodes mission, value conditions, failure modes, coordination cost, and merge-split logic for supported role families.",
+  "research_question": "What minimum role ontology is required for BDC CLI v2 to reason about real agent-role architecture rather than abstract predictor-critic-aggregator placeholders?",
+  "depends_on": [
+    "TASK-7460-BDC-PACKET-V2-VALIDATOR-AND-QUALITY-ENGINE"
+  ],
+  "execution_rules": {
+    "phase_gate": "May start only after TASK-7460 is SUCCESS.",
+    "parallel_execution_allowed": false,
+    "scope_expansion_forbidden": true
+  },
+  "runner": {
+    "script": "scripts/analysis/run_phase38_bdc_role_ontology_v2.py"
+  },
+  "outputs": [
+    "data/BDC_ROLE_ONTOLOGY_V2.json",
+    "docs/BDC_ROLE_ONTOLOGY_GUIDE.md",
+    "src/bdc_designer_v2/ontology.py",
+    "results/bdc_role_ontology_v2/ontology_validation_matrix.csv",
+    "reports/analysis/TASK-7470-BDC-ROLE-ONTOLOGY-V2/TASK-7470_BRIEF_REPORT.md"
+  ],
+  "tests_required": [
+    "ontology loads and validates",
+    "each required role has mandatory fields",
+    "TextAI_Auto roles map cleanly into ontology",
+    "merge candidate lookups work deterministically"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "minimum_role_set_implemented": true,
+      "role_metadata_queryable": true,
+      "anti_pattern_metadata_present": true,
+      "merge_split_metadata_available": true
+    }
+  },
+  "definition_of_done": [
+    "minimum supported role families implemented",
+    "ontology query layer implemented",
+    "merge and split metadata available",
+    "anti-pattern metadata exposed for diagnostics",
+    "brief report generated",
+    "append-only logs updated"
+  ],
+  "out_of_scope": [
+    "evidence scoring",
+    "strategy mode selection"
+  ]
+}
+

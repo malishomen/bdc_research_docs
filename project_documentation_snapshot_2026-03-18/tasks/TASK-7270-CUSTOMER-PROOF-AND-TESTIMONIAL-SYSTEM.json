@@ -1,0 +1,35 @@
+{
+  "task_id": "TASK-7270-CUSTOMER-PROOF-AND-TESTIMONIAL-SYSTEM",
+  "project": "Bio Digital Core",
+  "phase": 31,
+  "status": "planned",
+  "priority": "high",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Create a repeatable system for turning successful pilots into proof assets, testimonials, mini-cases, and objection-killing evidence.",
+  "research_question": "Can customer proof extraction be systematized so each successful BDC pilot strengthens future conversion and authority?",
+  "runner": {
+    "script": "scripts/analysis/run_phase31_customer_proof_and_testimonial_system.py"
+  },
+  "outputs": [
+    "results/customer_proof/proof_asset_templates.csv",
+    "results/customer_proof/testimonial_capture_flow.json",
+    "results/customer_proof/proof_reuse_matrix.csv",
+    "reports/analysis/TASK-7270-CUSTOMER-PROOF-AND-TESTIMONIAL-SYSTEM/TASK-7270_BRIEF_REPORT.md",
+    "docs/BDC_CUSTOMER_PROOF_SYSTEM.md"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "proof_templates_defined": true,
+      "testimonial_flow_defined": true,
+      "reuse_matrix_defined": true
+    }
+  },
+  "definition_of_done": [
+    "proof templates created",
+    "testimonial flow defined",
+    "reuse matrix created",
+    "brief report generated",
+    "append-only logs updated"
+  ]
+}

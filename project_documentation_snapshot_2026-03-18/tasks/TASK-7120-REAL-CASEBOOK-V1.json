@@ -1,0 +1,40 @@
+{
+  "task_id": "TASK-7120-REAL-CASEBOOK-V1",
+  "project": "Bio Digital Core",
+  "phase": 28,
+  "status": "planned",
+  "priority": "high",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Convert the flagship case and the real-task validation suite into a public-facing casebook that shows how BDC Designer works across different workflow patterns.",
+  "research_question": "Can multiple validated real-task runs be turned into a compact, credible, and reusable casebook for demos, sales, onboarding, and partner education?",
+  "inputs": [
+    "reports/public_release/TASK-7030-CASE-STUDY-REAL-DEPLOYMENT/FLAGSHIP_CASE_STUDY.md",
+    "results/real_task_suite/validation_summary.json",
+    "results/real_task_suite/cross_task_summary.csv"
+  ],
+  "runner": {
+    "script": "scripts/analysis/run_phase28_real_casebook_v1.py"
+  },
+  "outputs": [
+    "results/casebook/casebook_manifest.csv",
+    "results/casebook/workflow_pattern_matrix.csv",
+    "reports/analysis/TASK-7120-REAL-CASEBOOK-V1/TASK-7120_BRIEF_REPORT.md",
+    "reports/public_release/TASK-7120-REAL-CASEBOOK-V1/BDC_REAL_CASEBOOK_V1.md"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "flagship_case_included": true,
+      "minimum_five_real_cases_included": true,
+      "family_pattern_matrix_written": true,
+      "public_casebook_complete": true
+    }
+  },
+  "definition_of_done": [
+    "casebook assembled",
+    "workflow pattern matrix added",
+    "public casebook written",
+    "brief report generated",
+    "append-only logs updated"
+  ]
+}

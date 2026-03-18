@@ -1,0 +1,152 @@
+{
+  "task_id": "TASK-6200-NOISE-REGIME-MAPPING",
+  "project": "Bio Digital Core",
+  "phase": 12,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Map how evaluation noise parameters determine emergent cooperative role ratios in the coevolution system.",
+  "background": {
+    "previous_tasks": [
+      "TASK-5700-COOPERATIVE-COEVOLUTION-ARCHITECTURE",
+      "TASK-5800-RISK-ADJUSTED-WEIGHT-LAW",
+      "TASK-5900-GENERALIZED-WEIGHT-LAW-DISCOVERY",
+      "TASK-6000-LAW-INJECTION-VALIDATION",
+      "TASK-6100-SURVIVAL-PRESSURE-INJECTION"
+    ],
+    "key_findings": [
+      "Stable role ratio emerges (~0.63 / 0.33 / 0.04).",
+      "Empirical law w \u221d sigma^1.57 / mu^0.60 strongly describes equilibrium.",
+      "Direct weight injection does not improve performance.",
+      "Survival-pressure scaling does not improve performance."
+    ],
+    "hypothesis": "Emergent cooperative architecture is governed by evaluation noise regime rather than role weights or explicit selection scaling."
+  },
+  "research_hypothesis": {
+    "statement": "Emergent role ratios depend on the noise regime induced by evaluation sampling parameters.",
+    "noise_parameters": [
+      "evaluation_samples_per_genome",
+      "partners_per_evaluation",
+      "population_size"
+    ]
+  },
+  "experiment_configuration": {
+    "base_seed": 1337,
+    "seeds_per_setting": 20,
+    "generations": 120,
+    "parameter_grid": {
+      "evaluation_samples_per_genome": [
+        2,
+        5,
+        10,
+        20,
+        40
+      ],
+      "partners_per_evaluation": [
+        2,
+        5,
+        10
+      ],
+      "population_size": [
+        32,
+        64,
+        128
+      ]
+    }
+  },
+  "runner": {
+    "script": "scripts/edp1/run_phase12_noise_mapping.py",
+    "engine": "evolution/coevolution_engine.py"
+  },
+  "metrics_collected": [
+    "mean_delta_advantage",
+    "positive_seed_fraction",
+    "role_ratio_predictor",
+    "role_ratio_critic",
+    "role_ratio_aggregator",
+    "role_ratio_variance",
+    "fitness_variance",
+    "generation_to_plateau"
+  ],
+  "experiment_blocks": [
+    {
+      "block_id": "TASK-6201",
+      "title": "PARAMETER GRID EXECUTION",
+      "goal": "Run coevolution across full noise parameter grid.",
+      "outputs": [
+        "results/noise_mapping/per_seed_metrics.csv",
+        "results/noise_mapping/grid_summary.csv"
+      ]
+    },
+    {
+      "block_id": "TASK-6202",
+      "title": "ROLE-RATIO SURFACE",
+      "goal": "Compute emergent role ratios across parameter space.",
+      "outputs": [
+        "results/noise_mapping/role_ratio_surface.csv"
+      ]
+    },
+    {
+      "block_id": "TASK-6203",
+      "title": "NOISE VS ARCHITECTURE ANALYSIS",
+      "goal": "Measure correlation between evaluation noise and role ratios.",
+      "analysis_metrics": [
+        "pearson_correlation",
+        "spearman_correlation",
+        "variance_explained"
+      ],
+      "outputs": [
+        "results/noise_mapping/noise_architecture_correlation.csv"
+      ]
+    },
+    {
+      "block_id": "TASK-6204",
+      "title": "PERFORMANCE REGION IDENTIFICATION",
+      "goal": "Identify regions of parameter space with highest cooperative performance.",
+      "outputs": [
+        "results/noise_mapping/performance_regions.csv"
+      ]
+    },
+    {
+      "block_id": "TASK-6205",
+      "title": "ARCHITECTURE PHASE DIAGRAM",
+      "goal": "Construct phase diagram linking noise regime to emergent cooperative architecture.",
+      "outputs": [
+        "results/noise_mapping/architecture_phase_diagram.csv"
+      ]
+    },
+    {
+      "block_id": "TASK-6206",
+      "title": "FINAL REPORT",
+      "goal": "Document noise-regime influence on cooperative architecture.",
+      "report": "reports/analysis/TASK-6200-NOISE-MAPPING/TASK-6200_BRIEF_REPORT.md"
+    }
+  ],
+  "evaluation_criteria": {
+    "hypothesis_supported_if": {
+      "role_ratio_variation_detected": true,
+      "noise_correlation_min": 0.6,
+      "distinct_architecture_regions": true
+    }
+  },
+  "definition_of_done": [
+    "All parameter combinations executed.",
+    "Role ratios computed for all settings.",
+    "Noise-to-architecture correlations calculated.",
+    "Performance regions identified.",
+    "Architecture phase diagram constructed.",
+    "Final report produced.",
+    "Append-only logs updated."
+  ],
+  "artifacts_contract": {
+    "results_directory": "results/noise_mapping/",
+    "reports_directory": "reports/analysis/",
+    "append_only_logs": [
+      "AGENTS_LOG.md",
+      "WEEKLY_STATUS.md"
+    ],
+    "git_branch": "origin/test",
+    "results_not_committed": true
+  }
+}

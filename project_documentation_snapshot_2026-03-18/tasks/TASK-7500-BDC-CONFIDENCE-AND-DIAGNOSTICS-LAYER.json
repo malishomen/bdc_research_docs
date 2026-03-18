@@ -1,0 +1,57 @@
+{
+  "task_id": "TASK-7500-BDC-CONFIDENCE-AND-DIAGNOSTICS-LAYER",
+  "project": "Bio Digital Core",
+  "phase": 41,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-14",
+  "objective": "Implement confidence calibration, caution zones, prior-evidence conflict detection, and insufficiency modes so v2 communicates uncertainty explicitly.",
+  "research_question": "How should BDC CLI v2 quantify confidence and expose caution states without masking weak evidence, contradictions, or out-of-scope cases?",
+  "depends_on": [
+    "TASK-7490-BDC-STRATEGY-ENGINE-V2"
+  ],
+  "execution_rules": {
+    "phase_gate": "May start only after TASK-7490 is SUCCESS.",
+    "parallel_execution_allowed": false,
+    "scope_expansion_forbidden": true
+  },
+  "runner": {
+    "script": "scripts/analysis/run_phase41_bdc_confidence_and_diagnostics_layer.py"
+  },
+  "outputs": [
+    "src/bdc_designer_v2/confidence.py",
+    "src/bdc_designer_v2/diagnostics.py",
+    "schemas/BDC_CONFIDENCE_STATE_V2.json",
+    "results/bdc_confidence/confidence_calibration_cases.csv",
+    "reports/analysis/TASK-7500-BDC-CONFIDENCE-AND-DIAGNOSTICS-LAYER/TASK-7500_BRIEF_REPORT.md"
+  ],
+  "tests_required": [
+    "low evidence lowers confidence",
+    "contradiction lowers confidence",
+    "prior-evidence conflict explicitly emitted",
+    "insufficient data mode triggered when tested-variant evidence is absent",
+    "no overconfident result on low-quality packets"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "confidence_bands_emitted": true,
+      "diagnostics_include_conflict_flags": true,
+      "caution_zones_exposed": true,
+      "low_quality_packets_never_receive_high_confidence": true
+    }
+  },
+  "definition_of_done": [
+    "confidence logic implemented",
+    "diagnostics logic implemented",
+    "conflict flags and insufficiency mode exposed",
+    "confidence calibration behavior tested",
+    "brief report generated",
+    "append-only logs updated"
+  ],
+  "out_of_scope": [
+    "operator-facing natural language explanations",
+    "CLI command design"
+  ]
+}
+

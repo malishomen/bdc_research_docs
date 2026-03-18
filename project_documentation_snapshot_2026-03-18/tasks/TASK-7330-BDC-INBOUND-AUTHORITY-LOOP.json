@@ -1,0 +1,35 @@
+{
+  "task_id": "TASK-7330-BDC-INBOUND-AUTHORITY-LOOP",
+  "project": "Bio Digital Core",
+  "phase": 32,
+  "status": "planned",
+  "priority": "high",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Turn the growing body of BDC proof, case assets, and release materials into a repeatable inbound authority loop that improves trust and lead quality.",
+  "research_question": "Can BDC Designer create inbound momentum by packaging validated outcomes, proof assets, and restricted-claim authority into high-trust public materials?",
+  "runner": {
+    "script": "scripts/analysis/run_phase32_bdc_inbound_authority_loop.py"
+  },
+  "outputs": [
+    "results/inbound_authority/content_asset_plan.csv",
+    "results/inbound_authority/proof_to_content_map.csv",
+    "results/inbound_authority/inbound_signal_targets.json",
+    "reports/analysis/TASK-7330-BDC-INBOUND-AUTHORITY-LOOP/TASK-7330_BRIEF_REPORT.md",
+    "docs/BDC_INBOUND_AUTHORITY_PLAYBOOK.md"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "content_asset_plan_defined": true,
+      "proof_to_content_mapping_complete": true,
+      "inbound_targets_defined": true
+    }
+  },
+  "definition_of_done": [
+    "authority loop planned",
+    "proof mapped to content",
+    "inbound targets defined",
+    "brief report generated",
+    "append-only logs updated"
+  ]
+}

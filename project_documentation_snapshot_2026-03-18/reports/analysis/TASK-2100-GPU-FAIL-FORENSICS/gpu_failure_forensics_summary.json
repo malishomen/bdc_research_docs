@@ -1,0 +1,124 @@
+{
+  "schema_version": "task2100-gpu-forensics-v1",
+  "source_run_index": "results/exp_0700_applied/diagnostic/aggregates/run_index_v2.json",
+  "n_rows": 10,
+  "n_failures": 6,
+  "n_success": 4,
+  "seed_range": [
+    1337,
+    1346
+  ],
+  "rows": [
+    {
+      "seed": 1337,
+      "return_code": 1,
+      "error_signature": "softmax_assert",
+      "amp_enabled": true,
+      "requested_device": "cuda",
+      "resolved_device": "unknown"
+    },
+    {
+      "seed": 1338,
+      "return_code": 1,
+      "error_signature": "softmax_assert",
+      "amp_enabled": true,
+      "requested_device": "cuda",
+      "resolved_device": "unknown"
+    },
+    {
+      "seed": 1339,
+      "return_code": 0,
+      "error_signature": "none",
+      "amp_enabled": true,
+      "requested_device": "cuda",
+      "resolved_device": "cuda:0"
+    },
+    {
+      "seed": 1340,
+      "return_code": 1,
+      "error_signature": "softmax_assert",
+      "amp_enabled": true,
+      "requested_device": "cuda",
+      "resolved_device": "unknown"
+    },
+    {
+      "seed": 1341,
+      "return_code": 1,
+      "error_signature": "softmax_assert",
+      "amp_enabled": true,
+      "requested_device": "cuda",
+      "resolved_device": "unknown"
+    },
+    {
+      "seed": 1342,
+      "return_code": 1,
+      "error_signature": "softmax_assert",
+      "amp_enabled": true,
+      "requested_device": "cuda",
+      "resolved_device": "unknown"
+    },
+    {
+      "seed": 1343,
+      "return_code": 0,
+      "error_signature": "none",
+      "amp_enabled": true,
+      "requested_device": "cuda",
+      "resolved_device": "cuda:0"
+    },
+    {
+      "seed": 1344,
+      "return_code": 1,
+      "error_signature": "softmax_assert",
+      "amp_enabled": true,
+      "requested_device": "cuda",
+      "resolved_device": "unknown"
+    },
+    {
+      "seed": 1345,
+      "return_code": 0,
+      "error_signature": "none",
+      "amp_enabled": true,
+      "requested_device": "cuda",
+      "resolved_device": "cuda:0"
+    },
+    {
+      "seed": 1346,
+      "return_code": 0,
+      "error_signature": "none",
+      "amp_enabled": true,
+      "requested_device": "cuda",
+      "resolved_device": "cuda:0"
+    }
+  ],
+  "root_cause_ranking": [
+    {
+      "rank": 1,
+      "hypothesis": "strict_softmax_assert_in_fp16_path",
+      "evidence_ratio": 1.0,
+      "status": "confirmed"
+    },
+    {
+      "rank": 2,
+      "hypothesis": "amp_rounding_tolerance_mismatch",
+      "evidence_ratio": 1.0,
+      "status": "likely"
+    },
+    {
+      "rank": 3,
+      "hypothesis": "overflow_or_nan_in_logits",
+      "evidence_ratio": 0.0,
+      "status": "not_observed_in_failures"
+    },
+    {
+      "rank": 4,
+      "hypothesis": "device_or_runtime_instability",
+      "evidence_ratio": 0.0,
+      "status": "not_observed_in_failures"
+    }
+  ],
+  "notes": [
+    "All reproduced failures map to softmax_assert in run_once.py line 195 under --use_amp.",
+    "No CUDA OOM signatures detected.",
+    "No NaN-detected kill status reached before assertion."
+  ]
+}

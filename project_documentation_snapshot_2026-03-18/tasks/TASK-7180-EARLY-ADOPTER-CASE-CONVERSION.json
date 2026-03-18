@@ -1,0 +1,30 @@
+{
+  "task_id": "TASK-7180-EARLY-ADOPTER-CASE-CONVERSION",
+  "project": "Bio Digital Core",
+  "phase": 29,
+  "status": "planned",
+  "priority": "high",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Turn proof assets into a concrete early-adopter conversion process for real pilot conversations.",
+  "research_question": "Can BDC proof assets be turned into a repeatable conversion path from outreach to demo to pilot qualification?",
+  "runner": {
+    "script": "scripts/analysis/run_phase29_early_adopter_case_conversion.py"
+  },
+  "outputs": [
+    "results/case_conversion/icp_matrix.csv",
+    "results/case_conversion/demo_to_pilot_flow.json",
+    "results/case_conversion/objection_response_map.csv",
+    "results/case_conversion/contact_priority_list.csv",
+    "reports/analysis/TASK-7180-EARLY-ADOPTER-CASE-CONVERSION/TASK-7180_BRIEF_REPORT.md",
+    "docs/BDC_EARLY_ADOPTER_CONVERSION_PLAYBOOK.md"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "icp_matrix_defined": true,
+      "demo_to_pilot_flow_defined": true,
+      "objection_map_defined": true,
+      "priority_contact_logic_defined": true
+    }
+  }
+}

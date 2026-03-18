@@ -1,0 +1,14 @@
+{
+  "task_id": "TASK-6900-PAPER-READY-RESTRICTED-BDC-CONSOLIDATION",
+  "project": "Bio Digital Core",
+  "phase": 21,
+  "status": "planned",
+  "priority": "high",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Produce a publication-ready restricted BDC consolidation of positive and negative findings.",
+  "runner": {
+    "script": "scripts/analysis/run_phase21_paper_ready_restricted_bdc_consolidation.py"
+  }
+}
+

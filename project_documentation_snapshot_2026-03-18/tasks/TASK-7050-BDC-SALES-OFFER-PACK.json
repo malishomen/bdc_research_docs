@@ -1,0 +1,84 @@
+{
+  "task_id": "TASK-7050-BDC-SALES-OFFER-PACK",
+  "project": "Bio Digital Core",
+  "phase": 27,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Create the first commercial packaging layer for BDC Designer and Restricted BDC services, covering audit, workshop, pilot, and hybrid architecture design offers.",
+  "research_question": "Can the validated BDC asset be translated into a clear, credible, and commercially usable offer pack without overstating what the system does?",
+  "offer_types": [
+    {
+      "id": "O1",
+      "name": "Architecture Audit",
+      "description": "Short assessment of a client's current cooperative AI workflow with BDC-based recommendations."
+    },
+    {
+      "id": "O2",
+      "name": "Workshop",
+      "description": "Architecture design workshop for engineering and product teams."
+    },
+    {
+      "id": "O3",
+      "name": "Pilot Engagement",
+      "description": "BDC-guided pilot architecture redesign on one selected workflow."
+    },
+    {
+      "id": "O4",
+      "name": "Hybrid Design Advisory",
+      "description": "Higher-touch service using BDC CLI plus hybrid search guidance."
+    }
+  ],
+  "sales_assets": [
+    "one_page_offer",
+    "offer_matrix",
+    "pricing_tiers",
+    "objection_handling",
+    "nonfit_customer_filter",
+    "faq",
+    "proof_points",
+    "flagship_case_summary"
+  ],
+  "runner": {
+    "script": "scripts/analysis/run_phase27_bdc_sales_offer_pack.py"
+  },
+  "outputs": [
+    "results/sales_offer/offer_matrix.csv",
+    "results/sales_offer/pricing_tiers.csv",
+    "results/sales_offer/objection_map.csv",
+    "results/sales_offer/nonfit_filter.json",
+    "reports/analysis/TASK-7050-BDC-SALES-OFFER-PACK/TASK-7050_BRIEF_REPORT.md",
+    "reports/public_release/TASK-7050-BDC-SALES-OFFER-PACK/BDC_ONE_PAGE_OFFER.md",
+    "reports/public_release/TASK-7050-BDC-SALES-OFFER-PACK/BDC_SALES_FAQ.md"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "all_offer_types_packaged": true,
+      "pricing_tiers_defined": true,
+      "objection_handling_written": true,
+      "nonfit_filter_present": true,
+      "flagship_case_used_as_proof": true
+    }
+  },
+  "definition_of_done": [
+    "offer pack assembled",
+    "pricing tiers defined",
+    "objections mapped",
+    "nonfit customer filter written",
+    "public one-page offer written",
+    "brief report generated",
+    "append-only logs updated"
+  ],
+  "artifacts_contract": {
+    "results_directory": "results/sales_offer/",
+    "reports_directory": "reports/analysis/",
+    "public_reports_directory": "reports/public_release/",
+    "append_only_logs": [
+      "AGENTS_LOG.md",
+      "WEEKLY_STATUS.md"
+    ],
+    "git_branch": "origin/test",
+    "results_not_committed": true
+  }
+}

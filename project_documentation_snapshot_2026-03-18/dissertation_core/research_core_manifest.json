@@ -1,0 +1,94 @@
+{
+  "created": "2026-03-18",
+  "purpose": "Curated research bundle for continued BDC investigations",
+  "root": "D:\\projects\\Bio_Digital_Core\\Temp\\research\\project_documentation_snapshot_2026-03-18\\dissertation_core",
+  "file_count": 37,
+  "included_files": [
+    "CANON.md",
+    "SEMANTICS.md",
+    "SEED_POLICY.md",
+    "KILL_CRITERIA.yaml",
+    "REPRODUCIBILITY.md",
+    "VERSIONING.md",
+    "ARCHITECTURE.md",
+    "EVOLUTION_ENGINE.md",
+    "RESEARCH_METHODOLOGY.md",
+    "docs\\project\\project_main_doc.md",
+    "docs\\project\\project_roadmap.md",
+    "docs\\project\\BDC_PROJECT_HISTORY_MAP.md",
+    "docs\\project\\BDC_RESEARCH_REBOOT_PLAN.md",
+    "docs\\project\\BDC_RESEARCH_REBOOT_CHARTER.md",
+    "docs\\project\\BDC_DESIGNER_FREEZE_STATE.md",
+    "docs\\project\\BDC_DESIGNER_POST_TEXTAI_ROADMAP.md",
+    "docs\\project\\BDC_ROADMAP_Paramecium_MVP_TRL-3.md",
+    "docs\\EXPERIMENT_QUATERNARY_LOGIC.md",
+    "docs\\EXPERIMENT_DNA_COMPRESSION.md",
+    "docs\\EXPERIMENT_PISTREAM_V3.md",
+    "docs\\EXPERIMENT_EDP1_SYMBOLIC_RULE_EVOLUTION.md",
+    "docs\\experiments\\EXP-0800_SELECTION_PHYSICS_REBOOT_2026-03-17.md",
+    "decisions\\ADR-0004-hidden-rule-closure.md",
+    "decisions\\ADR-0005-complexity-regime.md",
+    "reports\\analysis\\TASK-1208-SCIENTIFIC-SNAPSHOT\\EDP1_SCIENTIFIC_SNAPSHOT_1208.md",
+    "reports\\analysis\\TASK-1400-COMPLEXITY-AUDIT\\TASK-1400_BRIEF_REPORT.md",
+    "reports\\analysis\\TASK-1400B-COMPLEXITY-AUDIT-ADDENDUM\\TASK-1400B_BRIEF_REPORT.md",
+    "reports\\analysis\\TASK-6890-CAUSAL-ARCHITECTURE-DESIGN-RULEBOOK\\TASK-6890_BRIEF_REPORT.md",
+    "reports\\analysis\\TASK-6900-PAPER-READY-RESTRICTED-BDC-CONSOLIDATION\\TASK-6900_BRIEF_REPORT.md",
+    "reports\\analysis\\TASK-6980-BDC-TOOLING-PROTOTYPE\\TOOL_SPEC.md",
+    "reports\\analysis\\TASK-7020-BDC-DESIGNER-CLI\\TASK-7020_BRIEF_REPORT.md",
+    "reports\\analysis\\TASK-7030-CASE-STUDY-REAL-DEPLOYMENT\\TASK-7030_BRIEF_REPORT.md",
+    "reports\\analysis\\TASK-7550-BDC-CLI-V2-PRODUCTIZATION-AND-RELEASE\\TASK-7550_BRIEF_REPORT.md",
+    "temp_sources\\bdc_dissertation_draft.md",
+    "temp_sources\\bdc_dissertation_extended_draft.md",
+    "temp_sources\\bdc_dissertation_omitted_materials_map.md"
+  ],
+  "categories": {
+    "temp_notes": [
+      "temp_sources/bdc_dissertation_draft.md",
+      "temp_sources/bdc_dissertation_extended_draft.md",
+      "temp_sources/bdc_dissertation_omitted_materials_map.md"
+    ],
+    "restricted_and_spinout": [
+      "reports/analysis/TASK-6890-CAUSAL-ARCHITECTURE-DESIGN-RULEBOOK/TASK-6890_BRIEF_REPORT.md",
+      "reports/analysis/TASK-6900-PAPER-READY-RESTRICTED-BDC-CONSOLIDATION/TASK-6900_BRIEF_REPORT.md",
+      "reports/analysis/TASK-6980-BDC-TOOLING-PROTOTYPE/TOOL_SPEC.md",
+      "reports/analysis/TASK-7020-BDC-DESIGNER-CLI/TASK-7020_BRIEF_REPORT.md",
+      "reports/analysis/TASK-7030-CASE-STUDY-REAL-DEPLOYMENT/TASK-7030_BRIEF_REPORT.md",
+      "reports/analysis/TASK-7550-BDC-CLI-V2-PRODUCTIZATION-AND-RELEASE/TASK-7550_BRIEF_REPORT.md",
+      "docs/project/BDC_DESIGNER_FREEZE_STATE.md",
+      "docs/project/BDC_DESIGNER_POST_TEXTAI_ROADMAP.md"
+    ],
+    "hypotheses_and_platform": [
+      "ARCHITECTURE.md",
+      "EVOLUTION_ENGINE.md",
+      "RESEARCH_METHODOLOGY.md",
+      "docs/EXPERIMENT_QUATERNARY_LOGIC.md",
+      "docs/EXPERIMENT_DNA_COMPRESSION.md",
+      "docs/EXPERIMENT_PISTREAM_V3.md",
+      "docs/EXPERIMENT_EDP1_SYMBOLIC_RULE_EVOLUTION.md",
+      "docs/project/BDC_ROADMAP_Paramecium_MVP_TRL-3.md"
+    ],
+    "reboot": [
+      "docs/project/BDC_RESEARCH_REBOOT_PLAN.md",
+      "docs/project/BDC_RESEARCH_REBOOT_CHARTER.md",
+      "docs/experiments/EXP-0800_SELECTION_PHYSICS_REBOOT_2026-03-17.md"
+    ],
+    "governance": [
+      "CANON.md",
+      "SEMANTICS.md",
+      "SEED_POLICY.md",
+      "KILL_CRITERIA.yaml",
+      "REPRODUCIBILITY.md",
+      "VERSIONING.md"
+    ],
+    "project_evolution": [
+      "docs/project/project_main_doc.md",
+      "docs/project/project_roadmap.md",
+      "docs/project/BDC_PROJECT_HISTORY_MAP.md",
+      "decisions/ADR-0004-hidden-rule-closure.md",
+      "decisions/ADR-0005-complexity-regime.md",
+      "reports/analysis/TASK-1208-SCIENTIFIC-SNAPSHOT/EDP1_SCIENTIFIC_SNAPSHOT_1208.md",
+      "reports/analysis/TASK-1400-COMPLEXITY-AUDIT/TASK-1400_BRIEF_REPORT.md",
+      "reports/analysis/TASK-1400B-COMPLEXITY-AUDIT-ADDENDUM/TASK-1400B_BRIEF_REPORT.md"
+    ]
+  }
+}

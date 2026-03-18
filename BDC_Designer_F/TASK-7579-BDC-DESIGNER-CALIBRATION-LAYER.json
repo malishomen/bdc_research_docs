@@ -1,0 +1,54 @@
+{
+  "task_id": "TASK-7579-BDC-DESIGNER-CALIBRATION-LAYER",
+  "project": "Bio Digital Core",
+  "phase": 48,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-18",
+  "objective": "Add calibration-aware confidence evaluation to BDC Designer so that recommendation confidence can be audited with proper scoring and calibration metrics rather than heuristic bands alone.",
+  "research_question": "Can BDC Designer confidence outputs be upgraded into a calibration-audited layer without breaking existing recommendation identity on canonical fixtures?",
+  "depends_on": [
+    "TASK-7578-BDC-DESIGNER-CONFIDENCE-EVIDENCE-IMPORT-PLAN"
+  ],
+  "execution_rules": {
+    "phase_gate": "May start only after the import plan is approved and no implementation work has started ahead of sequence.",
+    "parallel_execution_allowed": false,
+    "scope_expansion_forbidden": true
+  },
+  "runner": {
+    "script": "scripts/analysis/run_phase53_bdc_designer_calibration_layer.py"
+  },
+  "outputs": [
+    "src/bdc_designer_v2/calibration.py",
+    "docs/BDC_DESIGNER_CALIBRATION_AND_ABSTENTION_PLAN.md",
+    "results/bdc_designer_calibration/calibration_summary.json",
+    "reports/analysis/TASK-7579-BDC-DESIGNER-CALIBRATION-LAYER/TASK-7579_BRIEF_REPORT.md"
+  ],
+  "tests_required": [
+    "Brier score tests",
+    "ECE/reliability summary tests",
+    "benchmark fixture calibration output tests",
+    "CLI output compatibility tests"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "calibration_metrics_present": true,
+      "confidence_outputs_extended": true,
+      "canonical_fixture_identity_preserved": true,
+      "operator_facing_summary_written": true
+    }
+  },
+  "definition_of_done": [
+    "calibration module or equivalent extension implemented",
+    "Brier score and ECE outputs exposed",
+    "reliability summary artifact generated",
+    "brief report generated",
+    "append-only logs updated"
+  ],
+  "out_of_scope": [
+    "full selective-prediction contract",
+    "generalized-risk benchmarking",
+    "Belnap-style evidence semantics"
+  ]
+}

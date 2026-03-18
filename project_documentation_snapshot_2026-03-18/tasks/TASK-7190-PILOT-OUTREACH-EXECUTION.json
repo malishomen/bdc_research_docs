@@ -1,0 +1,21 @@
+{
+  "task_id": "TASK-7190-PILOT-OUTREACH-EXECUTION",
+  "project": "Bio Digital Core",
+  "phase": 30,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Execute the first outbound outreach wave for BDC Designer and track response quality and meeting generation.",
+  "research_question": "Can BDC proof assets and outreach playbook generate qualified pilot conversations?",
+  "runner": {
+    "script": "scripts/analysis/run_phase30_pilot_outreach_execution.py"
+  },
+  "outputs": [
+    "results/outreach_execution/contact_batch.csv",
+    "results/outreach_execution/outreach_log.csv",
+    "results/outreach_execution/reply_classification.csv",
+    "results/outreach_execution/meeting_generation_summary.json",
+    "reports/analysis/TASK-7190-PILOT-OUTREACH-EXECUTION/TASK-7190_BRIEF_REPORT.md"
+  ]
+}

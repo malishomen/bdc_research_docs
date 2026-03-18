@@ -1,0 +1,37 @@
+{
+  "task_id": "TASK-7300-PAID-PILOT-EXECUTION-BATCH",
+  "project": "Bio Digital Core",
+  "phase": 32,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Run a controlled batch of paid pilot attempts using the paid-by-default policy and the standardized pilot program to test repeatable revenue conversion.",
+  "research_question": "Can BDC Designer reliably convert qualified opportunities into multiple paid pilots under the new paid-default commercial policy?",
+  "runner": {
+    "script": "scripts/analysis/run_phase32_paid_pilot_execution_batch.py"
+  },
+  "outputs": [
+    "results/paid_pilot_batch/opportunity_batch.csv",
+    "results/paid_pilot_batch/paid_conversion_summary.csv",
+    "results/paid_pilot_batch/pilot_status_board.csv",
+    "results/paid_pilot_batch/revenue_signal_summary.json",
+    "reports/analysis/TASK-7300-PAID-PILOT-EXECUTION-BATCH/TASK-7300_BRIEF_REPORT.md"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "minimum_batch_attempted": true,
+      "at_least_one_paid_pilot_closed": true,
+      "pilot_status_tracking_complete": true,
+      "revenue_signal_summary_generated": true
+    }
+  },
+  "definition_of_done": [
+    "paid pilot batch attempted",
+    "conversion outcomes recorded",
+    "status board updated",
+    "revenue signals summarized",
+    "brief report generated",
+    "append-only logs updated"
+  ]
+}

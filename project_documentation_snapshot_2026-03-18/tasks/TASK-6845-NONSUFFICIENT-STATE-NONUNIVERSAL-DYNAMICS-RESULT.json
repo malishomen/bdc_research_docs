@@ -1,0 +1,24 @@
+{
+  "task_id": "TASK-6845-NONSUFFICIENT-STATE-NONUNIVERSAL-DYNAMICS-RESULT",
+  "project": "Bio Digital Core",
+  "phase": 20,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Formally establish the negative result for transition-law portability after TASK-6810/6820/6830 and record restricted defensible BDC theory scope.",
+  "runner": {
+    "script": "scripts/analysis/run_phase20_negative_transition_result.py"
+  },
+  "artifacts_contract": {
+    "results_directory": "results/negative_transition_result/",
+    "reports_directory": "reports/analysis/",
+    "append_only_logs": [
+      "AGENTS_LOG.md",
+      "WEEKLY_STATUS.md"
+    ],
+    "git_branch": "origin/test",
+    "results_not_committed": true
+  }
+}
+

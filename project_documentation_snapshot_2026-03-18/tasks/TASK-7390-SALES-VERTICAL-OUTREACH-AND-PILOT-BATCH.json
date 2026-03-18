@@ -1,0 +1,28 @@
+{
+  "task_id": "TASK-7390-SALES-VERTICAL-OUTREACH-AND-PILOT-BATCH",
+  "project": "Bio Digital Core",
+  "phase": 34,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Execute a dedicated outbound, demo, qualification, and paid-pilot batch for the sales automation vertical using the prepared vertical pack, demo assets, and pricing structure.",
+  "research_question": "Can BDC Designer convert sales automation prospects into paid pilots and measurable workflow wins under a focused vertical execution track?",
+  "runner": {
+    "script": "scripts/analysis/run_phase34_sales_vertical_outreach_and_pilot_batch.py"
+  },
+  "outputs": [
+    "results/vertical_sales_execution/outreach_log.csv",
+    "results/vertical_sales_execution/demo_log.csv",
+    "results/vertical_sales_execution/pilot_status_board.csv",
+    "results/vertical_sales_execution/revenue_summary.json",
+    "reports/analysis/TASK-7390-SALES-VERTICAL-OUTREACH-AND-PILOT-BATCH/TASK-7390_BRIEF_REPORT.md"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "qualified_sales_meetings_generated": true,
+      "minimum_one_paid_sales_pilot_closed": true,
+      "pipeline_status_board_complete": true
+    }
+  }
+}

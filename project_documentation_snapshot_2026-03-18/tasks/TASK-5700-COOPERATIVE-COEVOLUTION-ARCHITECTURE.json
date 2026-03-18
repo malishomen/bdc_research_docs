@@ -1,0 +1,10 @@
+{
+  "task_id": "TASK-5700-COOPERATIVE-COEVOLUTION-ARCHITECTURE",
+  "project": "Bio Digital Core",
+  "phase": 7,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-05",
+  "objective": "Test the hypothesis that evolutionary selection bias destroys cooperative regimes by introducing cooperative coevolution with separate role populations and role-specific selection pressure."
+}

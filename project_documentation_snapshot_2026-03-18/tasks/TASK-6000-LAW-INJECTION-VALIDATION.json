@@ -1,0 +1,136 @@
+{
+  "task_id": "TASK-6000-LAW-INJECTION-VALIDATION",
+  "project": "Bio Digital Core",
+  "phase": 10,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Test the causal validity of the discovered cooperative weight law by injecting different role-weight regimes into the coevolution system and measuring their impact on performance, convergence speed, and stability.",
+  "background": {
+    "previous_tasks": [
+      "TASK-5700-COOPERATIVE-COEVOLUTION-ARCHITECTURE",
+      "TASK-5800-RISK-ADJUSTED-WEIGHT-LAW",
+      "TASK-5900-GENERALIZED-WEIGHT-LAW-DISCOVERY"
+    ],
+    "discovered_law": {
+      "formula": "w_r ∝ sigma_r^alpha / mu_r^beta",
+      "alpha": 1.5714285714285714,
+      "beta": 0.6020408163265306,
+      "correlation": 0.9821649299187987,
+      "mae": 0.03882849082931975
+    },
+    "motivation": "Determine whether the discovered weight law is causal (improves system performance when injected) or merely descriptive (correlates with observed dynamics)."
+  },
+  "experimental_regimes": [
+    {
+      "regime_id": "baseline_coevolution",
+      "description": "Standard cooperative coevolution with emergent role ratios."
+    },
+    {
+      "regime_id": "uniform_weights",
+      "description": "All roles receive equal weight (1/3, 1/3, 1/3)."
+    },
+    {
+      "regime_id": "risk_law_weights",
+      "description": "Weights follow rejected risk-law hypothesis: w_r ∝ mu_r / sigma_r^2."
+    },
+    {
+      "regime_id": "discovered_law_weights",
+      "description": "Weights fixed according to discovered law: w_r ∝ sigma_r^1.5714 / mu_r^0.6020."
+    }
+  ],
+  "experiment_configuration": {
+    "seeds": 30,
+    "base_seed": 1337,
+    "generations": 120,
+    "population_size": 64,
+    "partners_per_evaluation": 5,
+    "evaluation_samples_per_genome": 10
+  },
+  "metrics_collected": [
+    "delta_advantage",
+    "convergence_speed",
+    "positive_seed_fraction",
+    "role_ratio_stability",
+    "fitness_variance",
+    "generation_to_plateau"
+  ],
+  "experiment_blocks": [
+    {
+      "block_id": "TASK-6001",
+      "title": "REGIME EXECUTION",
+      "goal": "Run coevolution experiment under each role-weight regime.",
+      "runner": "scripts/edp1/run_phase10_law_injection.py",
+      "outputs": [
+        "results/law_injection/per_seed_metrics.csv",
+        "results/law_injection/delta_timeseries.csv",
+        "results/law_injection/regime_summary.json"
+      ]
+    },
+    {
+      "block_id": "TASK-6002",
+      "title": "PERFORMANCE COMPARISON",
+      "goal": "Compare performance metrics across regimes.",
+      "analysis": [
+        "mean_delta_advantage",
+        "convergence_speed",
+        "positive_seed_fraction"
+      ],
+      "outputs": [
+        "results/law_injection/performance_comparison.csv"
+      ]
+    },
+    {
+      "block_id": "TASK-6003",
+      "title": "STABILITY ANALYSIS",
+      "goal": "Measure stability of role ratios and fitness across generations.",
+      "outputs": [
+        "results/law_injection/stability_metrics.csv"
+      ]
+    },
+    {
+      "block_id": "TASK-6004",
+      "title": "CAUSAL VALIDATION",
+      "goal": "Determine whether discovered law improves performance relative to baseline.",
+      "criteria": {
+        "delta_advantage_improvement": 0.01,
+        "positive_seed_fraction_improvement": 0.05
+      },
+      "outputs": [
+        "results/law_injection/causal_validation.json"
+      ]
+    },
+    {
+      "block_id": "TASK-6005",
+      "title": "FINAL REPORT",
+      "goal": "Document experimental results and determine causal validity of discovered law.",
+      "report": "reports/analysis/TASK-6000-LAW-INJECTION/TASK-6000_BRIEF_REPORT.md"
+    }
+  ],
+  "evaluation_criteria": {
+    "law_is_causal_if": {
+      "delta_advantage_improvement_min": 0.01,
+      "positive_seed_fraction_improvement_min": 0.05,
+      "convergence_speed_improvement": true
+    }
+  },
+  "definition_of_done": [
+    "All four regimes executed across N=30 seeds.",
+    "Performance metrics collected and compared.",
+    "Stability metrics computed.",
+    "Causal validation decision generated.",
+    "Brief report produced.",
+    "Append-only logs updated."
+  ],
+  "artifacts_contract": {
+    "results_directory": "results/law_injection/",
+    "reports_directory": "reports/analysis/",
+    "append_only_logs": [
+      "AGENTS_LOG.md",
+      "WEEKLY_STATUS.md"
+    ],
+    "git_branch": "origin/test",
+    "results_not_committed": true
+  }
+}

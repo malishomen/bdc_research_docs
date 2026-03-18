@@ -1,0 +1,48 @@
+{
+  "task_id": "TASK-7587-BDC-CHANNEL-AWARE-MEMORY-NOTE",
+  "project": "Bio Digital Core",
+  "phase": 48,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-18",
+  "objective": "Write a channel-aware memory note for the rebooted BDC line that specifies addressability, retrieval, accessibility states, and noise-aware assumptions.",
+  "research_question": "Can BDC translate DNA-inspired memory from metaphor into a bounded architectural note that explicitly depends on addressability and the previously defined error/erasure model?",
+  "depends_on": [
+    "TASK-7586-BDC-ERROR-ERASURE-MODEL-NOTE"
+  ],
+  "execution_rules": {
+    "phase_gate": "May start only after the error/erasure model is written.",
+    "parallel_execution_allowed": false,
+    "scope_expansion_forbidden": true
+  },
+  "outputs": [
+    "docs/BDC_MEMORY_ADDRESSABILITY_NOTE.md",
+    "reports/analysis/TASK-7587-BDC-CHANNEL-AWARE-MEMORY-NOTE/TASK-7587_BRIEF_REPORT.md"
+  ],
+  "tests_required": [
+    "document existence check",
+    "note includes address/header/payload/control structure",
+    "note includes active/locked/retired states",
+    "note explicitly references the error/erasure model dependency"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "channel_aware_memory_note_written": true,
+      "addressability_defined": true,
+      "memory_state_model_defined": true,
+      "error_model_dependency_explicit": true
+    }
+  },
+  "definition_of_done": [
+    "channel-aware memory note written",
+    "memory states defined",
+    "brief report generated",
+    "append-only logs updated"
+  ],
+  "out_of_scope": [
+    "memory engine implementation",
+    "DNA-storage empirical experiment",
+    "new organism-level claims"
+  ]
+}

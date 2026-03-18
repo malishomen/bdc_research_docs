@@ -1,0 +1,61 @@
+{
+  "task_id": "TASK-7240-DIVERSE-REAL-WORKFLOW-SIMULATION-SUITE",
+  "project": "Bio Digital Core",
+  "phase": 31,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Build and evaluate a diverse simulation suite of real-world workflow archetypes to test BDC Designer across substantially different cooperative AI architecture problems.",
+  "research_question": "Does BDC Designer remain practically useful across a broad and heterogeneous set of real workflow archetypes rather than only isolated flagship examples?",
+  "workflow_baskets": [
+    "planner_executor_checker",
+    "planner_tooluser_verifier",
+    "proposer_verifier_judge",
+    "generator_critic_editor",
+    "retriever_reasoner_critic",
+    "research_planner_retriever_synthesizer_factchecker",
+    "lead_triage_proposal_risk_review",
+    "crm_response_offer_tailoring_approval_gate",
+    "policy_answer_compliance_final_gate",
+    "incident_response_classification_plan_check"
+  ],
+  "runner": {
+    "script": "scripts/analysis/run_phase31_diverse_real_workflow_simulation_suite.py"
+  },
+  "data_collection": [
+    "frozen_task_descriptor",
+    "baseline_architecture",
+    "bdc_cli_recommendation",
+    "hybrid_refinement_result",
+    "time_to_target",
+    "final_quality",
+    "search_cost",
+    "coordination_overhead",
+    "caution_flags",
+    "operator_notes"
+  ],
+  "outputs": [
+    "results/diverse_workflow_suite/workflow_manifest.csv",
+    "results/diverse_workflow_suite/baseline_vs_bdc_vs_hybrid.csv",
+    "results/diverse_workflow_suite/cross_workflow_summary.csv",
+    "results/diverse_workflow_suite/simulation_suite_summary.json",
+    "reports/analysis/TASK-7240-DIVERSE-REAL-WORKFLOW-SIMULATION-SUITE/TASK-7240_BRIEF_REPORT.md"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "minimum_ten_workflows_completed": true,
+      "minimum_five_distinct_workflow_types_covered": true,
+      "bdc_guided_hybrid_beats_baseline_in_majority_of_workflows": true,
+      "common_measurement_schema_used": true
+    }
+  },
+  "definition_of_done": [
+    "workflow suite defined",
+    "baseline frozen for all workflows",
+    "BDC and hybrid runs completed",
+    "cross-workflow summary produced",
+    "brief report generated",
+    "append-only logs updated"
+  ]
+}

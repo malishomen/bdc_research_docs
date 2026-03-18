@@ -1,0 +1,33 @@
+{
+  "task_id": "TASK-5600-CREDIT-ASSIGNMENT-STABILIZATION",
+  "project": "Bio Digital Core",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-05",
+  "phase": 6,
+  "priority": "critical",
+  "status": "planned",
+  "objective": "Resolve credit assignment instability in the BDC cooperative architecture by introducing role-specific credit estimation and verify whether cooperative regime (2:5:1) becomes dynamically stable during training.",
+  "background": {
+    "previous_tasks": [
+      "TASK-5300-COOPERATION-ROOTCAUSE",
+      "TASK-5400-COOPERATION-LANDSCAPE",
+      "TASK-5500-COOPERATIVE-REGIME-STABILITY"
+    ],
+    "key_findings": {
+      "cooperation_region_exists": true,
+      "training_regime_unstable": true,
+      "role_specialization_present": true,
+      "suspected_cause": "credit_assignment_instability"
+    },
+    "reference_weights": {
+      "predictor": 0.25,
+      "critic": 0.625,
+      "aggregator": 0.125
+    }
+  },
+  "research_hypothesis": {
+    "statement": "Training instability is caused by incorrect gradient attribution between roles.",
+    "expected_result": "Role-specific credit estimation stabilizes cooperative regime.",
+    "mechanism": "difference reward based gradient correction"
+  }
+}

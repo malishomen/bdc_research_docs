@@ -1,0 +1,74 @@
+{
+  "source_best_metric": {
+    "accuracy": 0.8671875,
+    "generation": 90,
+    "metrics_path": "results\\edp1_exp0200_shock\\seeds\\seed_1338\\metrics.csv",
+    "seed_dir": "results\\edp1_exp0200_shock\\seeds\\seed_1338"
+  },
+  "source_summary": {
+    "task": "exp_0200_edp1_symbolic_rule_evolution",
+    "seed": 1338,
+    "population": 100,
+    "generations_requested": 100,
+    "kill_status": {
+      "status": "PASS",
+      "reason": null,
+      "generation": null
+    },
+    "diversity_shocks_total": 6,
+    "diversity_shock_events": [
+      {
+        "event": "diversity_shock",
+        "generation": 27,
+        "immigrants": 20,
+        "cumulative_shocks": 1
+      },
+      {
+        "event": "diversity_shock",
+        "generation": 38,
+        "immigrants": 20,
+        "cumulative_shocks": 2
+      },
+      {
+        "event": "diversity_shock",
+        "generation": 49,
+        "immigrants": 20,
+        "cumulative_shocks": 3
+      },
+      {
+        "event": "diversity_shock",
+        "generation": 60,
+        "immigrants": 20,
+        "cumulative_shocks": 4
+      },
+      {
+        "event": "diversity_shock",
+        "generation": 71,
+        "immigrants": 20,
+        "cumulative_shocks": 5
+      },
+      {
+        "event": "diversity_shock",
+        "generation": 82,
+        "immigrants": 20,
+        "cumulative_shocks": 6
+      }
+    ],
+    "finished_at_utc": "2026-02-26T00:27:34Z",
+    "out_dir": "results\\edp1_exp0200_shock\\seeds\\seed_1338"
+  },
+  "replayed_extraction": {
+    "generation": 90,
+    "max_accuracy": 0.8671875,
+    "genome": {
+      "threshold_count": 6,
+      "w_count": 0.08835391593117525,
+      "w_pattern_101": 0.2941924701365732,
+      "w_first_bit": -0.014294797402976149,
+      "w_last_bit": 0.03995740035219046,
+      "w_pos3": -0.5293052739263623,
+      "w_pos7": 0.8090259732105728,
+      "bias": 0.13606648585378103
+    }
+  }
+}

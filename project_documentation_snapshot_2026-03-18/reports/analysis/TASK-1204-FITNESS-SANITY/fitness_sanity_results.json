@@ -1,0 +1,86 @@
+{
+  "task_id": "TASK-1204-FITNESS-SANITY-BASELINES",
+  "dataset": {
+    "type": "exhaustive_hidden_rule",
+    "bit_len": 9,
+    "size": 512
+  },
+  "config": {
+    "complexity_lambda": 0.01,
+    "random_v2_n": 100,
+    "seed": 1337
+  },
+  "baseline_predictors": {
+    "always_1": {
+      "accuracy": 0.677734375,
+      "fitness": 0.677734375,
+      "complexity": 0.0,
+      "complexity_penalty": 0.0,
+      "is_trivial": true,
+      "trivial_value": 1
+    },
+    "always_0": {
+      "accuracy": 0.322265625,
+      "fitness": 0.322265625,
+      "complexity": 0.0,
+      "complexity_penalty": 0.0,
+      "is_trivial": true,
+      "trivial_value": 0
+    },
+    "random_coinflip_seed1337": {
+      "accuracy": 0.521484375,
+      "fitness": 0.521484375,
+      "complexity": 0.0,
+      "complexity_penalty": 0.0,
+      "is_trivial": false,
+      "trivial_value": null
+    }
+  },
+  "v1_always_1_imitation": {
+    "genome": {
+      "threshold_count": 0,
+      "w_count": 0.0,
+      "w_pattern_101": 0.0,
+      "w_first_bit": 0.0,
+      "w_last_bit": 0.0,
+      "w_pos3": 0.0,
+      "w_pos7": 0.0,
+      "bias": 1.0
+    },
+    "accuracy": 0.677734375,
+    "fitness": 0.667734375,
+    "complexity": 1.0,
+    "complexity_penalty": 0.01
+  },
+  "v2_random_genomes_distribution": {
+    "accuracy": {
+      "n": 100,
+      "mean": 0.48541015625,
+      "median": 0.49609375,
+      "min": 0.29296875,
+      "max": 0.7109375,
+      "ci95": 0.021258157885349963
+    },
+    "fitness": {
+      "n": 100,
+      "mean": 0.2169342248735789,
+      "median": 0.22759967930037833,
+      "min": 0.009137073548479369,
+      "max": 0.46750358405599357,
+      "ci95": 0.021233312470578917
+    },
+    "complexity": {
+      "n": 100,
+      "mean": 26.847593137642107,
+      "median": 26.93898566437847,
+      "min": 21.46541398475957,
+      "max": 32.93811589077799,
+      "ci95": 0.5140591987275644
+    }
+  },
+  "observed_experiment_floor": {
+    "source": "results/edp1_exp0200_v2/aggregates/metrics_agg.csv:final_max_fitness_mean",
+    "value": 0.5356865515715755,
+    "delta_vs_random_v2_fitness_mean": 0.3187523266979966
+  }
+}

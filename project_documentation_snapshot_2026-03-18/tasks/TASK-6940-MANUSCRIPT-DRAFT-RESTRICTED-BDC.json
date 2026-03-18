@@ -1,0 +1,13 @@
+{
+  "task_id": "TASK-6940-MANUSCRIPT-DRAFT-RESTRICTED-BDC",
+  "project": "Bio Digital Core",
+  "phase": 22,
+  "status": "planned",
+  "priority": "high",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Produce a full manuscript draft for restricted BDC claims, limits, and engineering implications.",
+  "runner": {
+    "script": "scripts/analysis/run_phase22_manuscript_draft_restricted_bdc.py"
+  }
+}

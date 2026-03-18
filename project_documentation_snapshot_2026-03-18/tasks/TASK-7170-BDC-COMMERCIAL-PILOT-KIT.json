@@ -1,0 +1,30 @@
+{
+  "task_id": "TASK-7170-BDC-COMMERCIAL-PILOT-KIT",
+  "project": "Bio Digital Core",
+  "phase": 29,
+  "status": "planned",
+  "priority": "high",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Create a commercial pilot kit for BDC Designer that can be sent to qualified prospects and used to structure paid pilot engagements.",
+  "research_question": "Can BDC Designer be packaged into a commercially credible pilot offer with clear scope, deliverables, timing, and success conditions?",
+  "runner": {
+    "script": "scripts/analysis/run_phase29_bdc_commercial_pilot_kit.py"
+  },
+  "outputs": [
+    "results/commercial_pilot/pilot_offer_matrix.csv",
+    "results/commercial_pilot/pricing_bands.csv",
+    "results/commercial_pilot/deliverables_manifest.csv",
+    "results/commercial_pilot/success_criteria.json",
+    "reports/analysis/TASK-7170-BDC-COMMERCIAL-PILOT-KIT/TASK-7170_BRIEF_REPORT.md",
+    "reports/public_release/TASK-7170-BDC-COMMERCIAL-PILOT-KIT/BDC_COMMERCIAL_PILOT_KIT.md"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "pilot_scope_defined": true,
+      "deliverables_defined": true,
+      "pricing_bands_defined": true,
+      "success_criteria_defined": true
+    }
+  }
+}

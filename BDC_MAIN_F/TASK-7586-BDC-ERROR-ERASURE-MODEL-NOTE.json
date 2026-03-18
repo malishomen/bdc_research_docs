@@ -1,0 +1,47 @@
+{
+  "task_id": "TASK-7586-BDC-ERROR-ERASURE-MODEL-NOTE",
+  "project": "Bio Digital Core",
+  "phase": 48,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-18",
+  "objective": "Write a bounded BDC error/erasure model note for reboot-line memory, transmission, and archival reasoning.",
+  "research_question": "Can BDC define a scientifically honest distinction between corruption, loss, burst defects, and address defects before specifying the new memory architecture?",
+  "depends_on": [
+    "TASK-7585-BDC-DIVERSITY-TAXONOMY-NOTE"
+  ],
+  "execution_rules": {
+    "phase_gate": "May start only after the diversity-policy note, so that memory is not treated in isolation from reboot-line system dynamics.",
+    "parallel_execution_allowed": false,
+    "scope_expansion_forbidden": true
+  },
+  "outputs": [
+    "docs/BDC_MEMORY_ERROR_MODEL.md",
+    "reports/analysis/TASK-7586-BDC-ERROR-ERASURE-MODEL-NOTE/TASK-7586_BRIEF_REPORT.md"
+  ],
+  "tests_required": [
+    "document existence check",
+    "model note includes corruption vs erasure distinction",
+    "model note includes burst and address defect classes"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "error_erasure_note_written": true,
+      "loss_vs_corruption_separated": true,
+      "burst_and_address_classes_defined": true,
+      "serialization_implications_written": true
+    }
+  },
+  "definition_of_done": [
+    "error/erasure model note written",
+    "defect classes defined",
+    "brief report generated",
+    "append-only logs updated"
+  ],
+  "out_of_scope": [
+    "memory implementation changes",
+    "actual ECC implementation",
+    "channel-aware memory architecture note"
+  ]
+}

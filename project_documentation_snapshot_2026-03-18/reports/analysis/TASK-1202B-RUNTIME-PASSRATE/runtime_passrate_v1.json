@@ -1,0 +1,9 @@
+{
+  "runs_total": 30,
+  "runs_pass": 30,
+  "runs_fail": 0,
+  "pass_rate": 1.0,
+  "fail_reasons": {},
+  "missing_summary_files": [],
+  "source": "summary.json.kill_status"
+}

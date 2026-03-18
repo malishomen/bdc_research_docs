@@ -1,0 +1,3 @@
+baseline_batch,baseline_generations,baseline_lr,baseline_population,baseline_steps,complexity_lambda_equal,critical_equivalence_ok,effective_batch_size_equal,generations_equal,lr_scaled_with_batch,optimized_batch,optimized_generations,optimized_lr,optimized_population,optimized_steps,pilot,population_equal,seed,steps_equal,stochastic_layers_equivalent,subset_equal,token_budget_equal
+,30,,60,,True,True,,True,,,30,,60,,cpu,True,1337,,True,True,
+12,,3e-05,,80,,True,False,,True,8,,2e-05,,120,gpu,,1337,False,True,,True

@@ -1,0 +1,13 @@
+{
+  "task_id": "TASK-6960-SUBMISSION-READY-MANUSCRIPT-PACKAGE",
+  "project": "Bio Digital Core",
+  "phase": 24,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Convert draft and restricted BDC evidence into a submission-ready package with frozen claims and reproducibility support.",
+  "runner": {
+    "script": "scripts/analysis/run_phase24_submission_ready_manuscript_package.py"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "task_id": "TASK-7040-BDC-DESIGNER-DEMO-PACK",
+  "project": "Bio Digital Core",
+  "phase": 27,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Assemble repeatable demo pack for BDC Designer CLI with examples and flagship before/after.",
+  "runner": {
+    "script": "scripts/analysis/run_phase27_bdc_designer_demo_pack.py"
+  }
+}

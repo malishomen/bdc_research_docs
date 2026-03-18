@@ -1,0 +1,14 @@
+{
+  "task_id": "TASK-6930-HYBRID-BDC-DESIGN-PLAYBOOK-BENCHMARK",
+  "project": "Bio Digital Core",
+  "phase": 22,
+  "status": "planned",
+  "priority": "high",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Benchmark strategy-selection playbook from BDC rulebook across families and conditions.",
+  "runner": {
+    "script": "scripts/analysis/run_phase22_hybrid_bdc_design_playbook_benchmark.py"
+  }
+}
+

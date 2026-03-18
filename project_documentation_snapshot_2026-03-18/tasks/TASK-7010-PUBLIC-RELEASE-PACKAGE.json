@@ -1,0 +1,13 @@
+{
+  "task_id": "TASK-7010-PUBLIC-RELEASE-PACKAGE",
+  "project": "Bio Digital Core",
+  "phase": 26,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Assemble a public-facing release package for Restricted BDC v1 with frozen claims, reproducibility path, and scope boundaries.",
+  "runner": {
+    "script": "scripts/analysis/run_phase26_public_release_package.py"
+  }
+}

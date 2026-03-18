@@ -1,0 +1,30 @@
+{
+  "task_id": "TASK-7340-SALES-AUTOMATION-VERTICAL-PACK",
+  "project": "Bio Digital Core",
+  "phase": 33,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Build a complete verticalized commercial and delivery package for BDC Designer in sales automation workflows.",
+  "research_question": "Can BDC Designer be packaged as a clear, high-conversion solution for sales workflow architecture problems such as lead triage, proposal generation, qualification, and review?",
+  "runner": {
+    "script": "scripts/analysis/run_phase33_sales_automation_vertical_pack.py"
+  },
+  "outputs": [
+    "results/vertical_sales/icp_profile.json",
+    "results/vertical_sales/discovery_question_set.csv",
+    "results/vertical_sales/pilot_scope_templates.csv",
+    "results/vertical_sales/success_metrics_matrix.csv",
+    "reports/analysis/TASK-7340-SALES-AUTOMATION-VERTICAL-PACK/TASK-7340_BRIEF_REPORT.md",
+    "reports/public_release/TASK-7340-SALES-AUTOMATION-VERTICAL-PACK/BDC_SALES_AUTOMATION_VERTICAL_PACK.md"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "icp_defined": true,
+      "discovery_questions_defined": true,
+      "pilot_templates_defined": true,
+      "success_metrics_defined": true
+    }
+  }
+}

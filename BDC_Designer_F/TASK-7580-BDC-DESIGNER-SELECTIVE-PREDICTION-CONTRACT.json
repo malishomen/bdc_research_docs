@@ -1,0 +1,53 @@
+{
+  "task_id": "TASK-7580-BDC-DESIGNER-SELECTIVE-PREDICTION-CONTRACT",
+  "project": "Bio Digital Core",
+  "phase": 48,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-18",
+  "objective": "Formalize BDC Designer recommendation outcomes as a selective-prediction contract with explicit abstention and bounded machine-readable outcome classes.",
+  "research_question": "Can BDC Designer expose lawful abstention and recommendation classes in a way that is consistent across diagnostics, explanations, CLI outputs, and client bundles?",
+  "depends_on": [
+    "TASK-7579-BDC-DESIGNER-CALIBRATION-LAYER"
+  ],
+  "execution_rules": {
+    "phase_gate": "May start only after calibration outputs exist and can be consumed by the contract logic.",
+    "parallel_execution_allowed": false,
+    "scope_expansion_forbidden": true
+  },
+  "runner": {
+    "script": "scripts/analysis/run_phase54_bdc_designer_selective_prediction_contract.py"
+  },
+  "outputs": [
+    "src/bdc_designer_v2/selective_prediction.py",
+    "docs/BDC_DESIGNER_SELECTIVE_PREDICTION_CONTRACT.md",
+    "results/bdc_designer_selective_prediction/selective_prediction_summary.json",
+    "reports/analysis/TASK-7580-BDC-DESIGNER-SELECTIVE-PREDICTION-CONTRACT/TASK-7580_BRIEF_REPORT.md"
+  ],
+  "tests_required": [
+    "outcome-class unit tests",
+    "low-evidence abstention regression tests",
+    "diagnostics and explanation consistency tests",
+    "client-bundle output contract tests"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "selective_contract_defined": true,
+      "abstention_machine_readable": true,
+      "client_bundle_consistent": true,
+      "canonical_low_evidence_case_covered": true
+    }
+  },
+  "definition_of_done": [
+    "recommendation outcome classes implemented",
+    "abstain_need_more_evidence path implemented",
+    "CLI and client-bundle outputs extended",
+    "brief report generated",
+    "append-only logs updated"
+  ],
+  "out_of_scope": [
+    "multi-threshold generalized-risk implementation",
+    "full evidence-state semantics rewrite"
+  ]
+}

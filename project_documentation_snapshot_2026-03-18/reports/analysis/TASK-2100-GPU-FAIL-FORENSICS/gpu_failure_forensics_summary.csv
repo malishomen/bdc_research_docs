@@ -1,0 +1,11 @@
+seed,return_code,error_signature,amp_enabled,requested_device,resolved_device
+1337,1,softmax_assert,True,cuda,unknown
+1338,1,softmax_assert,True,cuda,unknown
+1339,0,none,True,cuda,cuda:0
+1340,1,softmax_assert,True,cuda,unknown
+1341,1,softmax_assert,True,cuda,unknown
+1342,1,softmax_assert,True,cuda,unknown
+1343,0,none,True,cuda,cuda:0
+1344,1,softmax_assert,True,cuda,unknown
+1345,0,none,True,cuda,cuda:0
+1346,0,none,True,cuda,cuda:0

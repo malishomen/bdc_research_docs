@@ -1,0 +1,29 @@
+{
+  "task_id": "TASK-7140-BDC-V1-RELEASE-CANDIDATE",
+  "project": "Bio Digital Core",
+  "phase": 29,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Freeze BDC Designer as a versioned v1 release candidate with stable artifacts, release notes, integrity checks, and explicit scope boundaries.",
+  "research_question": "Can BDC Designer v1 be packaged as a stable release candidate suitable for pilot distribution without ambiguity about supported behavior and scope?",
+  "runner": {
+    "script": "scripts/analysis/run_phase29_bdc_v1_release_candidate.py"
+  },
+  "outputs": [
+    "results/release_candidate/release_manifest.json",
+    "results/release_candidate/artifact_checksums.csv",
+    "results/release_candidate/scope_freeze.json",
+    "reports/analysis/TASK-7140-BDC-V1-RELEASE-CANDIDATE/TASK-7140_BRIEF_REPORT.md",
+    "docs/BDC_V1_RELEASE_NOTES.md"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "versioned_release_manifest_exists": true,
+      "artifact_integrity_recorded": true,
+      "scope_boundaries_frozen": true,
+      "release_notes_complete": true
+    }
+  }
+}

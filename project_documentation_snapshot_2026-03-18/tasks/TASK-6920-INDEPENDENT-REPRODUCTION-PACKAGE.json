@@ -1,0 +1,14 @@
+{
+  "task_id": "TASK-6920-INDEPENDENT-REPRODUCTION-PACKAGE",
+  "project": "Bio Digital Core",
+  "phase": 22,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Create minimal independent reproduction package for restricted BDC claims.",
+  "runner": {
+    "script": "scripts/analysis/run_phase22_independent_reproduction_package.py"
+  }
+}
+

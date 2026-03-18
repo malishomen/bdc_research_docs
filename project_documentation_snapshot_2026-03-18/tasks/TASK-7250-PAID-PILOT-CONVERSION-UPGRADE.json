@@ -1,0 +1,38 @@
+{
+  "task_id": "TASK-7250-PAID-PILOT-CONVERSION-UPGRADE",
+  "project": "Bio Digital Core",
+  "phase": 31,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Upgrade the current pilot program so that paid pilot becomes the default path for qualified prospects, while preserving trust and conversion quality.",
+  "research_question": "Can BDC Designer move from formal pilot acceptance to paid pilot by default for qualified prospects with appropriate positioning, scope, and pricing?",
+  "runner": {
+    "script": "scripts/analysis/run_phase31_paid_pilot_conversion_upgrade.py"
+  },
+  "outputs": [
+    "results/paid_pilot/paid_vs_free_decision_matrix.csv",
+    "results/paid_pilot/pilot_pricing_logic.json",
+    "results/paid_pilot/qualification_to_payment_flow.json",
+    "results/paid_pilot/objection_handling_upgrade.csv",
+    "reports/analysis/TASK-7250-PAID-PILOT-CONVERSION-UPGRADE/TASK-7250_BRIEF_REPORT.md",
+    "docs/BDC_PAID_PILOT_POLICY.md"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "paid_pilot_default_policy_defined": true,
+      "qualification_to_payment_flow_defined": true,
+      "pricing_logic_defined": true,
+      "objection_handling_updated": true
+    }
+  },
+  "definition_of_done": [
+    "paid-pilot policy written",
+    "pricing logic defined",
+    "qualification-to-payment flow defined",
+    "objection handling updated",
+    "brief report generated",
+    "append-only logs updated"
+  ]
+}

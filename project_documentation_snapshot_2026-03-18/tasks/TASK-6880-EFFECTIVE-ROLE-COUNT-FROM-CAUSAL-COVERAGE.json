@@ -1,0 +1,14 @@
+{
+  "task_id": "TASK-6880-EFFECTIVE-ROLE-COUNT-FROM-CAUSAL-COVERAGE",
+  "project": "Bio Digital Core",
+  "phase": 20,
+  "status": "planned",
+  "priority": "high",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Estimate effective role count from marginal causal coverage vs coordination cost.",
+  "runner": {
+    "script": "scripts/analysis/run_phase20_effective_role_count_from_causal_coverage.py"
+  }
+}
+

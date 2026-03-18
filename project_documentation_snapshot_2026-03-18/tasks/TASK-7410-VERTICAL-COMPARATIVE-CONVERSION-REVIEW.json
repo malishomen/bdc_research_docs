@@ -1,0 +1,28 @@
+{
+  "task_id": "TASK-7410-VERTICAL-COMPARATIVE-CONVERSION-REVIEW",
+  "project": "Bio Digital Core",
+  "phase": 34,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Compare the sales automation and real estate verticals using real commercial and delivery metrics to determine which one converts faster, closes cleaner, and scales more credibly.",
+  "research_question": "Which of the two initial BDC Designer verticals shows the stronger short-term commercial traction and lower execution friction?",
+  "runner": {
+    "script": "scripts/analysis/run_phase34_vertical_comparative_conversion_review.py"
+  },
+  "outputs": [
+    "results/vertical_comparison/conversion_comparison.csv",
+    "results/vertical_comparison/sales_cycle_comparison.csv",
+    "results/vertical_comparison/proof_strength_comparison.csv",
+    "results/vertical_comparison/vertical_review_summary.json",
+    "reports/analysis/TASK-7410-VERTICAL-COMPARATIVE-CONVERSION-REVIEW/TASK-7410_BRIEF_REPORT.md"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "real_comparison_completed": true,
+      "winner_signals_identified": true,
+      "execution_friction_compared": true
+    }
+  }
+}

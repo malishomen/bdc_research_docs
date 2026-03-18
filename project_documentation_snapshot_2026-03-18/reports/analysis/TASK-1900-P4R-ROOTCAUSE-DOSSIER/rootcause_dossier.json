@@ -1,0 +1,465 @@
+{
+  "n_seeds": 30,
+  "inputs": {
+    "summary_json": "results\\edp1_exp0600_multirole_3task\\aggregates\\phase4_multirole_3task_n30_summary.json",
+    "recompute_json": "results\\edp1_exp0600_multirole_3task\\aggregates\\phase4_advantage_recomputed_3task_n30.json",
+    "ablation_json": "results\\edp1_exp0600_multirole_3task\\aggregates\\phase4_role_ablation_3task_n30.json"
+  },
+  "seed_level_rows": [
+    {
+      "seed": 1337,
+      "gain_cloze": -0.01582440020418581,
+      "gain_entity": 0.0,
+      "gain_category": 0.0,
+      "A1_3": -0.01582440020418581,
+      "A2_3": -0.01582440020418581,
+      "A3_3": 0,
+      "dominant_role_by_max_accuracy": "category",
+      "final_functional_diversity": 0.94,
+      "final_conflict_flag_rate": 0.9323828125
+    },
+    {
+      "seed": 1338,
+      "gain_cloze": 0.0015017269860339438,
+      "gain_entity": 0.0,
+      "gain_category": 0.0,
+      "A1_3": 0.0015017269860339438,
+      "A2_3": 0.0,
+      "A3_3": 0,
+      "dominant_role_by_max_accuracy": "category",
+      "final_functional_diversity": 0.925,
+      "final_conflict_flag_rate": 0.935390625
+    },
+    {
+      "seed": 1339,
+      "gain_cloze": 0.0073992443324936985,
+      "gain_entity": 0.0,
+      "gain_category": 0.0,
+      "A1_3": 0.0073992443324936985,
+      "A2_3": 0.0,
+      "A3_3": 0,
+      "dominant_role_by_max_accuracy": "category",
+      "final_functional_diversity": 0.96,
+      "final_conflict_flag_rate": 0.91513671875
+    },
+    {
+      "seed": 1340,
+      "gain_cloze": 0.005656406208892406,
+      "gain_entity": 0.0,
+      "gain_category": 0.0,
+      "A1_3": 0.005656406208892406,
+      "A2_3": 0.0,
+      "A3_3": 0,
+      "dominant_role_by_max_accuracy": "category",
+      "final_functional_diversity": 0.985,
+      "final_conflict_flag_rate": 0.9427734375
+    },
+    {
+      "seed": 1341,
+      "gain_cloze": -0.006827492034592625,
+      "gain_entity": 0.005461993627674078,
+      "gain_category": 0.0,
+      "A1_3": -0.0013654984069185472,
+      "A2_3": -0.006827492034592625,
+      "A3_3": 0,
+      "dominant_role_by_max_accuracy": "category",
+      "final_functional_diversity": 0.95,
+      "final_conflict_flag_rate": 0.90552734375
+    },
+    {
+      "seed": 1342,
+      "gain_cloze": -0.006401365624666602,
+      "gain_entity": 0.0,
+      "gain_category": 0.0,
+      "A1_3": -0.006401365624666602,
+      "A2_3": -0.006401365624666602,
+      "A3_3": 0,
+      "dominant_role_by_max_accuracy": "category",
+      "final_functional_diversity": 0.975,
+      "final_conflict_flag_rate": 0.956328125
+    },
+    {
+      "seed": 1343,
+      "gain_cloze": 0.015622534322234496,
+      "gain_entity": 0.00441849455578347,
+      "gain_category": 0.0,
+      "A1_3": 0.020041028878017966,
+      "A2_3": 0.0,
+      "A3_3": 0,
+      "dominant_role_by_max_accuracy": "category",
+      "final_functional_diversity": 0.94,
+      "final_conflict_flag_rate": 0.8438671875
+    },
+    {
+      "seed": 1344,
+      "gain_cloze": 0.014894250819183788,
+      "gain_entity": 0.0032767351802205358,
+      "gain_category": 0.0,
+      "A1_3": 0.018170985999404324,
+      "A2_3": 0.0,
+      "A3_3": 0,
+      "dominant_role_by_max_accuracy": "category",
+      "final_functional_diversity": 0.93,
+      "final_conflict_flag_rate": 0.91830078125
+    },
+    {
+      "seed": 1345,
+      "gain_cloze": -0.007561436672967867,
+      "gain_entity": 0.006616257088846944,
+      "gain_category": 0.0,
+      "A1_3": -0.0009451795841209226,
+      "A2_3": -0.007561436672967867,
+      "A3_3": 0,
+      "dominant_role_by_max_accuracy": "category",
+      "final_functional_diversity": 0.955,
+      "final_conflict_flag_rate": 0.9135546875
+    },
+    {
+      "seed": 1346,
+      "gain_cloze": 0.004226202455222386,
+      "gain_entity": 0.006037432078889071,
+      "gain_category": 0.0,
+      "A1_3": 0.010263634534111457,
+      "A2_3": 0.0,
+      "A3_3": 0,
+      "dominant_role_by_max_accuracy": "category",
+      "final_functional_diversity": 0.925,
+      "final_conflict_flag_rate": 0.908828125
+    },
+    {
+      "seed": 1347,
+      "gain_cloze": 0.0029178824510212586,
+      "gain_entity": 0.0062526052521884035,
+      "gain_category": 0.0,
+      "A1_3": 0.009170487703209662,
+      "A2_3": 0.0,
+      "A3_3": 0,
+      "dominant_role_by_max_accuracy": "category",
+      "final_functional_diversity": 0.98,
+      "final_conflict_flag_rate": 0.8978125
+    },
+    {
+      "seed": 1348,
+      "gain_cloze": 0.015810276679841903,
+      "gain_entity": 0.008399209486166015,
+      "gain_category": 0.0,
+      "A1_3": 0.024209486166007918,
+      "A2_3": 0.0,
+      "A3_3": 0,
+      "dominant_role_by_max_accuracy": "category",
+      "final_functional_diversity": 0.98,
+      "final_conflict_flag_rate": 0.91607421875
+    },
+    {
+      "seed": 1349,
+      "gain_cloze": 0.023809523809523808,
+      "gain_entity": 0.0,
+      "gain_category": 0.0,
+      "A1_3": 0.023809523809523808,
+      "A2_3": 0.0,
+      "A3_3": 0,
+      "dominant_role_by_max_accuracy": "category",
+      "final_functional_diversity": 0.965,
+      "final_conflict_flag_rate": 0.8671875
+    },
+    {
+      "seed": 1350,
+      "gain_cloze": 0.013654618473895583,
+      "gain_entity": 0.006425702811244993,
+      "gain_category": 0.0,
+      "A1_3": 0.020080321285140576,
+      "A2_3": 0.0,
+      "A3_3": 0,
+      "dominant_role_by_max_accuracy": "category",
+      "final_functional_diversity": 0.915,
+      "final_conflict_flag_rate": 0.9009765625
+    },
+    {
+      "seed": 1351,
+      "gain_cloze": 0.0034430815579944013,
+      "gain_entity": 0.005595007531740914,
+      "gain_category": 0.0,
+      "A1_3": 0.009038089089735316,
+      "A2_3": 0.0,
+      "A3_3": 0,
+      "dominant_role_by_max_accuracy": "category",
+      "final_functional_diversity": 0.96,
+      "final_conflict_flag_rate": 0.8849609375
+    },
+    {
+      "seed": 1352,
+      "gain_cloze": 0.005200090436355415,
+      "gain_entity": 0.003617454216594984,
+      "gain_category": 0.0,
+      "A1_3": 0.008817544652950399,
+      "A2_3": 0.0,
+      "A3_3": 0,
+      "dominant_role_by_max_accuracy": "category",
+      "final_functional_diversity": 0.985,
+      "final_conflict_flag_rate": 0.87052734375
+    },
+    {
+      "seed": 1353,
+      "gain_cloze": 0.014522821576763476,
+      "gain_entity": 0.0055325034578146415,
+      "gain_category": 0.0,
+      "A1_3": 0.020055325034578117,
+      "A2_3": 0.0,
+      "A3_3": 0,
+      "dominant_role_by_max_accuracy": "category",
+      "final_functional_diversity": 0.955,
+      "final_conflict_flag_rate": 0.9151171875
+    },
+    {
+      "seed": 1354,
+      "gain_cloze": -0.015377757967461561,
+      "gain_entity": 0.0049030532649877445,
+      "gain_category": 0.0,
+      "A1_3": -0.010474704702473817,
+      "A2_3": -0.015377757967461561,
+      "A3_3": 0,
+      "dominant_role_by_max_accuracy": "category",
+      "final_functional_diversity": 0.965,
+      "final_conflict_flag_rate": 0.87525390625
+    },
+    {
+      "seed": 1355,
+      "gain_cloze": 0.022476264289866307,
+      "gain_entity": 0.007556675062972307,
+      "gain_category": 0.0,
+      "A1_3": 0.030032939352838614,
+      "A2_3": 0.0,
+      "A3_3": 0,
+      "dominant_role_by_max_accuracy": "category",
+      "final_functional_diversity": 0.94,
+      "final_conflict_flag_rate": 0.8823046875
+    },
+    {
+      "seed": 1356,
+      "gain_cloze": 0.003607809847198634,
+      "gain_entity": 0.0,
+      "gain_category": 0.0,
+      "A1_3": 0.003607809847198634,
+      "A2_3": 0.0,
+      "A3_3": 0,
+      "dominant_role_by_max_accuracy": "category",
+      "final_functional_diversity": 0.94,
+      "final_conflict_flag_rate": 0.91806640625
+    },
+    {
+      "seed": 1357,
+      "gain_cloze": 0.01723436015741621,
+      "gain_entity": 0.0,
+      "gain_category": 0.0,
+      "A1_3": 0.01723436015741621,
+      "A2_3": 0.0,
+      "A3_3": 0,
+      "dominant_role_by_max_accuracy": "category",
+      "final_functional_diversity": 0.935,
+      "final_conflict_flag_rate": 0.931953125
+    },
+    {
+      "seed": 1358,
+      "gain_cloze": 0.005106600280863016,
+      "gain_entity": 0.009957870547682934,
+      "gain_category": 0.0,
+      "A1_3": 0.01506447082854595,
+      "A2_3": 0.0,
+      "A3_3": 0,
+      "dominant_role_by_max_accuracy": "category",
+      "final_functional_diversity": 0.955,
+      "final_conflict_flag_rate": 0.9517578125
+    },
+    {
+      "seed": 1359,
+      "gain_cloze": 0.012764405543398971,
+      "gain_entity": 0.003829321663019636,
+      "gain_category": 0.004376367614879584,
+      "A1_3": 0.02097009482129819,
+      "A2_3": 0.003829321663019636,
+      "A3_3": 1,
+      "dominant_role_by_max_accuracy": "category",
+      "final_functional_diversity": 1.0,
+      "final_conflict_flag_rate": 0.92484375
+    },
+    {
+      "seed": 1360,
+      "gain_cloze": -0.0014730639730639733,
+      "gain_entity": 0.005050505050504972,
+      "gain_category": 0.0,
+      "A1_3": 0.0035774410774409987,
+      "A2_3": -0.0014730639730639733,
+      "A3_3": 0,
+      "dominant_role_by_max_accuracy": "category",
+      "final_functional_diversity": 0.99,
+      "final_conflict_flag_rate": 0.89912109375
+    },
+    {
+      "seed": 1361,
+      "gain_cloze": -0.0032820512820512793,
+      "gain_entity": 0.004307692307692346,
+      "gain_category": 0.0,
+      "A1_3": 0.0010256410256410664,
+      "A2_3": -0.0032820512820512793,
+      "A3_3": 0,
+      "dominant_role_by_max_accuracy": "category",
+      "final_functional_diversity": 0.945,
+      "final_conflict_flag_rate": 0.90935546875
+    },
+    {
+      "seed": 1362,
+      "gain_cloze": 0.006970753144415823,
+      "gain_entity": 0.0,
+      "gain_category": 0.0,
+      "A1_3": 0.006970753144415823,
+      "A2_3": 0.0,
+      "A3_3": 0,
+      "dominant_role_by_max_accuracy": "category",
+      "final_functional_diversity": 0.94,
+      "final_conflict_flag_rate": 0.91552734375
+    },
+    {
+      "seed": 1363,
+      "gain_cloze": 0.0004968532626697664,
+      "gain_entity": 0.00397482610135802,
+      "gain_category": 0.0,
+      "A1_3": 0.004471679364027786,
+      "A2_3": 0.0,
+      "A3_3": 0,
+      "dominant_role_by_max_accuracy": "category",
+      "final_functional_diversity": 0.965,
+      "final_conflict_flag_rate": 0.91732421875
+    },
+    {
+      "seed": 1364,
+      "gain_cloze": 0.017391304347826084,
+      "gain_entity": 0.0,
+      "gain_category": 0.0,
+      "A1_3": 0.017391304347826084,
+      "A2_3": 0.0,
+      "A3_3": 0,
+      "dominant_role_by_max_accuracy": "category",
+      "final_functional_diversity": 0.95,
+      "final_conflict_flag_rate": 0.92076171875
+    },
+    {
+      "seed": 1365,
+      "gain_cloze": -0.0002712232167073614,
+      "gain_entity": 0.004475183075671185,
+      "gain_category": 0.0,
+      "A1_3": 0.004203959858963824,
+      "A2_3": -0.0002712232167073614,
+      "A3_3": 0,
+      "dominant_role_by_max_accuracy": "category",
+      "final_functional_diversity": 0.955,
+      "final_conflict_flag_rate": 0.9334375
+    },
+    {
+      "seed": 1366,
+      "gain_cloze": -0.013153513153513152,
+      "gain_entity": 0.00366300366300365,
+      "gain_category": 0.0,
+      "A1_3": -0.009490509490509502,
+      "A2_3": -0.013153513153513152,
+      "A3_3": 0,
+      "dominant_role_by_max_accuracy": "category",
+      "final_functional_diversity": 1.0,
+      "final_conflict_flag_rate": 0.94478515625
+    }
+  ],
+  "sign_frequencies": {
+    "gain_cloze": {
+      "negative_rate": 0.3,
+      "positive_rate": 0.7,
+      "zero_rate": 0.0,
+      "mean": 0.004817823561796704
+    },
+    "gain_entity": {
+      "negative_rate": 0.0,
+      "positive_rate": 0.6666666666666666,
+      "zero_rate": 0.3333333333333333,
+      "mean": 0.0036450508674685613
+    },
+    "gain_category": {
+      "negative_rate": 0.0,
+      "positive_rate": 0.03333333333333333,
+      "zero_rate": 0.9666666666666667,
+      "mean": 0.00014587892049598613
+    }
+  },
+  "tradeoff_matrix": {
+    "corr_gain_cloze__gain_entity": 0.012571164567665665,
+    "corr_gain_cloze__gain_category": 0.1404576753882713,
+    "corr_gain_entity__gain_category": 0.011715383056183111
+  },
+  "overlap_indicators": {
+    "dominant_role_counts": {
+      "cloze": 0,
+      "entity": 0,
+      "category": 30
+    },
+    "dominant_category_rate": 1.0,
+    "mean_final_functional_diversity": 0.9568333333333333,
+    "mean_final_conflict_flag_rate": 0.9116412760416667
+  },
+  "ablation_sensitivity": {
+    "cloze_degrade_ge_5pct_rate": 0.0,
+    "entity_degrade_ge_5pct_rate": 0.0,
+    "category_degrade_ge_5pct_rate": 0.0,
+    "cloze_primary_drop_ci95": [
+      -0.0040268661286181695,
+      -0.0003959993691278697
+    ],
+    "entity_primary_drop_ci95": [
+      -0.00013338803792851728,
+      0.000388676148796493
+    ],
+    "category_primary_drop_ci95": [
+      -0.00013338803792851728,
+      0.000388676148796493
+    ]
+  },
+  "root_cause_ranking": [
+    {
+      "id": "RC1_CATEGORY_SIGNAL_SATURATION",
+      "score": 1.9333333333333333,
+      "evidence": {
+        "gain_category_positive_rate": 0.03333333333333333,
+        "gain_category_zero_rate": 0.9666666666666667,
+        "gain_category_mean": 0.00014587892049598613
+      }
+    },
+    {
+      "id": "RC2_BALANCED_METRIC_DRAG_FROM_CLOZE",
+      "score": 1.2666666666666666,
+      "evidence": {
+        "gain_cloze_negative_rate": 0.3,
+        "A2_3_nonpositive_rate": 0.9666666666666667
+      }
+    },
+    {
+      "id": "RC3_ROLE_INTERCHANGEABILITY",
+      "score": 1.0,
+      "evidence": {
+        "cloze_degrade_ge_5pct_rate": 0.0,
+        "entity_degrade_ge_5pct_rate": 0.0,
+        "category_degrade_ge_5pct_rate": 0.0
+      }
+    }
+  ],
+  "recommended_minimal_redesign": {
+    "name": "P4R_MINIMAL_ARM_A",
+    "intent": "Lift category informativeness and reduce role interchangeability with minimal code changes.",
+    "proposal": {
+      "category_metric_mode": "balanced_accuracy",
+      "collective_scheme": "s1_gain",
+      "role_balance_bonus": 0.15,
+      "backcompat_flags": "all new behavior behind opt-in flags; default stays current baseline"
+    },
+    "rationale": [
+      "Category gain is saturated at zero in 29/30 seeds.",
+      "A2_3 is non-positive in 29/30 seeds; cloze negatives drive lower tail.",
+      "All three role necessity rates are 0.0 at degrade>=5%."
+    ]
+  }
+}

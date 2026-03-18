@@ -1,0 +1,28 @@
+{
+  "task_id": "TASK-7380-VERTICAL-GO-TO-MARKET-EXECUTION-BOARD",
+  "project": "Bio Digital Core",
+  "phase": 33,
+  "status": "planned",
+  "priority": "high",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Build an execution board for vertical go-to-market so outreach, demos, offers, pilots, and proof assets are tracked separately by target market.",
+  "research_question": "Can BDC Designer improve conversion and focus by managing go-to-market separately for each vertical rather than as one generic sales process?",
+  "runner": {
+    "script": "scripts/analysis/run_phase33_vertical_go_to_market_execution_board.py"
+  },
+  "outputs": [
+    "results/vertical_gtm/vertical_pipeline_board.csv",
+    "results/vertical_gtm/asset_usage_matrix.csv",
+    "results/vertical_gtm/vertical_conversion_targets.json",
+    "reports/analysis/TASK-7380-VERTICAL-GO-TO-MARKET-EXECUTION-BOARD/TASK-7380_BRIEF_REPORT.md",
+    "docs/BDC_VERTICAL_GTM_PLAYBOOK.md"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "vertical_pipeline_board_defined": true,
+      "asset_usage_matrix_defined": true,
+      "conversion_targets_defined": true
+    }
+  }
+}

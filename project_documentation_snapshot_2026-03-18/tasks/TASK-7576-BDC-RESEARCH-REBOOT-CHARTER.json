@@ -1,0 +1,51 @@
+{
+  "task_id": "TASK-7576-BDC-RESEARCH-REBOOT-CHARTER",
+  "project": "Bio Digital Core",
+  "phase": 47,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-17",
+  "objective": "Formally reopen the BDC scientific line under a new charter that preserves historical truth, separates the reboot from BDC Designer, and fixes the first gate on selection physics rather than organism expansion.",
+  "research_question": "Can the original BDC scientific line be rebooted under explicit historical constraints without silently reviving the broken hidden_rule trajectory?",
+  "depends_on": [
+    "TASK-7574-BDC-PROJECT-HISTORY-MAP",
+    "TASK-7575-BDC-RESEARCH-REBOOT-PLAN"
+  ],
+  "execution_rules": {
+    "phase_gate": "May start only after the history map and reboot plan are committed.",
+    "parallel_execution_allowed": false,
+    "scope_expansion_forbidden": true
+  },
+  "outputs": [
+    "docs/project/BDC_RESEARCH_REBOOT_CHARTER.md",
+    "reports/analysis/TASK-7576-BDC-RESEARCH-REBOOT-CHARTER/TASK-7576_BRIEF_REPORT.md"
+  ],
+  "tests_required": [
+    "charter existence check",
+    "charter references reboot baseline docs",
+    "charter states first gate as selection physics rebuild"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "charter_written": true,
+      "historical_closures_explicit": true,
+      "bdc_designer_and_research_lines_separated": true,
+      "first_gate_fixed_on_selection_physics": true
+    }
+  },
+  "definition_of_done": [
+    "reboot charter written",
+    "historical closures explicitly preserved",
+    "relationship to BDC Designer stated",
+    "first scientific gate fixed",
+    "brief report generated",
+    "append-only logs updated"
+  ],
+  "out_of_scope": [
+    "running scientific experiments",
+    "starting organism assembly",
+    "changing canonical historical evidence"
+  ]
+}
+

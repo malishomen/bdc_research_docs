@@ -1,0 +1,58 @@
+{
+  "task_id": "TASK-7480-BDC-EVIDENCE-AWARE-SCORING-ENGINE",
+  "project": "Bio Digital Core",
+  "phase": 39,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-14",
+  "objective": "Implement the evidence-aware decision core that scores tested variants, rewards empirically useful role structure, and penalizes failed role inflation and coordination overhead.",
+  "research_question": "How should BDC CLI v2 convert tested variants and measured outcomes into architecture scores that correctly override generic priors when strong evidence exists?",
+  "depends_on": [
+    "TASK-7470-BDC-ROLE-ONTOLOGY-V2"
+  ],
+  "execution_rules": {
+    "phase_gate": "May start only after TASK-7470 is SUCCESS.",
+    "parallel_execution_allowed": false,
+    "scope_expansion_forbidden": true
+  },
+  "runner": {
+    "script": "scripts/analysis/run_phase39_bdc_evidence_aware_scoring_engine.py"
+  },
+  "outputs": [
+    "src/bdc_designer_v2/evidence_engine.py",
+    "src/bdc_designer_v2/coordination_penalty.py",
+    "docs/BDC_EVIDENCE_SCORING_SPEC_V2.md",
+    "results/bdc_evidence_engine/scoring_regression_matrix.csv",
+    "results/bdc_evidence_engine/textai_auto_score_trace.json",
+    "reports/analysis/TASK-7480-BDC-EVIDENCE-AWARE-SCORING-ENGINE/TASK-7480_BRIEF_REPORT.md"
+  ],
+  "tests_required": [
+    "failed variants reduce recommendation score for repeated structures",
+    "empirically useful roles get positive contribution",
+    "coordination penalty increases with unnecessary role inflation",
+    "TextAI_Auto penalizes harmonizer inflation because Variant E failed",
+    "scorer remains deterministic on the same packet"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "evidence_scoring_implemented": true,
+      "rejection_reasons_available": true,
+      "coordination_penalty_active": true,
+      "textai_auto_no_longer_defaults_to_five_roles": true
+    }
+  },
+  "definition_of_done": [
+    "evidence scoring implemented",
+    "coordination penalty implemented",
+    "rejection reasons exposed",
+    "TextAI_Auto role inflation corrected at scorer level",
+    "brief report generated",
+    "append-only logs updated"
+  ],
+  "out_of_scope": [
+    "final CLI command surface",
+    "raw text LLM intake"
+  ]
+}
+

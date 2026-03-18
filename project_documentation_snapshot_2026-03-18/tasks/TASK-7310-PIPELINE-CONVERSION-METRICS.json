@@ -1,0 +1,37 @@
+{
+  "task_id": "TASK-7310-PIPELINE-CONVERSION-METRICS",
+  "project": "Bio Digital Core",
+  "phase": 32,
+  "status": "planned",
+  "priority": "high",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Instrument and summarize end-to-end conversion metrics from outreach through paid pilot close and delivery.",
+  "research_question": "What are the real conversion rates, bottlenecks, and dropout points across the BDC Designer commercial pipeline?",
+  "runner": {
+    "script": "scripts/analysis/run_phase32_pipeline_conversion_metrics.py"
+  },
+  "outputs": [
+    "results/conversion_metrics/funnel_metrics.csv",
+    "results/conversion_metrics/dropoff_analysis.csv",
+    "results/conversion_metrics/stage_latency_summary.csv",
+    "results/conversion_metrics/conversion_dashboard.json",
+    "reports/analysis/TASK-7310-PIPELINE-CONVERSION-METRICS/TASK-7310_BRIEF_REPORT.md"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "funnel_metrics_complete": true,
+      "dropoff_points_identified": true,
+      "stage_latencies_measured": true,
+      "dashboard_generated": true
+    }
+  },
+  "definition_of_done": [
+    "funnel metrics compiled",
+    "dropoff analysis completed",
+    "latencies summarized",
+    "dashboard generated",
+    "brief report generated",
+    "append-only logs updated"
+  ]
+}

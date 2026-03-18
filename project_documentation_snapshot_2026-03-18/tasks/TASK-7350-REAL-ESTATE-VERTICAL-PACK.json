@@ -1,0 +1,30 @@
+{
+  "task_id": "TASK-7350-REAL-ESTATE-VERTICAL-PACK",
+  "project": "Bio Digital Core",
+  "phase": 33,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Build a complete verticalized commercial and delivery package for BDC Designer in real estate workflows such as property intake, matching, valuation, and offer generation.",
+  "research_question": "Can BDC Designer be positioned as a practical architecture decision system for real estate workflow automation with measurable business value?",
+  "runner": {
+    "script": "scripts/analysis/run_phase33_real_estate_vertical_pack.py"
+  },
+  "outputs": [
+    "results/vertical_real_estate/icp_profile.json",
+    "results/vertical_real_estate/discovery_question_set.csv",
+    "results/vertical_real_estate/pilot_scope_templates.csv",
+    "results/vertical_real_estate/success_metrics_matrix.csv",
+    "reports/analysis/TASK-7350-REAL-ESTATE-VERTICAL-PACK/TASK-7350_BRIEF_REPORT.md",
+    "reports/public_release/TASK-7350-REAL-ESTATE-VERTICAL-PACK/BDC_REAL_ESTATE_VERTICAL_PACK.md"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "icp_defined": true,
+      "discovery_questions_defined": true,
+      "pilot_templates_defined": true,
+      "success_metrics_defined": true
+    }
+  }
+}

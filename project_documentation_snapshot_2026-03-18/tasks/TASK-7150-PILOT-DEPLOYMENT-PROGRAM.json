@@ -1,0 +1,30 @@
+{
+  "task_id": "TASK-7150-PILOT-DEPLOYMENT-PROGRAM",
+  "project": "Bio Digital Core",
+  "phase": 29,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Define and operationalize a pilot deployment program for BDC Designer across qualified early adopter workflows.",
+  "research_question": "Can BDC Designer pilots be run through a standardized program with clear intake, qualification, execution, and success criteria?",
+  "runner": {
+    "script": "scripts/analysis/run_phase29_pilot_deployment_program.py"
+  },
+  "outputs": [
+    "results/pilot_program/pilot_intake_form.json",
+    "results/pilot_program/qualification_matrix.csv",
+    "results/pilot_program/pilot_success_metrics.csv",
+    "results/pilot_program/pilot_operating_flow.json",
+    "reports/analysis/TASK-7150-PILOT-DEPLOYMENT-PROGRAM/TASK-7150_BRIEF_REPORT.md",
+    "docs/BDC_PILOT_PROGRAM.md"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "intake_defined": true,
+      "qualification_criteria_defined": true,
+      "success_metrics_defined": true,
+      "operating_flow_defined": true
+    }
+  }
+}

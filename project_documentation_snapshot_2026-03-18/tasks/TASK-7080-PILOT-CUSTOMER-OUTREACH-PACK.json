@@ -1,0 +1,66 @@
+{
+  "task_id": "TASK-7080-PILOT-CUSTOMER-OUTREACH-PACK",
+  "project": "Bio Digital Core",
+  "phase": 27,
+  "status": "planned",
+  "priority": "high",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Prepare a pilot-customer outreach pack for BDC Designer and Restricted BDC services, including outbound message templates, call structure, offer sequencing, and flagship proof attachments.",
+  "research_question": "Can the BDC asset be packaged into an outreach-ready set of materials that increases the odds of securing qualified pilot conversations?",
+  "target_contact_types": [
+    "CTO",
+    "Head of AI",
+    "AI engineering lead",
+    "product lead for AI workflows",
+    "innovation lead"
+  ],
+  "outreach_assets": [
+    "cold outreach email",
+    "warm intro email",
+    "short dm version",
+    "pilot call agenda",
+    "discovery question sheet",
+    "follow_up_sequence",
+    "flagship_case_attachment_summary",
+    "audit_offer_attachment_summary"
+  ],
+  "runner": {
+    "script": "scripts/analysis/run_phase27_pilot_customer_outreach_pack.py"
+  },
+  "outputs": [
+    "results/outreach_pack/message_variant_manifest.csv",
+    "results/outreach_pack/discovery_question_sheet.csv",
+    "results/outreach_pack/follow_up_sequence.json",
+    "reports/analysis/TASK-7080-PILOT-CUSTOMER-OUTREACH-PACK/TASK-7080_BRIEF_REPORT.md",
+    "reports/public_release/TASK-7080-PILOT-CUSTOMER-OUTREACH-PACK/PILOT_OUTREACH_PACK.md"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "all_core_outreach_variants_written": true,
+      "discovery_question_sheet_complete": true,
+      "follow_up_sequence_complete": true,
+      "flagship_case_integrated": true,
+      "offer_sequencing_present": true
+    }
+  },
+  "definition_of_done": [
+    "outreach variants written",
+    "discovery questions prepared",
+    "follow-up sequence prepared",
+    "flagship case integrated",
+    "brief report generated",
+    "append-only logs updated"
+  ],
+  "artifacts_contract": {
+    "results_directory": "results/outreach_pack/",
+    "reports_directory": "reports/analysis/",
+    "public_reports_directory": "reports/public_release/",
+    "append_only_logs": [
+      "AGENTS_LOG.md",
+      "WEEKLY_STATUS.md"
+    ],
+    "git_branch": "origin/test",
+    "results_not_committed": true
+  }
+}

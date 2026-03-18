@@ -1,0 +1,44 @@
+{
+  "task_id": "TASK-7130-PILOT-OPERATOR-ONBOARDING-KIT",
+  "project": "Bio Digital Core",
+  "phase": 28,
+  "status": "planned",
+  "priority": "high",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Create a pilot-ready onboarding kit so that a new technical operator can install, launch, test, and interpret BDC Designer with minimal supervision.",
+  "research_question": "Can a new pilot operator go from zero to first valid BDC Designer run, example interpretation, and first workflow recommendation using only the onboarding materials?",
+  "kit_components": [
+    "quickstart",
+    "install guide",
+    "windows one-click guide",
+    "example walkthrough",
+    "interpretation cheat sheet",
+    "common error guide",
+    "pilot checklist"
+  ],
+  "runner": {
+    "script": "scripts/analysis/run_phase28_pilot_operator_onboarding_kit.py"
+  },
+  "outputs": [
+    "results/onboarding/onboarding_manifest.csv",
+    "results/onboarding/operator_checklist.csv",
+    "reports/analysis/TASK-7130-PILOT-OPERATOR-ONBOARDING-KIT/TASK-7130_BRIEF_REPORT.md",
+    "docs/BDC_PILOT_OPERATOR_ONBOARDING_KIT.md"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "install_path_documented": true,
+      "first_run_path_documented": true,
+      "interpretation_cheat_sheet_present": true,
+      "pilot_checklist_present": true
+    }
+  },
+  "definition_of_done": [
+    "onboarding kit drafted",
+    "quickstart included",
+    "pilot checklist included",
+    "brief report generated",
+    "append-only logs updated"
+  ]
+}

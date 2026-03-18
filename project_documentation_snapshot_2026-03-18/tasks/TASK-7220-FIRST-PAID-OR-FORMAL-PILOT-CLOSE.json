@@ -1,0 +1,20 @@
+{
+  "task_id": "TASK-7220-FIRST-PAID-OR-FORMAL-PILOT-CLOSE",
+  "project": "Bio Digital Core",
+  "phase": 30,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Close the first formal BDC pilot agreement using commercial pilot kit and workflow-fit evidence.",
+  "research_question": "Can the current BDC asset package be converted into a signed formal pilot with defined scope and criteria?",
+  "runner": {
+    "script": "scripts/analysis/run_phase30_first_pilot_close.py"
+  },
+  "outputs": [
+    "results/pilot_close/pilot_scope_summary.json",
+    "results/pilot_close/success_criteria.csv",
+    "results/pilot_close/close_status.json",
+    "reports/analysis/TASK-7220-FIRST-PAID-OR-FORMAL-PILOT-CLOSE/TASK-7220_BRIEF_REPORT.md"
+  ]
+}

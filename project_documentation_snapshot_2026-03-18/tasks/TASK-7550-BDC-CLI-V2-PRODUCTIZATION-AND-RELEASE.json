@@ -1,0 +1,61 @@
+{
+  "task_id": "TASK-7550-BDC-CLI-V2-PRODUCTIZATION-AND-RELEASE",
+  "project": "Bio Digital Core",
+  "phase": 46,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-14",
+  "objective": "Package the benchmark-validated BDC CLI v2 into a release-ready operator system with install path, migration path from v1, example packets, and complete operator documentation.",
+  "research_question": "Can BDC CLI v2 be released as a stable operator tool only after benchmark validation proves it is ready to replace or sit alongside v1?",
+  "depends_on": [
+    "TASK-7540-BDC-REAL-CASE-BENCHMARK-SUITE"
+  ],
+  "execution_rules": {
+    "phase_gate": "May start only after TASK-7540 is SUCCESS and benchmark verdict is positive.",
+    "parallel_execution_allowed": false,
+    "scope_expansion_forbidden": true
+  },
+  "runner": {
+    "script": "scripts/analysis/run_phase46_bdc_cli_v2_productization_and_release.py"
+  },
+  "outputs": [
+    "pyproject.toml",
+    "docs/BDC_CLI_V2_INSTALL_AND_RUN.md",
+    "docs/BDC_CLI_V2_MIGRATION_GUIDE.md",
+    "docs/BDC_CLI_V2_USER_GUIDE.md",
+    "examples/bdc_cli_v2_release_examples.json",
+    "results/bdc_cli_v2_release/release_validation_summary.json",
+    "reports/analysis/TASK-7550-BDC-CLI-V2-PRODUCTIZATION-AND-RELEASE/TASK-7550_BRIEF_REPORT.md"
+  ],
+  "tests_required": [
+    "install and run tests",
+    "Windows quickstart tests",
+    "example packet smoke tests",
+    "output schema compatibility checks",
+    "operator can run from packet and from raw case path"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "release_ready_bundle_complete": true,
+      "operator_docs_complete": true,
+      "migration_guide_complete": true,
+      "install_and_run_path_verified": true,
+      "benchmark_validated_core_preserved": true
+    }
+  },
+  "definition_of_done": [
+    "release bundle prepared",
+    "install path verified",
+    "migration guide from v1 written",
+    "operator docs and examples written",
+    "release validation summary generated",
+    "brief report generated",
+    "append-only logs updated"
+  ],
+  "out_of_scope": [
+    "new algorithmic experiments after release freeze",
+    "replacing v1 without benchmark-backed release approval"
+  ]
+}
+

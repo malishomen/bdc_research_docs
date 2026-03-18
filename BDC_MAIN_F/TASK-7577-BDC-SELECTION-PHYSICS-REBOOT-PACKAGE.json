@@ -1,0 +1,50 @@
+{
+  "task_id": "TASK-7577-BDC-SELECTION-PHYSICS-REBOOT-PACKAGE",
+  "project": "Bio Digital Core",
+  "phase": 47,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-17",
+  "objective": "Define the first scientific package of the rebooted BDC research line: a selection-physics rebuild experiment that tests new resource and energy regimes before any new organism-level expansion.",
+  "research_question": "Can BDC define a first reboot experiment that tests new selection physics honestly and prevents premature return to organism-level complexity?",
+  "depends_on": [
+    "TASK-7576-BDC-RESEARCH-REBOOT-CHARTER"
+  ],
+  "execution_rules": {
+    "phase_gate": "May start only after the reboot charter is approved.",
+    "parallel_execution_allowed": false,
+    "scope_expansion_forbidden": true
+  },
+  "outputs": [
+    "docs/experiments/EXP-0800_SELECTION_PHYSICS_REBOOT_2026-03-17.md",
+    "tasks/TASK-7577-BDC-SELECTION-PHYSICS-REBOOT-PACKAGE.json",
+    "reports/analysis/TASK-7577-BDC-SELECTION-PHYSICS-REBOOT-PACKAGE/TASK-7577_BRIEF_REPORT.md"
+  ],
+  "tests_required": [
+    "experiment doc existence check",
+    "experiment doc includes protocol and roadmap impact sections",
+    "package states pass/fail condition for Phase R1"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "phase_r1_package_defined": true,
+      "legacy_control_retained": true,
+      "new_regime_families_defined": true,
+      "roadmap_gate_logic_explicit": true
+    }
+  },
+  "definition_of_done": [
+    "phase R1 experiment package written",
+    "candidate regime families defined",
+    "protocol and gate logic defined",
+    "brief report generated",
+    "append-only logs updated"
+  ],
+  "out_of_scope": [
+    "execution of the experiment",
+    "selection of a winning regime before data",
+    "any organism-level claim"
+  ]
+}
+

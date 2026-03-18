@@ -1,0 +1,13 @@
+{
+  "task_id": "TASK-7000-STRATEGIC-SPINOUT-MAP",
+  "project": "Bio Digital Core",
+  "phase": 25,
+  "status": "planned",
+  "priority": "medium",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Map strategic spinout tracks into publication, tooling, methodology, and commercialization paths.",
+  "runner": {
+    "script": "scripts/analysis/run_phase25_strategic_spinout_map.py"
+  }
+}

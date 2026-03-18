@@ -1,0 +1,24 @@
+{
+  "task_id": "TASK-6830-HIDDEN-STATE-AUGMENTATION-TEST",
+  "project": "Bio Digital Core",
+  "phase": 19,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Test whether transition-law recovery failure is caused by missing state variables and whether hidden-state augmentation improves OOS transition prediction.",
+  "runner": {
+    "script": "scripts/analysis/run_phase19_hidden_state_augmentation_test.py"
+  },
+  "artifacts_contract": {
+    "results_directory": "results/transition_hidden_state/",
+    "reports_directory": "reports/analysis/",
+    "append_only_logs": [
+      "AGENTS_LOG.md",
+      "WEEKLY_STATUS.md"
+    ],
+    "git_branch": "origin/test",
+    "results_not_committed": true
+  }
+}
+

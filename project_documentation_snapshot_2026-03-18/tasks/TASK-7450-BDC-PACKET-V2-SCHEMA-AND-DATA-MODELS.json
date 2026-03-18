@@ -1,0 +1,58 @@
+{
+  "task_id": "TASK-7450-BDC-PACKET-V2-SCHEMA-AND-DATA-MODELS",
+  "project": "Bio Digital Core",
+  "phase": 36,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-14",
+  "objective": "Define and implement BDC_PACKET_V2 so real workflow cases, tested variants, constraints, and evidence can be represented without loss of decision-critical information.",
+  "research_question": "What packet schema and data models are required so BDC CLI v2 can reason about real multi-agent architecture decisions rather than toy descriptors only?",
+  "depends_on": [
+    "TASK-7440-BDC-CLI-V1-BASELINE-FREEZE"
+  ],
+  "execution_rules": {
+    "phase_gate": "May start only after TASK-7440 is SUCCESS.",
+    "parallel_execution_allowed": false,
+    "scope_expansion_forbidden": true
+  },
+  "runner": {
+    "script": "scripts/analysis/run_phase36_bdc_packet_v2_schema_and_data_models.py"
+  },
+  "outputs": [
+    "schemas/BDC_CLI_SCHEMA_V2.json",
+    "docs/BDC_PACKET_V2_EXAMPLES.md",
+    "src/bdc_designer_v2/models.py",
+    "src/bdc_designer_v2/schema_v2.py",
+    "results/bdc_cli_v2_schema/schema_validation_matrix.csv",
+    "reports/analysis/TASK-7450-BDC-PACKET-V2-SCHEMA-AND-DATA-MODELS/TASK-7450_BRIEF_REPORT.md"
+  ],
+  "tests_required": [
+    "valid packet fixtures parse cleanly",
+    "invalid packets fail with explicit reasons",
+    "backward-compat adapter from v1 descriptor to v2 packet works",
+    "TextAI_Auto packet is expressible without losing tested-variant facts"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "schema_finalized": true,
+      "parser_serializer_implemented": true,
+      "packet_quality_levels_exposed": true,
+      "textai_auto_fully_expressible_in_v2": true
+    }
+  },
+  "definition_of_done": [
+    "schema finalized",
+    "data models implemented",
+    "v1 to v2 adapter implemented",
+    "packet quality levels represented in schema layer",
+    "TextAI_Auto fully representable in v2 packet",
+    "brief report generated",
+    "append-only logs updated"
+  ],
+  "out_of_scope": [
+    "recommendation logic",
+    "role ontology semantics beyond schema support"
+  ]
+}
+

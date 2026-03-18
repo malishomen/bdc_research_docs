@@ -1,0 +1,14 @@
+{
+  "task_id": "TASK-6870-FAILURE-MODE-LOCALIZATION-OF-BDC-DESIGN",
+  "project": "Bio Digital Core",
+  "phase": 20,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Localize conditions and predictors of standalone BDC design failure against stronger baselines.",
+  "runner": {
+    "script": "scripts/analysis/run_phase20_failure_mode_localization_bdc_design.py"
+  }
+}
+

@@ -1,0 +1,47 @@
+{
+  "snapshot_date": "2026-03-18",
+  "source_root": "D:\\projects\\Bio_Digital_Core\\Bio_digital_core",
+  "destination_root": "D:\\projects\\Bio_Digital_Core\\Temp\\research\\project_documentation_snapshot_2026-03-18",
+  "copied_directories": [
+    "docs",
+    "decisions",
+    "reports",
+    "tasks"
+  ],
+  "copied_root_files": [
+    "AGENTS_LOG.md",
+    "AGENTS.md",
+    "ARCHITECTURE.md",
+    "BDC_HIVE_ARCHITECTURE.md",
+    "bdc_orchestrator.md",
+    "CANON.md",
+    "CANONICAL_DOCS_MAP.md",
+    "CANONICAL_LIMITS_AND_PROHIBITIONS.md",
+    "CHECKPOINT_SYSTEM_V2.md",
+    "codex.md",
+    "docker-compose.yml",
+    "environment_snapshot.json",
+    "EVOLUTION_ENGINE.md",
+    "EXECUTION_SUMMARY_TRL10_1.md",
+    "KILL_CRITERIA.yaml",
+    "openapi.yaml",
+    "PISTREAM_PARAMETRIC_SWEEP_REPORT.md",
+    "POPULATION_AND_SCALING.md",
+    "project_main_doc.md",
+    "project_roadmap.md",
+    "pyproject.toml",
+    "README.md",
+    "REPRODUCIBILITY.md",
+    "RESEARCH_METHODOLOGY.md",
+    "SEED_POLICY.md",
+    "SEMANTICS.md",
+    "USER_INTERACTION_MODEL.md",
+    "VERSIONING.md",
+    "WEEKLY_STATUS.md"
+  ],
+  "notes": [
+    "Source code directories were intentionally excluded.",
+    "Documentation snapshot preserves relative structure for docs/decisions/reports/tasks.",
+    "Root-level markdown/yaml/json/toml files were copied as documentation/canonical context."
+  ]
+}

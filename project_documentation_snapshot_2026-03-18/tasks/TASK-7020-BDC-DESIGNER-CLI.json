@@ -1,0 +1,13 @@
+{
+  "task_id": "TASK-7020-BDC-DESIGNER-CLI",
+  "project": "Bio Digital Core",
+  "phase": 26,
+  "status": "planned",
+  "priority": "high",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Turn validated BDC tooling prototype into a usable CLI for architecture-prior recommendations.",
+  "runner": {
+    "script": "scripts/analysis/run_phase26_bdc_designer_cli.py"
+  }
+}

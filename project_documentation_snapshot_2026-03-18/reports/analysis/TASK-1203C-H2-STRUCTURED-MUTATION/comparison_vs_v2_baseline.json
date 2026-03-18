@@ -1,0 +1,103 @@
+{
+  "baseline_v2": {
+    "runtime": {
+      "runs_total": 30,
+      "runs_pass": 30,
+      "runs_fail": 0,
+      "pass_rate": 1.0,
+      "shock_event_count_total": 240
+    },
+    "aggregate": {
+      "runs_total": 30.0,
+      "runs_pass": 0.0,
+      "runs_fail": 30.0,
+      "pass_rate": 0.0,
+      "final_max_fitness_mean": 0.5356865515715755,
+      "final_max_fitness_median": 0.5362029706576338,
+      "final_diversity_mean": 1.0,
+      "final_lineage_persistence_mean": 1.0,
+      "final_rule_entropy_mean": 4.605170185988082
+    },
+    "best_single_accuracy": {
+      "mean": 0.8117838541666667,
+      "median": 0.8095703125,
+      "max": 0.861328125,
+      "count_gt_0_75": 30
+    },
+    "final_max_fitness": {
+      "mean": 0.5356865515715755,
+      "median": 0.5362029706576338,
+      "count_gt_0_75": 0
+    },
+    "trajectory": {
+      "first": 0.5475458841543084,
+      "last": 0.5356865515715755,
+      "delta": -0.011859332582732862,
+      "non_decreasing_ratio": 0.898989898989899,
+      "points_sample": {
+        "1": 0.5475458841543084,
+        "10": 0.5344320536004283,
+        "25": 0.5363766316109981,
+        "50": 0.5360370774581817,
+        "75": 0.5309033291249865,
+        "100": 0.5356865515715755
+      }
+    }
+  },
+  "v2_structured": {
+    "runtime": {
+      "runs_total": 30,
+      "runs_pass": 30,
+      "runs_fail": 0,
+      "pass_rate": 1.0,
+      "shock_event_count_total": 240
+    },
+    "aggregate": {
+      "runs_total": 30.0,
+      "runs_pass": 0.0,
+      "runs_fail": 30.0,
+      "pass_rate": 0.0,
+      "final_max_fitness_mean": 0.528259165120311,
+      "final_max_fitness_median": 0.5298231113485061,
+      "final_diversity_mean": 1.0,
+      "final_lineage_persistence_mean": 1.0,
+      "final_rule_entropy_mean": 4.605170185988082
+    },
+    "best_single_accuracy": {
+      "mean": 0.8037109375,
+      "median": 0.8056640625,
+      "max": 0.8359375,
+      "count_gt_0_75": 30
+    },
+    "final_max_fitness": {
+      "mean": 0.528259165120311,
+      "median": 0.5298231113485061,
+      "count_gt_0_75": 0
+    },
+    "trajectory": {
+      "first": 0.5475458841543084,
+      "last": 0.528259165120311,
+      "delta": -0.019286719033997368,
+      "non_decreasing_ratio": 0.8888888888888888,
+      "points_sample": {
+        "1": 0.5475458841543084,
+        "10": 0.5406209869564376,
+        "25": 0.538244467171819,
+        "50": 0.5371935219872594,
+        "75": 0.5304850279415156,
+        "100": 0.528259165120311
+      }
+    }
+  },
+  "delta": {
+    "final_max_fitness_mean": -0.007427386451264506,
+    "best_single_accuracy_mean": -0.008072916666666652,
+    "runtime_pass_rate": 0.0
+  },
+  "evaluation_criteria": {
+    "final_max_fitness_mean_gt_0_75": false,
+    "at_least_5_best_single_accuracy_gt_0_75": true,
+    "trajectory_non_decreasing_ratio_gt_baseline": false,
+    "trajectory_delta_positive": false
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "cuda_version": "12.1",
+  "gpu_model": "NVIDIA GeForce GTX 1080 Ti",
+  "driver_version": "566.36",
+  "pytorch_version": "2.5.1+cu121",
+  "numpy_version": "1.26.4",
+  "os_version": "Windows-10-10.0.22631-SP0",
+  "hostname": "WIN-JTSARSVBH32"
+}

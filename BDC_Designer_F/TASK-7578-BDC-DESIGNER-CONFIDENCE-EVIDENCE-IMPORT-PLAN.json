@@ -1,0 +1,54 @@
+{
+  "task_id": "TASK-7578-BDC-DESIGNER-CONFIDENCE-EVIDENCE-IMPORT-PLAN",
+  "project": "Bio Digital Core",
+  "phase": 48,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-18",
+  "objective": "Define the strict documentation-first execution package for importing calibration, selective prediction, generalized risk, and evidence-state semantics into the frozen BDC Designer line.",
+  "research_question": "Can BDC Designer absorb the strongest external research imports through a bounded documentation gate before any implementation changes are made?",
+  "depends_on": [
+    "TASK-7573-BDC-DESIGNER-FREEZE-RELEASE-NOTE"
+  ],
+  "execution_rules": {
+    "phase_gate": "May start only after the BDC Designer freeze state is established and current mainline status is documented.",
+    "parallel_execution_allowed": false,
+    "scope_expansion_forbidden": true
+  },
+  "outputs": [
+    "docs/project/BDC_DESIGNER_CONFIDENCE_EVIDENCE_IMPORT_PLAN.md",
+    "tasks/TASK-7578-BDC-DESIGNER-CONFIDENCE-EVIDENCE-IMPORT-PLAN.json",
+    "tasks/TASK-7579-BDC-DESIGNER-CALIBRATION-LAYER.json",
+    "tasks/TASK-7580-BDC-DESIGNER-SELECTIVE-PREDICTION-CONTRACT.json",
+    "tasks/TASK-7581-BDC-DESIGNER-GENERALIZED-RISK-EVALUATION.json",
+    "tasks/TASK-7582-BDC-DESIGNER-EVIDENCE-STATE-SEMANTICS.json",
+    "reports/analysis/TASK-7578-BDC-DESIGNER-CONFIDENCE-EVIDENCE-IMPORT-PLAN/TASK-7578_BRIEF_REPORT.md"
+  ],
+  "tests_required": [
+    "plan document existence check",
+    "task JSON parse checks",
+    "project docs reference checks"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "import_plan_written": true,
+      "strict_task_order_defined": true,
+      "phase_level_dod_defined": true,
+      "acceptance_standards_defined": true
+    }
+  },
+  "definition_of_done": [
+    "master import plan written",
+    "strict ordered task packets written",
+    "project docs references updated",
+    "brief report generated",
+    "append-only logs updated"
+  ],
+  "out_of_scope": [
+    "implementation of calibration logic",
+    "implementation of selective prediction logic",
+    "implementation of generalized risk",
+    "implementation of evidence-state semantics"
+  ]
+}

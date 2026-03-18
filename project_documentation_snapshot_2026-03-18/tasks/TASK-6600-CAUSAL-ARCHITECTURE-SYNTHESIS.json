@@ -1,0 +1,30 @@
+{
+  "task_id": "TASK-6600-CAUSAL-ARCHITECTURE-SYNTHESIS",
+  "project": "Bio Digital Core",
+  "phase": 16,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Validate that cooperative multi-agent architecture can be predicted from task causal structure before training.",
+  "principle": "Agent role weights are determined by causal contributions derived from task causal graph.",
+  "formal_model": {
+    "causal_graph": "task represented as DAG",
+    "causal_contribution": "counterfactual influence of node on outcome",
+    "weight_prediction": "w_r = C_r / ΣC_r"
+  },
+  "runner": {
+    "prediction_script": "scripts/analysis/run_phase16_causal_architecture_prediction.py",
+    "training_script": "scripts/edp1/run_phase16_architecture_validation.py"
+  },
+  "artifacts_contract": {
+    "results_directory": "results/causal_architecture/",
+    "reports_directory": "reports/analysis/",
+    "append_only_logs": [
+      "AGENTS_LOG.md",
+      "WEEKLY_STATUS.md"
+    ],
+    "git_branch": "origin/test",
+    "results_not_committed": true
+  }
+}

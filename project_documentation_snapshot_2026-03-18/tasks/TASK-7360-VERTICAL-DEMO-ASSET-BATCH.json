@@ -1,0 +1,27 @@
+{
+  "task_id": "TASK-7360-VERTICAL-DEMO-ASSET-BATCH",
+  "project": "Bio Digital Core",
+  "phase": 33,
+  "status": "planned",
+  "priority": "high",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Create vertical-specific demo assets for the strongest BDC Designer entry markets so each target customer sees their own workflow reflected immediately.",
+  "research_question": "Can BDC demo materials be made more convincing by tying them directly to vertical-specific workflow pain and outcomes?",
+  "runner": {
+    "script": "scripts/analysis/run_phase33_vertical_demo_asset_batch.py"
+  },
+  "outputs": [
+    "results/vertical_demos/demo_asset_index.csv",
+    "results/vertical_demos/vertical_before_after_tables.csv",
+    "reports/analysis/TASK-7360-VERTICAL-DEMO-ASSET-BATCH/TASK-7360_BRIEF_REPORT.md",
+    "reports/public_release/TASK-7360-VERTICAL-DEMO-ASSET-BATCH/BDC_VERTICAL_DEMOS.md"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "sales_demo_asset_created": true,
+      "real_estate_demo_asset_created": true,
+      "before_after_tables_present": true
+    }
+  }
+}

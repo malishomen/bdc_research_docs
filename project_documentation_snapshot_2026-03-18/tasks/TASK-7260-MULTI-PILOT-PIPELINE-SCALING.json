@@ -1,0 +1,34 @@
+{
+  "task_id": "TASK-7260-MULTI-PILOT-PIPELINE-SCALING",
+  "project": "Bio Digital Core",
+  "phase": 31,
+  "status": "planned",
+  "priority": "high",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Scale BDC Designer from one completed pilot to a controlled multi-pilot pipeline with repeatable qualification, delivery, and proof collection.",
+  "research_question": "Can the current pilot process be scaled to multiple concurrent pilot tracks without losing delivery quality or qualification discipline?",
+  "runner": {
+    "script": "scripts/analysis/run_phase31_multi_pilot_pipeline_scaling.py"
+  },
+  "outputs": [
+    "results/multi_pilot/pipeline_capacity_model.csv",
+    "results/multi_pilot/pilot_stage_tracking.csv",
+    "results/multi_pilot/delivery_risk_map.csv",
+    "reports/analysis/TASK-7260-MULTI-PILOT-PIPELINE-SCALING/TASK-7260_BRIEF_REPORT.md"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "multi_pilot_stage_model_defined": true,
+      "capacity_constraints_identified": true,
+      "delivery_risks_mapped": true
+    }
+  },
+  "definition_of_done": [
+    "pipeline model created",
+    "stage tracking defined",
+    "delivery risks mapped",
+    "brief report generated",
+    "append-only logs updated"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "task_id": "TASK-7420-RETAINER-AND-EXPANSION-OFFER-DESIGN",
+  "project": "Bio Digital Core",
+  "phase": 34,
+  "status": "planned",
+  "priority": "high",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Design the post-pilot commercial path from one-off paid pilot into retainer, repeat workflow redesign, or expansion to additional workflows inside the same client.",
+  "research_question": "Can BDC Designer evolve from pilot revenue into recurring or expanding revenue within the same customer accounts?",
+  "runner": {
+    "script": "scripts/analysis/run_phase34_retainer_and_expansion_offer_design.py"
+  },
+  "outputs": [
+    "results/retainer_expansion/offer_paths.csv",
+    "results/retainer_expansion/retainer_logic.json",
+    "results/retainer_expansion/expansion_playbook.csv",
+    "reports/analysis/TASK-7420-RETAINER-AND-EXPANSION-OFFER-DESIGN/TASK-7420_BRIEF_REPORT.md",
+    "docs/BDC_RETAINER_AND_EXPANSION_PLAYBOOK.md"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "retainer_path_defined": true,
+      "expansion_logic_defined": true,
+      "post_pilot_offer_paths_defined": true
+    }
+  }
+}

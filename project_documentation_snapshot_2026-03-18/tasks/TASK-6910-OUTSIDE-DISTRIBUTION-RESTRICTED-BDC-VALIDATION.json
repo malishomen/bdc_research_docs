@@ -1,0 +1,14 @@
+{
+  "task_id": "TASK-6910-OUTSIDE-DISTRIBUTION-RESTRICTED-BDC-VALIDATION",
+  "project": "Bio Digital Core",
+  "phase": 22,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Validate restricted BDC core under outside-distribution cooperative task families.",
+  "runner": {
+    "script": "scripts/analysis/run_phase22_ood_restricted_bdc_validation.py"
+  }
+}
+

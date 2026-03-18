@@ -1,0 +1,53 @@
+{
+  "task_id": "TASK-7582-BDC-DESIGNER-EVIDENCE-STATE-SEMANTICS",
+  "project": "Bio Digital Core",
+  "phase": 48,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-18",
+  "objective": "Formalize BDC Designer packet evidence states into a compact semantics layer that distinguishes measured support, inferred support, missingness, and contradiction without collapsing them into ad hoc labels.",
+  "research_question": "Can BDC Designer turn its packet evidence-state handling into a bounded semantics layer that improves reasoning quality while remaining compatible with the existing intake and client-bundle workflows?",
+  "depends_on": [
+    "TASK-7581-BDC-DESIGNER-GENERALIZED-RISK-EVALUATION"
+  ],
+  "execution_rules": {
+    "phase_gate": "May start only after calibration, selective prediction, and generalized-risk outputs are already defined so that semantics are aligned to the final operator contract.",
+    "parallel_execution_allowed": false,
+    "scope_expansion_forbidden": true
+  },
+  "runner": {
+    "script": "scripts/analysis/run_phase56_bdc_designer_evidence_state_semantics.py"
+  },
+  "outputs": [
+    "src/bdc_designer_v2/evidence_state_semantics.py",
+    "docs/BDC_EVIDENCE_STATE_LOGIC_NOTE.md",
+    "results/bdc_designer_evidence_state/evidence_state_summary.json",
+    "reports/analysis/TASK-7582-BDC-DESIGNER-EVIDENCE-STATE-SEMANTICS/TASK-7582_BRIEF_REPORT.md"
+  ],
+  "tests_required": [
+    "contradiction-vs-missing regression tests",
+    "validator/evidence summary integration tests",
+    "diagnostics/explanation consistency tests",
+    "client-bundle compatibility tests"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "evidence_state_semantics_defined": true,
+      "contradiction_and_missingness_separated": true,
+      "machine_readable_state_summary_present": true,
+      "client_bundle_compatibility_preserved": true
+    }
+  },
+  "definition_of_done": [
+    "evidence-state semantics layer implemented",
+    "state summary exposed in outputs",
+    "diagnostics and explanation aligned",
+    "brief report generated",
+    "append-only logs updated"
+  ],
+  "out_of_scope": [
+    "full qcore rewrite",
+    "new architecture-search algorithm beyond semantics integration"
+  ]
+}

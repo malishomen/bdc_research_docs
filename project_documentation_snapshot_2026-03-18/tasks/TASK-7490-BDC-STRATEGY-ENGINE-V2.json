@@ -1,0 +1,55 @@
+{
+  "task_id": "TASK-7490-BDC-STRATEGY-ENGINE-V2",
+  "project": "Bio Digital Core",
+  "phase": 40,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-14",
+  "objective": "Derive search and decision mode from evidence state, ambiguity, budget, and prior-evidence conflict rather than from family defaults.",
+  "research_question": "When should BDC CLI v2 choose direct architecture selection, direct selection with tuning, warm start, pruning, or full hybrid search based on packet and evidence state?",
+  "depends_on": [
+    "TASK-7480-BDC-EVIDENCE-AWARE-SCORING-ENGINE"
+  ],
+  "execution_rules": {
+    "phase_gate": "May start only after TASK-7480 is SUCCESS.",
+    "parallel_execution_allowed": false,
+    "scope_expansion_forbidden": true
+  },
+  "runner": {
+    "script": "scripts/analysis/run_phase40_bdc_strategy_engine_v2.py"
+  },
+  "outputs": [
+    "src/bdc_designer_v2/strategy_engine.py",
+    "docs/BDC_STRATEGY_EXPLANATION_CONTRACT_V2.md",
+    "results/bdc_strategy_engine/strategy_case_matrix.csv",
+    "results/bdc_strategy_engine/textai_auto_strategy_trace.json",
+    "reports/analysis/TASK-7490-BDC-STRATEGY-ENGINE-V2/TASK-7490_BRIEF_REPORT.md"
+  ],
+  "tests_required": [
+    "strong winner plus failed inflation yields direct architecture selection or direct selection plus tuning",
+    "ambiguous packet yields warm start or full hybrid search",
+    "low budget plus weak evidence yields pruning",
+    "TextAI_Auto yields direct architecture selection plus tuning"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "strategy_engine_uses_evidence_state": true,
+      "strategy_explanation_emitted": true,
+      "textai_auto_strategy_fixed_relative_to_v1": true
+    }
+  },
+  "definition_of_done": [
+    "strategy engine implemented",
+    "strategy explanation contract implemented",
+    "evidence state and conflict state drive strategy selection",
+    "TextAI_Auto strategy corrected relative to v1",
+    "brief report generated",
+    "append-only logs updated"
+  ],
+  "out_of_scope": [
+    "confidence calibration",
+    "human-readable explanation generation beyond strategy rationale"
+  ]
+}
+

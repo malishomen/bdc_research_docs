@@ -1,0 +1,155 @@
+{
+  "task_id": "TASK-6100-SURVIVAL-PRESSURE-INJECTION",
+  "project": "Bio Digital Core",
+  "phase": 11,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Test whether the discovered cooperative law reflects survival dynamics rather than direct weight causality by injecting survival-pressure scaling into the selection process.",
+  "background": {
+    "previous_tasks": [
+      "TASK-5700-COOPERATIVE-COEVOLUTION-ARCHITECTURE",
+      "TASK-5800-RISK-ADJUSTED-WEIGHT-LAW",
+      "TASK-5900-GENERALIZED-WEIGHT-LAW-DISCOVERY",
+      "TASK-6000-LAW-INJECTION-VALIDATION"
+    ],
+    "discovered_empirical_law": {
+      "formula": "w_r \u221d sigma_r^alpha / mu_r^beta",
+      "alpha": 1.5714285714285714,
+      "beta": 0.6020408163265306,
+      "correlation": 0.9821649299187987,
+      "mae": 0.03882849082931975
+    },
+    "previous_causal_test": {
+      "result": "FAILURE",
+      "interpretation": "Direct weight injection does not improve system performance, suggesting the law reflects emergent survival dynamics rather than causal weight control."
+    },
+    "hypothesis": "The empirical law approximates role survival probability under selection pressure rather than optimal fixed weight allocation."
+  },
+  "research_hypothesis": {
+    "statement": "Injecting survival-pressure scaling into fitness evaluation will improve cooperative dynamics if the discovered law approximates role survival probability.",
+    "survival_scaling_formula": "fitness_r = fitness \u00d7 (sigma_r^alpha / mu_r^beta)",
+    "alpha": 1.5714285714285714,
+    "beta": 0.6020408163265306
+  },
+  "experimental_regimes": [
+    {
+      "regime_id": "baseline_coevolution",
+      "description": "Standard cooperative coevolution without survival-pressure scaling."
+    },
+    {
+      "regime_id": "survival_scaled",
+      "description": "Fitness scaled using discovered survival law."
+    },
+    {
+      "regime_id": "variance_only_scaling",
+      "description": "Fitness scaled only by variance term: fitness \u00d7 sigma_r^alpha."
+    },
+    {
+      "regime_id": "mean_inverse_scaling",
+      "description": "Fitness scaled only by inverse mean signal: fitness \u00d7 (1 / mu_r^beta)."
+    }
+  ],
+  "experiment_configuration": {
+    "seeds": 30,
+    "base_seed": 1337,
+    "generations": 120,
+    "population_size": 64,
+    "partners_per_evaluation": 5,
+    "evaluation_samples_per_genome": 10
+  },
+  "metrics_collected": [
+    "mean_delta_advantage",
+    "positive_seed_fraction",
+    "convergence_speed",
+    "fitness_variance",
+    "role_ratio_stability",
+    "generation_to_plateau"
+  ],
+  "experiment_blocks": [
+    {
+      "block_id": "TASK-6101",
+      "title": "SURVIVAL-PRESSURE IMPLEMENTATION",
+      "goal": "Extend coevolution engine to support survival-pressure scaling during selection.",
+      "target_files": [
+        "evolution/coevolution_engine.py"
+      ]
+    },
+    {
+      "block_id": "TASK-6102",
+      "title": "MULTI-REGIME EXECUTION",
+      "goal": "Run experiments under baseline and three survival-pressure regimes.",
+      "runner": "scripts/edp1/run_phase11_survival_injection.py",
+      "outputs": [
+        "results/survival_injection/per_seed_metrics.csv",
+        "results/survival_injection/delta_timeseries.csv",
+        "results/survival_injection/regime_summary.json"
+      ]
+    },
+    {
+      "block_id": "TASK-6103",
+      "title": "PERFORMANCE COMPARISON",
+      "goal": "Compare cooperative performance across regimes.",
+      "analysis_metrics": [
+        "mean_delta_advantage",
+        "positive_seed_fraction",
+        "convergence_speed"
+      ],
+      "outputs": [
+        "results/survival_injection/performance_comparison.csv"
+      ]
+    },
+    {
+      "block_id": "TASK-6104",
+      "title": "STABILITY ANALYSIS",
+      "goal": "Analyze role ratio stability and fitness variance across generations.",
+      "outputs": [
+        "results/survival_injection/stability_metrics.csv"
+      ]
+    },
+    {
+      "block_id": "TASK-6105",
+      "title": "MECHANISM VALIDATION",
+      "goal": "Determine whether survival-pressure scaling improves cooperative regime stability.",
+      "criteria": {
+        "delta_advantage_improvement": 0.01,
+        "positive_seed_fraction_improvement": 0.05
+      },
+      "outputs": [
+        "results/survival_injection/mechanism_validation.json"
+      ]
+    },
+    {
+      "block_id": "TASK-6106",
+      "title": "FINAL REPORT",
+      "goal": "Interpret experimental results and determine whether the discovered law reflects survival dynamics.",
+      "report": "reports/analysis/TASK-6100-SURVIVAL-PRESSURE/TASK-6100_BRIEF_REPORT.md"
+    }
+  ],
+  "evaluation_criteria": {
+    "mechanism_confirmed_if": {
+      "delta_advantage_improvement_min": 0.01,
+      "positive_seed_fraction_improvement_min": 0.05
+    }
+  },
+  "definition_of_done": [
+    "Survival-pressure scaling implemented in coevolution engine.",
+    "All regimes executed across N=30 seeds.",
+    "Performance metrics collected and compared.",
+    "Stability analysis completed.",
+    "Mechanism validation result produced.",
+    "Brief report generated.",
+    "Append-only logs updated."
+  ],
+  "artifacts_contract": {
+    "results_directory": "results/survival_injection/",
+    "reports_directory": "reports/analysis/",
+    "append_only_logs": [
+      "AGENTS_LOG.md",
+      "WEEKLY_STATUS.md"
+    ],
+    "git_branch": "origin/test",
+    "results_not_committed": true
+  }
+}

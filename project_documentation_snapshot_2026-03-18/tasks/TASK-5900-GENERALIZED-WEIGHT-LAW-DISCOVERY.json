@@ -1,0 +1,142 @@
+{
+  "task_id": "TASK-5900-GENERALIZED-WEIGHT-LAW-DISCOVERY",
+  "project": "Bio Digital Core",
+  "phase": 9,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Discover the empirical law governing emergent role weights in cooperative coevolution by fitting a generalized power-law model using role signal statistics.",
+  "background": {
+    "previous_tasks": [
+      "TASK-5600-CREDIT-ASSIGNMENT-STABILIZATION",
+      "TASK-5700-COOPERATIVE-COEVOLUTION-ARCHITECTURE",
+      "TASK-5800-RISK-ADJUSTED-WEIGHT-LAW"
+    ],
+    "observations": {
+      "observed_role_ratio": {
+        "predictor": 0.627,
+        "critic": 0.331,
+        "aggregator": 0.042
+      },
+      "risk_law_result": {
+        "pearson": -0.9835944662021062,
+        "mae": 0.32933314182314616,
+        "law_confirmed": false
+      }
+    },
+    "interpretation": "Strong negative correlation suggests emergent weights follow an inverse signal law rather than a direct signal-to-noise law."
+  },
+  "research_hypothesis": {
+    "statement": "Emergent role weights follow a generalized power law based on role signal statistics.",
+    "model": "w_r ∝ sigma_r^alpha / mu_r^beta",
+    "parameters_to_estimate": [
+      "alpha",
+      "beta"
+    ]
+  },
+  "input_data": {
+    "files": [
+      "results/risk_law/role_statistics.csv",
+      "results/coevolution/role_ratio_dynamics.csv",
+      "results/coevolution/per_seed_metrics.csv"
+    ]
+  },
+  "experiment_design": {
+    "parameter_search": {
+      "alpha_range": [
+        0.5,
+        3.0
+      ],
+      "beta_range": [
+        0.5,
+        3.0
+      ],
+      "alpha_steps": 50,
+      "beta_steps": 50,
+      "search_method": "grid_search"
+    },
+    "prediction_equation": "predicted_r = sigma_r^alpha / mu_r^beta",
+    "normalization": "predicted_r / sum(predicted_r)"
+  },
+  "experiment_blocks": [
+    {
+      "block_id": "TASK-5901",
+      "title": "PARAMETER GRID GENERATION",
+      "goal": "Generate alpha/beta parameter grid for model search.",
+      "output": "results/weight_law/grid_parameters.csv"
+    },
+    {
+      "block_id": "TASK-5902",
+      "title": "WEIGHT PREDICTION SIMULATION",
+      "goal": "Compute predicted role weights for each alpha/beta pair.",
+      "outputs": [
+        "results/weight_law/predicted_weight_grid.csv"
+      ]
+    },
+    {
+      "block_id": "TASK-5903",
+      "title": "MODEL FITTING",
+      "goal": "Compare predicted weights against observed coevolution weights.",
+      "metrics": [
+        "mean_absolute_error",
+        "pearson_correlation",
+        "rmse"
+      ],
+      "outputs": [
+        "results/weight_law/model_fit_metrics.csv"
+      ]
+    },
+    {
+      "block_id": "TASK-5904",
+      "title": "BEST LAW DISCOVERY",
+      "goal": "Find alpha/beta combination minimizing MAE and maximizing correlation.",
+      "outputs": [
+        "results/weight_law/best_parameters.json"
+      ]
+    },
+    {
+      "block_id": "TASK-5905",
+      "title": "ROBUSTNESS ANALYSIS",
+      "goal": "Verify discovered law across seeds and across generations.",
+      "analysis": {
+        "per_seed": true,
+        "per_generation": true
+      },
+      "outputs": [
+        "results/weight_law/stability_analysis.csv"
+      ]
+    },
+    {
+      "block_id": "TASK-5906",
+      "title": "THEORETICAL INTERPRETATION",
+      "goal": "Interpret discovered law and connect it to cooperative coevolution dynamics.",
+      "report": "reports/analysis/TASK-5900-WEIGHT-LAW/TASK-5900_BRIEF_REPORT.md"
+    }
+  ],
+  "evaluation_criteria": {
+    "law_confirmed_if": {
+      "pearson_correlation_min": 0.9,
+      "mean_absolute_error_max": 0.05
+    }
+  },
+  "definition_of_done": [
+    "Grid search completed across alpha/beta parameter space.",
+    "Predicted weights computed for all parameter combinations.",
+    "Best-fitting parameters identified.",
+    "Correlation and MAE metrics evaluated.",
+    "Stability analysis across seeds performed.",
+    "Brief report generated.",
+    "Append-only logs updated."
+  ],
+  "artifacts_contract": {
+    "results_directory": "results/weight_law/",
+    "reports_directory": "reports/analysis/",
+    "append_only_logs": [
+      "AGENTS_LOG.md",
+      "WEEKLY_STATUS.md"
+    ],
+    "git_branch": "origin/test",
+    "results_not_committed": true
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "prior": {
+    "runs_total": "30",
+    "runs_pass": "0",
+    "runs_fail": "30",
+    "pass_rate": "0.0",
+    "final_max_fitness_mean": "0.5531664379938884",
+    "final_max_fitness_median": "0.5530038818022092",
+    "final_mean_fitness_mean": "0.31733006528305713",
+    "final_max_accuracy_mean": "0.790234375",
+    "final_mean_accuracy_mean": "0.5844720052083333",
+    "final_max_complexity_mean": "nan",
+    "final_mean_complexity_mean": "nan",
+    "final_max_penalty_mean": "nan",
+    "final_mean_penalty_mean": "nan",
+    "final_diversity_mean": "1.0",
+    "final_lineage_persistence_mean": "1.0",
+    "final_rule_entropy_mean": "4.605170185988082"
+  },
+  "staged": {
+    "runs_total": "30",
+    "runs_pass": "0",
+    "runs_fail": "30",
+    "pass_rate": "0.0",
+    "final_max_fitness_mean": "0.5524726487966959",
+    "final_max_fitness_median": "0.550524685502884",
+    "final_mean_fitness_mean": "0.3211291017413905",
+    "final_max_accuracy_mean": "0.7884765625",
+    "final_mean_accuracy_mean": "0.5883697916666667",
+    "final_max_complexity_mean": "nan",
+    "final_mean_complexity_mean": "nan",
+    "final_max_penalty_mean": "nan",
+    "final_mean_penalty_mean": "nan",
+    "final_diversity_mean": "1.0",
+    "final_lineage_persistence_mean": "1.0",
+    "final_rule_entropy_mean": "4.605170185988082"
+  },
+  "gaps": {
+    "accuracy_gap_final_max": -0.0017578125000000666,
+    "accuracy_gap_final_mean": 0.0038977864583333854,
+    "penalty_gap_final_max": NaN,
+    "penalty_gap_final_mean": NaN,
+    "fitness_gap_final_max": -0.0006937891971925403,
+    "fitness_gap_final_mean": 0.003799036458333349
+  }
+}

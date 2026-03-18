@@ -1,0 +1,29 @@
+{
+  "task_id": "TASK-6810-UNIVERSAL-TRANSITION-LAW-VALIDATION",
+  "project": "Bio Digital Core",
+  "phase": 19,
+  "status": "planned",
+  "priority": "critical",
+  "objective": "Validate whether the transition law class identified in TASK-6800 generalizes across unseen seeds, unseen task families, larger role sets, and more complex causal DAGs.",
+  "runner": {
+    "script": "scripts/analysis/run_phase19_universal_transition_validation.py"
+  },
+  "outputs": [
+    "results/transition_universality/seed_holdout_metrics.csv",
+    "results/transition_universality/family_holdout_metrics.csv",
+    "results/transition_universality/role_count_transfer_metrics.csv",
+    "results/transition_universality/dag_complexity_metrics.csv",
+    "results/transition_universality/temporal_rollout_metrics.csv",
+    "results/transition_universality/universality_summary.json"
+  ],
+  "report": "reports/analysis/TASK-6810-UNIVERSAL-TRANSITION-LAW-VALIDATION/TASK-6810_BRIEF_REPORT.md",
+  "artifacts_contract": {
+    "results_directory": "results/transition_universality/",
+    "append_only_logs": [
+      "AGENTS_LOG.md",
+      "WEEKLY_STATUS.md"
+    ],
+    "git_branch": "origin/test",
+    "results_not_committed": true
+  }
+}

@@ -1,0 +1,17 @@
+openapi: 3.1.0
+info:
+  title: BIO-DIGITAL CORE API
+  version: 0.1.0
+  contact:
+    name: BDC System Orchestrator
+    email: bdc-orchestrator@example.com
+servers:
+  - url: https://api.github.com/malishomen/Bio_Digital_Core
+    description: Main BDC API
+paths:
+  /health:
+    get:
+      summary: Health check
+      responses:
+        '200':
+          description: OK

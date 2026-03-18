@@ -1,0 +1,83 @@
+{
+  "task_id": "TASK-7090-RELEASE-READY-CLI-BUNDLE",
+  "project": "Bio Digital Core",
+  "phase": 28,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Convert BDC Designer CLI from an internal developer tool into a release-ready distributable CLI package with stable entrypoints, versioning, installation path, and reproducible example runs.",
+  "research_question": "Can BDC Designer be packaged so that an external technical user can install and run it with a single command and obtain stable, documented outputs?",
+  "release_goals": [
+    "single-command installation",
+    "stable CLI entrypoint",
+    "versioned package metadata",
+    "bundled example inputs",
+    "bundled example outputs",
+    "cross-run reproducibility for examples",
+    "release notes and install instructions"
+  ],
+  "target_release_modes": [
+    "pip-installable package",
+    "pipx-installable package"
+  ],
+  "runner": {
+    "script": "scripts/analysis/run_phase28_release_ready_cli_bundle.py"
+  },
+  "artifacts": [
+    "pyproject.toml",
+    "tools/bdc_designer_cli.py",
+    "src/bdc_designer_cli/",
+    "docs/BDC_INSTALL_AND_RUN.md",
+    "examples/release_examples.json",
+    "reports/analysis/TASK-7090-RELEASE-READY-CLI-BUNDLE/TASK-7090_BRIEF_REPORT.md"
+  ],
+  "analysis_pipeline": [
+    {
+      "block_id": "TASK-7091",
+      "title": "PACKAGE STRUCTURE NORMALIZATION",
+      "outputs": [
+        "results/release_cli/package_structure_manifest.csv"
+      ]
+    },
+    {
+      "block_id": "TASK-7092",
+      "title": "ENTRYPOINT AND VERSIONING",
+      "outputs": [
+        "results/release_cli/entrypoint_validation.json"
+      ]
+    },
+    {
+      "block_id": "TASK-7093",
+      "title": "INSTALL AND EXAMPLE RUN VALIDATION",
+      "outputs": [
+        "results/release_cli/install_run_validation.csv"
+      ]
+    },
+    {
+      "block_id": "TASK-7094",
+      "title": "RELEASE DOCS ASSEMBLY",
+      "outputs": [
+        "results/release_cli/release_docs_manifest.csv"
+      ]
+    }
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "single_command_install_path_exists": true,
+      "stable_cli_entrypoint_exists": true,
+      "example_runs_pass": true,
+      "install_docs_complete": true,
+      "release_ready_bundle_complete": true
+    }
+  },
+  "definition_of_done": [
+    "package normalized",
+    "entrypoint stabilized",
+    "install path verified",
+    "example runs verified",
+    "release docs written",
+    "brief report generated",
+    "append-only logs updated"
+  ]
+}

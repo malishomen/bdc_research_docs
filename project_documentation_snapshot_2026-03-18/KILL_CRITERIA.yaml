@@ -1,0 +1,97 @@
+status: DRAFT
+sources:
+  - docs/project/BDC_PROJECT_MAIN_DOC.md
+  - docs/project/BDC_ROADMAP_Paramecium_MVP_TRL-3.md
+  - CANON.md
+notes:
+  - "Thresholds marked TODO/UNVERIFIED must be approved before first experiment run."
+
+edp1_hidden_rule_line:
+  status: CLOSED
+  closure_adr: decisions/ADR-0004-hidden-rule-closure.md
+  product_direction: "closed_as_of_2026-02-27"
+  laboratory_mode:
+    allowed_change_classes:
+      - R0
+      - R1
+    roadmap_impact: forbidden
+    strategic_claims: forbidden
+    interpretation_rule: "hidden_rule experiments are laboratory diagnostics only and cannot be interpreted as product-direction progress."
+  permanent_baseline:
+    id: v1_speciation
+    locked: true
+    reference_metric:
+      name: final_max_fitness_mean
+      value: 0.7881661019442968
+    source: reports/analysis/TASK-1400-COMPLEXITY-AUDIT/TASK-1400_BRIEF_REPORT.md
+  evidence_base:
+    - reports/analysis/TASK-1100-EDP1-SYMBOLIC-DIVERSITY-FIRST-SCAFFOLD/TASK-1100-EDP1_BRIEF_REPORT.md
+    - reports/analysis/TASK-1203A-MRTN-DIAGNOSTIC/TASK-1203A_BRIEF_REPORT.md
+    - reports/analysis/TASK-1300-GENOME-V1_5/TASK-1300_BRIEF_REPORT.md
+    - reports/analysis/TASK-1400-COMPLEXITY-AUDIT/TASK-1400_BRIEF_REPORT.md
+    - reports/analysis/TASK-1400B-COMPLEXITY-AUDIT-ADDENDUM/TASK-1400B_BRIEF_REPORT.md
+
+hypotheses:
+  H1:
+    title: "Quaternary logic improves calibration and reduces false confidence"
+    metrics:
+      - "ECE or Brier score improvement vs baseline"
+      - "Selective prediction utility under MY/MN allowance"
+      - "False-confidence rate"
+    kill_criteria:
+      - "Improvement in ECE or Brier < 10% vs baseline at equal compute budget"
+      - "MY/MN share > X% without utility gain (TODO: set X in EXPERIMENT_SPEC)"
+      - "No statistically stable reduction in false-confidence rate"
+  H2:
+    title: "DNA-inspired memory yields scalable long context with exact recall"
+    metrics:
+      - "Exact recall accuracy"
+      - "Random access latency"
+      - "Compression ratio (if claimed)"
+      - "Integrity rate (checksums/ECC)"
+    kill_criteria:
+      - "Exact recall < 99.9% on fixed test length"
+      - "Random access latency exceeds target class (TODO: fix target class)"
+      - "Compression degrades recall or causes uncontrolled loss"
+  H3:
+    title: "Self-replication/regeneration without error accumulation"
+    metrics:
+      - "Replication fidelity"
+      - "Recovery rate"
+      - "Error accumulation slope"
+    kill_criteria:
+      - "Recovery rate < 70% on 'small damage' scenarios (parameters TODO in EXPERIMENT_SPEC)"
+      - "Error accumulation accelerates across generations"
+      - "Works only in noise-free conditions (fails under minimal noise)"
+
+trl3_paramecium:
+  definition_of_done:
+    - "Deterministic 2D environment by ENV_PISTREAM"
+    - "Agent sensors with NOISE_PISTREAM"
+    - "qcore S={T,F,MY,MN} + conflict_flag with truth tables/tests"
+    - "Genome+VM interpretation documented and tested"
+    - "Evolution loop with MUT_DECISION/MUT_MAGNITUDE streams"
+    - "One-command experiment run with N>=30 fixed seeds"
+    - "RUN_COMMANDS.md, EXPERIMENT_SPEC.md, DECISIONS/, AGENTS_LOG.md present"
+  kill_criteria:
+    - "Recovery rate < 70% on formalized small-damage regime"
+    - "Error accumulation slope is positive (accelerating failures)"
+    - "Fails under minimal noise (greenhouse-only behavior)"
+
+phase3_energy_model:
+  experiment: exp_0500
+  description: "Resource-bounded evolution where complexity costs energy, not fitness penalty."
+  success_criteria:
+    - "Stable complexity distribution: final complexity variance > 0.01 in >= 7/10 seeds"
+    - "No mass extinction: final alive population ratio > 0.5 in >= 8/10 seeds"
+    - "Accuracy trend positive across 10-generation windows in >= 7/10 seeds"
+    - "Higher-complexity persistence: top-25% initial complexity lineages alive ratio >= 0.5 in >= 5/10 seeds"
+  kill_criteria:
+    - "Collapse to minimal complexity in all seeds (variance near zero)"
+    - "Unbounded complexity growth in all seeds (variance explosively high)"
+    - "Mass extinction: alive ratio < 0.2 in > 5/10 seeds"
+    - "No accuracy improvement over baseline across all seeds"
+  notes:
+    - "FFT spectral diagnostics are post-processing only and do not alter run behavior."
+    - "phi_rebalance remains optional behind flag and is not part of default Phase 3 sweep."
+

@@ -1,0 +1,21 @@
+{
+  "task_id": "TASK-7200-DEMO-AND-DISCOVERY-CALL-PIPELINE",
+  "project": "Bio Digital Core",
+  "phase": 30,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-06",
+  "objective": "Run and standardize demo and discovery calls for BDC Designer and capture pilot readiness.",
+  "research_question": "Can BDC be communicated clearly enough in live calls to identify qualified pilot candidates?",
+  "runner": {
+    "script": "scripts/analysis/run_phase30_demo_and_discovery_call_pipeline.py"
+  },
+  "outputs": [
+    "results/demo_calls/call_log.csv",
+    "results/demo_calls/discovery_notes.csv",
+    "results/demo_calls/fit_scoring.csv",
+    "results/demo_calls/pilot_readiness_summary.json",
+    "reports/analysis/TASK-7200-DEMO-AND-DISCOVERY-CALL-PIPELINE/TASK-7200_BRIEF_REPORT.md"
+  ]
+}

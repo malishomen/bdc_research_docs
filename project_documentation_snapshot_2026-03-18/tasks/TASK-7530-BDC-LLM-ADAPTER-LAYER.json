@@ -1,0 +1,59 @@
+{
+  "task_id": "TASK-7530-BDC-LLM-ADAPTER-LAYER",
+  "project": "Bio Digital Core",
+  "phase": 44,
+  "status": "planned",
+  "priority": "high",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-14",
+  "objective": "Add a raw-text case interpretation layer that drafts packets, labels inferred fields, and asks clarifying questions without ever replacing the final BDC decision engine.",
+  "research_question": "How can BDC CLI v2 accept real user narratives while preserving explicit source labels, clarification loops, and core decision-engine authority?",
+  "depends_on": [
+    "TASK-7520-BDC-CLI-V2-SURFACE"
+  ],
+  "execution_rules": {
+    "phase_gate": "May start only after TASK-7520 is SUCCESS.",
+    "parallel_execution_allowed": false,
+    "scope_expansion_forbidden": true
+  },
+  "runner": {
+    "script": "scripts/analysis/run_phase44_bdc_llm_adapter_layer.py"
+  },
+  "outputs": [
+    "src/bdc_designer_v2/llm_adapter/interpreter.py",
+    "src/bdc_designer_v2/llm_adapter/clarifier.py",
+    "src/bdc_designer_v2/llm_adapter/builder.py",
+    "src/bdc_designer_v2/llm_adapter/explainer.py",
+    "docs/BDC_LLM_ADAPTER_PROMPT_CONTRACTS.md",
+    "results/bdc_llm_adapter/adapter_validation_matrix.csv",
+    "reports/analysis/TASK-7530-BDC-LLM-ADAPTER-LAYER/TASK-7530_BRIEF_REPORT.md"
+  ],
+  "tests_required": [
+    "raw case narrative converts to draft packet",
+    "source labels retained",
+    "missing fields produce clarification questions",
+    "adapter cannot overwrite final BDC decision fields silently",
+    "mocked LLM tests are deterministic in CI"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "raw_text_to_packet_draft_works": true,
+      "clarification_loop_works": true,
+      "final_decision_remains_in_bdc_core": true,
+      "source_label_tracking_present": true
+    }
+  },
+  "definition_of_done": [
+    "LLM adapter interpreter implemented",
+    "clarification loop implemented",
+    "source label schema enforced",
+    "decision-core override protections implemented",
+    "brief report generated",
+    "append-only logs updated"
+  ],
+  "out_of_scope": [
+    "benchmark sign-off",
+    "release packaging"
+  ]
+}
+

@@ -1,0 +1,53 @@
+{
+  "task_id": "TASK-7510-BDC-EXPLANATION-LAYER",
+  "project": "Bio Digital Core",
+  "phase": 42,
+  "status": "planned",
+  "priority": "high",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-14",
+  "objective": "Generate operator-readable recommendations that remain fully aligned with the machine-readable decision output, evidence interpretation, and caution states.",
+  "research_question": "How should BDC CLI v2 explain its architecture recommendation so an engineer can act on it without ambiguity or contradiction to the structured output?",
+  "depends_on": [
+    "TASK-7500-BDC-CONFIDENCE-AND-DIAGNOSTICS-LAYER"
+  ],
+  "execution_rules": {
+    "phase_gate": "May start only after TASK-7500 is SUCCESS.",
+    "parallel_execution_allowed": false,
+    "scope_expansion_forbidden": true
+  },
+  "runner": {
+    "script": "scripts/analysis/run_phase42_bdc_explanation_layer.py"
+  },
+  "outputs": [
+    "src/bdc_designer_v2/explainer.py",
+    "templates/BDC_EXPLANATION_TEMPLATE_V2.md",
+    "templates/BDC_EXPLANATION_TEMPLATE_V2.json",
+    "results/bdc_explainer/explanation_alignment_matrix.csv",
+    "reports/analysis/TASK-7510-BDC-EXPLANATION-LAYER/TASK-7510_BRIEF_REPORT.md"
+  ],
+  "tests_required": [
+    "explanation contains recommendation, evidence interpretation, cautions, and rejected alternatives",
+    "explanation is consistent with machine-readable output",
+    "implementation summary generated for benchmark cases"
+  ],
+  "evaluation_criteria": {
+    "supported_if": {
+      "human_readable_memo_available": true,
+      "machine_and_human_outputs_aligned": true,
+      "rejected_alternatives_explicitly_reported": true
+    }
+  },
+  "definition_of_done": [
+    "explanation layer implemented",
+    "markdown and JSON explanation templates implemented",
+    "alignment between human and machine outputs verified",
+    "brief report generated",
+    "append-only logs updated"
+  ],
+  "out_of_scope": [
+    "new scoring logic",
+    "raw case interpretation"
+  ]
+}
+
