@@ -1,0 +1,48 @@
+{
+  "task_id": "TASK-7596-BDC-SCIENTIFIC-PREEXPERIMENT-GATE-PROTOCOL",
+  "project": "Bio Digital Core",
+  "phase": 54,
+  "status": "completed",
+  "priority": "high",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-19",
+  "change_class": "R2",
+  "objective": "Formalize the rule that new scientific BDC cycles must use BDC Designer first as a pre-experiment evidence and narrowing gate before direct execution begins.",
+  "depends_on": [
+    "TASK-7595-BDC-PARTNERSHIP-REVIEW-AND-RESEARCH-PRIORITY"
+  ],
+  "execution_rules": {
+    "parallel_execution_allowed": false,
+    "scope_expansion_forbidden": true,
+    "protected_docs_touched": true
+  },
+  "outputs": [
+    "docs/project/BDC_SCIENTIFIC_PREEXPERIMENT_GATE_PROTOCOL.md",
+    "templates/BDC_SCIENTIFIC_PREEXPERIMENT_GATE_TEMPLATE.md",
+    "docs/project/BDC_RESEARCH_REBOOT_CHARTER.md",
+    "docs/project/BDC_RESEARCH_REBOOT_PLAN.md",
+    "docs/project/project_main_doc.md",
+    "docs/project/project_roadmap.md",
+    "tasks/TASK-7596-BDC-SCIENTIFIC-PREEXPERIMENT-GATE-PROTOCOL.json",
+    "reports/analysis/TASK-7596-BDC-SCIENTIFIC-PREEXPERIMENT-GATE-PROTOCOL/TASK-7596_BRIEF_REPORT.md"
+  ],
+  "tests_required": [
+    "protocol doc existence check",
+    "template existence check",
+    "reference check across reboot and project docs",
+    "mirror duplication check"
+  ],
+  "definition_of_done": [
+    "pre-experiment gate protocol documented",
+    "template created",
+    "reboot docs updated",
+    "project docs updated",
+    "brief report generated",
+    "mirrors updated"
+  ],
+  "out_of_scope": [
+    "new scientific execution code",
+    "running a new experiment",
+    "changing scientific hypotheses"
+  ]
+}
