@@ -1,0 +1,203 @@
+﻿{
+    "collected_at_utc":  "2026-03-18T23:44:21Z",
+    "execute":  false,
+    "codex_protected":  true,
+    "target_count":  32,
+    "targets":  [
+                    {
+                        "name":  "wslservice.exe",
+                        "process_id":  4732,
+                        "command_line":  "\"C:\\Program Files\\WSL\\wslservice.exe\"",
+                        "action":  "preview_only"
+                    },
+                    {
+                        "name":  "ChatGPT.exe",
+                        "process_id":  13852,
+                        "command_line":  "\"C:\\Program Files\\WindowsApps\\OpenAI.ChatGPT-Desktop_1.2026.43.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe\" ",
+                        "action":  "preview_only"
+                    },
+                    {
+                        "name":  "ChatGPT.exe",
+                        "process_id":  1048,
+                        "command_line":  "\"C:\\Program Files\\WindowsApps\\OpenAI.ChatGPT-Desktop_1.2026.43.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe\" --type=crashpad-handler --user-data-dir=C:\\Users\\user\\AppData\\Local\\Packages\\OpenAI.ChatGPT-Desktop_2p2nqsd0c76g0\\LocalCache\\Roaming\\ChatGPT /prefetch:4 --no-rate-limit --monitor-self-annotation=ptype=crashpad-handler --database=C:\\Users\\user\\AppData\\Local\\Packages\\OpenAI.ChatGPT-Desktop_2p2nqsd0c76g0\\LocalCache\\Roaming\\ChatGPT\\Crashpad --url=https://o33249.ingest.us.sentry.io/api/4507771614265344/minidump/?sentry_key=95e16831cb6713fbf64816ec78a777ef --annotation=_productName=ChatGPT --annotation=_version=1.2026.43 --annotation=plat=Win64 --annotation=prod=Electron \"--annotation=sentry___initialScope={\\\"release\\\":\\\"ChatGPT@1.2026.43\\\",\\\"environment\\\":\\\"production\\\",\\\"tags\\\":{\\\"app_session_id\\\":\\\"083f2904-a4d0-472e-aa83-0a39916d9794\\\",\\\"environment\\\":\\\"production\\\",\\\"arch\\\":\\\"x86_64\\\",\\\"is_quitting\\\":\\\"false\\\"}}\" --annotation=ver=39.2.7 --initial-client-data=0x6e8,0x6ec,0x6f0,0x6e0,0x6f4,0x7ff60ef616ec,0x7ff60ef616f8,0x7ff60ef61708",
+                        "action":  "preview_only"
+                    },
+                    {
+                        "name":  "ChatGPT.exe",
+                        "process_id":  13124,
+                        "command_line":  "\"C:\\Program Files\\WindowsApps\\OpenAI.ChatGPT-Desktop_1.2026.43.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe\" --type=gpu-process --user-data-dir=\"C:\\Users\\user\\AppData\\Local\\Packages\\OpenAI.ChatGPT-Desktop_2p2nqsd0c76g0\\LocalCache\\Roaming\\ChatGPT\" --gpu-preferences=SAAAAAAAAADgAAAEAAAAAAAAAAAAAGAAAQAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAAAAAACAAAAAAAAAAIAAAAAAAAAA== --field-trial-handle=2244,i,10790715074392905832,4424879845199496836,262144 --enable-features=EnableTransparentHwndEnlargement,FluentScrollbar,PdfUseShowSaveFilePicker --disable-features=LocalNetworkAccessChecks,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation --variations-seed-version --trace-process-track-uuid=3190708988185955192 --mojo-platform-channel-handle=2228 /prefetch:2",
+                        "action":  "preview_only"
+                    },
+                    {
+                        "name":  "ChatGPT.exe",
+                        "process_id":  1916,
+                        "command_line":  "\"C:\\Program Files\\WindowsApps\\OpenAI.ChatGPT-Desktop_1.2026.43.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe\" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=ru --service-sandbox-type=none --user-data-dir=\"C:\\Users\\user\\AppData\\Local\\Packages\\OpenAI.ChatGPT-Desktop_2p2nqsd0c76g0\\LocalCache\\Roaming\\ChatGPT\" --secure-schemes=sentry-ipc --bypasscsp-schemes=sentry-ipc --cors-schemes=sentry-ipc --fetch-schemes=sentry-ipc --field-trial-handle=2244,i,10790715074392905832,4424879845199496836,262144 --enable-features=EnableTransparentHwndEnlargement,FluentScrollbar,PdfUseShowSaveFilePicker --disable-features=LocalNetworkAccessChecks,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation --variations-seed-version --trace-process-track-uuid=3190708989122997041 --mojo-platform-channel-handle=2504 /prefetch:11",
+                        "action":  "preview_only"
+                    },
+                    {
+                        "name":  "Telegram.exe",
+                        "process_id":  22008,
+                        "command_line":  "\"D:\\Program Files\\Telegram Desktop\\Telegram.exe\" ",
+                        "action":  "preview_only"
+                    },
+                    {
+                        "name":  "ChatGPT.exe",
+                        "process_id":  65644,
+                        "command_line":  "\"C:\\Program Files\\WindowsApps\\OpenAI.ChatGPT-Desktop_1.2026.43.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe\" --type=renderer --user-data-dir=\"C:\\Users\\user\\AppData\\Local\\Packages\\OpenAI.ChatGPT-Desktop_2p2nqsd0c76g0\\LocalCache\\Roaming\\ChatGPT\" --secure-schemes=sentry-ipc --bypasscsp-schemes=sentry-ipc --cors-schemes=sentry-ipc --fetch-schemes=sentry-ipc --app-path=\"C:\\Program Files\\WindowsApps\\OpenAI.ChatGPT-Desktop_1.2026.43.0_x64__2p2nqsd0c76g0\\app\\resources\\app.asar\" --enable-sandbox --video-capture-use-gpu-memory-buffer --lang=ru --device-scale-factor=1 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=9 --time-ticks-at-unix-epoch=-1772695327229103 --launch-time-ticks=298564821491 --field-trial-handle=2244,i,10790715074392905832,4424879845199496836,262144 --enable-features=EnableTransparentHwndEnlargement,FluentScrollbar,PdfUseShowSaveFilePicker --disable-features=LocalNetworkAccessChecks,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation --variations-seed-version --trace-process-track-uuid=3190708994745248135 --mojo-platform-channel-handle=4832 /prefetch:1",
+                        "action":  "preview_only"
+                    },
+                    {
+                        "name":  "node.exe",
+                        "process_id":  250180,
+                        "command_line":  "\"C:\\Program Files\\nodejs\\node.exe\" \"C:\\Program Files\\nodejs/node_modules/npm/bin/npx-cli.js\" next dev -p 3001",
+                        "action":  "preview_only"
+                    },
+                    {
+                        "name":  "node.exe",
+                        "process_id":  117176,
+                        "command_line":  "\"node\"   \"C:\\Users\\user\\.claude.work\\Capstory.ru\\capstory_main_project\\frontend\\node_modules\\.bin\\\\..\\next\\dist\\bin\\next\" dev -p 3001",
+                        "action":  "preview_only"
+                    },
+                    {
+                        "name":  "claude.exe",
+                        "process_id":  248108,
+                        "command_line":  "\"C:\\Program Files\\WindowsApps\\Claude_1.1.6452.0_x64__pzs8sxrjxfjjc\\app\\claude.exe\" ",
+                        "action":  "preview_only"
+                    },
+                    {
+                        "name":  "claude.exe",
+                        "process_id":  74192,
+                        "command_line":  "\"C:\\Program Files\\WindowsApps\\Claude_1.1.6452.0_x64__pzs8sxrjxfjjc\\app\\claude.exe\" --type=crashpad-handler --user-data-dir=C:\\Users\\user\\AppData\\Roaming\\Claude /prefetch:4 --no-rate-limit --monitor-self-annotation=ptype=crashpad-handler --database=C:\\Users\\user\\AppData\\Roaming\\Claude\\Crashpad --url=https://f.a.k/e --annotation=_productName=Claude --annotation=_version=1.1.6452 --annotation=plat=Win64 --annotation=prod=Electron --annotation=ver=40.4.1 --initial-client-data=0x4e8,0x4ec,0x4f0,0x444,0x4f4,0x7ff7ced5e774,0x7ff7ced5e780,0x7ff7ced5e790",
+                        "action":  "preview_only"
+                    },
+                    {
+                        "name":  "claude.exe",
+                        "process_id":  53624,
+                        "command_line":  "\"C:\\Program Files\\WindowsApps\\Claude_1.1.6452.0_x64__pzs8sxrjxfjjc\\app\\claude.exe\" --type=gpu-process --user-data-dir=\"C:\\Users\\user\\AppData\\Roaming\\Claude\" --gpu-preferences=SAAAAAAAAADgAAAEAAAAAAAAAAAAAGAAAQAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAAAAAACAAAAAAAAAAIAAAAAAAAAA== --field-trial-handle=1984,i,7070131397568361741,14607455134034276134,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EnableTransparentHwndEnlargement,PdfUseShowSaveFilePicker --disable-features=LocalNetworkAccessChecks,NetworkServiceSandbox,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation --variations-seed-version --trace-process-track-uuid=3190708988185955192 --mojo-platform-channel-handle=1980 /prefetch:2",
+                        "action":  "preview_only"
+                    },
+                    {
+                        "name":  "claude.exe",
+                        "process_id":  159676,
+                        "command_line":  "\"C:\\Program Files\\WindowsApps\\Claude_1.1.6452.0_x64__pzs8sxrjxfjjc\\app\\claude.exe\" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=ru --service-sandbox-type=none --user-data-dir=\"C:\\Users\\user\\AppData\\Roaming\\Claude\" --secure-schemes=sentry-ipc --bypasscsp-schemes=sentry-ipc --cors-schemes=sentry-ipc --fetch-schemes=sentry-ipc --field-trial-handle=1984,i,7070131397568361741,14607455134034276134,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EnableTransparentHwndEnlargement,PdfUseShowSaveFilePicker --disable-features=LocalNetworkAccessChecks,NetworkServiceSandbox,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation --variations-seed-version --trace-process-track-uuid=3190708989122997041 --mojo-platform-channel-handle=2296 /prefetch:11",
+                        "action":  "preview_only"
+                    },
+                    {
+                        "name":  "claude.exe",
+                        "process_id":  200972,
+                        "command_line":  "\"C:\\Program Files\\WindowsApps\\Claude_1.1.6452.0_x64__pzs8sxrjxfjjc\\app\\claude.exe\" --type=renderer --user-data-dir=\"C:\\Users\\user\\AppData\\Roaming\\Claude\" --secure-schemes=sentry-ipc --bypasscsp-schemes=sentry-ipc --cors-schemes=sentry-ipc --fetch-schemes=sentry-ipc --app-path=\"C:\\Program Files\\WindowsApps\\Claude_1.1.6452.0_x64__pzs8sxrjxfjjc\\app\\resources\\app.asar\" --enable-sandbox --video-capture-use-gpu-memory-buffer --lang=ru --device-scale-factor=1 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=4 --time-ticks-at-unix-epoch=-1772695359512078 --launch-time-ticks=958308052984 --field-trial-handle=1984,i,7070131397568361741,14607455134034276134,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EnableTransparentHwndEnlargement,PdfUseShowSaveFilePicker --disable-features=LocalNetworkAccessChecks,NetworkServiceSandbox,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation --variations-seed-version --trace-process-track-uuid=3190708990060038890 --mojo-platform-channel-handle=2728 /prefetch:1",
+                        "action":  "preview_only"
+                    },
+                    {
+                        "name":  "claude.exe",
+                        "process_id":  184940,
+                        "command_line":  "\"C:\\Program Files\\WindowsApps\\Claude_1.1.6452.0_x64__pzs8sxrjxfjjc\\app\\claude.exe\" --type=renderer --user-data-dir=\"C:\\Users\\user\\AppData\\Roaming\\Claude\" --secure-schemes=sentry-ipc --bypasscsp-schemes=sentry-ipc --cors-schemes=sentry-ipc --fetch-schemes=sentry-ipc --app-path=\"C:\\Program Files\\WindowsApps\\Claude_1.1.6452.0_x64__pzs8sxrjxfjjc\\app\\resources\\app.asar\" --enable-sandbox --video-capture-use-gpu-memory-buffer --lang=ru --device-scale-factor=1 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=6 --time-ticks-at-unix-epoch=-1772695359512078 --launch-time-ticks=958308104926 --field-trial-handle=1984,i,7070131397568361741,14607455134034276134,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EnableTransparentHwndEnlargement,PdfUseShowSaveFilePicker --disable-features=LocalNetworkAccessChecks,NetworkServiceSandbox,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation --variations-seed-version --trace-process-track-uuid=3190708991934122588 --mojo-platform-channel-handle=2988 /prefetch:1",
+                        "action":  "preview_only"
+                    },
+                    {
+                        "name":  "claude.exe",
+                        "process_id":  6676,
+                        "command_line":  "\"C:\\Program Files\\WindowsApps\\Claude_1.1.6452.0_x64__pzs8sxrjxfjjc\\app\\claude.exe\" --type=renderer --user-data-dir=\"C:\\Users\\user\\AppData\\Roaming\\Claude\" --secure-schemes=sentry-ipc --bypasscsp-schemes=sentry-ipc --cors-schemes=sentry-ipc --fetch-schemes=sentry-ipc --app-path=\"C:\\Program Files\\WindowsApps\\Claude_1.1.6452.0_x64__pzs8sxrjxfjjc\\app\\resources\\app.asar\" --enable-sandbox --video-capture-use-gpu-memory-buffer --lang=ru --device-scale-factor=1 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=7 --time-ticks-at-unix-epoch=-1772695359512078 --launch-time-ticks=958308697602 --field-trial-handle=1984,i,7070131397568361741,14607455134034276134,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EnableTransparentHwndEnlargement,PdfUseShowSaveFilePicker --disable-features=LocalNetworkAccessChecks,NetworkServiceSandbox,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation --variations-seed-version --trace-process-track-uuid=3190708992871164437 --mojo-platform-channel-handle=3860 --desktop-features=\"{\\\"nativeQuickEntry\\\":{\\\"status\\\":\\\"unavailable\\\"},\\\"quickEntryDictation\\\":{\\\"status\\\":\\\"unavailable\\\"},\\\"customQuickEntryDictationShortcut\\\":{\\\"status\\\":\\\"supported\\\"},\\\"plushRaccoon\\\":{\\\"status\\\":\\\"unavailable\\\"},\\\"quietPenguin\\\":{\\\"status\\\":\\\"unavailable\\\"},\\\"chillingSlothFeat\\\":{\\\"status\\\":\\\"unavailable\\\"},\\\"chillingSlothEnterprise\\\":{\\\"status\\\":\\\"supported\\\"},\\\"chillingSlothLocal\\\":{\\\"status\\\":\\\"supported\\\"},\\\"yukonSilver\\\":{\\\"status\\\":\\\"supported\\\"},\\\"yukonSilverGems\\\":{\\\"status\\\":\\\"supported\\\"},\\\"desktopTopBar\\\":{\\\"status\\\":\\\"supported\\\"},\\\"ccdPlugins\\\":{\\\"status\\\":\\\"supported\\\"}}\" /prefetch:1",
+                        "action":  "preview_only"
+                    },
+                    {
+                        "name":  "claude.exe",
+                        "process_id":  213256,
+                        "command_line":  "\"C:\\Program Files\\WindowsApps\\Claude_1.1.6452.0_x64__pzs8sxrjxfjjc\\app\\claude.exe\" --type=utility --utility-sub-type=audio.mojom.AudioService --lang=ru --service-sandbox-type=audio --video-capture-use-gpu-memory-buffer --user-data-dir=\"C:\\Users\\user\\AppData\\Roaming\\Claude\" --secure-schemes=sentry-ipc --bypasscsp-schemes=sentry-ipc --cors-schemes=sentry-ipc --fetch-schemes=sentry-ipc --field-trial-handle=1984,i,7070131397568361741,14607455134034276134,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EnableTransparentHwndEnlargement,PdfUseShowSaveFilePicker --disable-features=LocalNetworkAccessChecks,NetworkServiceSandbox,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation --variations-seed-version --trace-process-track-uuid=3190708993808206286 --mojo-platform-channel-handle=5352 /prefetch:12",
+                        "action":  "preview_only"
+                    },
+                    {
+                        "name":  "claude.exe",
+                        "process_id":  180052,
+                        "command_line":  "\"C:\\Program Files\\WindowsApps\\Claude_1.1.6452.0_x64__pzs8sxrjxfjjc\\app\\claude.exe\" --type=utility --utility-sub-type=video_capture.mojom.VideoCaptureService --lang=ru --service-sandbox-type=none --video-capture-use-gpu-memory-buffer --user-data-dir=\"C:\\Users\\user\\AppData\\Roaming\\Claude\" --secure-schemes=sentry-ipc --bypasscsp-schemes=sentry-ipc --cors-schemes=sentry-ipc --fetch-schemes=sentry-ipc --field-trial-handle=1984,i,7070131397568361741,14607455134034276134,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EnableTransparentHwndEnlargement,PdfUseShowSaveFilePicker --disable-features=LocalNetworkAccessChecks,NetworkServiceSandbox,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation --variations-seed-version --trace-process-track-uuid=3190708994745248135 --mojo-platform-channel-handle=5372 /prefetch:14",
+                        "action":  "preview_only"
+                    },
+                    {
+                        "name":  "claude.exe",
+                        "process_id":  250724,
+                        "command_line":  "\"C:\\Program Files\\WindowsApps\\Claude_1.1.6452.0_x64__pzs8sxrjxfjjc\\app\\claude.exe\" --type=renderer --user-data-dir=\"C:\\Users\\user\\AppData\\Roaming\\Claude\" --secure-schemes=sentry-ipc --bypasscsp-schemes=sentry-ipc --cors-schemes=sentry-ipc --fetch-schemes=sentry-ipc --app-path=\"C:\\Program Files\\WindowsApps\\Claude_1.1.6452.0_x64__pzs8sxrjxfjjc\\app\\resources\\app.asar\" --enable-sandbox --video-capture-use-gpu-memory-buffer --lang=ru --device-scale-factor=1 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=12 --time-ticks-at-unix-epoch=-1772695359512078 --launch-time-ticks=958328169147 --field-trial-handle=1984,i,7070131397568361741,14607455134034276134,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EnableTransparentHwndEnlargement,PdfUseShowSaveFilePicker --disable-features=LocalNetworkAccessChecks,NetworkServiceSandbox,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation --variations-seed-version --trace-process-track-uuid=3190708997556373682 --mojo-platform-channel-handle=5544 --desktop-features=\"{\\\"nativeQuickEntry\\\":{\\\"status\\\":\\\"unavailable\\\"},\\\"quickEntryDictation\\\":{\\\"status\\\":\\\"unavailable\\\"},\\\"customQuickEntryDictationShortcut\\\":{\\\"status\\\":\\\"supported\\\"},\\\"plushRaccoon\\\":{\\\"status\\\":\\\"unavailable\\\"},\\\"quietPenguin\\\":{\\\"status\\\":\\\"unavailable\\\"},\\\"chillingSlothFeat\\\":{\\\"status\\\":\\\"unavailable\\\"},\\\"chillingSlothEnterprise\\\":{\\\"status\\\":\\\"supported\\\"},\\\"chillingSlothLocal\\\":{\\\"status\\\":\\\"supported\\\"},\\\"yukonSilver\\\":{\\\"status\\\":\\\"supported\\\"},\\\"yukonSilverGems\\\":{\\\"status\\\":\\\"supported\\\"},\\\"desktopTopBar\\\":{\\\"status\\\":\\\"supported\\\"},\\\"ccdPlugins\\\":{\\\"status\\\":\\\"supported\\\"}}\" /prefetch:1",
+                        "action":  "preview_only"
+                    },
+                    {
+                        "name":  "claude.exe",
+                        "process_id":  185404,
+                        "command_line":  "\"C:\\Program Files\\WindowsApps\\Claude_1.1.6452.0_x64__pzs8sxrjxfjjc\\app\\claude.exe\" --type=renderer --user-data-dir=\"C:\\Users\\user\\AppData\\Roaming\\Claude\" --secure-schemes=sentry-ipc --bypasscsp-schemes=sentry-ipc --cors-schemes=sentry-ipc --fetch-schemes=sentry-ipc --app-path=\"C:\\Program Files\\WindowsApps\\Claude_1.1.6452.0_x64__pzs8sxrjxfjjc\\app\\resources\\app.asar\" --enable-sandbox --video-capture-use-gpu-memory-buffer --lang=ru --device-scale-factor=1 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=13 --time-ticks-at-unix-epoch=-1772695359512078 --launch-time-ticks=958328371291 --field-trial-handle=1984,i,7070131397568361741,14607455134034276134,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EnableTransparentHwndEnlargement,PdfUseShowSaveFilePicker --disable-features=LocalNetworkAccessChecks,NetworkServiceSandbox,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation --variations-seed-version --trace-process-track-uuid=3190708998493415531 --mojo-platform-channel-handle=5744 --desktop-features=\"{\\\"nativeQuickEntry\\\":{\\\"status\\\":\\\"unavailable\\\"},\\\"quickEntryDictation\\\":{\\\"status\\\":\\\"unavailable\\\"},\\\"customQuickEntryDictationShortcut\\\":{\\\"status\\\":\\\"supported\\\"},\\\"plushRaccoon\\\":{\\\"status\\\":\\\"unavailable\\\"},\\\"quietPenguin\\\":{\\\"status\\\":\\\"unavailable\\\"},\\\"chillingSlothFeat\\\":{\\\"status\\\":\\\"unavailable\\\"},\\\"chillingSlothEnterprise\\\":{\\\"status\\\":\\\"supported\\\"},\\\"chillingSlothLocal\\\":{\\\"status\\\":\\\"supported\\\"},\\\"yukonSilver\\\":{\\\"status\\\":\\\"supported\\\"},\\\"yukonSilverGems\\\":{\\\"status\\\":\\\"supported\\\"},\\\"desktopTopBar\\\":{\\\"status\\\":\\\"supported\\\"},\\\"ccdPlugins\\\":{\\\"status\\\":\\\"supported\\\"}}\" /prefetch:1",
+                        "action":  "preview_only"
+                    },
+                    {
+                        "name":  "claude.exe",
+                        "process_id":  171336,
+                        "command_line":  "C:\\Users\\user\\AppData\\Roaming\\Claude\\claude-code\\2.1.72\\claude.exe --output-format stream-json --verbose --input-format stream-json --model claude-opus-4-6 --permission-prompt-tool stdio --mcp-config \"{\\\"mcpServers\\\":{\\\"Claude in Chrome\\\":{\\\"type\\\":\\\"sdk\\\",\\\"name\\\":\\\"Claude in Chrome\\\"},\\\"mcp-registry\\\":{\\\"type\\\":\\\"sdk\\\",\\\"name\\\":\\\"mcp-registry\\\"},\\\"Claude Preview\\\":{\\\"type\\\":\\\"sdk\\\",\\\"name\\\":\\\"Claude Preview\\\"},\\\"scheduled-tasks\\\":{\\\"type\\\":\\\"sdk\\\",\\\"name\\\":\\\"scheduled-tasks\\\"}}}\" --setting-sources user,project,local --permission-mode default --include-partial-messages --plugin-dir C:\\Users\\user\\AppData\\Roaming\\Claude\\local-agent-mode-sessions\\skills-plugin\\21cbfc55-c8a7-45fb-ab19-1571ab3dd2f5\\9a70fa9c-db85-4ad1-8cd8-7352bc794341 --plugin-dir C:\\Users\\user\\.claude\\plugins\\cache\\claude-plugins-official\\playwright\\d5c15b861cd2",
+                        "action":  "preview_only"
+                    },
+                    {
+                        "name":  "node.exe",
+                        "process_id":  121524,
+                        "command_line":  "\"C:\\Program Files\\nodejs\\\\node.exe\"  \"C:\\Program Files\\nodejs\\\\node_modules\\npm\\bin\\npx-cli.js\" \"@playwright/mcp@latest\"",
+                        "action":  "preview_only"
+                    },
+                    {
+                        "name":  "node.exe",
+                        "process_id":  62032,
+                        "command_line":  "\"C:\\Program Files\\nodejs\\\\node.exe\"  \"C:\\Program Files\\nodejs\\\\node_modules\\npm\\bin\\npx-cli.js\" @playwright/mcp@latest",
+                        "action":  "preview_only"
+                    },
+                    {
+                        "name":  "com.docker.backend.exe",
+                        "process_id":  21272,
+                        "command_line":  "\"C:\\Program Files\\Docker\\Docker\\resources\\com.docker.backend.exe\"",
+                        "action":  "preview_only"
+                    },
+                    {
+                        "name":  "com.docker.backend.exe",
+                        "process_id":  178784,
+                        "command_line":  "\"C:\\Program Files\\Docker\\Docker\\resources\\com.docker.backend.exe\" services",
+                        "action":  "preview_only"
+                    },
+                    {
+                        "name":  "vmmemWSL",
+                        "process_id":  46208,
+                        "command_line":  "",
+                        "action":  "preview_only"
+                    },
+                    {
+                        "name":  "claude.exe",
+                        "process_id":  163148,
+                        "command_line":  "c:\\Users\\user\\.antigravity\\extensions\\anthropic.claude-code-2.1.76-win32-x64\\resources\\native-binary\\claude.exe --output-format stream-json --verbose --input-format stream-json --max-thinking-tokens 31999 --model default --permission-prompt-tool stdio --resume fb9d2be8-2199-470e-affe-230d1dbdfdb0 --mcp-config \"{\\\"mcpServers\\\":{\\\"claude-vscode\\\":{\\\"type\\\":\\\"sdk\\\",\\\"name\\\":\\\"claude-vscode\\\"}}}\" --setting-sources user,project,local --permission-mode default --allow-dangerously-skip-permissions --include-partial-messages --debug --debug-to-stderr --enable-auth-status --no-chrome --replay-user-messages",
+                        "action":  "preview_only"
+                    },
+                    {
+                        "name":  "node.exe",
+                        "process_id":  101720,
+                        "command_line":  "\"C:\\Program Files\\nodejs\\\\node.exe\"  \"C:\\Program Files\\nodejs\\\\node_modules\\npm\\bin\\npx-cli.js\" \"@playwright/mcp@latest\"",
+                        "action":  "preview_only"
+                    },
+                    {
+                        "name":  "node.exe",
+                        "process_id":  196700,
+                        "command_line":  "\"C:\\Program Files\\nodejs\\\\node.exe\"  \"C:\\Program Files\\nodejs\\\\node_modules\\npm\\bin\\npx-cli.js\" @playwright/mcp@latest",
+                        "action":  "preview_only"
+                    },
+                    {
+                        "name":  "node.exe",
+                        "process_id":  33164,
+                        "command_line":  "\"C:\\Program Files\\nodejs\\\\node.exe\"  \"C:\\Program Files\\nodejs\\\\node_modules\\npm\\bin\\npx-cli.js\" @playwright/mcp@latest",
+                        "action":  "preview_only"
+                    },
+                    {
+                        "name":  "python.exe",
+                        "process_id":  51588,
+                        "command_line":  "C:\\Python313\\python.exe c:\\Users\\user\\.antigravity\\extensions\\ms-python.python-2026.4.0-universal\\python_files\\lib\\jedilsp\\jedi\\inference\\compiled\\subprocess\\__main__.py c:\\Users\\user\\.antigravity\\extensions\\ms-python.python-2026.4.0-universal\\python_files\\lib\\jedilsp 3.13.7",
+                        "action":  "preview_only"
+                    },
+                    {
+                        "name":  "python.exe",
+                        "process_id":  212424,
+                        "command_line":  "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -m pytest tests/ -q --tb=line",
+                        "action":  "preview_only"
+                    }
+                ],
+    "terminated":  [
+
+                   ]
+}

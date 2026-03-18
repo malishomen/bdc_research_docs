@@ -1,0 +1,253 @@
+﻿{
+    "collected_at_utc":  "2026-03-18T23:44:07Z",
+    "logical_cpu":  8,
+    "total_cpu_percent":  4,
+    "free_memory_mb":  7509,
+    "gpu":  [
+                {
+                    "name":  "NVIDIA GeForce GTX 1080 Ti",
+                    "utilization_gpu":  "1 %",
+                    "utilization_memory":  "1 %",
+                    "memory_used":  "1708 MiB",
+                    "memory_total":  "11264 MiB",
+                    "temperature_gpu":  "51"
+                }
+            ],
+    "python_process_count":  8,
+    "python_processes":  [
+                             {
+                                 "Id":  33148,
+                                 "ProcessName":  "python",
+                                 "CPU":  214.40625,
+                                 "WS_MB":  63.8,
+                                 "PM_MB":  96.4,
+                                 "StartTime":  "\/Date(1773653686439)\/",
+                                 "Path":  "C:\\Users\\user\\AppData\\Roaming\\uv\\python\\cpython-3.13.12-windows-x86_64-none\\python.exe"
+                             },
+                             {
+                                 "Id":  51588,
+                                 "ProcessName":  "python",
+                                 "CPU":  0.5625,
+                                 "WS_MB":  12.2,
+                                 "PM_MB":  19.9,
+                                 "StartTime":  "\/Date(1773832758447)\/",
+                                 "Path":  "C:\\Python313\\python.exe"
+                             },
+                             {
+                                 "Id":  100936,
+                                 "ProcessName":  "python",
+                                 "CPU":  0,
+                                 "WS_MB":  2.9,
+                                 "PM_MB":  0.8,
+                                 "StartTime":  "\/Date(1773653686428)\/",
+                                 "Path":  "C:\\Users\\user\\AppData\\Local\\Packages\\Claude_pzs8sxrjxfjjc\\LocalCache\\Roaming\\Claude\\Claude Extensions\\ant.dir.cursortouch.windows-mcp\\.venv\\Scripts\\python.exe"
+                             },
+                             {
+                                 "Id":  114192,
+                                 "ProcessName":  "python",
+                                 "CPU":  0.890625,
+                                 "WS_MB":  17.1,
+                                 "PM_MB":  72.3,
+                                 "StartTime":  "\/Date(1773830263601)\/",
+                                 "Path":  "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe"
+                             },
+                             {
+                                 "Id":  125636,
+                                 "ProcessName":  "python",
+                                 "CPU":  1.453125,
+                                 "WS_MB":  14,
+                                 "PM_MB":  47.4,
+                                 "StartTime":  "\/Date(1773830235381)\/",
+                                 "Path":  "C:\\Python313\\python.exe"
+                             },
+                             {
+                                 "Id":  135296,
+                                 "ProcessName":  "python",
+                                 "CPU":  54.296875,
+                                 "WS_MB":  63.6,
+                                 "PM_MB":  95.9,
+                                 "StartTime":  "\/Date(1773822904711)\/",
+                                 "Path":  "C:\\Users\\user\\AppData\\Roaming\\uv\\python\\cpython-3.13.12-windows-x86_64-none\\python.exe"
+                             },
+                             {
+                                 "Id":  212424,
+                                 "ProcessName":  "python",
+                                 "CPU":  54.234375,
+                                 "WS_MB":  151.8,
+                                 "PM_MB":  145.2,
+                                 "StartTime":  "\/Date(1773867378273)\/",
+                                 "Path":  "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe"
+                             },
+                             {
+                                 "Id":  257628,
+                                 "ProcessName":  "python",
+                                 "CPU":  0.015625,
+                                 "WS_MB":  2.9,
+                                 "PM_MB":  0.8,
+                                 "StartTime":  "\/Date(1773822904692)\/",
+                                 "Path":  "C:\\Users\\user\\AppData\\Local\\Packages\\Claude_pzs8sxrjxfjjc\\LocalCache\\Roaming\\Claude\\Claude Extensions\\ant.dir.cursortouch.windows-mcp\\.venv\\Scripts\\python.exe"
+                             }
+                         ],
+    "top_processes":  [
+                          {
+                              "Id":  113296,
+                              "ProcessName":  "cowork-svc",
+                              "CPU":  162600.546875,
+                              "WS_MB":  43.9,
+                              "PM_MB":  33.9,
+                              "StartTime":  "\/Date(1773653664974)\/"
+                          },
+                          {
+                              "Id":  4644,
+                              "ProcessName":  "MsMpEng",
+                              "CPU":  26527.6875,
+                              "WS_MB":  313.7,
+                              "PM_MB":  436.4,
+                              "StartTime":  "\/Date(1772695359007)\/"
+                          },
+                          {
+                              "Id":  178784,
+                              "ProcessName":  "com.docker.backend",
+                              "CPU":  16616.78125,
+                              "WS_MB":  163.1,
+                              "PM_MB":  149.1,
+                              "StartTime":  "\/Date(1773699509380)\/"
+                          },
+                          {
+                              "Id":  46208,
+                              "ProcessName":  "vmmemWSL",
+                              "CPU":  16149.296875,
+                              "WS_MB":  703.5,
+                              "PM_MB":  7932.5,
+                              "StartTime":  "\/Date(1773699558284)\/"
+                          },
+                          {
+                              "Id":  4,
+                              "ProcessName":  "System",
+                              "CPU":  15590.4375,
+                              "WS_MB":  0.9,
+                              "PM_MB":  0,
+                              "StartTime":  "\/Date(1772695343430)\/"
+                          },
+                          {
+                              "Id":  1768,
+                              "ProcessName":  "dwm",
+                              "CPU":  7518.40625,
+                              "WS_MB":  53.1,
+                              "PM_MB":  152.6,
+                              "StartTime":  "\/Date(1772695357394)\/"
+                          },
+                          {
+                              "Id":  182712,
+                              "ProcessName":  "dllhost",
+                              "CPU":  7318.640625,
+                              "WS_MB":  9,
+                              "PM_MB":  6.7,
+                              "StartTime":  "\/Date(1773699558680)\/"
+                          },
+                          {
+                              "Id":  8636,
+                              "ProcessName":  "RGBFusion",
+                              "CPU":  5283.296875,
+                              "WS_MB":  25.9,
+                              "PM_MB":  159.8,
+                              "StartTime":  "\/Date(1772695364536)\/"
+                          },
+                          {
+                              "Id":  6676,
+                              "ProcessName":  "claude",
+                              "CPU":  3408.453125,
+                              "WS_MB":  368.9,
+                              "PM_MB":  658.8,
+                              "StartTime":  "\/Date(1773653668233)\/"
+                          },
+                          {
+                              "Id":  4372,
+                              "ProcessName":  "MacriumService",
+                              "CPU":  3137,
+                              "WS_MB":  20.4,
+                              "PM_MB":  70,
+                              "StartTime":  "\/Date(1772695358891)\/"
+                          },
+                          {
+                              "Id":  22008,
+                              "ProcessName":  "Telegram",
+                              "CPU":  3135.3125,
+                              "WS_MB":  184.1,
+                              "PM_MB":  908.4,
+                              "StartTime":  "\/Date(1772698627262)\/"
+                          },
+                          {
+                              "Id":  260528,
+                              "ProcessName":  "Antigravity",
+                              "CPU":  3108.953125,
+                              "WS_MB":  132.4,
+                              "PM_MB":  477.5,
+                              "StartTime":  "\/Date(1773678132926)\/"
+                          },
+                          {
+                              "Id":  103276,
+                              "ProcessName":  "Antigravity",
+                              "CPU":  2887.734375,
+                              "WS_MB":  464.4,
+                              "PM_MB":  572.9,
+                              "StartTime":  "\/Date(1773678162832)\/"
+                          },
+                          {
+                              "Id":  15348,
+                              "ProcessName":  "svchost",
+                              "CPU":  2713.84375,
+                              "WS_MB":  21,
+                              "PM_MB":  21.9,
+                              "StartTime":  "\/Date(1772695404222)\/"
+                          },
+                          {
+                              "Id":  267812,
+                              "ProcessName":  "Codex",
+                              "CPU":  2680.90625,
+                              "WS_MB":  482.4,
+                              "PM_MB":  631.3,
+                              "StartTime":  "\/Date(1773677970915)\/"
+                          },
+                          {
+                              "Id":  2844,
+                              "ProcessName":  "svchost",
+                              "CPU":  2590.09375,
+                              "WS_MB":  6,
+                              "PM_MB":  2.8,
+                              "StartTime":  "\/Date(1772695357834)\/"
+                          },
+                          {
+                              "Id":  65644,
+                              "ProcessName":  "ChatGPT",
+                              "CPU":  2020.921875,
+                              "WS_MB":  239.2,
+                              "PM_MB":  457.9,
+                              "StartTime":  "\/Date(1772993931042)\/"
+                          },
+                          {
+                              "Id":  148988,
+                              "ProcessName":  "msedge",
+                              "CPU":  1754.15625,
+                              "WS_MB":  55.7,
+                              "PM_MB":  42,
+                              "StartTime":  "\/Date(1773637899801)\/"
+                          },
+                          {
+                              "Id":  2912,
+                              "ProcessName":  "Memory Compression",
+                              "CPU":  1670.734375,
+                              "WS_MB":  2929.3,
+                              "PM_MB":  16.3,
+                              "StartTime":  "\/Date(1772695357859)\/"
+                          },
+                          {
+                              "Id":  13124,
+                              "ProcessName":  "ChatGPT",
+                              "CPU":  1594.8125,
+                              "WS_MB":  42.3,
+                              "PM_MB":  370.4,
+                              "StartTime":  "\/Date(1772695388751)\/"
+                          }
+                      ]
+}
