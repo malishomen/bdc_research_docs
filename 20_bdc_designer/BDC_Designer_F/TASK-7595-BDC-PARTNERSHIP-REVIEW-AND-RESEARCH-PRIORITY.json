@@ -1,0 +1,45 @@
+{
+  "task_id": "TASK-7595-BDC-PARTNERSHIP-REVIEW-AND-RESEARCH-PRIORITY",
+  "project": "Bio Digital Core",
+  "phase": 53,
+  "status": "completed",
+  "priority": "high",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-19",
+  "change_class": "R2",
+  "objective": "Preserve the TextAI_Auto partnership review as a project document and formalize the strategic priority that BDC Designer should be used first as the analytical discipline layer for the main scientific BDC line.",
+  "depends_on": [
+    "TASK-7550-BDC-CLI-V2-PRODUCTIZATION-AND-RELEASE",
+    "TASK-7588-BDC-DESIGNER-TEXTAI-V25-INTAKE-COMPATIBILITY",
+    "TASK-7589-BDC-DESIGNER-TEXTAI-V26-HARDENING-INTAKE-SUPPORT"
+  ],
+  "execution_rules": {
+    "parallel_execution_allowed": false,
+    "scope_expansion_forbidden": true,
+    "protected_docs_touched": true
+  },
+  "outputs": [
+    "docs/project/BDC_PARTNERSHIP_REVIEW_AND_RESEARCH_PRIORITY.md",
+    "docs/project/project_main_doc.md",
+    "docs/project/project_roadmap.md",
+    "tasks/TASK-7595-BDC-PARTNERSHIP-REVIEW-AND-RESEARCH-PRIORITY.json",
+    "reports/analysis/TASK-7595-BDC-PARTNERSHIP-REVIEW-AND-RESEARCH-PRIORITY/TASK-7595_BRIEF_REPORT.md"
+  ],
+  "tests_required": [
+    "document existence check",
+    "project doc reference check",
+    "research mirror duplication check"
+  ],
+  "definition_of_done": [
+    "partnership review saved as project document",
+    "research priority statement formalized",
+    "project docs reference the new document",
+    "brief report generated",
+    "mirrors updated"
+  ],
+  "out_of_scope": [
+    "changing scientific hypotheses",
+    "changing BDC Designer code",
+    "starting a new experiment cycle"
+  ]
+}
