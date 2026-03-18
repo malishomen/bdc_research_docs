@@ -1,0 +1,48 @@
+{
+  "task_id": "TASK-7590-BDC-SELECTION-PHYSICS-R1-IMPLEMENTATION-PACKAGE",
+  "project": "Bio Digital Core",
+  "phase": 48,
+  "status": "completed",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-18",
+  "change_class": "R1",
+  "objective": "Convert Phase R1 from scientific framing into an executable implementation package with strict gates, deliverables, and downstream task sequence.",
+  "depends_on": [
+    "TASK-7577-BDC-SELECTION-PHYSICS-REBOOT-PACKAGE",
+    "TASK-7584-BDC-BELNAP-ALIGNMENT-NOTE",
+    "TASK-7585-BDC-DIVERSITY-TAXONOMY-NOTE",
+    "TASK-7586-BDC-ERROR-ERASURE-MODEL-NOTE",
+    "TASK-7587-BDC-CHANNEL-AWARE-MEMORY-NOTE"
+  ],
+  "execution_rules": {
+    "parallel_execution_allowed": false,
+    "scope_expansion_forbidden": true,
+    "protected_file_changes_required": false
+  },
+  "outputs": [
+    "docs/experiments/EXP-0801_SELECTION_PHYSICS_REBOOT_IMPLEMENTATION_PACKAGE.md",
+    "tasks/TASK-7590-BDC-SELECTION-PHYSICS-R1-IMPLEMENTATION-PACKAGE.json",
+    "tasks/TASK-7591-BDC-SELECTION-PHYSICS-R1-REGIME-ABSTRACTION.json",
+    "tasks/TASK-7592-BDC-SELECTION-PHYSICS-R1-SWEEP-RUNNER.json",
+    "tasks/TASK-7593-BDC-SELECTION-PHYSICS-R1-GATE-AUDIT.json",
+    "reports/analysis/TASK-7590-BDC-SELECTION-PHYSICS-R1-IMPLEMENTATION-PACKAGE/TASK-7590_BRIEF_REPORT.md"
+  ],
+  "tests_required": [
+    "implementation package doc existence check",
+    "downstream task JSON parse check",
+    "implementation package contains sequence, DoD, and failure conditions"
+  ],
+  "definition_of_done": [
+    "Phase R1 implementation package written",
+    "strict downstream task chain defined",
+    "DoD and acceptance criteria defined",
+    "brief report generated",
+    "append-only logs updated"
+  ],
+  "out_of_scope": [
+    "execution of regime sweep",
+    "selection of a winning regime",
+    "organism-level construction"
+  ]
+}

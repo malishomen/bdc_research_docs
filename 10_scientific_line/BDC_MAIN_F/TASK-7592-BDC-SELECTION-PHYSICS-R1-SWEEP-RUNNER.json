@@ -1,0 +1,41 @@
+{
+  "task_id": "TASK-7592-BDC-SELECTION-PHYSICS-R1-SWEEP-RUNNER",
+  "project": "Bio Digital Core",
+  "phase": 50,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-18",
+  "change_class": "R1",
+  "objective": "Build a deterministic multi-regime Phase R1 sweep runner with manifest discipline and bounded result collection for selection-physics comparison.",
+  "depends_on": [
+    "TASK-7591-BDC-SELECTION-PHYSICS-R1-REGIME-ABSTRACTION"
+  ],
+  "execution_rules": {
+    "parallel_execution_allowed": false,
+    "scope_expansion_forbidden": true,
+    "minimum_seed_count": 30
+  },
+  "outputs": [
+    "scripts/edp1/run_selection_physics_reboot_sweep.py",
+    "scripts/edp1/selection_physics_manifest.json",
+    "evolution/edp1_symbolic/tests/test_selection_physics_runner.py",
+    "reports/analysis/TASK-7592-BDC-SELECTION-PHYSICS-R1-SWEEP-RUNNER/TASK-7592_BRIEF_REPORT.md"
+  ],
+  "tests_required": [
+    "runner smoke test on reduced seed count",
+    "manifest determinism check",
+    "artifact schema check"
+  ],
+  "definition_of_done": [
+    "runner executes required regime set from manifest",
+    "per-run outputs are reproducible",
+    "failed runs are retained rather than dropped",
+    "tests pass"
+  ],
+  "failure_conditions": [
+    "runner silently omits failed regimes",
+    "manifest is implicit or embedded only in code comments",
+    "task drifts into post-hoc threshold tuning"
+  ]
+}
