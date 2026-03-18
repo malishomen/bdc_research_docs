@@ -1,0 +1,45 @@
+{
+  "task_id": "TASK-7594-BDC-SELECTION-PHYSICS-R1-LAUNCH-PREP",
+  "project": "Bio Digital Core",
+  "phase": 52,
+  "status": "completed",
+  "priority": "high",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-18",
+  "change_class": "R1",
+  "objective": "Prepare a safe parallel launch script for the canonical Phase R1 sweep on the current machine and capture a host-load snapshot to assess contention before the long-run starts.",
+  "depends_on": [
+    "TASK-7591-BDC-SELECTION-PHYSICS-R1-REGIME-ABSTRACTION",
+    "TASK-7592-BDC-SELECTION-PHYSICS-R1-SWEEP-RUNNER",
+    "TASK-7593-BDC-SELECTION-PHYSICS-R1-GATE-AUDIT"
+  ],
+  "execution_rules": {
+    "parallel_execution_allowed": false,
+    "scope_expansion_forbidden": true,
+    "must_not_start_full_r1": true
+  },
+  "outputs": [
+    "scripts/edp1/run_selection_physics_reboot_parallel.ps1",
+    "scripts/edp1/capture_selection_physics_host_snapshot.ps1",
+    "tasks/TASK-7594-BDC-SELECTION-PHYSICS-R1-LAUNCH-PREP.json",
+    "reports/analysis/TASK-7594-BDC-SELECTION-PHYSICS-R1-LAUNCH-PREP/host_snapshot.json",
+    "reports/analysis/TASK-7594-BDC-SELECTION-PHYSICS-R1-LAUNCH-PREP/TASK-7594_BRIEF_REPORT.md"
+  ],
+  "tests_required": [
+    "parallel launch script preview mode",
+    "host snapshot generation",
+    "no Phase R1 full run started"
+  ],
+  "definition_of_done": [
+    "parallel launch plan script exists",
+    "host snapshot captured",
+    "contention analysis documented",
+    "brief report generated",
+    "append-only logs updated"
+  ],
+  "out_of_scope": [
+    "starting the canonical full Phase R1 run",
+    "changing the scientific protocol",
+    "GPU implementation of edp1_symbolic"
+  ]
+}
