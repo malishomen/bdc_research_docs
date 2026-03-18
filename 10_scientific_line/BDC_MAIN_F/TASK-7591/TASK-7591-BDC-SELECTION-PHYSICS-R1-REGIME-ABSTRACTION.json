@@ -1,0 +1,49 @@
+{
+  "task_id": "TASK-7591-BDC-SELECTION-PHYSICS-R1-REGIME-ABSTRACTION",
+  "project": "Bio Digital Core",
+  "phase": 49,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-18",
+  "change_class": "R1",
+  "objective": "Implement a bounded selection-physics abstraction layer on top of the current edp1_symbolic runtime so Phase R1 can compare multiple regime families without replacing the historical execution stack.",
+  "depends_on": [
+    "TASK-7590-BDC-SELECTION-PHYSICS-R1-IMPLEMENTATION-PACKAGE"
+  ],
+  "execution_rules": {
+    "parallel_execution_allowed": false,
+    "scope_expansion_forbidden": true,
+    "legacy_control_required": true
+  },
+  "required_regimes": [
+    "legacy_linear_control",
+    "energy_budget",
+    "maintenance_cost",
+    "resource_allocation",
+    "bounded_hybrid",
+    "no_penalty_diagnostic"
+  ],
+  "outputs": [
+    "evolution/edp1_symbolic/selection_physics.py",
+    "evolution/edp1_symbolic/evaluate.py",
+    "evolution/edp1_symbolic/tests/test_selection_physics.py",
+    "reports/analysis/TASK-7591-BDC-SELECTION-PHYSICS-R1-REGIME-ABSTRACTION/TASK-7591_BRIEF_REPORT.md"
+  ],
+  "tests_required": [
+    "selection physics unit tests",
+    "legacy control regression compatibility test",
+    "schema smoke test for all required regimes"
+  ],
+  "definition_of_done": [
+    "required regime family set represented in code",
+    "legacy control preserved as explicit control path",
+    "evaluation schema remains machine-readable",
+    "tests pass"
+  ],
+  "failure_conditions": [
+    "legacy control behavior breaks without explicit justification",
+    "required regimes exist only as comments or constants without executable path",
+    "task drifts into sweep execution or regime winner claims"
+  ]
+}
