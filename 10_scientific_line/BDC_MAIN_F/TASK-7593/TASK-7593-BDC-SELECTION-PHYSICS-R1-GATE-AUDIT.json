@@ -1,0 +1,53 @@
+{
+  "task_id": "TASK-7593-BDC-SELECTION-PHYSICS-R1-GATE-AUDIT",
+  "project": "Bio Digital Core",
+  "phase": 51,
+  "status": "planned",
+  "priority": "critical",
+  "author": "Авакумов Данил Эдуардович",
+  "date": "2026-03-18",
+  "change_class": "R1",
+  "objective": "Aggregate Phase R1 sweep outputs, compute feasibility and collapse gates, and produce a final reboot decision packet with an explicit PASS_TO_R2 or REMAIN_IN_R1 verdict.",
+  "depends_on": [
+    "TASK-7591-BDC-SELECTION-PHYSICS-R1-REGIME-ABSTRACTION",
+    "TASK-7592-BDC-SELECTION-PHYSICS-R1-SWEEP-RUNNER"
+  ],
+  "execution_rules": {
+    "parallel_execution_allowed": false,
+    "scope_expansion_forbidden": true,
+    "allowed_final_verdicts": [
+      "PASS_TO_R2",
+      "REMAIN_IN_R1"
+    ]
+  },
+  "outputs": [
+    "scripts/edp1/aggregate_selection_physics_reboot.py",
+    "results/selection_physics_reboot_r1/",
+    "reports/analysis/TASK-7593-BDC-SELECTION-PHYSICS-R1-GATE-AUDIT/TASK-7593_BRIEF_REPORT.md"
+  ],
+  "tests_required": [
+    "aggregation schema test",
+    "gate verdict determinism test",
+    "legacy-control-presence assertion"
+  ],
+  "required_metrics": [
+    "feasible_growth",
+    "required_accuracy_to_beat_legacy",
+    "collapse_rate",
+    "trivial_strategy_rate",
+    "diversity_index_final",
+    "functional_diversity_final",
+    "runtime_pass_rate"
+  ],
+  "definition_of_done": [
+    "aggregated regime comparison exists",
+    "gate metrics computed for all required regimes",
+    "final decision packet contains only allowed verdicts",
+    "tests pass"
+  ],
+  "failure_conditions": [
+    "report cannot distinguish missing data from regime failure",
+    "final verdict uses informal language instead of allowed verdicts",
+    "task drifts into Phase R2 work"
+  ]
+}
