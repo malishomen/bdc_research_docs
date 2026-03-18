@@ -1,0 +1,119 @@
+{
+  "summary": {
+    "recommended_variant_id": "no_penalty_diagnostic",
+    "recommended_variant_name": "stage_pipeline_plus_gate::no_penalty_diagnostic",
+    "recommended_role_names": [
+      "orchestrator",
+      "planner",
+      "editor",
+      "guardian"
+    ],
+    "recommended_role_count": 4,
+    "strategy_mode": "full_hybrid_search",
+    "confidence_band": "medium",
+    "confidence_score": 0.77,
+    "prior_confidence_band": "high",
+    "prior_confidence_score": 0.8,
+    "deployability_confidence_band": "medium",
+    "deployability_confidence_score": 0.77
+  },
+  "evidence_interpretation": {
+    "winner_margin": 0.66,
+    "role_contributions": {
+      "editor": 128.5444,
+      "guardian": 128.5444,
+      "orchestrator": 128.5444,
+      "planner": 128.5444
+    },
+    "evidence_status_summary": {
+      "counts": {
+        "measured": 6,
+        "measured_from_historical_report": 0,
+        "measured_from_historical_report_negative": 0,
+        "inferred": 0,
+        "missing": 0
+      },
+      "current_runtime_variant_count": 6,
+      "historical_variant_count": 0,
+      "winner_evidence_status": "measured",
+      "winner_is_historical_prior": false
+    },
+    "evidence_state_summary": {
+      "packet_state_class": "supported",
+      "winner_state": "measured_support",
+      "variant_state_counts": {
+        "measured_support": 6,
+        "historical_support": 0,
+        "historical_negative_support": 0,
+        "inferred_support": 0,
+        "missing_evidence": 0,
+        "contradicted_evidence": 0
+      },
+      "has_missing_evidence": false,
+      "has_contradicted_evidence": false,
+      "contradiction_flags": []
+    }
+  },
+  "cautions": {
+    "caution_flags": [
+      "broad_search_required"
+    ],
+    "conflict_flags": [],
+    "insufficiency_mode": false,
+    "validation_errors": [],
+    "validation_warnings": [
+      "sparse_runtime_missing_metric_cells_present"
+    ],
+    "evidence_state_summary": {
+      "packet_state_class": "supported",
+      "winner_state": "measured_support",
+      "variant_state_counts": {
+        "measured_support": 6,
+        "historical_support": 0,
+        "historical_negative_support": 0,
+        "inferred_support": 0,
+        "missing_evidence": 0,
+        "contradicted_evidence": 0
+      },
+      "has_missing_evidence": false,
+      "has_contradicted_evidence": false,
+      "contradiction_flags": []
+    }
+  },
+  "selective_prediction": {
+    "outcome_class": "recommend_with_guardrails",
+    "abstain": false,
+    "operator_action": "bounded_search_around_prior",
+    "reasons": [
+      "search_mode_requires_operator_guardrails"
+    ],
+    "confidence_band": "medium",
+    "deployability_confidence_band": "medium",
+    "strategy_mode": "full_hybrid_search",
+    "tested_variant_count": 6,
+    "calibration_audit_status": "single_case_not_audited"
+  },
+  "rejected_alternatives": [
+    {
+      "variant_id": "maintenance_cost",
+      "reason_summary": []
+    },
+    {
+      "variant_id": "bounded_hybrid",
+      "reason_summary": []
+    },
+    {
+      "variant_id": "energy_budget",
+      "reason_summary": []
+    },
+    {
+      "variant_id": "resource_allocation",
+      "reason_summary": []
+    },
+    {
+      "variant_id": "legacy_linear_control",
+      "reason_summary": []
+    }
+  ],
+  "markdown": "# Architecture Recommendation: Bio_Digital_Core\n\n- Recommended variant: `no_penalty_diagnostic` / `stage_pipeline_plus_gate::no_penalty_diagnostic`\n- Recommended roles: orchestrator, planner, editor, guardian\n- Recommended role count: `4`\n- Strategy mode: `full_hybrid_search`\n- Confidence: `medium` (0.77)\n- Prior confidence: `high` (0.8)\n- Deployability confidence: `medium` (0.77)\n- Outcome class: `recommend_with_guardrails`\n- Abstain: `False`\n\n## Evidence Interpretation\n- Winner margin: `0.66`\n- Tested variants: `6`\n- Role contributions: `{'editor': 128.5444, 'guardian': 128.5444, 'orchestrator': 128.5444, 'planner': 128.5444}`\n- Evidence status summary: `{'counts': {'measured': 6, 'measured_from_historical_report': 0, 'measured_from_historical_report_negative': 0, 'inferred': 0, 'missing': 0}, 'current_runtime_variant_count': 6, 'historical_variant_count': 0, 'winner_evidence_status': 'measured', 'winner_is_historical_prior': False}`\n- Evidence state summary: `{'packet_state_class': 'supported', 'winner_state': 'measured_support', 'variant_state_counts': {'measured_support': 6, 'historical_support': 0, 'historical_negative_support': 0, 'inferred_support': 0, 'missing_evidence': 0, 'contradicted_evidence': 0}, 'has_missing_evidence': False, 'has_contradicted_evidence': False, 'contradiction_flags': []}`\n\n## Cautions\n- Caution flags: `['broad_search_required']`\n- Conflict flags: `[]`\n- Insufficiency mode: `False`\n\n## Rejected Alternatives\n- `maintenance_cost`: lower total score\n- `bounded_hybrid`: lower total score\n- `energy_budget`: lower total score\n- `resource_allocation`: lower total score\n- `legacy_linear_control`: lower total score"
+}

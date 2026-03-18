@@ -1,0 +1,3 @@
+"case_id","failure_mode","severity","status","note"
+"R1_FULL_SWEEP_MISSING","missing_full_multiseed_evidence","high","open","Only a single-seed smoke run exists for this packet; full canonical sweep is still required."
+"SMOKE_NOT_SCIENTIFIC_VERDICT","forbidden_overclaim","high","controlled","Smoke run may validate artifact preservation, but cannot authorize R2."

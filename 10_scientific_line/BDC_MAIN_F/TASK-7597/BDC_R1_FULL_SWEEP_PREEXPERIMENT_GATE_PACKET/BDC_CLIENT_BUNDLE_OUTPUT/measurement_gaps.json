@@ -1,0 +1,41 @@
+{
+  "decision_mode": "full_hybrid_search",
+  "confidence_band": "medium",
+  "priority_slices": [
+    "forensic_high_ai_5",
+    "mid_ai_4",
+    "real_eval_primary_20"
+  ],
+  "minimum_additional_measurement_set": [
+    {
+      "metric_key": "accepted_rewrite_rate_pct",
+      "description": "accepted rewrite rate by slice and variant"
+    },
+    {
+      "metric_key": "useful_rewrite_rate_pct",
+      "description": "useful rewrite rate by slice and variant"
+    },
+    {
+      "metric_key": "semantic_pass_proxy_pct",
+      "description": "semantic pass proxy by slice and variant"
+    },
+    {
+      "metric_key": "revert_rate_pct",
+      "description": "revert rate by slice and variant"
+    },
+    {
+      "metric_key": "runtime_min",
+      "description": "runtime by variant"
+    },
+    {
+      "metric_key": "cost_usd",
+      "description": "cost by variant"
+    },
+    {
+      "metric_key": "useful_output_rate_pct",
+      "description": "useful output rate by slice and variant for current runtime"
+    }
+  ],
+  "blocking_gap_count": 7,
+  "supported": true
+}

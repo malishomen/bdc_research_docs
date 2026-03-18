@@ -1,0 +1,15 @@
+{
+  "packet_state_class": "supported",
+  "winner_state": "measured_support",
+  "variant_state_counts": {
+    "measured_support": 6,
+    "historical_support": 0,
+    "historical_negative_support": 0,
+    "inferred_support": 0,
+    "missing_evidence": 0,
+    "contradicted_evidence": 0
+  },
+  "has_missing_evidence": false,
+  "has_contradicted_evidence": false,
+  "contradiction_flags": []
+}

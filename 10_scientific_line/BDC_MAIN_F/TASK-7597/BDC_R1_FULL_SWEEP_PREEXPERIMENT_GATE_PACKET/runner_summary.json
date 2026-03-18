@@ -1,0 +1,23 @@
+{
+  "task": "selection_physics_reboot_r1",
+  "manifest_path": "scripts\\edp1\\selection_physics_manifest.json",
+  "out_root": "results\\selection_physics_reboot_r1_gate_smoke_2026-03-19",
+  "generated_at_utc": "2026-03-18T19:30:25Z",
+  "total_runs": 6,
+  "pass_runs": 6,
+  "fail_runs": 0,
+  "selection_regimes": [
+    "legacy_linear_control",
+    "maintenance_cost",
+    "energy_budget",
+    "resource_allocation",
+    "bounded_hybrid",
+    "no_penalty_diagnostic"
+  ],
+  "genome_versions": [
+    "v2"
+  ],
+  "seeds": [
+    1337
+  ]
+}

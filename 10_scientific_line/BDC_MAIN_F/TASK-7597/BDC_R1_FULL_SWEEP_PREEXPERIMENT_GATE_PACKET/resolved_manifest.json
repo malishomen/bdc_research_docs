@@ -1,0 +1,42 @@
+{
+  "task": "selection_physics_reboot_r1",
+  "description": "Canonical Phase R1 sweep manifest for bounded selection-physics comparison.",
+  "task_environment": {
+    "module": "evolution.edp1_symbolic.run_generations",
+    "dataset_size": 512,
+    "bit_len": 12,
+    "population": 100,
+    "generations": 100
+  },
+  "genome_versions": [
+    "v2"
+  ],
+  "selection_regimes": [
+    "legacy_linear_control",
+    "maintenance_cost",
+    "energy_budget",
+    "resource_allocation",
+    "bounded_hybrid",
+    "no_penalty_diagnostic"
+  ],
+  "seeds": [
+    1337
+  ],
+  "runner_defaults": {
+    "complexity_lambda": 0.01,
+    "lambda_v1": 0.01,
+    "lambda_v1_5": 0.01,
+    "lambda_v2": 0.01,
+    "phase0_min_generations": 10,
+    "phase0_diversity_threshold": 0.45,
+    "selection_top_pct_phase1": 0.2,
+    "plateau_window": 10,
+    "plateau_improvement_pct": 0.01,
+    "diversity_collapse_threshold": 0.15,
+    "diversity_collapse_patience": 10,
+    "trivial_strategy_threshold": 0.8,
+    "trivial_strategy_patience": 5
+  },
+  "dry_run": true,
+  "generated_at_utc": "2026-03-18T19:30:22Z"
+}

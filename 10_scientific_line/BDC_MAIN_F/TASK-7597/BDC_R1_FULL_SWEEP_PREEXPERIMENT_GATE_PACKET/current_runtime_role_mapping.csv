@@ -1,0 +1,5 @@
+"runtime_component","logical_bdc_role","status","why_mapped_this_way"
+"cycle_scope","orchestrator","active","Owns phase boundary, scope discipline, and bounded execution policy."
+"manifest_and_regime_design","planner","active","Defines candidate regime families, seed list, and explicit gate framing."
+"runner_execution","editor","active","Executes the actual transformation from manifest to per-run outputs."
+"aggregate_gate_audit","guardian","active","Computes bounded pass/remain verdict and blocks rhetorical drift."

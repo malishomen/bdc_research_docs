@@ -1,0 +1,31 @@
+{
+  "packet_version": "R1_PREEXPERIMENT_GATE_V1",
+  "packet_id": "BDC_R1_FULL_SWEEP_PREEXPERIMENT_GATE",
+  "project": "Bio_Digital_Core",
+  "system_name": "BDC_Scientific_Line",
+  "base_packet_reference": "EXP-0801_SELECTION_PHYSICS_REBOOT_IMPLEMENTATION_PACKAGE",
+  "evidence_policy": {
+    "measured": [
+      "historical TASK-1400B complexity barrier",
+      "TASK-7591 regime abstraction",
+      "TASK-7592 canonical runner",
+      "TASK-7593 gate audit",
+      "2026-03-19 smoke run artifact preservation check"
+    ],
+    "inferred": [
+      "At least one bounded non-legacy regime may justify progression to R2"
+    ],
+    "missing": [
+      "full canonical multi-seed Phase R1 sweep"
+    ]
+  },
+  "positioning": {
+    "historical_best_prior": "bounded_non_legacy_selection_regime_not_yet_measured_full_scale",
+    "bdc_recommendation_mode": "scientific_preexperiment_gate"
+  },
+  "explicit_requests_to_bdc": [
+    "Confirm that the full canonical Phase R1 sweep remains the smallest honest next experiment",
+    "Confirm that PASS_TO_R2 vs REMAIN_IN_R1 is the only valid decision gate",
+    "Confirm that smoke-run outputs are useful only for artifact validation, not scientific progression"
+  ]
+}

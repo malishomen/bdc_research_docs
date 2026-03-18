@@ -1,0 +1,7 @@
+variant_id,slice_id,accepted_rewrite_rate,revert_rate,no_op_rate,semantic_pass_proxy,useful_output_rate,latency,cost,evidence_status,notes
+bounded_hybrid,overall_smoke_seed_1337,100.0000,0.0000,0.0000,100.0000,79.6875,0.1000,0.0000,measured_smoke_only,required_accuracy_to_beat_legacy=0.5304; feasible_growth=True; mean_penalty=0.0235
+energy_budget,overall_smoke_seed_1337,100.0000,0.0000,0.0000,100.0000,79.6875,0.1000,0.0000,measured_smoke_only,required_accuracy_to_beat_legacy=0.5478; feasible_growth=True; mean_penalty=0.0408
+legacy_linear_control,overall_smoke_seed_1337,100.0000,0.0000,0.0000,100.0000,79.6875,0.1000,0.0000,measured_smoke_only,required_accuracy_to_beat_legacy=0.7777; feasible_growth=True; mean_penalty=0.2707
+maintenance_cost,overall_smoke_seed_1337,100.0000,0.0000,0.0000,100.0000,79.6875,0.1000,0.0000,measured_smoke_only,required_accuracy_to_beat_legacy=0.5131; feasible_growth=True; mean_penalty=0.0062
+no_penalty_diagnostic,overall_smoke_seed_1337,100.0000,0.0000,0.0000,100.0000,79.6875,0.1000,0.0000,measured_smoke_only,required_accuracy_to_beat_legacy=0.5070; feasible_growth=True; mean_penalty=0.0000
+resource_allocation,overall_smoke_seed_1337,100.0000,0.0000,0.0000,100.0000,79.6875,0.1000,0.0000,measured_smoke_only,required_accuracy_to_beat_legacy=0.5489; feasible_growth=True; mean_penalty=0.0419

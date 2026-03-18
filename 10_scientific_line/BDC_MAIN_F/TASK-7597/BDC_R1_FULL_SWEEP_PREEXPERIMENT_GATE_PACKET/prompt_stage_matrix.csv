@@ -1,0 +1,4 @@
+"stage_id","stage_name","objective","measured_output","evidence_status"
+"pre_gate","BDC pre-experiment narrowing","Bind the R1 cycle to a two-way gate and exclude false directions.","BDC_R1_FULL_SWEEP_PREEXPERIMENT_GATE.md","measured"
+"execute","Canonical manifest sweep","Produce reproducible per-run outputs for all required regimes and seeds.","runner_summary.json, run_index.csv, summary.json, metrics.csv","measured_smoke_only"
+"gate","Aggregate gate audit","Reduce outputs to PASS_TO_R2 or REMAIN_IN_R1.","r1_gate_decision.json","measured_smoke_only"
