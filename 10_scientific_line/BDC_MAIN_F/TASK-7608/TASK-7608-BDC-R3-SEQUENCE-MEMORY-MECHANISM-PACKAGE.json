@@ -1,0 +1,12 @@
+{
+  "task_id": "TASK-7608",
+  "title": "R3 sequence-memory mechanism package",
+  "change_class": "R1",
+  "objective": "Open the first bounded downstream mechanism-validation cycle inside the approved controlled_sequence_memory environment.",
+  "depends_on": ["TASK-7607"],
+  "deliverables": [
+    "docs/experiments/EXP-0804_R3_SEQUENCE_MEMORY_MECHANISM_VALIDATION.md",
+    "docs/experiments/BDC_R3_SEQUENCE_MEMORY_MECHANISM_PREEXPERIMENT_GATE.md",
+    "docs/experiments/EXP-0805_R3_SEQUENCE_MEMORY_MECHANISM_IMPLEMENTATION_PACKAGE.md"
+  ]
+}

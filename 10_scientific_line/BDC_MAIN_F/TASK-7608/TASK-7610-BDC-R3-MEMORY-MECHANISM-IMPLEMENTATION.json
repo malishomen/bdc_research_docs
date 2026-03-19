@@ -1,0 +1,7 @@
+{
+  "task_id": "TASK-7610",
+  "title": "R3 memory mechanism implementation",
+  "change_class": "R1",
+  "objective": "Implement the bounded working-memory candidate and the required no-memory/trivial-memory controls inside controlled_sequence_memory.",
+  "depends_on": ["TASK-7609"]
+}
