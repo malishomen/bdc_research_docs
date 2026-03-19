@@ -1,0 +1,2 @@
+case_id,failure_mode,severity,status,note
+R3_SCOPE_GUARD,forbidden_overclaim,high,controlled,Approval is mechanism-continuation only and does not authorize organism or cell claims.

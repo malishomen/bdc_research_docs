@@ -1,0 +1,27 @@
+{
+  "packet_version": "R3_SECOND_BOUNDED_SIGNAL_V1",
+  "packet_id": "BDC_R3_SECOND_BOUNDED_SIGNAL",
+  "project": "Bio_Digital_Core",
+  "system_name": "BDC_Scientific_Line",
+  "base_packet_reference": "TASK-7613",
+  "evidence_policy": {
+    "measured": [
+      "control-resistant dataset artifact",
+      "bounded FIFO mechanism scorecard on stricter slice",
+      "control-resistant conditions verified over the dataset"
+    ],
+    "inferred": [],
+    "missing": [
+      "no multi-mechanism evidence exists",
+      "no organism-level assembly evidence exists"
+    ]
+  },
+  "positioning": {
+    "historical_best_prior": "bounded_working_memory_candidate_r3_continuation",
+    "bdc_recommendation_mode": "scientific_second_signal_gate"
+  },
+  "explicit_requests_to_bdc": [
+    "Interpret whether the control-resistant continuation confirms a second bounded signal for the same memory mechanism",
+    "Assess whether the honest measured verdict is CONFIRM_SECOND_BOUNDED_SIGNAL or REMAIN_IN_R3_CONTINUATION"
+  ]
+}

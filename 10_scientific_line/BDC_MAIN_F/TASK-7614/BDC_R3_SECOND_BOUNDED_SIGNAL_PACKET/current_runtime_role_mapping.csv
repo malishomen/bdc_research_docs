@@ -1,0 +1,5 @@
+runtime_component,logical_bdc_role,status,why_mapped_this_way
+continuation_scope,orchestrator,active,Keeps the cycle inside the same environment and mechanism family.
+control_resistant_conditions,planner,active,Defines target != last and target != majority as mandatory slice constraints.
+measured_artifact_surface,editor,active,Carries the stricter dataset and measured scorecard.
+second_signal_gate,guardian,active,Determines whether a second bounded signal is confirmed.

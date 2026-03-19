@@ -1,0 +1,12 @@
+{
+  "task_id": "TASK-7612",
+  "title": "R3 control-resistant sequence-memory continuation package",
+  "change_class": "R1",
+  "objective": "Open a stricter continuation cycle inside the same controlled_sequence_memory family to seek a second independent bounded signal.",
+  "depends_on": ["TASK-7611"],
+  "deliverables": [
+    "docs/experiments/EXP-0806_R3_CONTROL_RESISTANT_SEQUENCE_MEMORY_CONTINUATION.md",
+    "docs/experiments/BDC_R3_CONTROL_RESISTANT_SEQUENCE_MEMORY_PREEXPERIMENT_GATE.md",
+    "docs/experiments/EXP-0807_R3_CONTROL_RESISTANT_SEQUENCE_MEMORY_CONTINUATION_IMPLEMENTATION_PACKAGE.md"
+  ]
+}

@@ -27,6 +27,11 @@
   - `bounded_working_memory_candidate`
 - Canonical gate artifact:
   - `results/r3_sequence_memory_mechanism/mechanism_gate_decision.json`
+- `R3` second bounded signal is now confirmed.
+- Canonical continuation verdict:
+  - `CONFIRM_SECOND_BOUNDED_SIGNAL`
+- Continuation gate artifact:
+  - `results/r3_control_resistant_sequence_memory/second_bounded_signal_decision.json`
 
 ## Current Analytical State
 - Full `R1` packet was run through `BDC Designer`.
@@ -44,19 +49,23 @@
 
 ## Current Next Phase
 - Active scientific target:
-  - `R3 - Sequence-Memory Mechanism Continuation`
+  - `R3 - Post-Second-Signal Bounded Decision`
 - Canonical R3 docs:
   - `docs/experiments/EXP-0804_R3_SEQUENCE_MEMORY_MECHANISM_VALIDATION.md`
   - `docs/experiments/BDC_R3_SEQUENCE_MEMORY_MECHANISM_PREEXPERIMENT_GATE.md`
   - `docs/experiments/EXP-0805_R3_SEQUENCE_MEMORY_MECHANISM_IMPLEMENTATION_PACKAGE.md`
   - `docs/experiments/R3_SEQUENCE_MEMORY_MECHANISM_GATE_DECISION.md`
+  - `docs/experiments/R3_SECOND_BOUNDED_SIGNAL_GATE_DECISION.md`
 
 ## Current Task Chain
 - `TASK-7608` - R3 mechanism package
 - `TASK-7609` - memory mechanism spec
 - `TASK-7610` - bounded memory mechanism implementation
 - `TASK-7611` - measured mechanism gate audit
-- next bounded task not yet opened: harder continuation cycle inside the same environment
+- `TASK-7612` - control-resistant continuation package
+- `TASK-7613` - control-resistant artifact
+- `TASK-7614` - second bounded signal gate
+- next bounded task not yet opened: post-second-signal decision gate
 
 ## BDC Designer Rule
 - For scientific reboot work, `BDC Designer` must be used first as pre-experiment narrowing/evidence discipline.
@@ -73,7 +82,7 @@
 ## Current Stop Point
 If a new session starts, the correct next action is:
 1. treat `controlled_sequence_memory` as the approved canonical bounded `R2` environment,
-2. treat `bounded_working_memory_candidate` as the first approved bounded `R3` mechanism for continuation,
-3. open the next bounded continuation cycle inside the same environment rather than reopening environment choice,
-4. keep `majority_symbol_predictor` and `trivial_last_symbol_memory` as live comparators,
-5. do not widen to multi-mechanism, organism, or cell claims.
+2. treat `bounded_working_memory_candidate` as a mechanism with two bounded positive signals inside the same environment family,
+3. do not widen scope automatically just because the second signal exists,
+4. open the next broader claim only through a new bounded pre-experiment gate,
+5. keep organism/cell/multi-mechanism claims closed until that gate is explicit.

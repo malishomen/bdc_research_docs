@@ -1,0 +1,23 @@
+{
+  "phase": "R3",
+  "task": "second_bounded_signal_gate",
+  "verdict": "CONFIRM_SECOND_BOUNDED_SIGNAL",
+  "mechanism_candidate_id": "bounded_working_memory_candidate",
+  "control_resistant_conditions_pass": true,
+  "approval_conditions": {
+    "deterministic_replay_status": true,
+    "control_resistant_conditions_pass": true,
+    "candidate_gt_no_memory": true,
+    "candidate_gt_trivial": true,
+    "hardest_gap_gt_no_memory": true,
+    "hardest_gap_gt_trivial": true
+  },
+  "measured_summary": {
+    "candidate_accuracy": 1.0,
+    "no_memory_control_accuracy": 0.0,
+    "trivial_last_symbol_memory_accuracy": 0.0,
+    "delta_vs_no_memory": 1.0,
+    "delta_vs_trivial_memory": 1.0,
+    "hardest_recall_gap": 6
+  }
+}

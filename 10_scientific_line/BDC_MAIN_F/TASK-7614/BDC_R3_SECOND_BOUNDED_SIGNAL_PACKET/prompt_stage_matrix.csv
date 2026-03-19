@@ -1,0 +1,4 @@
+stage_id,stage_name,objective,measured_output,evidence_status
+continuation_package,control-resistant package,Define a stricter continuation inside the same environment family.,EXP-0806_R3_CONTROL_RESISTANT_SEQUENCE_MEMORY_CONTINUATION.md,measured
+artifact,control-resistant artifact,Generate the stricter dataset and re-measure the same FIFO mechanism.,"mechanism_scorecard.json, control_resistant_dataset.json",measured
+gate,second bounded signal gate,Choose CONFIRM_SECOND_BOUNDED_SIGNAL vs REMAIN_IN_R3_CONTINUATION.,r3_second_bounded_signal_decision.json,measured

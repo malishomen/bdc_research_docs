@@ -1,0 +1,7 @@
+{
+  "task_id": "TASK-7614",
+  "title": "R3 second bounded signal gate audit",
+  "change_class": "R1",
+  "objective": "Decide whether the stricter continuation cycle confirms a second bounded signal or remains in R3 continuation.",
+  "depends_on": ["TASK-7613"]
+}

@@ -1,0 +1,7 @@
+{
+  "task_id": "TASK-7613",
+  "title": "R3 control-resistant sequence-memory artifact",
+  "change_class": "R1",
+  "objective": "Implement and measure a deterministic control-resistant continuation artifact using the existing bounded FIFO memory mechanism.",
+  "depends_on": ["TASK-7612"]
+}
