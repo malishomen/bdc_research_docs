@@ -1,0 +1,9 @@
+{
+  "task_id": "TASK-7633",
+  "title": "BDC Designer cockpit letter runtime refinement",
+  "change_class": "R0",
+  "objective": "Refine the Agent Studio cockpit qualification letter using the partner-provided runtime flow clarification and update the external delivery copy.",
+  "depends_on": [
+    "TASK-7632"
+  ]
+}
