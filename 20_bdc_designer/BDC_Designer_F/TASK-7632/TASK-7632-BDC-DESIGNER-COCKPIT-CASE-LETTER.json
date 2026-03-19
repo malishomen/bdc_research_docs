@@ -1,0 +1,10 @@
+{
+  "task_id": "TASK-7632",
+  "title": "BDC Designer cockpit case letter",
+  "change_class": "R0",
+  "objective": "Review the Agent Studio cockpit specification, prepare a BDC-facing qualification letter, and define the minimum evidence packet required for an honest architecture audit.",
+  "depends_on": [
+    "TASK-7629",
+    "TASK-7630"
+  ]
+}
