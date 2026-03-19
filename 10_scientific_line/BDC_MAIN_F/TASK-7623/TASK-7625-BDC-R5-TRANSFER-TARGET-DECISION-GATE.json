@@ -1,0 +1,7 @@
+{
+  "task_id": "TASK-7625",
+  "title": "R5 transfer target decision gate",
+  "change_class": "R1",
+  "objective": "Use a BDC-assisted decision gate to approve one adjacent bounded transfer target or remain in R5 transfer planning.",
+  "depends_on": ["TASK-7624"]
+}

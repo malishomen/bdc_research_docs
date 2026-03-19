@@ -1,0 +1,7 @@
+{
+  "task_id": "TASK-7624",
+  "title": "R5 transfer target matrix",
+  "change_class": "R1",
+  "objective": "Define the bounded adjacent transfer target matrix for the same FIFO mechanism.",
+  "depends_on": ["TASK-7623"]
+}

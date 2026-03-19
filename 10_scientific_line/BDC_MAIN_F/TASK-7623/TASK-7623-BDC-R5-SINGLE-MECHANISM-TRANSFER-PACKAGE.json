@@ -1,0 +1,7 @@
+{
+  "task_id": "TASK-7623",
+  "title": "R5 single-mechanism transfer package",
+  "change_class": "R1",
+  "objective": "Open the bounded R5 single-mechanism transfer package selected by the post-R4 decision gate.",
+  "depends_on": ["TASK-7622"]
+}

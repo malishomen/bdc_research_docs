@@ -1,0 +1,7 @@
+{
+  "task_id": "TASK-7626",
+  "title": "R5 transfer long-run launch prep",
+  "change_class": "R1",
+  "objective": "Prepare a deterministic launch-ready long-run surface for the approved R5 transfer target without starting the run.",
+  "depends_on": ["TASK-7625"]
+}
