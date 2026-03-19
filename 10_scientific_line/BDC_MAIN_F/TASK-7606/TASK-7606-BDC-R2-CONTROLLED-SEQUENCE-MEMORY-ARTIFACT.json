@@ -1,0 +1,13 @@
+{
+  "task_id": "TASK-7606",
+  "title": "Controlled sequence memory deterministic artifact",
+  "change_class": "R1",
+  "objective": "Adopt controlled_sequence_memory as the conservative implementation prior for R2 and create an executable deterministic environment artifact with smoke-level baseline evidence.",
+  "depends_on": ["TASK-7605"],
+  "deliverables": [
+    "evolution/micro_tasks/sequence_memory.py",
+    "scripts/analysis/run_phase59_r2_controlled_sequence_memory_artifact.py",
+    "tests/test_phase59_r2_controlled_sequence_memory_artifact.py",
+    "docs/experiments/R2_CONTROLLED_SEQUENCE_MEMORY_ARTIFACT.md"
+  ]
+}
