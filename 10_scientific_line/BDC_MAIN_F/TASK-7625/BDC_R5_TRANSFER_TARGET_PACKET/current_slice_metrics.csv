@@ -1,0 +1,3 @@
+variant_id,slice_id,accepted_rewrite_rate,revert_rate,no_op_rate,semantic_pass_proxy,useful_output_rate,latency,cost,evidence_status,notes
+symbolic_micro_corpus_cloze_transfer,adjacent_executable_surface,82.0000,15.0000,0.0000,82.0000,84.0000,0.0000,0.0000,measured_from_historical_report,"Deterministic cloze infrastructure exists historically, but same-mechanism transfer still needs a new bounded harness."
+controlled_uncertainty_abstention_transfer,missing_executable_surface,0.0000,0.0000,100.0000,0.0000,0.0000,0.0000,0.0000,missing,No deterministic uncertainty-abstention artifact exists yet.

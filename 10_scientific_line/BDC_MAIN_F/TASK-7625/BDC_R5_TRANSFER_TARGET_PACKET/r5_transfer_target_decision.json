@@ -1,0 +1,16 @@
+{
+  "phase": "r5_single_mechanism_transfer",
+  "task": "r5_transfer_target_decision_gate",
+  "verdict": "APPROVE_R5_TRANSFER_TARGET",
+  "bdc_supported": true,
+  "bdc_recommended_variant_id": "symbolic_micro_corpus_cloze_transfer",
+  "bdc_strategy_mode": "direct_architecture_selection",
+  "bdc_confidence_band": "high",
+  "bdc_selective_outcome_class": "recommend_ready",
+  "approved_target_id": "symbolic_micro_corpus_cloze_transfer",
+  "deferred_target_id": "controlled_uncertainty_abstention_transfer",
+  "interpretation": {
+    "matrix_prior": "symbolic_micro_corpus_cloze_transfer",
+    "reason": "Only the cloze candidate combines adjacent task infrastructure with a plausible path to deterministic launch prep inside the same mechanism family."
+  }
+}

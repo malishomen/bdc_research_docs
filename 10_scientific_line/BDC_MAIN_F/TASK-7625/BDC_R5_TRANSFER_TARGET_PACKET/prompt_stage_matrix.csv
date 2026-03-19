@@ -1,0 +1,4 @@
+stage_id,stage_name,objective,measured_output,evidence_status
+r4_transfer_opening,post-r4 transfer opening,Provide the confirmed single-mechanism generalization base state.,docs/experiments/POST_R4_GATE_DECISION.md,measured
+r5_matrix,transfer target matrix,Compare the two allowed adjacent transfer targets.,docs/experiments/R5_TRANSFER_TARGET_MATRIX.json,mixed
+r5_gate,transfer target approval,Approve one target for long-run launch prep or remain in planning.,r5_transfer_target_decision.json,mixed

@@ -1,0 +1,443 @@
+{
+  "schema_version": "BDC_PACKET_V2",
+  "case_id": "BDC_R5_TRANSFER_TARGET_DECISION",
+  "system_name": "Bio_Digital_Core",
+  "task_type": "current_runtime_logical_redesign_decision",
+  "workflow_summary": "Folder intake normalization for current-runtime logical redesign using historical prior evidence and current runtime measurements.",
+  "primary_objective": "Choose the minimum logical redesign for current runtime that improves semantic safety and useful rewrite rate without premature coordination overhead.",
+  "functional_decomposition": [
+    {
+      "function_id": "F1",
+      "name": "planner-like routing and family selection",
+      "level": "system",
+      "criticality": "high"
+    },
+    {
+      "function_id": "F2",
+      "name": "editor path execution",
+      "level": "system",
+      "criticality": "very_high"
+    },
+    {
+      "function_id": "F3",
+      "name": "guardian-like accept/revert/retry logic",
+      "level": "system",
+      "criticality": "very_high"
+    },
+    {
+      "function_id": "F4",
+      "name": "orchestration and bounded iteration",
+      "level": "system",
+      "criticality": "high"
+    }
+  ],
+  "hard_constraints": [
+    "Do not conflate historical measured multi-agent evidence with current stage-based runtime truth.",
+    "Do not optimize for detector score over semantic safety and useful rewrite rate.",
+    "Do not introduce harmonizer-like overhead without positive evidence.",
+    "Preserve semantics, terminology, citations, and academic structure."
+  ],
+  "soft_constraints": [
+    "Increase accepted useful rewrites on forensic_high_ai_5.",
+    "Break the no-op gap on mid_ai_4.",
+    "Reduce revert-heavy aggressive families.",
+    "Keep runtime and coordination overhead controlled."
+  ],
+  "candidate_roles": [
+    {
+      "role_name": "editor",
+      "source": "inferred"
+    },
+    {
+      "role_name": "guardian",
+      "source": "inferred"
+    },
+    {
+      "role_name": "orchestrator",
+      "source": "inferred"
+    },
+    {
+      "role_name": "planner",
+      "source": "inferred"
+    }
+  ],
+  "tested_variants": [
+    {
+      "variant_id": "symbolic_micro_corpus_cloze_transfer",
+      "name": "scientific_transfer_target::symbolic_micro_corpus_cloze_transfer",
+      "roles": [
+        "orchestrator",
+        "planner",
+        "editor",
+        "guardian"
+      ],
+      "description": "Only candidate with executable adjacent infrastructure already present in the repository.",
+      "role_count": 4,
+      "metrics": {
+        "docs_improved_pct": 85.0,
+        "naturalness_delta": 10.0,
+        "semantic_pass_pct": 82.0,
+        "runtime_min": 0.0,
+        "cost_usd": 0.0,
+        "llm_calls": 0.0
+      },
+      "source": "measured_from_historical_report",
+      "metadata": {
+        "runtime_type": "r5_transfer_target_decision",
+        "raw_role_set": "orchestrator+planner+editor+guardian",
+        "logical_mapping_mode": "folder_intake_role_mapped",
+        "sparse_runtime_annotations": {
+          "raw_metric_text": {
+            "docs_improved_pct": "85.0000",
+            "naturalness_delta": "10.0000",
+            "semantic_pass_pct": "82.0000",
+            "runtime_min": "0.0000",
+            "cost_usd": "0.0000",
+            "llm_calls": "0",
+            "revert_rate_pct": "missing",
+            "gate_pass_rate_pct": "missing",
+            "useful_rewrite_rate_pct": "missing"
+          },
+          "metric_status": {
+            "docs_improved_pct": "measured_numeric",
+            "naturalness_delta": "measured_numeric",
+            "semantic_pass_pct": "measured_numeric",
+            "runtime_min": "measured_numeric",
+            "cost_usd": "measured_numeric",
+            "llm_calls": "measured_numeric",
+            "revert_rate_pct": "missing",
+            "gate_pass_rate_pct": "missing",
+            "useful_rewrite_rate_pct": "missing"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [
+            "revert_rate_pct",
+            "gate_pass_rate_pct",
+            "useful_rewrite_rate_pct"
+          ]
+        }
+      }
+    },
+    {
+      "variant_id": "controlled_uncertainty_abstention_transfer",
+      "name": "scientific_transfer_target::controlled_uncertainty_abstention_transfer",
+      "roles": [
+        "orchestrator",
+        "planner",
+        "editor",
+        "guardian"
+      ],
+      "description": "Conceptually aligned, but still documentation-only and therefore not ready for immediate long-run preparation.",
+      "role_count": 4,
+      "metrics": {
+        "docs_improved_pct": 30.0,
+        "naturalness_delta": 4.0,
+        "semantic_pass_pct": 35.0,
+        "runtime_min": 0.0,
+        "cost_usd": 0.0,
+        "llm_calls": 0.0
+      },
+      "source": "missing",
+      "metadata": {
+        "runtime_type": "r5_transfer_target_decision",
+        "raw_role_set": "orchestrator+planner+editor+guardian",
+        "logical_mapping_mode": "folder_intake_role_mapped",
+        "sparse_runtime_annotations": {
+          "raw_metric_text": {
+            "docs_improved_pct": "30.0000",
+            "naturalness_delta": "4.0000",
+            "semantic_pass_pct": "35.0000",
+            "runtime_min": "0.0000",
+            "cost_usd": "0.0000",
+            "llm_calls": "0",
+            "revert_rate_pct": "missing",
+            "gate_pass_rate_pct": "missing",
+            "useful_rewrite_rate_pct": "missing"
+          },
+          "metric_status": {
+            "docs_improved_pct": "measured_numeric",
+            "naturalness_delta": "measured_numeric",
+            "semantic_pass_pct": "measured_numeric",
+            "runtime_min": "measured_numeric",
+            "cost_usd": "measured_numeric",
+            "llm_calls": "measured_numeric",
+            "revert_rate_pct": "missing",
+            "gate_pass_rate_pct": "missing",
+            "useful_rewrite_rate_pct": "missing"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [
+            "revert_rate_pct",
+            "gate_pass_rate_pct",
+            "useful_rewrite_rate_pct"
+          ]
+        }
+      }
+    }
+  ],
+  "quality_targets": {
+    "historical_best_prior": "bounded_working_memory_candidate_r4_confirmed_state",
+    "recommended_mode_from_previous_run": "r5_transfer_target_decision",
+    "forensic_high_ai_target_accept_rate_pct": 60,
+    "mid_ai_useful_output_must_be_gt_zero": true
+  },
+  "risk_map": {
+    "highest_risks": [
+      "semantic_reconstruction_damage",
+      "ru_lexical_fusion",
+      "mid_ai_no_op_gap",
+      "historical_current_truth_conflation"
+    ],
+    "moderate_risks": [
+      "premature_harmonizer_overhead",
+      "pre_edit_guard_without_same_slice_evidence"
+    ]
+  },
+  "document_families": [
+    "adjacent_executable_surface",
+    "missing_executable_surface"
+  ],
+  "failure_examples": [
+    {
+      "case_id": "R5_CLOZE_STACK_REUSE",
+      "failure_mode": "mechanism_substitution",
+      "severity": "high",
+      "status": "controlled",
+      "note": "Historical cloze infrastructure must not be mistaken for same-mechanism transfer success."
+    },
+    {
+      "case_id": "R5_UNCERTAINTY_DOC_ONLY",
+      "failure_mode": "documentation_only_candidate",
+      "severity": "high",
+      "status": "active",
+      "note": "The uncertainty-abstention candidate has no executable adjacent environment surface yet."
+    }
+  ],
+  "variant_metrics_by_slice": [
+    {
+      "variant_id": "symbolic_micro_corpus_cloze_transfer",
+      "slice": "adjacent_executable_surface",
+      "metrics": {
+        "accepted_rewrite_rate_pct": 82.0,
+        "revert_rate_pct": 15.0,
+        "no_op_rate_pct": 0.0,
+        "semantic_pass_proxy_pct": 82.0,
+        "useful_output_rate_pct": 84.0,
+        "runtime_min": 0.0,
+        "cost_usd": 0.0
+      },
+      "notes": "Deterministic cloze infrastructure exists historically, but same-mechanism transfer still needs a new bounded harness.",
+      "evidence_annotations": {
+        "raw_metric_text": {
+          "accepted_rewrite_rate_pct": "82.0000",
+          "revert_rate_pct": "15.0000",
+          "no_op_rate_pct": "0.0000",
+          "semantic_pass_proxy_pct": "82.0000",
+          "useful_output_rate_pct": "84.0000",
+          "runtime_min": "0.0000",
+          "cost_usd": "0.0000"
+        },
+        "metric_status": {
+          "accepted_rewrite_rate_pct": "measured_numeric",
+          "revert_rate_pct": "measured_numeric",
+          "no_op_rate_pct": "measured_numeric",
+          "semantic_pass_proxy_pct": "measured_numeric",
+          "useful_output_rate_pct": "measured_numeric",
+          "runtime_min": "measured_numeric",
+          "cost_usd": "measured_numeric"
+        },
+        "verdict_tags": {},
+        "missing_metric_keys": [],
+        "aggregate_runtime_variant": false,
+        "evidence_status": "measured_from_historical_report"
+      }
+    },
+    {
+      "variant_id": "controlled_uncertainty_abstention_transfer",
+      "slice": "missing_executable_surface",
+      "metrics": {
+        "accepted_rewrite_rate_pct": 0.0,
+        "revert_rate_pct": 0.0,
+        "no_op_rate_pct": 100.0,
+        "semantic_pass_proxy_pct": 0.0,
+        "useful_output_rate_pct": 0.0,
+        "runtime_min": 0.0,
+        "cost_usd": 0.0
+      },
+      "notes": "No deterministic uncertainty-abstention artifact exists yet.",
+      "evidence_annotations": {
+        "raw_metric_text": {
+          "accepted_rewrite_rate_pct": "0.0000",
+          "revert_rate_pct": "0.0000",
+          "no_op_rate_pct": "100.0000",
+          "semantic_pass_proxy_pct": "0.0000",
+          "useful_output_rate_pct": "0.0000",
+          "runtime_min": "0.0000",
+          "cost_usd": "0.0000"
+        },
+        "metric_status": {
+          "accepted_rewrite_rate_pct": "measured_numeric",
+          "revert_rate_pct": "measured_numeric",
+          "no_op_rate_pct": "measured_numeric",
+          "semantic_pass_proxy_pct": "measured_numeric",
+          "useful_output_rate_pct": "measured_numeric",
+          "runtime_min": "measured_numeric",
+          "cost_usd": "measured_numeric"
+        },
+        "verdict_tags": {},
+        "missing_metric_keys": [],
+        "aggregate_runtime_variant": false,
+        "evidence_status": "missing"
+      }
+    }
+  ],
+  "open_questions": [
+    "Interpret which adjacent target is the narrowest honest next transfer target.",
+    "Prefer the target that can be prepared for the next long-run without adding a new mechanism family.",
+    "Do not treat historical cloze infrastructure as direct transfer success.",
+    "Should guardian-like logic stay post-edit only or also become pre-edit gating?",
+    "What is the minimum additional measurement set needed to move beyond warm_start?"
+  ],
+  "known_implementation_limits": [
+    "Current runtime metrics remain sparse relative to historical batch metrics.",
+    "Useful rewrite rate is still missing on several current slices.",
+    "Current logical role map is measured at system level, not yet isolated by ablation."
+  ],
+  "role_intervention_evidence": [
+    {
+      "role": "planner",
+      "status": "measured",
+      "reason": "Current runtime already contains measured planner-like decisions via AI% routing, prompt family selection, and skip_stages controls."
+    },
+    {
+      "role": "editor",
+      "status": "measured",
+      "reason": "Current pipeline stages constitute the active editor path."
+    },
+    {
+      "role": "guardian",
+      "status": "measured",
+      "reason": "Current safety gate and revert behavior implement guardian-like post-edit validation."
+    },
+    {
+      "role": "harmonizer",
+      "status": "measured_from_historical_report_negative",
+      "reason": "Historical over-segmented variant E regressed naturalness and efficiency."
+    }
+  ],
+  "source_labels": {
+    "case_id": "inferred",
+    "system_name": "user_provided",
+    "task_type": "inferred",
+    "workflow_summary": "inferred",
+    "primary_objective": "inferred",
+    "functional_decomposition": "inferred",
+    "hard_constraints": "user_provided",
+    "soft_constraints": "inferred",
+    "candidate_roles": "inferred",
+    "tested_variants": "user_provided",
+    "quality_targets": "user_provided",
+    "risk_map": "inferred"
+  },
+  "packet_quality_level": "Q4",
+  "metadata": {
+    "input_packet_version": "R5_TRANSFER_TARGET_DECISION_V1",
+    "normalization_mode": "folder_intake_role_mapped",
+    "current_runtime_role_mapping": [
+      {
+        "runtime_component": "r5_transfer_scope",
+        "logical_bdc_role": "orchestrator",
+        "status": "active",
+        "why_mapped_this_way": "Keeps the choice between two adjacent transfer targets below mechanism interaction scope."
+      },
+      {
+        "runtime_component": "matrix_evidence_surface",
+        "logical_bdc_role": "planner",
+        "status": "active",
+        "why_mapped_this_way": "Serializes candidate asymmetry before launch prep begins."
+      },
+      {
+        "runtime_component": "decision_packet",
+        "logical_bdc_role": "editor",
+        "status": "active",
+        "why_mapped_this_way": "Carries the bounded transfer options into BDC Designer."
+      },
+      {
+        "runtime_component": "r5_transfer_gate",
+        "logical_bdc_role": "guardian",
+        "status": "active",
+        "why_mapped_this_way": "Approves one adjacent target or keeps the project in R5 transfer planning."
+      }
+    ],
+    "prompt_stage_matrix": [
+      {
+        "stage_id": "r4_transfer_opening",
+        "stage_name": "post-r4 transfer opening",
+        "objective": "Provide the confirmed single-mechanism generalization base state.",
+        "measured_output": "docs/experiments/POST_R4_GATE_DECISION.md",
+        "evidence_status": "measured"
+      },
+      {
+        "stage_id": "r5_matrix",
+        "stage_name": "transfer target matrix",
+        "objective": "Compare the two allowed adjacent transfer targets.",
+        "measured_output": "docs/experiments/R5_TRANSFER_TARGET_MATRIX.json",
+        "evidence_status": "mixed"
+      },
+      {
+        "stage_id": "r5_gate",
+        "stage_name": "transfer target approval",
+        "objective": "Approve one target for long-run launch prep or remain in planning.",
+        "measured_output": "r5_transfer_target_decision.json",
+        "evidence_status": "mixed"
+      }
+    ],
+    "design_priorities": "# Lead Architect Design Priorities\n\n1. Preserve the same FIFO mechanism family.\n2. Choose the adjacent target that can reach deterministic launch prep now.\n3. Do not let historical cloze infrastructure masquerade as transfer success.\n4. Do not open multi-mechanism or organism scope.\n",
+    "intake_manifest": {
+      "folder_path": "docs\\experiments\\BDC_R5_TRANSFER_TARGET_PACKET",
+      "readme_path": "docs\\experiments\\BDC_R5_TRANSFER_TARGET_PACKET\\README.md",
+      "packet_json_path": "docs\\experiments\\BDC_R5_TRANSFER_TARGET_PACKET\\BDC_INPUT_PACKET_R5_TRANSFER_TARGET.json",
+      "unified_variant_comparison_csv": "docs\\experiments\\BDC_R5_TRANSFER_TARGET_PACKET\\unified_variant_comparison.csv",
+      "provider_comparison_csv": null,
+      "stability_run_metrics_csv": null,
+      "rollout_case_index_csv": null,
+      "guardian_audit_csv": null,
+      "current_runtime_role_mapping_csv": "docs\\experiments\\BDC_R5_TRANSFER_TARGET_PACKET\\current_runtime_role_mapping.csv",
+      "current_slice_metrics_csv": "docs\\experiments\\BDC_R5_TRANSFER_TARGET_PACKET\\current_slice_metrics.csv",
+      "failure_case_registry_csv": "docs\\experiments\\BDC_R5_TRANSFER_TARGET_PACKET\\failure_case_registry.csv",
+      "prompt_stage_matrix_csv": "docs\\experiments\\BDC_R5_TRANSFER_TARGET_PACKET\\prompt_stage_matrix.csv",
+      "lead_architect_design_priorities_md": "docs\\experiments\\BDC_R5_TRANSFER_TARGET_PACKET\\lead_architect_design_priorities.md",
+      "extras": [
+        "docs\\experiments\\BDC_R5_TRANSFER_TARGET_PACKET\\BDC_INPUT_PACKET_R5_TRANSFER_TARGET.json",
+        "docs\\experiments\\BDC_R5_TRANSFER_TARGET_PACKET\\current_runtime_role_mapping.csv",
+        "docs\\experiments\\BDC_R5_TRANSFER_TARGET_PACKET\\current_slice_metrics.csv",
+        "docs\\experiments\\BDC_R5_TRANSFER_TARGET_PACKET\\failure_case_registry.csv",
+        "docs\\experiments\\BDC_R5_TRANSFER_TARGET_PACKET\\lead_architect_design_priorities.md",
+        "docs\\experiments\\BDC_R5_TRANSFER_TARGET_PACKET\\prompt_stage_matrix.csv",
+        "docs\\experiments\\BDC_R5_TRANSFER_TARGET_PACKET\\README.md",
+        "docs\\experiments\\BDC_R5_TRANSFER_TARGET_PACKET\\unified_variant_comparison.csv"
+      ]
+    },
+    "evidence_policy": {
+      "measured": [],
+      "measured_from_historical_report": [
+        "symbolic cloze task infrastructure already exists in the repository",
+        "historical deterministic cloze work exists, including deterministic masking and historical measured reports"
+      ],
+      "inferred": [
+        "the approved FIFO mechanism can be transferred into a new bounded cloze harness without adding a second mechanism"
+      ],
+      "missing": [
+        "direct same-mechanism transfer evidence for either target",
+        "any executable uncertainty-abstention environment artifact"
+      ]
+    },
+    "base_packet_reference": "TASK-7624",
+    "sparse_runtime_support_summary": {
+      "supported": true,
+      "verdict_like_metric_cells": 0,
+      "missing_metric_cells": 6,
+      "aggregate_variant_rows": 0
+    }
+  }
+}

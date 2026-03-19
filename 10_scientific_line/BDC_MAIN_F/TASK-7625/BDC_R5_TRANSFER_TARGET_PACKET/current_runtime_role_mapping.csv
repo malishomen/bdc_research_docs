@@ -1,0 +1,5 @@
+runtime_component,logical_bdc_role,status,why_mapped_this_way
+r5_transfer_scope,orchestrator,active,Keeps the choice between two adjacent transfer targets below mechanism interaction scope.
+matrix_evidence_surface,planner,active,Serializes candidate asymmetry before launch prep begins.
+decision_packet,editor,active,Carries the bounded transfer options into BDC Designer.
+r5_transfer_gate,guardian,active,Approves one adjacent target or keeps the project in R5 transfer planning.

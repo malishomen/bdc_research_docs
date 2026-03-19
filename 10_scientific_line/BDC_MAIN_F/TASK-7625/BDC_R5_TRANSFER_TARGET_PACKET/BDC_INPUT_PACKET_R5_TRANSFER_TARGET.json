@@ -1,0 +1,35 @@
+{
+  "packet_version": "R5_TRANSFER_TARGET_DECISION_V1",
+  "packet_id": "BDC_R5_TRANSFER_TARGET_DECISION",
+  "project": "Bio_Digital_Core",
+  "system_name": "BDC_Scientific_Line",
+  "base_packet_reference": "TASK-7624",
+  "evidence_policy": {
+    "measured": [],
+    "measured_from_historical_report": [
+      "symbolic cloze task infrastructure already exists in the repository",
+      "historical deterministic cloze work exists, including deterministic masking and historical measured reports"
+    ],
+    "inferred": [
+      "the approved FIFO mechanism can be transferred into a new bounded cloze harness without adding a second mechanism"
+    ],
+    "missing": [
+      "direct same-mechanism transfer evidence for either target",
+      "any executable uncertainty-abstention environment artifact"
+    ]
+  },
+  "positioning": {
+    "historical_best_prior": "bounded_working_memory_candidate_r4_confirmed_state",
+    "bdc_recommendation_mode": "r5_transfer_target_decision"
+  },
+  "explicit_requests_to_bdc": [
+    "Interpret which adjacent target is the narrowest honest next transfer target.",
+    "Prefer the target that can be prepared for the next long-run without adding a new mechanism family.",
+    "Do not treat historical cloze infrastructure as direct transfer success."
+  ],
+  "matrix_conclusion": {
+    "current_narrower_preparation_prior": "symbolic_micro_corpus_cloze_transfer",
+    "deferred_candidate": "controlled_uncertainty_abstention_transfer",
+    "reason": "R5 must prepare the next long-run, and only the cloze candidate already has executable adjacent task infrastructure in the repository."
+  }
+}

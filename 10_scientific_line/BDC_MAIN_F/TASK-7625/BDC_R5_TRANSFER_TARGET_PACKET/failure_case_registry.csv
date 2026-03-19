@@ -1,0 +1,3 @@
+case_id,failure_mode,severity,status,note
+R5_CLOZE_STACK_REUSE,mechanism_substitution,high,controlled,Historical cloze infrastructure must not be mistaken for same-mechanism transfer success.
+R5_UNCERTAINTY_DOC_ONLY,documentation_only_candidate,high,active,The uncertainty-abstention candidate has no executable adjacent environment surface yet.
