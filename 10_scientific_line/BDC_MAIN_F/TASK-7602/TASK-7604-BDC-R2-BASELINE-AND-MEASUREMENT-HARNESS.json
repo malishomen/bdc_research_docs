@@ -1,0 +1,11 @@
+{
+  "task_id": "TASK-7604",
+  "title": "R2 baseline and measurement harness",
+  "change_class": "R1",
+  "objective": "Define deterministic generation, baselines, trivial strategy exposure, and metric contract for each R2 candidate environment.",
+  "depends_on": ["TASK-7603"],
+  "deliverables": [
+    "reports/analysis/TASK-7604-BDC-R2-BASELINE-AND-MEASUREMENT-HARNESS/",
+    "baseline and metric contract artifacts"
+  ]
+}

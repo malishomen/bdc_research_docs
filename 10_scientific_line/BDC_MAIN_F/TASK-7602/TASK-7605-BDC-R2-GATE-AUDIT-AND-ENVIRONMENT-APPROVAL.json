@@ -1,0 +1,11 @@
+{
+  "task_id": "TASK-7605",
+  "title": "R2 gate audit and environment approval packet",
+  "change_class": "R1",
+  "objective": "Produce the bounded R2 gate packet that yields APPROVE_R2_ENVIRONMENT or REMAIN_IN_R2.",
+  "depends_on": ["TASK-7604"],
+  "deliverables": [
+    "reports/analysis/TASK-7605-BDC-R2-GATE-AUDIT-AND-ENVIRONMENT-APPROVAL/",
+    "R2 approval packet"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "task_id": "TASK-7603",
+  "title": "R2 candidate environment matrix",
+  "change_class": "R1",
+  "objective": "Define the bounded candidate family matrix for the post-hidden_rule controlled environment phase.",
+  "depends_on": ["TASK-7602"],
+  "deliverables": [
+    "reports/analysis/TASK-7603-BDC-R2-CANDIDATE-ENVIRONMENT-MATRIX/",
+    "structured candidate environment matrix artifact"
+  ]
+}

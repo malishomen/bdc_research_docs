@@ -1,0 +1,12 @@
+{
+  "task_id": "TASK-7602",
+  "title": "BDC R2 foundation package",
+  "change_class": "R1",
+  "objective": "Prepare the bounded R2 document stack after the successful completion of R1.",
+  "deliverables": [
+    "docs/experiments/EXP-0802_R2_CONTROLLED_TASK_ENVIRONMENT.md",
+    "docs/experiments/BDC_R2_CONTROLLED_TASK_ENVIRONMENT_PREEXPERIMENT_GATE.md",
+    "docs/experiments/EXP-0803_R2_CONTROLLED_TASK_ENVIRONMENT_IMPLEMENTATION_PACKAGE.md",
+    "memory.md"
+  ]
+}

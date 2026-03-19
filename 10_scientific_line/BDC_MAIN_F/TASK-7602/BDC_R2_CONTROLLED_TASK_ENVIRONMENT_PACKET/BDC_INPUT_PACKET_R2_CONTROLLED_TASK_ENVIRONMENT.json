@@ -1,0 +1,30 @@
+{
+  "packet_version": "R2_PREEXPERIMENT_GATE_V1",
+  "packet_id": "BDC_R2_CONTROLLED_TASK_ENVIRONMENT",
+  "project": "Bio_Digital_Core",
+  "system_name": "BDC_Scientific_Line",
+  "base_packet_reference": "EXP-0802_R2_CONTROLLED_TASK_ENVIRONMENT",
+  "evidence_policy": {
+    "measured": [
+      "R1 canonical gate verdict PASS_TO_R2",
+      "R1 full result packet accepted by BDC Designer"
+    ],
+    "inferred": [
+      "the next bottleneck is environment design rather than selection physics"
+    ],
+    "missing": [
+      "approved canonical R2 environment",
+      "baseline table for R2 candidates",
+      "R2 environment approval verdict"
+    ]
+  },
+  "positioning": {
+    "historical_best_prior": "bounded_post_hidden_rule_environment_needed",
+    "bdc_recommendation_mode": "scientific_preexperiment_gate"
+  },
+  "explicit_requests_to_bdc": [
+    "Confirm that controlled task environment selection is the correct next bounded scientific phase after R1",
+    "Confirm that R2 should choose an environment rather than widen to organism assembly",
+    "Confirm that APPROVE_R2_ENVIRONMENT vs REMAIN_IN_R2 is the correct decision gate"
+  ]
+}
