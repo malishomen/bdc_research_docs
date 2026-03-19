@@ -1,0 +1,9 @@
+{
+  "task_id": "TASK-7636",
+  "title": "BDC Designer cockpit final corrective checklist",
+  "change_class": "R0",
+  "objective": "Prepare the final corrective checklist that upgrades the current Cockpit BDC_PACKET_PREP from prep-only status to honest BDC Designer audit readiness in one cycle.",
+  "depends_on": [
+    "TASK-7635"
+  ]
+}
