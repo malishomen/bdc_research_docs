@@ -1,0 +1,4 @@
+variant_id,architecture_type,role_set,runtime_type,docs_improved_pct,naturalness_delta,semantic_pass_pct,runtime_min,cost_usd,llm_calls,revert_rate_pct,gate_pass_rate_pct,useful_rewrite_rate_pct,evidence_status,notes
+bounded_working_memory_candidate,scientific_mechanism_candidate,orchestrator+planner+editor+guardian,mechanism_gate,100.0000,56.2500,100.0000,0.0000,0.0000,0,0.0000,100.0000,100.0000,measured,Deterministic FIFO trace mechanism with measured replay and hardest-gap superiority over controls.
+majority_symbol_predictor,no_memory_control,orchestrator+planner+editor+guardian,mechanism_gate,43.7500,0.0000,43.7500,0.0000,0.0000,0,0.0000,43.7500,43.7500,measured,Strongest non-mechanistic baseline; no replayable internal state.
+trivial_last_symbol_memory,trivial_memory_control,orchestrator+planner+editor+guardian,mechanism_gate,25.7812,0.0000,25.7812,0.0000,0.0000,0,0.0000,25.7812,25.7812,measured,Replayable but only tracks the last observed symbol.

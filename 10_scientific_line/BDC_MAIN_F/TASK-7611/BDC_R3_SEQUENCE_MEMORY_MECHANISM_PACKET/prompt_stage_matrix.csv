@@ -1,0 +1,4 @@
+stage_id,stage_name,objective,measured_output,evidence_status
+spec,mechanism contract,Define the bounded FIFO trace mechanism and controls.,R3_SEQUENCE_MEMORY_MECHANISM_SPEC.json,measured
+implementation,mechanism run,Execute the bounded trace candidate and control comparisons.,mechanism_scorecard.json,measured
+gate,mechanism gate audit,Choose APPROVE_MECHANISM_CONTINUATION vs REMAIN_IN_MECHANISM_PHASE.,r3_mechanism_gate_decision.json,measured

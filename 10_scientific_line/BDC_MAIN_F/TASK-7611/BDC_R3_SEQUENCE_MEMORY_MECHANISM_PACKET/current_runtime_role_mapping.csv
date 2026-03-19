@@ -1,0 +1,5 @@
+runtime_component,logical_bdc_role,status,why_mapped_this_way
+mechanism_scope,orchestrator,active,Owns bounded R3 scope and blocks organism-level overclaim.
+mechanism_spec,planner,active,Carries the FIFO trace contract and control definitions.
+measured_replay_surface,editor,active,Preserves replayable state updates and measured scorecard artifacts.
+mechanism_gate_audit,guardian,active,Determines whether the measured mechanism may continue.

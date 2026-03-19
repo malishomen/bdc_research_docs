@@ -1,0 +1,10 @@
+variant_id,slice_id,accepted_rewrite_rate,revert_rate,no_op_rate,semantic_pass_proxy,useful_output_rate,latency,cost,evidence_status,notes
+bounded_working_memory_candidate,gap_2,100.0000,0.0000,0.0000,100.0000,100.0000,0.0000,0.0000,measured,Measured bounded FIFO mechanism slice performance.
+majority_symbol_predictor,gap_2,43.1818,0.0000,0.0000,43.1818,43.1818,0.0000,0.0000,measured,Measured no-memory baseline slice performance.
+trivial_last_symbol_memory,gap_2,25.0000,0.0000,0.0000,25.0000,25.0000,0.0000,0.0000,measured,Measured trivial-memory baseline slice performance.
+bounded_working_memory_candidate,gap_3,100.0000,0.0000,0.0000,100.0000,100.0000,0.0000,0.0000,measured,Measured bounded FIFO mechanism slice performance.
+majority_symbol_predictor,gap_3,48.8372,0.0000,0.0000,48.8372,48.8372,0.0000,0.0000,measured,Measured no-memory baseline slice performance.
+trivial_last_symbol_memory,gap_3,25.5814,0.0000,0.0000,25.5814,25.5814,0.0000,0.0000,measured,Measured trivial-memory baseline slice performance.
+bounded_working_memory_candidate,gap_4,100.0000,0.0000,0.0000,100.0000,100.0000,0.0000,0.0000,measured,Measured bounded FIFO mechanism slice performance.
+majority_symbol_predictor,gap_4,39.0244,0.0000,0.0000,39.0244,39.0244,0.0000,0.0000,measured,Measured no-memory baseline slice performance.
+trivial_last_symbol_memory,gap_4,26.8293,0.0000,0.0000,26.8293,26.8293,0.0000,0.0000,measured,Measured trivial-memory baseline slice performance.

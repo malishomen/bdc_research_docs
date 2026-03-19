@@ -1,0 +1,7 @@
+{
+  "task_id": "TASK-7609",
+  "title": "R3 memory mechanism spec",
+  "change_class": "R1",
+  "objective": "Define the bounded working-memory candidate state-update contract and control definitions.",
+  "depends_on": ["TASK-7608"]
+}

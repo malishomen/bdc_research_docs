@@ -1,0 +1,66 @@
+{
+  "cycle_id": "BDC_R3_SEQUENCE_MEMORY_MECHANISM",
+  "task_id": "TASK-7609",
+  "environment_id": "controlled_sequence_memory",
+  "mechanism_candidate_id": "bounded_working_memory_candidate",
+  "mechanism_type": "bounded_fifo_trace",
+  "state_contract": {
+    "trace_width": 5,
+    "fields": [
+      "trace_width",
+      "trace",
+      "steps_seen"
+    ],
+    "initial_state": {
+      "trace_width": 5,
+      "trace": [],
+      "steps_seen": 0
+    },
+    "update_rule": [
+      "increment steps_seen",
+      "append current symbol to trace",
+      "drop oldest symbol if trace length exceeds trace_width"
+    ],
+    "prediction_rule": [
+      "required_depth = recall_gap + 1",
+      "if required_depth exceeds trace length then replay coverage fails",
+      "otherwise predict trace[-required_depth]"
+    ]
+  },
+  "controls": {
+    "no_memory_control": "majority_symbol_predictor",
+    "trivial_last_symbol_memory": "always_repeat_last_symbol"
+  },
+  "required_outputs": [
+    "candidate_accuracy",
+    "no_memory_control_accuracy",
+    "trivial_last_symbol_memory_accuracy",
+    "delta_vs_no_memory",
+    "delta_vs_trivial_memory",
+    "gap_accuracy_by_recall_gap",
+    "deterministic_replay_status",
+    "replay_examples"
+  ],
+  "gate_rule": {
+    "allowed_verdicts": [
+      "APPROVE_MECHANISM_CONTINUATION",
+      "REMAIN_IN_MECHANISM_PHASE"
+    ],
+    "approval_conditions": [
+      "deterministic replay passes",
+      "candidate accuracy is strictly greater than no_memory_control_accuracy",
+      "candidate accuracy is strictly greater than trivial_last_symbol_memory_accuracy",
+      "candidate remains above both controls on the hardest observed recall gap slice",
+      "no hidden second mechanism is introduced"
+    ]
+  },
+  "excluded_expansions": [
+    "uncertainty gating",
+    "multi-buffer design",
+    "communication channel",
+    "learned weights",
+    "adaptive training loop",
+    "organism rhetoric",
+    "cell rhetoric"
+  ]
+}

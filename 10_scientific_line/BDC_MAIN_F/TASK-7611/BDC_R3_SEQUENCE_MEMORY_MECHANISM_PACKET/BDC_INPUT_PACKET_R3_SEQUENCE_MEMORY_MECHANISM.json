@@ -1,0 +1,27 @@
+{
+  "packet_version": "R3_SEQUENCE_MEMORY_MECHANISM_V1",
+  "packet_id": "BDC_R3_SEQUENCE_MEMORY_MECHANISM",
+  "project": "Bio_Digital_Core",
+  "system_name": "BDC_Scientific_Line",
+  "base_packet_reference": "TASK-7610",
+  "evidence_policy": {
+    "measured": [
+      "bounded working-memory candidate scorecard",
+      "deterministic replay examples",
+      "hardest-gap superiority over controls"
+    ],
+    "inferred": [],
+    "missing": [
+      "broader mechanism families remain unmeasured",
+      "no multi-mechanism assembly evidence exists"
+    ]
+  },
+  "positioning": {
+    "historical_best_prior": "controlled_sequence_memory_r3_memory_prior",
+    "bdc_recommendation_mode": "scientific_mechanism_gate"
+  },
+  "explicit_requests_to_bdc": [
+    "Interpret the measured bounded working-memory candidate relative to the R3 mechanism gate",
+    "Assess whether the honest measured verdict is APPROVE_MECHANISM_CONTINUATION or REMAIN_IN_MECHANISM_PHASE"
+  ]
+}

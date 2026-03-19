@@ -20,6 +20,13 @@
   - `controlled_sequence_memory`
 - Canonical gate artifact:
   - `docs/experiments/BDC_R2_CONTROLLED_TASK_ENVIRONMENT_REFRESH_PACKET/r2_refresh_gate_decision.json`
+- `R3` first mechanism gate is complete.
+- Canonical `R3` verdict:
+  - `APPROVE_MECHANISM_CONTINUATION`
+- Approved bounded mechanism:
+  - `bounded_working_memory_candidate`
+- Canonical gate artifact:
+  - `results/r3_sequence_memory_mechanism/mechanism_gate_decision.json`
 
 ## Current Analytical State
 - Full `R1` packet was run through `BDC Designer`.
@@ -37,17 +44,19 @@
 
 ## Current Next Phase
 - Active scientific target:
-  - `R3 - Sequence-Memory Mechanism Validation`
+  - `R3 - Sequence-Memory Mechanism Continuation`
 - Canonical R3 docs:
   - `docs/experiments/EXP-0804_R3_SEQUENCE_MEMORY_MECHANISM_VALIDATION.md`
   - `docs/experiments/BDC_R3_SEQUENCE_MEMORY_MECHANISM_PREEXPERIMENT_GATE.md`
   - `docs/experiments/EXP-0805_R3_SEQUENCE_MEMORY_MECHANISM_IMPLEMENTATION_PACKAGE.md`
+  - `docs/experiments/R3_SEQUENCE_MEMORY_MECHANISM_GATE_DECISION.md`
 
 ## Current Task Chain
 - `TASK-7608` - R3 mechanism package
 - `TASK-7609` - memory mechanism spec
 - `TASK-7610` - bounded memory mechanism implementation
 - `TASK-7611` - measured mechanism gate audit
+- next bounded task not yet opened: harder continuation cycle inside the same environment
 
 ## BDC Designer Rule
 - For scientific reboot work, `BDC Designer` must be used first as pre-experiment narrowing/evidence discipline.
@@ -64,7 +73,7 @@
 ## Current Stop Point
 If a new session starts, the correct next action is:
 1. treat `controlled_sequence_memory` as the approved canonical bounded `R2` environment,
-2. stay inside the first bounded `R3` mechanism-level cycle,
-3. execute `TASK-7609` next,
-4. compare only `no_memory_control`, `trivial_last_symbol_memory`, and `bounded_working_memory_candidate`,
-5. do not widen to organism/cell claims.
+2. treat `bounded_working_memory_candidate` as the first approved bounded `R3` mechanism for continuation,
+3. open the next bounded continuation cycle inside the same environment rather than reopening environment choice,
+4. keep `majority_symbol_predictor` and `trivial_last_symbol_memory` as live comparators,
+5. do not widen to multi-mechanism, organism, or cell claims.

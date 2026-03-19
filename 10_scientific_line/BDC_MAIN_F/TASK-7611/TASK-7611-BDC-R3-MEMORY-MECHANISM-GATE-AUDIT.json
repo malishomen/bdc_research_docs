@@ -1,0 +1,7 @@
+{
+  "task_id": "TASK-7611",
+  "title": "R3 memory mechanism gate audit",
+  "change_class": "R1",
+  "objective": "Run the measured mechanism gate and decide APPROVE_MECHANISM_CONTINUATION vs REMAIN_IN_MECHANISM_PHASE.",
+  "depends_on": ["TASK-7610"]
+}

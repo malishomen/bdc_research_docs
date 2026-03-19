@@ -1,0 +1,476 @@
+{
+  "mechanism_candidate_id": "bounded_working_memory_candidate",
+  "trace_width": 5,
+  "candidate_accuracy": 1.0,
+  "no_memory_control_accuracy": 0.4375,
+  "trivial_last_symbol_memory_accuracy": 0.2578125,
+  "delta_vs_no_memory": 0.5625,
+  "delta_vs_trivial_memory": 0.7421875,
+  "gap_accuracy_by_recall_gap": {
+    "2": {
+      "candidate_accuracy": 1.0,
+      "no_memory_control_accuracy": 0.4318181818181818,
+      "trivial_last_symbol_memory_accuracy": 0.25
+    },
+    "3": {
+      "candidate_accuracy": 1.0,
+      "no_memory_control_accuracy": 0.4883720930232558,
+      "trivial_last_symbol_memory_accuracy": 0.2558139534883721
+    },
+    "4": {
+      "candidate_accuracy": 1.0,
+      "no_memory_control_accuracy": 0.3902439024390244,
+      "trivial_last_symbol_memory_accuracy": 0.2682926829268293
+    }
+  },
+  "hardest_recall_gap": 4,
+  "hardest_gap_accuracy": {
+    "candidate_accuracy": 1.0,
+    "no_memory_control_accuracy": 0.3902439024390244,
+    "trivial_last_symbol_memory_accuracy": 0.2682926829268293
+  },
+  "deterministic_replay_status": true,
+  "replay_examples": [
+    {
+      "sequence": [
+        2,
+        3,
+        1,
+        1,
+        1,
+        3,
+        3,
+        3
+      ],
+      "recall_gap": 2,
+      "target_index": 5,
+      "target_symbol": 3,
+      "predicted_symbol": 3,
+      "final_state": {
+        "trace_width": 5,
+        "trace": [
+          1,
+          1,
+          3,
+          3,
+          3
+        ],
+        "steps_seen": 8
+      },
+      "replay": [
+        {
+          "step_index": 0,
+          "observed_symbol": 2,
+          "trace_before": [],
+          "trace_after": [
+            2
+          ]
+        },
+        {
+          "step_index": 1,
+          "observed_symbol": 3,
+          "trace_before": [
+            2
+          ],
+          "trace_after": [
+            2,
+            3
+          ]
+        },
+        {
+          "step_index": 2,
+          "observed_symbol": 1,
+          "trace_before": [
+            2,
+            3
+          ],
+          "trace_after": [
+            2,
+            3,
+            1
+          ]
+        },
+        {
+          "step_index": 3,
+          "observed_symbol": 1,
+          "trace_before": [
+            2,
+            3,
+            1
+          ],
+          "trace_after": [
+            2,
+            3,
+            1,
+            1
+          ]
+        },
+        {
+          "step_index": 4,
+          "observed_symbol": 1,
+          "trace_before": [
+            2,
+            3,
+            1,
+            1
+          ],
+          "trace_after": [
+            2,
+            3,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "step_index": 5,
+          "observed_symbol": 3,
+          "trace_before": [
+            2,
+            3,
+            1,
+            1,
+            1
+          ],
+          "trace_after": [
+            3,
+            1,
+            1,
+            1,
+            3
+          ]
+        },
+        {
+          "step_index": 6,
+          "observed_symbol": 3,
+          "trace_before": [
+            3,
+            1,
+            1,
+            1,
+            3
+          ],
+          "trace_after": [
+            1,
+            1,
+            1,
+            3,
+            3
+          ]
+        },
+        {
+          "step_index": 7,
+          "observed_symbol": 3,
+          "trace_before": [
+            1,
+            1,
+            1,
+            3,
+            3
+          ],
+          "trace_after": [
+            1,
+            1,
+            3,
+            3,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": [
+        3,
+        3,
+        0,
+        3,
+        1,
+        1,
+        0,
+        1
+      ],
+      "recall_gap": 4,
+      "target_index": 3,
+      "target_symbol": 3,
+      "predicted_symbol": 3,
+      "final_state": {
+        "trace_width": 5,
+        "trace": [
+          3,
+          1,
+          1,
+          0,
+          1
+        ],
+        "steps_seen": 8
+      },
+      "replay": [
+        {
+          "step_index": 0,
+          "observed_symbol": 3,
+          "trace_before": [],
+          "trace_after": [
+            3
+          ]
+        },
+        {
+          "step_index": 1,
+          "observed_symbol": 3,
+          "trace_before": [
+            3
+          ],
+          "trace_after": [
+            3,
+            3
+          ]
+        },
+        {
+          "step_index": 2,
+          "observed_symbol": 0,
+          "trace_before": [
+            3,
+            3
+          ],
+          "trace_after": [
+            3,
+            3,
+            0
+          ]
+        },
+        {
+          "step_index": 3,
+          "observed_symbol": 3,
+          "trace_before": [
+            3,
+            3,
+            0
+          ],
+          "trace_after": [
+            3,
+            3,
+            0,
+            3
+          ]
+        },
+        {
+          "step_index": 4,
+          "observed_symbol": 1,
+          "trace_before": [
+            3,
+            3,
+            0,
+            3
+          ],
+          "trace_after": [
+            3,
+            3,
+            0,
+            3,
+            1
+          ]
+        },
+        {
+          "step_index": 5,
+          "observed_symbol": 1,
+          "trace_before": [
+            3,
+            3,
+            0,
+            3,
+            1
+          ],
+          "trace_after": [
+            3,
+            0,
+            3,
+            1,
+            1
+          ]
+        },
+        {
+          "step_index": 6,
+          "observed_symbol": 0,
+          "trace_before": [
+            3,
+            0,
+            3,
+            1,
+            1
+          ],
+          "trace_after": [
+            0,
+            3,
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "step_index": 7,
+          "observed_symbol": 1,
+          "trace_before": [
+            0,
+            3,
+            1,
+            1,
+            0
+          ],
+          "trace_after": [
+            3,
+            1,
+            1,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": [
+        3,
+        1,
+        2,
+        3,
+        3,
+        3,
+        0,
+        3
+      ],
+      "recall_gap": 3,
+      "target_index": 4,
+      "target_symbol": 3,
+      "predicted_symbol": 3,
+      "final_state": {
+        "trace_width": 5,
+        "trace": [
+          3,
+          3,
+          3,
+          0,
+          3
+        ],
+        "steps_seen": 8
+      },
+      "replay": [
+        {
+          "step_index": 0,
+          "observed_symbol": 3,
+          "trace_before": [],
+          "trace_after": [
+            3
+          ]
+        },
+        {
+          "step_index": 1,
+          "observed_symbol": 1,
+          "trace_before": [
+            3
+          ],
+          "trace_after": [
+            3,
+            1
+          ]
+        },
+        {
+          "step_index": 2,
+          "observed_symbol": 2,
+          "trace_before": [
+            3,
+            1
+          ],
+          "trace_after": [
+            3,
+            1,
+            2
+          ]
+        },
+        {
+          "step_index": 3,
+          "observed_symbol": 3,
+          "trace_before": [
+            3,
+            1,
+            2
+          ],
+          "trace_after": [
+            3,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "step_index": 4,
+          "observed_symbol": 3,
+          "trace_before": [
+            3,
+            1,
+            2,
+            3
+          ],
+          "trace_after": [
+            3,
+            1,
+            2,
+            3,
+            3
+          ]
+        },
+        {
+          "step_index": 5,
+          "observed_symbol": 3,
+          "trace_before": [
+            3,
+            1,
+            2,
+            3,
+            3
+          ],
+          "trace_after": [
+            1,
+            2,
+            3,
+            3,
+            3
+          ]
+        },
+        {
+          "step_index": 6,
+          "observed_symbol": 0,
+          "trace_before": [
+            1,
+            2,
+            3,
+            3,
+            3
+          ],
+          "trace_after": [
+            2,
+            3,
+            3,
+            3,
+            0
+          ]
+        },
+        {
+          "step_index": 7,
+          "observed_symbol": 3,
+          "trace_before": [
+            2,
+            3,
+            3,
+            3,
+            0
+          ],
+          "trace_after": [
+            3,
+            3,
+            3,
+            0,
+            3
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "summary": {
+    "recommended_variant_id": "bounded_working_memory_candidate",
+    "recommended_variant_name": "scientific_mechanism_candidate::bounded_working_memory_candidate",
+    "recommended_role_names": [
+      "orchestrator",
+      "planner",
+      "editor",
+      "guardian"
+    ],
+    "recommended_role_count": 4,
+    "strategy_mode": "direct_architecture_selection",
+    "confidence_band": "high",
+    "confidence_score": 0.92,
+    "prior_confidence_band": "high",
+    "prior_confidence_score": 0.95,
+    "deployability_confidence_band": "high",
+    "deployability_confidence_score": 0.92
+  },
+  "evidence_interpretation": {
+    "winner_margin": 5681.25,
+    "role_contributions": {
+      "editor": 5724.5544,
+      "guardian": 5724.5544,
+      "orchestrator": 5724.5544,
+      "planner": 5724.5544
+    },
+    "evidence_status_summary": {
+      "counts": {
+        "measured": 3,
+        "measured_from_historical_report": 0,
+        "measured_from_historical_report_negative": 0,
+        "inferred": 0,
+        "missing": 0
+      },
+      "current_runtime_variant_count": 3,
+      "historical_variant_count": 0,
+      "winner_evidence_status": "measured",
+      "winner_is_historical_prior": false
+    },
+    "evidence_state_summary": {
+      "packet_state_class": "supported",
+      "winner_state": "measured_support",
+      "variant_state_counts": {
+        "measured_support": 3,
+        "historical_support": 0,
+        "historical_negative_support": 0,
+        "inferred_support": 0,
+        "missing_evidence": 0,
+        "contradicted_evidence": 0
+      },
+      "has_missing_evidence": false,
+      "has_contradicted_evidence": false,
+      "contradiction_flags": []
+    }
+  },
+  "cautions": {
+    "caution_flags": [],
+    "conflict_flags": [],
+    "insufficiency_mode": false,
+    "validation_errors": [],
+    "validation_warnings": [
+      "sparse_runtime_missing_metric_cells_present"
+    ],
+    "evidence_state_summary": {
+      "packet_state_class": "supported",
+      "winner_state": "measured_support",
+      "variant_state_counts": {
+        "measured_support": 3,
+        "historical_support": 0,
+        "historical_negative_support": 0,
+        "inferred_support": 0,
+        "missing_evidence": 0,
+        "contradicted_evidence": 0
+      },
+      "has_missing_evidence": false,
+      "has_contradicted_evidence": false,
+      "contradiction_flags": []
+    }
+  },
+  "selective_prediction": {
+    "outcome_class": "recommend_ready",
+    "abstain": false,
+    "operator_action": "direct_recommendation",
+    "reasons": [
+      "recommendation_ready"
+    ],
+    "confidence_band": "high",
+    "deployability_confidence_band": "high",
+    "strategy_mode": "direct_architecture_selection",
+    "tested_variant_count": 3,
+    "calibration_audit_status": "single_case_not_audited"
+  },
+  "rejected_alternatives": [
+    {
+      "variant_id": "majority_symbol_predictor",
+      "reason_summary": []
+    },
+    {
+      "variant_id": "trivial_last_symbol_memory",
+      "reason_summary": []
+    }
+  ],
+  "markdown": "# Architecture Recommendation: Bio_Digital_Core\n\n- Recommended variant: `bounded_working_memory_candidate` / `scientific_mechanism_candidate::bounded_working_memory_candidate`\n- Recommended roles: orchestrator, planner, editor, guardian\n- Recommended role count: `4`\n- Strategy mode: `direct_architecture_selection`\n- Confidence: `high` (0.92)\n- Prior confidence: `high` (0.95)\n- Deployability confidence: `high` (0.92)\n- Outcome class: `recommend_ready`\n- Abstain: `False`\n\n## Evidence Interpretation\n- Winner margin: `5681.25`\n- Tested variants: `3`\n- Role contributions: `{'editor': 5724.5544, 'guardian': 5724.5544, 'orchestrator': 5724.5544, 'planner': 5724.5544}`\n- Evidence status summary: `{'counts': {'measured': 3, 'measured_from_historical_report': 0, 'measured_from_historical_report_negative': 0, 'inferred': 0, 'missing': 0}, 'current_runtime_variant_count': 3, 'historical_variant_count': 0, 'winner_evidence_status': 'measured', 'winner_is_historical_prior': False}`\n- Evidence state summary: `{'packet_state_class': 'supported', 'winner_state': 'measured_support', 'variant_state_counts': {'measured_support': 3, 'historical_support': 0, 'historical_negative_support': 0, 'inferred_support': 0, 'missing_evidence': 0, 'contradicted_evidence': 0}, 'has_missing_evidence': False, 'has_contradicted_evidence': False, 'contradiction_flags': []}`\n\n## Cautions\n- Caution flags: `[]`\n- Conflict flags: `[]`\n- Insufficiency mode: `False`\n\n## Rejected Alternatives\n- `majority_symbol_predictor`: lower total score\n- `trivial_last_symbol_memory`: lower total score"
+}
