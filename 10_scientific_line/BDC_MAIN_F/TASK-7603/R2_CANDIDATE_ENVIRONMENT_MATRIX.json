@@ -1,0 +1,104 @@
+{
+  "phase": "R2",
+  "task": "candidate_environment_matrix",
+  "generated_at_utc": "2026-03-19T00:00:00Z",
+  "decision_contract": {
+    "allowed_outcomes_later": [
+      "APPROVE_R2_ENVIRONMENT",
+      "REMAIN_IN_R2"
+    ],
+    "note": "This matrix does not approve an environment; it only defines the bounded comparison surface."
+  },
+  "comparison_dimensions": [
+    "determinism",
+    "causal_interpretability",
+    "mechanism_pressure",
+    "baseline_readiness",
+    "trivial_strategy_exposure",
+    "distance_from_hidden_rule",
+    "scope_safety"
+  ],
+  "candidates": [
+    {
+      "environment_id": "controlled_sequence_memory",
+      "label": "Controlled Sequence Memory",
+      "primary_pressure": "memory",
+      "description": "Deterministic sequence task with bounded recall and short-horizon state dependence.",
+      "strengths": [
+        "maximally deterministic",
+        "easy causal inspection",
+        "clear failure attribution",
+        "clean bridge to later memory research"
+      ],
+      "risks": [
+        "may remain too toy-like if sequence family is too simple",
+        "could under-pressure uncertainty handling"
+      ],
+      "determinism": "high",
+      "causal_interpretability": "high",
+      "mechanism_pressure": "high",
+      "baseline_readiness": "high",
+      "trivial_strategy_exposure": "high",
+      "distance_from_hidden_rule": "medium",
+      "scope_safety": "high",
+      "overall_readiness_band": "high"
+    },
+    {
+      "environment_id": "controlled_uncertainty_abstention",
+      "label": "Controlled Uncertainty Abstention",
+      "primary_pressure": "uncertainty_handling",
+      "description": "Deterministic decision task with explicitly ambiguous cases and abstain/error tradeoffs.",
+      "strengths": [
+        "directly pressures abstention logic",
+        "good fit with quaternary uncertainty themes",
+        "baseline metrics can be explicit"
+      ],
+      "risks": [
+        "ambiguity construction can become rhetorical if not formalized tightly",
+        "may drift toward metric design complexity faster than environment complexity"
+      ],
+      "determinism": "high",
+      "causal_interpretability": "medium_high",
+      "mechanism_pressure": "high",
+      "baseline_readiness": "medium",
+      "trivial_strategy_exposure": "medium_high",
+      "distance_from_hidden_rule": "medium_high",
+      "scope_safety": "high",
+      "overall_readiness_band": "medium_high"
+    },
+    {
+      "environment_id": "micro_corpus_cloze",
+      "label": "Micro-Corpus Cloze",
+      "primary_pressure": "bounded_language_context",
+      "description": "Tightly curated deterministic text snippets with bounded cloze prediction and explicit baselines.",
+      "strengths": [
+        "closest bridge to real information tasks",
+        "meaningfully beyond hidden_rule",
+        "relevant to future adaptation line"
+      ],
+      "risks": [
+        "higher risk of premature complexity",
+        "baseline discipline must be stronger to stay interpretable",
+        "can drift toward messy language benchmarking if unbounded"
+      ],
+      "determinism": "medium_high",
+      "causal_interpretability": "medium",
+      "mechanism_pressure": "medium_high",
+      "baseline_readiness": "medium",
+      "trivial_strategy_exposure": "medium",
+      "distance_from_hidden_rule": "high",
+      "scope_safety": "medium",
+      "overall_readiness_band": "medium"
+    }
+  ],
+  "current_matrix_interpretation": {
+    "most_conservative_start": "controlled_sequence_memory",
+    "strongest_uncertainty_alignment": "controlled_uncertainty_abstention",
+    "richest_but_riskiest_candidate": "micro_corpus_cloze"
+  },
+  "forbidden_premature_claims": [
+    "No environment is approved by this matrix alone.",
+    "No organism or cell claim is authorized.",
+    "No full language-environment claim is authorized."
+  ]
+}
