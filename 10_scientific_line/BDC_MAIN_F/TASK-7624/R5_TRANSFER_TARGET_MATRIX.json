@@ -1,0 +1,43 @@
+{
+  "phase": "R5_single_mechanism_transfer",
+  "task": "transfer_target_matrix",
+  "candidates": [
+    {
+      "target_id": "symbolic_micro_corpus_cloze_transfer",
+      "adjacent_family": "micro_corpus_cloze",
+      "deterministic_surface_status": "present",
+      "historical_measured_support": "present_but_not_transfer_specific",
+      "same_mechanism_transfer_support": "missing",
+      "scope_preservation_risk": "medium",
+      "launch_prep_readiness": "medium",
+      "requires_new_bounded_harness": true,
+      "key_artifacts": [
+        "evolution/cloze_symbolic/task.py",
+        "scripts/edp1/run_cloze_exp_0400.py",
+        "reports/analysis/TASK_0139_BRIEF_REPORT.md",
+        "results/.tmp_task1603_v0_backcompat2/aggregates/summary.json"
+      ],
+      "selection_note": "Only candidate with executable adjacent infrastructure already present in the repository."
+    },
+    {
+      "target_id": "controlled_uncertainty_abstention_transfer",
+      "adjacent_family": "controlled_uncertainty_abstention",
+      "deterministic_surface_status": "absent",
+      "historical_measured_support": "absent",
+      "same_mechanism_transfer_support": "missing",
+      "scope_preservation_risk": "low",
+      "launch_prep_readiness": "low",
+      "requires_new_bounded_harness": true,
+      "key_artifacts": [
+        "docs/experiments/R2_CANDIDATE_ENVIRONMENT_MATRIX.md",
+        "docs/experiments/R2_BASELINE_AND_MEASUREMENT_HARNESS.md"
+      ],
+      "selection_note": "Conceptually aligned, but still documentation-only and therefore not ready for immediate long-run preparation."
+    }
+  ],
+  "matrix_conclusion": {
+    "current_narrower_preparation_prior": "symbolic_micro_corpus_cloze_transfer",
+    "deferred_candidate": "controlled_uncertainty_abstention_transfer",
+    "reason": "R5 must prepare the next long-run, and only the cloze candidate already has executable adjacent task infrastructure in the repository."
+  }
+}
