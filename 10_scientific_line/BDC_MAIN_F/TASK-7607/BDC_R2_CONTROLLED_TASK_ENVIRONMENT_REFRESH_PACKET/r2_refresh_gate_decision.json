@@ -1,0 +1,25 @@
+{
+  "phase": "R2",
+  "task": "controlled_task_environment_refresh_gate",
+  "generated_at_utc": "2026-03-19T00:00:00Z",
+  "verdict": "APPROVE_R2_ENVIRONMENT",
+  "approved_environment_id": "controlled_sequence_memory",
+  "reason": "The candidate now has deterministic implemented generation, measured baseline evidence, explicit trivial-strategy exposure, and BDC Designer support as measured_support/recommend_ready.",
+  "approval_scope": [
+    "Approves controlled_sequence_memory as the canonical bounded R2 environment.",
+    "Does not approve any organism-level, cell-level, or SuperCell claim.",
+    "Does not validate downstream mechanism success by itself."
+  ],
+  "measured_support": [
+    "deterministic dataset artifact exists",
+    "baseline scorecard exists",
+    "trivial last-symbol shortcut is not perfect",
+    "BDC Designer returns supported=true and measured_support winner state"
+  ],
+  "remaining_limits": [
+    "This is environment approval, not mechanism validation.",
+    "Majority baseline remains materially strong and should remain a comparator in downstream work.",
+    "Other candidate environments remain unmeasured."
+  ],
+  "next_required_step": "Begin bounded downstream work using controlled_sequence_memory as the approved R2 environment, while preserving baseline comparators and avoiding organism-level scope expansion."
+}

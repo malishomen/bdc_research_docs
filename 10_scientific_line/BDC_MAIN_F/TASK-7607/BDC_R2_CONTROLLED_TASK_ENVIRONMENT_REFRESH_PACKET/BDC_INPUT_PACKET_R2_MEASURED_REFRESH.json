@@ -1,0 +1,32 @@
+{
+  "packet_version": "R2_MEASURED_REFRESH_V1",
+  "packet_id": "BDC_R2_CONTROLLED_TASK_ENVIRONMENT_REFRESH",
+  "project": "Bio_Digital_Core",
+  "system_name": "BDC_Scientific_Line",
+  "base_packet_reference": "TASK-7606",
+  "evidence_policy": {
+    "measured": [
+      "controlled_sequence_memory deterministic dataset artifact",
+      "controlled_sequence_memory baseline scorecard",
+      "R1 canonical PASS_TO_R2"
+    ],
+    "inferred": [
+      "controlled_uncertainty_abstention candidate still documentation-only",
+      "micro_corpus_cloze candidate still documentation-only"
+    ],
+    "missing": [
+      "measured uncertainty-abstention environment artifact",
+      "measured micro-corpus-cloze environment artifact",
+      "measured nontrivial candidate performance beyond baselines for controlled_sequence_memory"
+    ]
+  },
+  "positioning": {
+    "historical_best_prior": "controlled_sequence_memory_conservative_r2_prior",
+    "bdc_recommendation_mode": "scientific_refresh_gate"
+  },
+  "explicit_requests_to_bdc": [
+    "Interpret the measured controlled_sequence_memory artifact relative to the current R2 gate",
+    "Assess whether controlled_sequence_memory is already strong enough for canonical environment approval",
+    "If not, indicate whether the honest scientific verdict remains REMAIN_IN_R2"
+  ]
+}

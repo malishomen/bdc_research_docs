@@ -1,0 +1,4 @@
+"case_id","failure_mode","severity","status","note"
+"R2_CSM_BASELINE_TOO_STRONG","candidate_not_yet_strong_enough","high","open","Measured artifact exists, but there is still no measured signal that controlled_sequence_memory beats or meaningfully pressures beyond the current majority baseline."
+"R2_OTHER_CANDIDATES_UNMEASURED","missing_competitor_evidence","medium","open","Other R2 candidates remain inferred-only."
+"R2_PREMATURE_APPROVAL_RISK","forbidden_overclaim","high","controlled","Measured artifact existence alone is insufficient for canonical R2 environment approval."

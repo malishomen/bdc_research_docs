@@ -1,0 +1,12 @@
+{
+  "task_id": "TASK-7607",
+  "title": "R2 measured refresh gate",
+  "change_class": "R1",
+  "objective": "Refresh the bounded R2 gate using measured controlled_sequence_memory evidence and decide whether the candidate is already strong enough for canonical approval or still needs strengthening.",
+  "depends_on": ["TASK-7606"],
+  "deliverables": [
+    "docs/experiments/BDC_R2_CONTROLLED_TASK_ENVIRONMENT_REFRESH_PACKET",
+    "docs/experiments/R2_MEASURED_REFRESH_GATE_DECISION.md",
+    "reports/analysis/TASK-7607-BDC-R2-MEASURED-REFRESH-GATE/TASK-7607_BRIEF_REPORT.md"
+  ]
+}

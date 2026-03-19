@@ -1,0 +1,11 @@
+{
+  "task": "r2_controlled_sequence_memory_artifact",
+  "seed": 20260319,
+  "size": 64,
+  "seq_len": 8,
+  "alphabet_size": 4,
+  "min_gap": 2,
+  "max_gap": 4,
+  "dataset_path": "results\\r2_controlled_sequence_memory_artifact\\dataset.json",
+  "baseline_scorecard_path": "results\\r2_controlled_sequence_memory_artifact\\baseline_scorecard.json"
+}

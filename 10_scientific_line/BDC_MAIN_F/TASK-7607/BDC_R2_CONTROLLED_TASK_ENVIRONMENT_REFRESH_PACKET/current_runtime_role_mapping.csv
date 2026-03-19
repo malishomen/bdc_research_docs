@@ -1,0 +1,5 @@
+"runtime_component","logical_bdc_role","status","why_mapped_this_way"
+"phase_scope","orchestrator","active","Owns bounded R2 refresh interpretation and blocks overclaim."
+"candidate_matrix_and_prior","planner","active","Carries the candidate matrix and conservative prior selection."
+"measured_artifact_surface","editor","active","Preserves deterministic artifact and measured baseline scorecard."
+"refresh_gate_audit","guardian","active","Determines whether measured evidence is sufficient for approval or still requires REMAIN_IN_R2."

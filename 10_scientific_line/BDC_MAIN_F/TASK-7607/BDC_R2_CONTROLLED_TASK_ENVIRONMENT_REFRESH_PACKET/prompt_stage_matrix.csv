@@ -1,0 +1,5 @@
+"stage_id","stage_name","objective","measured_output","evidence_status"
+"matrix","candidate environment matrix","Define the bounded candidate family surface.","R2_CANDIDATE_ENVIRONMENT_MATRIX.json","measured"
+"harness","baseline and measurement harness","Define baselines, trivial strategies, and failure registry.","R2_BASELINE_AND_MEASUREMENT_HARNESS.json","measured"
+"artifact","controlled_sequence_memory artifact","Create the first deterministic measured candidate-specific artifact.","manifest.json, baseline_scorecard.json, dataset.json","measured"
+"refresh_gate","R2 measured refresh gate","Decide whether the measured candidate is already approval-ready.","r2_refresh_gate_decision.json","measured"

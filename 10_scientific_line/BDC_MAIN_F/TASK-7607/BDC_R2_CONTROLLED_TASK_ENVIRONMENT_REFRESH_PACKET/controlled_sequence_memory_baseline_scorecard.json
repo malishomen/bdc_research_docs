@@ -1,0 +1,5 @@
+{
+  "random_symbol_predictor": 0.203125,
+  "always_repeat_last_symbol": 0.234375,
+  "majority_symbol_predictor": 0.484375
+}
