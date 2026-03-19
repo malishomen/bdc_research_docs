@@ -1,0 +1,827 @@
+{
+  "schema_version": "BDC_PACKET_V2",
+  "case_id": "BDC_R1_FULL_RESULT_PACKET",
+  "system_name": "Bio_Digital_Core",
+  "task_type": "current_runtime_logical_redesign_decision",
+  "workflow_summary": "Folder intake normalization for current-runtime logical redesign using historical prior evidence and current runtime measurements.",
+  "primary_objective": "Choose the minimum logical redesign for current runtime that improves semantic safety and useful rewrite rate without premature coordination overhead.",
+  "functional_decomposition": [
+    {
+      "function_id": "F1",
+      "name": "planner-like routing and family selection",
+      "level": "system",
+      "criticality": "high"
+    },
+    {
+      "function_id": "F2",
+      "name": "editor path execution",
+      "level": "system",
+      "criticality": "very_high"
+    },
+    {
+      "function_id": "F3",
+      "name": "guardian-like accept/revert/retry logic",
+      "level": "system",
+      "criticality": "very_high"
+    },
+    {
+      "function_id": "F4",
+      "name": "orchestration and bounded iteration",
+      "level": "system",
+      "criticality": "high"
+    }
+  ],
+  "hard_constraints": [
+    "Do not conflate historical measured multi-agent evidence with current stage-based runtime truth.",
+    "Do not optimize for detector score over semantic safety and useful rewrite rate.",
+    "Do not introduce harmonizer-like overhead without positive evidence.",
+    "Preserve semantics, terminology, citations, and academic structure."
+  ],
+  "soft_constraints": [
+    "Increase accepted useful rewrites on forensic_high_ai_5.",
+    "Break the no-op gap on mid_ai_4.",
+    "Reduce revert-heavy aggressive families.",
+    "Keep runtime and coordination overhead controlled."
+  ],
+  "candidate_roles": [
+    {
+      "role_name": "editor",
+      "source": "inferred"
+    },
+    {
+      "role_name": "guardian",
+      "source": "inferred"
+    },
+    {
+      "role_name": "orchestrator",
+      "source": "inferred"
+    },
+    {
+      "role_name": "planner",
+      "source": "inferred"
+    }
+  ],
+  "tested_variants": [
+    {
+      "variant_id": "bounded_hybrid",
+      "name": "stage_pipeline_plus_gate::bounded_hybrid",
+      "roles": [
+        "orchestrator",
+        "planner",
+        "editor",
+        "guardian"
+      ],
+      "description": "full_gate_verdict=PASS_TO_R2; runs_total=30; feasible_growth=True",
+      "role_count": 4,
+      "metrics": {
+        "docs_improved_pct": 100.0,
+        "naturalness_delta": 0.2144,
+        "semantic_pass_pct": 100.0,
+        "runtime_min": 180.0,
+        "cost_usd": 0.0,
+        "llm_calls": 0.0
+      },
+      "source": "measured",
+      "metadata": {
+        "runtime_type": "scientific_result_gate_review",
+        "raw_role_set": "orchestrator+planner+editor+guardian",
+        "logical_mapping_mode": "folder_intake_role_mapped",
+        "sparse_runtime_annotations": {
+          "raw_metric_text": {
+            "docs_improved_pct": "100.0000",
+            "naturalness_delta": "0.2144",
+            "semantic_pass_pct": "100.0000",
+            "runtime_min": "180.0000",
+            "cost_usd": "0.0000",
+            "llm_calls": "0",
+            "revert_rate_pct": "missing",
+            "gate_pass_rate_pct": "missing",
+            "useful_rewrite_rate_pct": "missing"
+          },
+          "metric_status": {
+            "docs_improved_pct": "measured_numeric",
+            "naturalness_delta": "measured_numeric",
+            "semantic_pass_pct": "measured_numeric",
+            "runtime_min": "measured_numeric",
+            "cost_usd": "measured_numeric",
+            "llm_calls": "measured_numeric",
+            "revert_rate_pct": "missing",
+            "gate_pass_rate_pct": "missing",
+            "useful_rewrite_rate_pct": "missing"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [
+            "revert_rate_pct",
+            "gate_pass_rate_pct",
+            "useful_rewrite_rate_pct"
+          ]
+        }
+      }
+    },
+    {
+      "variant_id": "energy_budget",
+      "name": "stage_pipeline_plus_gate::energy_budget",
+      "roles": [
+        "orchestrator",
+        "planner",
+        "editor",
+        "guardian"
+      ],
+      "description": "full_gate_verdict=PASS_TO_R2; runs_total=30; feasible_growth=True",
+      "role_count": 4,
+      "metrics": {
+        "docs_improved_pct": 100.0,
+        "naturalness_delta": 0.198,
+        "semantic_pass_pct": 100.0,
+        "runtime_min": 180.0,
+        "cost_usd": 0.0,
+        "llm_calls": 0.0
+      },
+      "source": "measured",
+      "metadata": {
+        "runtime_type": "scientific_result_gate_review",
+        "raw_role_set": "orchestrator+planner+editor+guardian",
+        "logical_mapping_mode": "folder_intake_role_mapped",
+        "sparse_runtime_annotations": {
+          "raw_metric_text": {
+            "docs_improved_pct": "100.0000",
+            "naturalness_delta": "0.1980",
+            "semantic_pass_pct": "100.0000",
+            "runtime_min": "180.0000",
+            "cost_usd": "0.0000",
+            "llm_calls": "0",
+            "revert_rate_pct": "missing",
+            "gate_pass_rate_pct": "missing",
+            "useful_rewrite_rate_pct": "missing"
+          },
+          "metric_status": {
+            "docs_improved_pct": "measured_numeric",
+            "naturalness_delta": "measured_numeric",
+            "semantic_pass_pct": "measured_numeric",
+            "runtime_min": "measured_numeric",
+            "cost_usd": "measured_numeric",
+            "llm_calls": "measured_numeric",
+            "revert_rate_pct": "missing",
+            "gate_pass_rate_pct": "missing",
+            "useful_rewrite_rate_pct": "missing"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [
+            "revert_rate_pct",
+            "gate_pass_rate_pct",
+            "useful_rewrite_rate_pct"
+          ]
+        }
+      }
+    },
+    {
+      "variant_id": "legacy_linear_control",
+      "name": "stage_pipeline_plus_gate::legacy_linear_control",
+      "roles": [
+        "orchestrator",
+        "planner",
+        "editor",
+        "guardian"
+      ],
+      "description": "full_gate_verdict=PASS_TO_R2; runs_total=30; feasible_growth=True; legacy_control=true",
+      "role_count": 4,
+      "metrics": {
+        "docs_improved_pct": 100.0,
+        "naturalness_delta": 0.0,
+        "semantic_pass_pct": 100.0,
+        "runtime_min": 180.0,
+        "cost_usd": 0.0,
+        "llm_calls": 0.0
+      },
+      "source": "measured",
+      "metadata": {
+        "runtime_type": "scientific_result_gate_review",
+        "raw_role_set": "orchestrator+planner+editor+guardian",
+        "logical_mapping_mode": "folder_intake_role_mapped",
+        "sparse_runtime_annotations": {
+          "raw_metric_text": {
+            "docs_improved_pct": "100.0000",
+            "naturalness_delta": "0.0000",
+            "semantic_pass_pct": "100.0000",
+            "runtime_min": "180.0000",
+            "cost_usd": "0.0000",
+            "llm_calls": "0",
+            "revert_rate_pct": "missing",
+            "gate_pass_rate_pct": "missing",
+            "useful_rewrite_rate_pct": "missing"
+          },
+          "metric_status": {
+            "docs_improved_pct": "measured_numeric",
+            "naturalness_delta": "measured_numeric",
+            "semantic_pass_pct": "measured_numeric",
+            "runtime_min": "measured_numeric",
+            "cost_usd": "measured_numeric",
+            "llm_calls": "measured_numeric",
+            "revert_rate_pct": "missing",
+            "gate_pass_rate_pct": "missing",
+            "useful_rewrite_rate_pct": "missing"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [
+            "revert_rate_pct",
+            "gate_pass_rate_pct",
+            "useful_rewrite_rate_pct"
+          ]
+        }
+      }
+    },
+    {
+      "variant_id": "maintenance_cost",
+      "name": "stage_pipeline_plus_gate::maintenance_cost",
+      "roles": [
+        "orchestrator",
+        "planner",
+        "editor",
+        "guardian"
+      ],
+      "description": "full_gate_verdict=PASS_TO_R2; runs_total=30; feasible_growth=True",
+      "role_count": 4,
+      "metrics": {
+        "docs_improved_pct": 100.0,
+        "naturalness_delta": 0.2311,
+        "semantic_pass_pct": 100.0,
+        "runtime_min": 180.0,
+        "cost_usd": 0.0,
+        "llm_calls": 0.0
+      },
+      "source": "measured",
+      "metadata": {
+        "runtime_type": "scientific_result_gate_review",
+        "raw_role_set": "orchestrator+planner+editor+guardian",
+        "logical_mapping_mode": "folder_intake_role_mapped",
+        "sparse_runtime_annotations": {
+          "raw_metric_text": {
+            "docs_improved_pct": "100.0000",
+            "naturalness_delta": "0.2311",
+            "semantic_pass_pct": "100.0000",
+            "runtime_min": "180.0000",
+            "cost_usd": "0.0000",
+            "llm_calls": "0",
+            "revert_rate_pct": "missing",
+            "gate_pass_rate_pct": "missing",
+            "useful_rewrite_rate_pct": "missing"
+          },
+          "metric_status": {
+            "docs_improved_pct": "measured_numeric",
+            "naturalness_delta": "measured_numeric",
+            "semantic_pass_pct": "measured_numeric",
+            "runtime_min": "measured_numeric",
+            "cost_usd": "measured_numeric",
+            "llm_calls": "measured_numeric",
+            "revert_rate_pct": "missing",
+            "gate_pass_rate_pct": "missing",
+            "useful_rewrite_rate_pct": "missing"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [
+            "revert_rate_pct",
+            "gate_pass_rate_pct",
+            "useful_rewrite_rate_pct"
+          ]
+        }
+      }
+    },
+    {
+      "variant_id": "no_penalty_diagnostic",
+      "name": "stage_pipeline_plus_gate::no_penalty_diagnostic",
+      "roles": [
+        "orchestrator",
+        "planner",
+        "editor",
+        "guardian"
+      ],
+      "description": "full_gate_verdict=PASS_TO_R2; runs_total=30; feasible_growth=True; diagnostic_only=true",
+      "role_count": 4,
+      "metrics": {
+        "docs_improved_pct": 100.0,
+        "naturalness_delta": 0.2371,
+        "semantic_pass_pct": 100.0,
+        "runtime_min": 180.0,
+        "cost_usd": 0.0,
+        "llm_calls": 0.0
+      },
+      "source": "measured",
+      "metadata": {
+        "runtime_type": "scientific_result_gate_review",
+        "raw_role_set": "orchestrator+planner+editor+guardian",
+        "logical_mapping_mode": "folder_intake_role_mapped",
+        "sparse_runtime_annotations": {
+          "raw_metric_text": {
+            "docs_improved_pct": "100.0000",
+            "naturalness_delta": "0.2371",
+            "semantic_pass_pct": "100.0000",
+            "runtime_min": "180.0000",
+            "cost_usd": "0.0000",
+            "llm_calls": "0",
+            "revert_rate_pct": "missing",
+            "gate_pass_rate_pct": "missing",
+            "useful_rewrite_rate_pct": "missing"
+          },
+          "metric_status": {
+            "docs_improved_pct": "measured_numeric",
+            "naturalness_delta": "measured_numeric",
+            "semantic_pass_pct": "measured_numeric",
+            "runtime_min": "measured_numeric",
+            "cost_usd": "measured_numeric",
+            "llm_calls": "measured_numeric",
+            "revert_rate_pct": "missing",
+            "gate_pass_rate_pct": "missing",
+            "useful_rewrite_rate_pct": "missing"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [
+            "revert_rate_pct",
+            "gate_pass_rate_pct",
+            "useful_rewrite_rate_pct"
+          ]
+        }
+      }
+    },
+    {
+      "variant_id": "resource_allocation",
+      "name": "stage_pipeline_plus_gate::resource_allocation",
+      "roles": [
+        "orchestrator",
+        "planner",
+        "editor",
+        "guardian"
+      ],
+      "description": "full_gate_verdict=PASS_TO_R2; runs_total=30; feasible_growth=True",
+      "role_count": 4,
+      "metrics": {
+        "docs_improved_pct": 100.0,
+        "naturalness_delta": 0.197,
+        "semantic_pass_pct": 100.0,
+        "runtime_min": 180.0,
+        "cost_usd": 0.0,
+        "llm_calls": 0.0
+      },
+      "source": "measured",
+      "metadata": {
+        "runtime_type": "scientific_result_gate_review",
+        "raw_role_set": "orchestrator+planner+editor+guardian",
+        "logical_mapping_mode": "folder_intake_role_mapped",
+        "sparse_runtime_annotations": {
+          "raw_metric_text": {
+            "docs_improved_pct": "100.0000",
+            "naturalness_delta": "0.1970",
+            "semantic_pass_pct": "100.0000",
+            "runtime_min": "180.0000",
+            "cost_usd": "0.0000",
+            "llm_calls": "0",
+            "revert_rate_pct": "missing",
+            "gate_pass_rate_pct": "missing",
+            "useful_rewrite_rate_pct": "missing"
+          },
+          "metric_status": {
+            "docs_improved_pct": "measured_numeric",
+            "naturalness_delta": "measured_numeric",
+            "semantic_pass_pct": "measured_numeric",
+            "runtime_min": "measured_numeric",
+            "cost_usd": "measured_numeric",
+            "llm_calls": "measured_numeric",
+            "revert_rate_pct": "missing",
+            "gate_pass_rate_pct": "missing",
+            "useful_rewrite_rate_pct": "missing"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [
+            "revert_rate_pct",
+            "gate_pass_rate_pct",
+            "useful_rewrite_rate_pct"
+          ]
+        }
+      }
+    }
+  ],
+  "quality_targets": {
+    "historical_best_prior": "bounded_non_legacy_selection_regime_family",
+    "recommended_mode_from_previous_run": "scientific_result_gate_review",
+    "forensic_high_ai_target_accept_rate_pct": 60,
+    "mid_ai_useful_output_must_be_gt_zero": true
+  },
+  "risk_map": {
+    "highest_risks": [
+      "semantic_reconstruction_damage",
+      "ru_lexical_fusion",
+      "mid_ai_no_op_gap",
+      "historical_current_truth_conflation"
+    ],
+    "moderate_risks": [
+      "premature_harmonizer_overhead",
+      "pre_edit_guard_without_same_slice_evidence"
+    ]
+  },
+  "document_families": [
+    "overall_full_30_seed"
+  ],
+  "failure_examples": [
+    {
+      "case_id": "R2_NOT_YET_MEASURED",
+      "failure_mode": "missing_next_phase_evidence",
+      "severity": "medium",
+      "status": "open",
+      "note": "R1 passed, but no R2 organism-level evidence exists yet."
+    },
+    {
+      "case_id": "R1_OVERCLAIM_GUARD",
+      "failure_mode": "forbidden_overclaim",
+      "severity": "high",
+      "status": "controlled",
+      "note": "R1 PASS_TO_R2 must not be interpreted as a digital-cell or SuperCell success claim."
+    }
+  ],
+  "variant_metrics_by_slice": [
+    {
+      "variant_id": "bounded_hybrid",
+      "slice": "overall_full_30_seed",
+      "metrics": {
+        "accepted_rewrite_rate_pct": 100.0,
+        "revert_rate_pct": 0.0,
+        "no_op_rate_pct": 0.0,
+        "semantic_pass_proxy_pct": 100.0,
+        "useful_output_rate_pct": 79.0234,
+        "runtime_min": 180.0,
+        "cost_usd": 0.0
+      },
+      "notes": "required_accuracy_to_beat_legacy=0.5763; feasible_growth=True; mean_penalty=0.0232; collapse_rate=0.0",
+      "evidence_annotations": {
+        "raw_metric_text": {
+          "accepted_rewrite_rate_pct": "100.0000",
+          "revert_rate_pct": "0.0000",
+          "no_op_rate_pct": "0.0000",
+          "semantic_pass_proxy_pct": "100.0000",
+          "useful_output_rate_pct": "79.0234",
+          "runtime_min": "180.0000",
+          "cost_usd": "0.0000"
+        },
+        "metric_status": {
+          "accepted_rewrite_rate_pct": "measured_numeric",
+          "revert_rate_pct": "measured_numeric",
+          "no_op_rate_pct": "measured_numeric",
+          "semantic_pass_proxy_pct": "measured_numeric",
+          "useful_output_rate_pct": "measured_numeric",
+          "runtime_min": "measured_numeric",
+          "cost_usd": "measured_numeric"
+        },
+        "verdict_tags": {},
+        "missing_metric_keys": [],
+        "aggregate_runtime_variant": false,
+        "evidence_status": "measured_full_run"
+      }
+    },
+    {
+      "variant_id": "energy_budget",
+      "slice": "overall_full_30_seed",
+      "metrics": {
+        "accepted_rewrite_rate_pct": 100.0,
+        "revert_rate_pct": 0.0,
+        "no_op_rate_pct": 0.0,
+        "semantic_pass_proxy_pct": 100.0,
+        "useful_output_rate_pct": 79.0234,
+        "runtime_min": 180.0,
+        "cost_usd": 0.0
+      },
+      "notes": "required_accuracy_to_beat_legacy=0.5934; feasible_growth=True; mean_penalty=0.0403; collapse_rate=0.0",
+      "evidence_annotations": {
+        "raw_metric_text": {
+          "accepted_rewrite_rate_pct": "100.0000",
+          "revert_rate_pct": "0.0000",
+          "no_op_rate_pct": "0.0000",
+          "semantic_pass_proxy_pct": "100.0000",
+          "useful_output_rate_pct": "79.0234",
+          "runtime_min": "180.0000",
+          "cost_usd": "0.0000"
+        },
+        "metric_status": {
+          "accepted_rewrite_rate_pct": "measured_numeric",
+          "revert_rate_pct": "measured_numeric",
+          "no_op_rate_pct": "measured_numeric",
+          "semantic_pass_proxy_pct": "measured_numeric",
+          "useful_output_rate_pct": "measured_numeric",
+          "runtime_min": "measured_numeric",
+          "cost_usd": "measured_numeric"
+        },
+        "verdict_tags": {},
+        "missing_metric_keys": [],
+        "aggregate_runtime_variant": false,
+        "evidence_status": "measured_full_run"
+      }
+    },
+    {
+      "variant_id": "legacy_linear_control",
+      "slice": "overall_full_30_seed",
+      "metrics": {
+        "accepted_rewrite_rate_pct": 100.0,
+        "revert_rate_pct": 0.0,
+        "no_op_rate_pct": 0.0,
+        "semantic_pass_proxy_pct": 100.0,
+        "useful_output_rate_pct": 79.0234,
+        "runtime_min": 180.0,
+        "cost_usd": 0.0
+      },
+      "notes": "required_accuracy_to_beat_legacy=0.8203; feasible_growth=True; mean_penalty=0.2671; collapse_rate=0.0",
+      "evidence_annotations": {
+        "raw_metric_text": {
+          "accepted_rewrite_rate_pct": "100.0000",
+          "revert_rate_pct": "0.0000",
+          "no_op_rate_pct": "0.0000",
+          "semantic_pass_proxy_pct": "100.0000",
+          "useful_output_rate_pct": "79.0234",
+          "runtime_min": "180.0000",
+          "cost_usd": "0.0000"
+        },
+        "metric_status": {
+          "accepted_rewrite_rate_pct": "measured_numeric",
+          "revert_rate_pct": "measured_numeric",
+          "no_op_rate_pct": "measured_numeric",
+          "semantic_pass_proxy_pct": "measured_numeric",
+          "useful_output_rate_pct": "measured_numeric",
+          "runtime_min": "measured_numeric",
+          "cost_usd": "measured_numeric"
+        },
+        "verdict_tags": {},
+        "missing_metric_keys": [],
+        "aggregate_runtime_variant": false,
+        "evidence_status": "measured_full_run"
+      }
+    },
+    {
+      "variant_id": "maintenance_cost",
+      "slice": "overall_full_30_seed",
+      "metrics": {
+        "accepted_rewrite_rate_pct": 100.0,
+        "revert_rate_pct": 0.0,
+        "no_op_rate_pct": 0.0,
+        "semantic_pass_proxy_pct": 100.0,
+        "useful_output_rate_pct": 79.0234,
+        "runtime_min": 180.0,
+        "cost_usd": 0.0
+      },
+      "notes": "required_accuracy_to_beat_legacy=0.5592; feasible_growth=True; mean_penalty=0.0061; collapse_rate=0.0",
+      "evidence_annotations": {
+        "raw_metric_text": {
+          "accepted_rewrite_rate_pct": "100.0000",
+          "revert_rate_pct": "0.0000",
+          "no_op_rate_pct": "0.0000",
+          "semantic_pass_proxy_pct": "100.0000",
+          "useful_output_rate_pct": "79.0234",
+          "runtime_min": "180.0000",
+          "cost_usd": "0.0000"
+        },
+        "metric_status": {
+          "accepted_rewrite_rate_pct": "measured_numeric",
+          "revert_rate_pct": "measured_numeric",
+          "no_op_rate_pct": "measured_numeric",
+          "semantic_pass_proxy_pct": "measured_numeric",
+          "useful_output_rate_pct": "measured_numeric",
+          "runtime_min": "measured_numeric",
+          "cost_usd": "measured_numeric"
+        },
+        "verdict_tags": {},
+        "missing_metric_keys": [],
+        "aggregate_runtime_variant": false,
+        "evidence_status": "measured_full_run"
+      }
+    },
+    {
+      "variant_id": "no_penalty_diagnostic",
+      "slice": "overall_full_30_seed",
+      "metrics": {
+        "accepted_rewrite_rate_pct": 100.0,
+        "revert_rate_pct": 0.0,
+        "no_op_rate_pct": 0.0,
+        "semantic_pass_proxy_pct": 100.0,
+        "useful_output_rate_pct": 79.0234,
+        "runtime_min": 180.0,
+        "cost_usd": 0.0
+      },
+      "notes": "required_accuracy_to_beat_legacy=0.5532; feasible_growth=True; mean_penalty=0.0000; collapse_rate=0.0",
+      "evidence_annotations": {
+        "raw_metric_text": {
+          "accepted_rewrite_rate_pct": "100.0000",
+          "revert_rate_pct": "0.0000",
+          "no_op_rate_pct": "0.0000",
+          "semantic_pass_proxy_pct": "100.0000",
+          "useful_output_rate_pct": "79.0234",
+          "runtime_min": "180.0000",
+          "cost_usd": "0.0000"
+        },
+        "metric_status": {
+          "accepted_rewrite_rate_pct": "measured_numeric",
+          "revert_rate_pct": "measured_numeric",
+          "no_op_rate_pct": "measured_numeric",
+          "semantic_pass_proxy_pct": "measured_numeric",
+          "useful_output_rate_pct": "measured_numeric",
+          "runtime_min": "measured_numeric",
+          "cost_usd": "measured_numeric"
+        },
+        "verdict_tags": {},
+        "missing_metric_keys": [],
+        "aggregate_runtime_variant": false,
+        "evidence_status": "measured_full_run"
+      }
+    },
+    {
+      "variant_id": "resource_allocation",
+      "slice": "overall_full_30_seed",
+      "metrics": {
+        "accepted_rewrite_rate_pct": 100.0,
+        "revert_rate_pct": 0.0,
+        "no_op_rate_pct": 0.0,
+        "semantic_pass_proxy_pct": 100.0,
+        "useful_output_rate_pct": 79.0234,
+        "runtime_min": 180.0,
+        "cost_usd": 0.0
+      },
+      "notes": "required_accuracy_to_beat_legacy=0.5945; feasible_growth=True; mean_penalty=0.0414; collapse_rate=0.0",
+      "evidence_annotations": {
+        "raw_metric_text": {
+          "accepted_rewrite_rate_pct": "100.0000",
+          "revert_rate_pct": "0.0000",
+          "no_op_rate_pct": "0.0000",
+          "semantic_pass_proxy_pct": "100.0000",
+          "useful_output_rate_pct": "79.0234",
+          "runtime_min": "180.0000",
+          "cost_usd": "0.0000"
+        },
+        "metric_status": {
+          "accepted_rewrite_rate_pct": "measured_numeric",
+          "revert_rate_pct": "measured_numeric",
+          "no_op_rate_pct": "measured_numeric",
+          "semantic_pass_proxy_pct": "measured_numeric",
+          "useful_output_rate_pct": "measured_numeric",
+          "runtime_min": "measured_numeric",
+          "cost_usd": "measured_numeric"
+        },
+        "verdict_tags": {},
+        "missing_metric_keys": [],
+        "aggregate_runtime_variant": false,
+        "evidence_status": "measured_full_run"
+      }
+    }
+  ],
+  "open_questions": [
+    "Confirm that the completed canonical R1 result is internally coherent as a bounded scientific gate outcome",
+    "Confirm that PASS_TO_R2 should be interpreted as permission for R2-scoped work only",
+    "Confirm that no broader organism-level or SuperCell-level claims are justified by R1 alone",
+    "Should guardian-like logic stay post-edit only or also become pre-edit gating?",
+    "What is the minimum additional measurement set needed to move beyond warm_start?"
+  ],
+  "known_implementation_limits": [
+    "Current runtime metrics remain sparse relative to historical batch metrics.",
+    "Useful rewrite rate is still missing on several current slices.",
+    "Current logical role map is measured at system level, not yet isolated by ablation."
+  ],
+  "role_intervention_evidence": [
+    {
+      "role": "planner",
+      "status": "measured",
+      "reason": "Current runtime already contains measured planner-like decisions via AI% routing, prompt family selection, and skip_stages controls."
+    },
+    {
+      "role": "editor",
+      "status": "measured",
+      "reason": "Current pipeline stages constitute the active editor path."
+    },
+    {
+      "role": "guardian",
+      "status": "measured",
+      "reason": "Current safety gate and revert behavior implement guardian-like post-edit validation."
+    },
+    {
+      "role": "harmonizer",
+      "status": "measured_from_historical_report_negative",
+      "reason": "Historical over-segmented variant E regressed naturalness and efficiency."
+    }
+  ],
+  "source_labels": {
+    "case_id": "inferred",
+    "system_name": "user_provided",
+    "task_type": "inferred",
+    "workflow_summary": "inferred",
+    "primary_objective": "inferred",
+    "functional_decomposition": "inferred",
+    "hard_constraints": "user_provided",
+    "soft_constraints": "inferred",
+    "candidate_roles": "inferred",
+    "tested_variants": "user_provided",
+    "quality_targets": "user_provided",
+    "risk_map": "inferred"
+  },
+  "packet_quality_level": "Q4",
+  "metadata": {
+    "input_packet_version": "R1_FULL_RESULT_V1",
+    "normalization_mode": "folder_intake_role_mapped",
+    "current_runtime_role_mapping": [
+      {
+        "runtime_component": "cycle_scope",
+        "logical_bdc_role": "orchestrator",
+        "status": "active",
+        "why_mapped_this_way": "Owns the bounded R1 scientific scope and progression boundary into R2."
+      },
+      {
+        "runtime_component": "regime_and_manifest_design",
+        "logical_bdc_role": "planner",
+        "status": "active",
+        "why_mapped_this_way": "Defines the candidate regime family set, seed policy, and bounded gate contract."
+      },
+      {
+        "runtime_component": "runner_execution",
+        "logical_bdc_role": "editor",
+        "status": "active",
+        "why_mapped_this_way": "Executes the manifest-driven full 180-run sweep and preserves run artifacts."
+      },
+      {
+        "runtime_component": "aggregate_gate_audit",
+        "logical_bdc_role": "guardian",
+        "status": "active",
+        "why_mapped_this_way": "Reduces the measured surface to PASS_TO_R2 or REMAIN_IN_R1 and blocks overclaim."
+      }
+    ],
+    "prompt_stage_matrix": [
+      {
+        "stage_id": "pre_gate",
+        "stage_name": "BDC scientific narrowing",
+        "objective": "Bind the reboot line to a bounded PASS_TO_R2 vs REMAIN_IN_R1 gate.",
+        "measured_output": "BDC_R1_FULL_SWEEP_PREEXPERIMENT_GATE.md",
+        "evidence_status": "measured"
+      },
+      {
+        "stage_id": "execute",
+        "stage_name": "Canonical full manifest sweep",
+        "objective": "Produce reproducible outputs for all six regimes across 30 seeds each.",
+        "measured_output": "runner_summary.json, run_index.csv, summary.json, metrics.csv",
+        "evidence_status": "measured_full_run"
+      },
+      {
+        "stage_id": "gate",
+        "stage_name": "Aggregate gate audit",
+        "objective": "Reduce the full output surface to a bounded scientific gate verdict.",
+        "measured_output": "r1_gate_decision.json",
+        "evidence_status": "measured_full_run"
+      }
+    ],
+    "design_priorities": "# Lead Architect Design Priorities\n\n1. Preserve the canonical R1 interpretation: selection-physics reboot only.\n2. Preserve the two-way gate semantics: `PASS_TO_R2` or `REMAIN_IN_R1`.\n3. Preserve the legacy control as a comparator, not as the only admissible future regime.\n4. Use BDC Designer as a bounded analytical reviewer over the finished result, not as a source of broader claims.\n5. Treat a positive BDC review as permission for R2-scoped implementation work only.\n",
+    "intake_manifest": {
+      "folder_path": "docs\\experiments\\BDC_R1_FULL_RESULT_PACKET",
+      "readme_path": "docs\\experiments\\BDC_R1_FULL_RESULT_PACKET\\README.md",
+      "packet_json_path": "docs\\experiments\\BDC_R1_FULL_RESULT_PACKET\\BDC_INPUT_PACKET_R1_FULL_RESULT.json",
+      "unified_variant_comparison_csv": "docs\\experiments\\BDC_R1_FULL_RESULT_PACKET\\unified_variant_comparison.csv",
+      "provider_comparison_csv": null,
+      "stability_run_metrics_csv": null,
+      "rollout_case_index_csv": null,
+      "guardian_audit_csv": null,
+      "current_runtime_role_mapping_csv": "docs\\experiments\\BDC_R1_FULL_RESULT_PACKET\\current_runtime_role_mapping.csv",
+      "current_slice_metrics_csv": "docs\\experiments\\BDC_R1_FULL_RESULT_PACKET\\current_slice_metrics.csv",
+      "failure_case_registry_csv": "docs\\experiments\\BDC_R1_FULL_RESULT_PACKET\\failure_case_registry.csv",
+      "prompt_stage_matrix_csv": "docs\\experiments\\BDC_R1_FULL_RESULT_PACKET\\prompt_stage_matrix.csv",
+      "lead_architect_design_priorities_md": "docs\\experiments\\BDC_R1_FULL_RESULT_PACKET\\lead_architect_design_priorities.md",
+      "extras": [
+        "docs\\experiments\\BDC_R1_FULL_RESULT_PACKET\\BDC_INPUT_PACKET_R1_FULL_RESULT.json",
+        "docs\\experiments\\BDC_R1_FULL_RESULT_PACKET\\current_runtime_role_mapping.csv",
+        "docs\\experiments\\BDC_R1_FULL_RESULT_PACKET\\current_slice_metrics.csv",
+        "docs\\experiments\\BDC_R1_FULL_RESULT_PACKET\\failure_case_registry.csv",
+        "docs\\experiments\\BDC_R1_FULL_RESULT_PACKET\\lead_architect_design_priorities.md",
+        "docs\\experiments\\BDC_R1_FULL_RESULT_PACKET\\prompt_stage_matrix.csv",
+        "docs\\experiments\\BDC_R1_FULL_RESULT_PACKET\\r1_gate_decision.json",
+        "docs\\experiments\\BDC_R1_FULL_RESULT_PACKET\\r1_regime_summary.csv",
+        "docs\\experiments\\BDC_R1_FULL_RESULT_PACKET\\r1_regime_summary.json",
+        "docs\\experiments\\BDC_R1_FULL_RESULT_PACKET\\README.md",
+        "docs\\experiments\\BDC_R1_FULL_RESULT_PACKET\\resolved_manifest.json",
+        "docs\\experiments\\BDC_R1_FULL_RESULT_PACKET\\runner_summary.json",
+        "docs\\experiments\\BDC_R1_FULL_RESULT_PACKET\\unified_variant_comparison.csv"
+      ]
+    },
+    "evidence_policy": {
+      "measured": [
+        "historical TASK-1400B complexity barrier",
+        "TASK-7591 regime abstraction",
+        "TASK-7592 canonical runner",
+        "TASK-7593 gate audit",
+        "TASK-7600 full canonical R1 merge and gate audit",
+        "full canonical 180-run R1 sweep"
+      ],
+      "inferred": [
+        "R1 success justifies progression to bounded R2 work, not broader scientific claims"
+      ],
+      "missing": [
+        "R2 organism assembly evidence",
+        "cell-level composition evidence",
+        "SuperCell evidence"
+      ]
+    },
+    "base_packet_reference": "EXP-0801_SELECTION_PHYSICS_REBOOT_IMPLEMENTATION_PACKAGE",
+    "sparse_runtime_support_summary": {
+      "supported": true,
+      "verdict_like_metric_cells": 0,
+      "missing_metric_cells": 18,
+      "aggregate_variant_rows": 0
+    }
+  }
+}

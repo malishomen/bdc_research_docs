@@ -1,0 +1,7 @@
+variant_id,slice_id,accepted_rewrite_rate,revert_rate,no_op_rate,semantic_pass_proxy,useful_output_rate,latency,cost,evidence_status,notes
+bounded_hybrid,overall_full_30_seed,100.0000,0.0000,0.0000,100.0000,79.0234,180.0000,0.0000,measured_full_run,required_accuracy_to_beat_legacy=0.5763; feasible_growth=True; mean_penalty=0.0232; collapse_rate=0.0
+energy_budget,overall_full_30_seed,100.0000,0.0000,0.0000,100.0000,79.0234,180.0000,0.0000,measured_full_run,required_accuracy_to_beat_legacy=0.5934; feasible_growth=True; mean_penalty=0.0403; collapse_rate=0.0
+legacy_linear_control,overall_full_30_seed,100.0000,0.0000,0.0000,100.0000,79.0234,180.0000,0.0000,measured_full_run,required_accuracy_to_beat_legacy=0.8203; feasible_growth=True; mean_penalty=0.2671; collapse_rate=0.0
+maintenance_cost,overall_full_30_seed,100.0000,0.0000,0.0000,100.0000,79.0234,180.0000,0.0000,measured_full_run,required_accuracy_to_beat_legacy=0.5592; feasible_growth=True; mean_penalty=0.0061; collapse_rate=0.0
+no_penalty_diagnostic,overall_full_30_seed,100.0000,0.0000,0.0000,100.0000,79.0234,180.0000,0.0000,measured_full_run,required_accuracy_to_beat_legacy=0.5532; feasible_growth=True; mean_penalty=0.0000; collapse_rate=0.0
+resource_allocation,overall_full_30_seed,100.0000,0.0000,0.0000,100.0000,79.0234,180.0000,0.0000,measured_full_run,required_accuracy_to_beat_legacy=0.5945; feasible_growth=True; mean_penalty=0.0414; collapse_rate=0.0

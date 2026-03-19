@@ -1,0 +1,13 @@
+{
+  "outcome_class": "recommend_with_guardrails",
+  "abstain": false,
+  "operator_action": "bounded_search_around_prior",
+  "reasons": [
+    "search_mode_requires_operator_guardrails"
+  ],
+  "confidence_band": "medium",
+  "deployability_confidence_band": "medium",
+  "strategy_mode": "full_hybrid_search",
+  "tested_variant_count": 6,
+  "calibration_audit_status": "single_case_not_audited"
+}

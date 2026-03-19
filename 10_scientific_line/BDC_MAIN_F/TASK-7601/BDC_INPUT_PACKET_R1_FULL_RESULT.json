@@ -1,0 +1,49 @@
+{
+  "packet_version": "R1_FULL_RESULT_V1",
+  "packet_id": "BDC_R1_FULL_RESULT_PACKET",
+  "project": "Bio_Digital_Core",
+  "system_name": "BDC_Scientific_Line",
+  "cycle_type": "scientific_gate_result",
+  "base_packet_reference": "EXP-0801_SELECTION_PHYSICS_REBOOT_IMPLEMENTATION_PACKAGE",
+  "canonical_gate_reference": "results/selection_physics_reboot_r1_full/aggregates/r1_gate_decision.json",
+  "evidence_policy": {
+    "measured": [
+      "historical TASK-1400B complexity barrier",
+      "TASK-7591 regime abstraction",
+      "TASK-7592 canonical runner",
+      "TASK-7593 gate audit",
+      "TASK-7600 full canonical R1 merge and gate audit",
+      "full canonical 180-run R1 sweep"
+    ],
+    "inferred": [
+      "R1 success justifies progression to bounded R2 work, not broader scientific claims"
+    ],
+    "missing": [
+      "R2 organism assembly evidence",
+      "cell-level composition evidence",
+      "SuperCell evidence"
+    ]
+  },
+  "positioning": {
+    "historical_best_prior": "bounded_non_legacy_selection_regime_family",
+    "bdc_recommendation_mode": "scientific_result_gate_review"
+  },
+  "roles": [
+    "orchestrator",
+    "planner",
+    "editor",
+    "guardian"
+  ],
+  "revision_truth": {
+    "measured_run_commit": "55094b6",
+    "experiment_results_commit": "55094b6",
+    "packet_state_commit": "55094b6",
+    "deployed_revision": "55094b6",
+    "current_head_at_review": "55094b6"
+  },
+  "explicit_requests_to_bdc": [
+    "Confirm that the completed canonical R1 result is internally coherent as a bounded scientific gate outcome",
+    "Confirm that PASS_TO_R2 should be interpreted as permission for R2-scoped work only",
+    "Confirm that no broader organism-level or SuperCell-level claims are justified by R1 alone"
+  ]
+}

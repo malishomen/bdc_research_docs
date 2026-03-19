@@ -1,0 +1,5 @@
+"runtime_component","logical_bdc_role","status","why_mapped_this_way"
+"cycle_scope","orchestrator","active","Owns the bounded R1 scientific scope and progression boundary into R2."
+"regime_and_manifest_design","planner","active","Defines the candidate regime family set, seed policy, and bounded gate contract."
+"runner_execution","editor","active","Executes the manifest-driven full 180-run sweep and preserves run artifacts."
+"aggregate_gate_audit","guardian","active","Reduces the measured surface to PASS_TO_R2 or REMAIN_IN_R1 and blocks overclaim."

@@ -1,0 +1,19 @@
+{
+  "task_id": "TASK-7601",
+  "title": "BDC R1 full-result packet and Designer run",
+  "change_class": "R1",
+  "objective": "Create a BDC-facing packet for the completed full canonical R1 sweep, run it through BDC Designer, and compare the Designer interpretation to the canonical scientific gate verdict.",
+  "inputs": [
+    "docs/experiments/BDC_R1_FULL_SWEEP_PREEXPERIMENT_GATE.md",
+    "results/selection_physics_reboot_r1_full/runner_summary.json",
+    "results/selection_physics_reboot_r1_full/aggregates/r1_gate_decision.json",
+    "results/selection_physics_reboot_r1_full/aggregates/r1_regime_summary.json"
+  ],
+  "deliverables": [
+    "docs/experiments/BDC_R1_FULL_RESULT_PACKET",
+    "reports/analysis/TASK-7601-BDC-R1-FULL-RESULT-PACKET-AND-DESIGNER-RUN/TASK-7601_BRIEF_REPORT.md"
+  ],
+  "verification": [
+    "python tools/bdc_designer_v2.py --pretty client-bundle --folder_path docs/experiments/BDC_R1_FULL_RESULT_PACKET --out_root docs/experiments/BDC_R1_FULL_RESULT_PACKET/BDC_CLIENT_BUNDLE_OUTPUT --out_json docs/experiments/BDC_R1_FULL_RESULT_PACKET/BDC_CLIENT_BUNDLE_OUTPUT/bundle_result.json"
+  ]
+}

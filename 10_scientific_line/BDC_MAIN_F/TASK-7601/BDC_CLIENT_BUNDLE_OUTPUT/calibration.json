@@ -1,0 +1,11 @@
+{
+  "audit_status": "single_case_not_audited",
+  "audited": false,
+  "predicted_correctness_probability": 0.77,
+  "calibration_bucket": "0.6-0.8",
+  "uses_benchmark_calibration": false,
+  "recommended_next_step": "run_phase53_bdc_designer_calibration_layer",
+  "caution_flags": [
+    "broad_search_required"
+  ]
+}

@@ -1,0 +1,3 @@
+"case_id","failure_mode","severity","status","note"
+"R2_NOT_YET_MEASURED","missing_next_phase_evidence","medium","open","R1 passed, but no R2 organism-level evidence exists yet."
+"R1_OVERCLAIM_GUARD","forbidden_overclaim","high","controlled","R1 PASS_TO_R2 must not be interpreted as a digital-cell or SuperCell success claim."

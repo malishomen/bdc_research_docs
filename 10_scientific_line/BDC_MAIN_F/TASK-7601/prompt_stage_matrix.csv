@@ -1,0 +1,4 @@
+"stage_id","stage_name","objective","measured_output","evidence_status"
+"pre_gate","BDC scientific narrowing","Bind the reboot line to a bounded PASS_TO_R2 vs REMAIN_IN_R1 gate.","BDC_R1_FULL_SWEEP_PREEXPERIMENT_GATE.md","measured"
+"execute","Canonical full manifest sweep","Produce reproducible outputs for all six regimes across 30 seeds each.","runner_summary.json, run_index.csv, summary.json, metrics.csv","measured_full_run"
+"gate","Aggregate gate audit","Reduce the full output surface to a bounded scientific gate verdict.","r1_gate_decision.json","measured_full_run"

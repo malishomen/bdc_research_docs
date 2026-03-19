@@ -1,0 +1,24 @@
+# BDC Redesign Memo
+
+## Case
+- System: Bio_Digital_Core
+- Case ID: BDC_R1_FULL_RESULT_PACKET
+
+## Recommendation
+- Winner prior: no_penalty_diagnostic
+- Recommended roles: orchestrator, planner, editor, guardian
+- Role count: 4
+- Strategy mode: full_hybrid_search
+- Confidence: medium
+- Prior confidence: high
+- Deployability confidence: medium
+
+## Logical Redesign
+- Recommended split: 4_role_logical_redesign
+- Guardian mode: post_edit_validation
+- Next test: 4_role_logical_redesign
+- Formalize first: planner-like routing and family selection, editor path as explicit execution layer, guardian-like post-edit accept/revert/retry layer, orchestrator lifecycle and bounded iteration control
+- Do not add yet: harmonizer_role
+
+## Minimum Additional Measurements
+- accepted_rewrite_rate_pct, useful_rewrite_rate_pct, semantic_pass_proxy_pct, revert_rate_pct, runtime_min, cost_usd, useful_output_rate_pct
