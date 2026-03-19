@@ -1,0 +1,10 @@
+{
+  "task_id": "TASK-7635",
+  "title": "BDC Designer cockpit architecture plan v2",
+  "change_class": "R0",
+  "objective": "Prepare a corrected Cockpit architecture plan v2 based on official Claude Agent SDK capabilities and BDC execution discipline.",
+  "depends_on": [
+    "TASK-7633",
+    "TASK-7634"
+  ]
+}
