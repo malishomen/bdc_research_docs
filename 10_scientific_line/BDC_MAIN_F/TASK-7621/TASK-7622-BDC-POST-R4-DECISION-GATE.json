@@ -1,0 +1,7 @@
+{
+  "task_id": "TASK-7622",
+  "title": "Post-R4 bounded decision gate",
+  "change_class": "R1",
+  "objective": "Use a BDC-assisted decision gate to choose the next bounded package after confirmed R4 single-mechanism generalization.",
+  "depends_on": ["TASK-7621"]
+}

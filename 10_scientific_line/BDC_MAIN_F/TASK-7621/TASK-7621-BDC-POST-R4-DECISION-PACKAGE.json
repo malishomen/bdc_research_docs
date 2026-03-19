@@ -1,0 +1,7 @@
+{
+  "task_id": "TASK-7621",
+  "title": "Post-R4 bounded decision package",
+  "change_class": "R1",
+  "objective": "Open the bounded post-R4 decision package comparing single_mechanism_transfer_gate vs minimal_multi_mechanism_micro_assembly.",
+  "depends_on": ["TASK-7620"]
+}

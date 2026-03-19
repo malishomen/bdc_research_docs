@@ -90,6 +90,8 @@
 - `TASK-7618` - generalization pressure matrix
 - `TASK-7619` - generalization implementation and measurement
 - `TASK-7620` - generalization gate audit
+- `TASK-7621` - post-R4 decision package
+- `TASK-7622` - post-R4 decision gate
 
 ## BDC Designer Rule
 - For scientific reboot work, `BDC Designer` must be used first as pre-experiment narrowing/evidence discipline.
@@ -109,6 +111,7 @@ If a new session starts, the correct next action is:
 2. treat `bounded_working_memory_candidate` as a mechanism with two bounded positive signals inside the same environment family,
 3. treat `CONFIRM_SINGLE_MECHANISM_GENERALIZATION` as the current canonical scientific truth,
 4. treat `BDC Designer` as a secondary confirming layer, not a replacement for the scientific gate,
-5. open the next bounded post-R4 decision package explicitly rather than jumping straight to micro-assembly,
+5. treat `docs/experiments/EXP-0812_POST_R4_BOUNDED_DECISION_GATE.md` as the active bounded post-R4 package,
+6. execute `TASK-7622` next,
 6. do not open organism or cell claims,
 7. do not open micro-assembly until it gets its own explicit bounded evidence gate.
