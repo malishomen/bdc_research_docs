@@ -100,5 +100,6 @@ If a new session starts, the correct next action is:
 2. treat `bounded_working_memory_candidate` as a mechanism with two bounded positive signals inside the same environment family,
 3. treat `single_mechanism_generalization` as the selected and already opened next bounded gate,
 4. treat `docs/experiments/R4_SINGLE_MECHANISM_GENERALIZATION_PRESSURE_MATRIX.md` as the canonical bounded `R4` pressure surface,
-5. execute `TASK-7619` next,
-6. do not open micro-assembly until it gets its own explicit bounded evidence gate.
+5. treat `docs/experiments/R4_SINGLE_MECHANISM_GENERALIZATION_MEASUREMENT_NOTE.md` as the measured `R4` implementation result,
+6. execute `TASK-7620` next,
+7. do not open micro-assembly until it gets its own explicit bounded evidence gate.
