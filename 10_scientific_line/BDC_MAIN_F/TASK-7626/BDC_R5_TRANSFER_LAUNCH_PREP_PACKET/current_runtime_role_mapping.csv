@@ -1,0 +1,5 @@
+runtime_component,logical_bdc_role,status,why_mapped_this_way
+r5_launch_scope,orchestrator,active,Keeps launch prep below actual long-run execution.
+manifest_surface,planner,active,Defines seeds and bounded slices for the approved target.
+smoke_artifact,editor,active,Carries the deterministic transfer artifact proving launch readiness.
+launch_readiness_gate,guardian,active,Determines whether the next action can be the full R5 long-run.

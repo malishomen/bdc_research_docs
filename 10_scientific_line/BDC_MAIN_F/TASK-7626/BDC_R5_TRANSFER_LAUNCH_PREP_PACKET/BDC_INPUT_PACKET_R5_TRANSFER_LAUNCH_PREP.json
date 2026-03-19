@@ -1,0 +1,23 @@
+{
+  "packet_version": "R5_TRANSFER_LAUNCH_PREP_V1",
+  "packet_id": "BDC_R5_TRANSFER_LAUNCH_PREP",
+  "project": "Bio_Digital_Core",
+  "system_name": "BDC_Scientific_Line",
+  "base_packet_reference": "TASK-7626",
+  "evidence_policy": {
+    "measured": [
+      "deterministic cloze transfer smoke artifact exists",
+      "the approved FIFO mechanism beats the controls on the smoke artifact",
+      "a deterministic long-run manifest exists for 30 seeds across bounded cloze slices"
+    ],
+    "inferred": [],
+    "missing": [
+      "the full R5 long-run itself"
+    ]
+  },
+  "explicit_requests_to_bdc": [
+    "Interpret whether the approved R5 target is launch-ready.",
+    "Do not reopen transfer target choice.",
+    "Do not let launch prep be mistaken for long-run completion."
+  ]
+}

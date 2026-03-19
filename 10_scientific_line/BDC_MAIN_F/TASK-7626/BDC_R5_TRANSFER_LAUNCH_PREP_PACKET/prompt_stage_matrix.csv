@@ -1,0 +1,4 @@
+stage_id,stage_name,objective,measured_output,evidence_status
+r5_target_approval,approved transfer target,Use the approved adjacent target as fixed input to launch prep.,docs/experiments/BDC_R5_TRANSFER_TARGET_PACKET/r5_transfer_target_decision.json,measured
+r5_smoke,deterministic cloze transfer smoke,Demonstrate deterministic same-mechanism transfer on the approved family.,results\r5_cloze_transfer_launch_prep_smoke\scorecard.json,measured
+r5_manifest,launch manifest,Define the seed and slice surface for the next long-run.,scripts\analysis\r5_cloze_transfer_longrun_manifest.json,measured

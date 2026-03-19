@@ -1,0 +1,4 @@
+variant_id,slice_id,accepted_rewrite_rate,revert_rate,no_op_rate,semantic_pass_proxy,useful_output_rate,latency,cost,evidence_status,notes
+symbolic_micro_corpus_cloze_transfer_launch_ready,deterministic_smoke_artifact,100.0000,0.0000,0.0000,100.0000,100.0000,0.0000,0.0000,measured,Smoke artifact confirms deterministic FIFO mechanism superiority over controls.
+symbolic_micro_corpus_cloze_transfer_launch_ready,launch_manifest_present,100.0000,0.0000,0.0000,100.0000,100.0000,0.0000,0.0000,measured,Manifest defines 30 seeds across 4 bounded slices.
+remain_in_r5_launch_prep,missing_launch_state,0.0000,0.0000,100.0000,0.0000,0.0000,0.0000,0.0000,missing,Hold state only if smoke artifact or manifest are absent.

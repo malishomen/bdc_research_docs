@@ -1,0 +1,3 @@
+variant_id,architecture_type,role_set,runtime_type,docs_improved_pct,naturalness_delta,semantic_pass_pct,runtime_min,cost_usd,llm_calls,revert_rate_pct,gate_pass_rate_pct,useful_rewrite_rate_pct,evidence_status,notes
+symbolic_micro_corpus_cloze_transfer_launch_ready,scientific_launch_state,orchestrator+planner+editor+guardian,r5_transfer_launch_prep,100.0000,15.0000,100.0000,0.0000,0.0000,0,0.0000,100.0000,100.0000,measured,Deterministic smoke artifact and bounded long-run manifest exist for the approved cloze transfer target.
+remain_in_r5_launch_prep,scientific_launch_state,orchestrator+planner+editor+guardian,r5_transfer_launch_prep,10.0000,0.0000,10.0000,0.0000,0.0000,0,90.0000,0.0000,0.0000,missing,Hold state if launch prep artifacts were missing.

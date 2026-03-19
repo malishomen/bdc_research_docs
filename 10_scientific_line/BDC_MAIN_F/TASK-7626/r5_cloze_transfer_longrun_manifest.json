@@ -1,0 +1,84 @@
+{
+  "phase": "r5_single_mechanism_transfer",
+  "approved_target_id": "symbolic_micro_corpus_cloze_transfer",
+  "execution_mode": "deterministic_cpu",
+  "preferred_device": "cpu",
+  "candidate_id": "bounded_working_memory_candidate",
+  "controls": [
+    "random_symbol",
+    "last_symbol",
+    "majority_symbol"
+  ],
+  "seeds": [
+    20260400,
+    20260401,
+    20260402,
+    20260403,
+    20260404,
+    20260405,
+    20260406,
+    20260407,
+    20260408,
+    20260409,
+    20260410,
+    20260411,
+    20260412,
+    20260413,
+    20260414,
+    20260415,
+    20260416,
+    20260417,
+    20260418,
+    20260419,
+    20260420,
+    20260421,
+    20260422,
+    20260423,
+    20260424,
+    20260425,
+    20260426,
+    20260427,
+    20260428,
+    20260429
+  ],
+  "slices": [
+    {
+      "slice_id": "base_cloze_transfer",
+      "size": 256,
+      "seq_len": 10,
+      "lexicon_size": 8,
+      "min_gap": 3,
+      "max_gap": 5
+    },
+    {
+      "slice_id": "gap_extension_cloze_transfer",
+      "size": 256,
+      "seq_len": 12,
+      "lexicon_size": 8,
+      "min_gap": 4,
+      "max_gap": 6
+    },
+    {
+      "slice_id": "lexicon_extension_cloze_transfer",
+      "size": 256,
+      "seq_len": 10,
+      "lexicon_size": 10,
+      "min_gap": 3,
+      "max_gap": 5
+    },
+    {
+      "slice_id": "combined_bounded_cloze_transfer",
+      "size": 256,
+      "seq_len": 12,
+      "lexicon_size": 10,
+      "min_gap": 4,
+      "max_gap": 6
+    }
+  ],
+  "out_root": "results/r5_cloze_transfer_longrun",
+  "notes": [
+    "The same FIFO memory mechanism must be reused unchanged.",
+    "The historical cloze evolutionary stack is not the execution target for this run.",
+    "This manifest is launch-ready but should not be started during launch-prep."
+  ]
+}
