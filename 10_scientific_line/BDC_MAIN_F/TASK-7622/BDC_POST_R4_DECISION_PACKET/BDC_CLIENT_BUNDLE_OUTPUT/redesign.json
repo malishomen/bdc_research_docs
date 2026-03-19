@@ -1,0 +1,48 @@
+{
+  "recommended_logical_split": "4_role_logical_redesign",
+  "deployment_mode": "direct_architecture_selection",
+  "prior_confidence_band": "high",
+  "deployability_confidence_band": "high",
+  "recommended_reference_architecture": {
+    "variant_id": "single_mechanism_transfer_gate",
+    "role_names": [
+      "orchestrator",
+      "planner",
+      "editor",
+      "guardian"
+    ],
+    "role_count": 4
+  },
+  "current_component_mapping": {
+    "orchestrator": [
+      "post_r4_scope"
+    ],
+    "planner": [
+      "evidence_asymmetry_surface"
+    ],
+    "editor": [
+      "decision_packet"
+    ],
+    "guardian": [
+      "post_r4_gate"
+    ]
+  },
+  "guardian_placement": {
+    "recommended_mode": "post_edit_validation",
+    "pre_edit_guard_recommended_now": false,
+    "reason": "Current evidence supports planner-like pre-edit routing and guardian-like post-edit accept/revert logic, but does not yet justify a separate pre-edit guardian gate."
+  },
+  "next_architecture_test": {
+    "baseline_arm": "current_best_stage_runtime",
+    "redesign_arm": "4_role_logical_redesign",
+    "what_to_formalize_first": [
+      "planner-like routing and family selection",
+      "editor path as explicit execution layer",
+      "guardian-like post-edit accept/revert/retry layer",
+      "orchestrator lifecycle and bounded iteration control"
+    ],
+    "what_not_to_add_yet": [
+      "harmonizer_role"
+    ]
+  }
+}

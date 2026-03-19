@@ -45,6 +45,14 @@
 - Secondary analytical `BDC Designer` packet verdict:
   - `supported = true`
   - `recommended_variant_id = bounded_working_memory_candidate`
+- Post-`R4` decision gate is now complete.
+- Canonical decision verdict:
+  - `OPEN_SINGLE_MECHANISM_TRANSFER_GATE`
+- Decision artifact:
+  - `docs/experiments/BDC_POST_R4_DECISION_PACKET/post_r4_gate_decision.json`
+- Secondary analytical `BDC Designer` packet verdict:
+  - `supported = true`
+  - `recommended_variant_id = single_mechanism_transfer_gate`
 
 ## Current Analytical State
 - Full `R1` packet was run through `BDC Designer`.
@@ -62,7 +70,7 @@
 
 ## Current Next Phase
 - Active scientific target:
-  - `POST-R4 BOUNDED DECISION GATE`
+  - `R5 - Single-Mechanism Transfer Gate`
 - Canonical R3 docs:
   - `docs/experiments/EXP-0804_R3_SEQUENCE_MEMORY_MECHANISM_VALIDATION.md`
   - `docs/experiments/BDC_R3_SEQUENCE_MEMORY_MECHANISM_PREEXPERIMENT_GATE.md`
@@ -75,6 +83,7 @@
   - `docs/experiments/BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PREEXPERIMENT_GATE.md`
   - `docs/experiments/EXP-0811_R4_SINGLE_MECHANISM_GENERALIZATION_IMPLEMENTATION_PACKAGE.md`
   - `docs/experiments/R4_SINGLE_MECHANISM_GENERALIZATION_GATE_DECISION.md`
+  - `docs/experiments/POST_R4_GATE_DECISION.md`
 
 ## Current Task Chain
 - `TASK-7608` - R3 mechanism package
@@ -111,7 +120,7 @@ If a new session starts, the correct next action is:
 2. treat `bounded_working_memory_candidate` as a mechanism with two bounded positive signals inside the same environment family,
 3. treat `CONFIRM_SINGLE_MECHANISM_GENERALIZATION` as the current canonical scientific truth,
 4. treat `BDC Designer` as a secondary confirming layer, not a replacement for the scientific gate,
-5. treat `docs/experiments/EXP-0812_POST_R4_BOUNDED_DECISION_GATE.md` as the active bounded post-R4 package,
-6. execute `TASK-7622` next,
-6. do not open organism or cell claims,
-7. do not open micro-assembly until it gets its own explicit bounded evidence gate.
+5. treat `OPEN_SINGLE_MECHANISM_TRANSFER_GATE` as the current canonical next-step verdict,
+6. open the bounded `R5` transfer package next,
+7. do not open organism or cell claims,
+8. do not open micro-assembly until it gets its own explicit bounded evidence gate.

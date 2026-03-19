@@ -1,0 +1,16 @@
+{
+  "phase": "post_r4_decision",
+  "task": "post_r4_decision_gate",
+  "verdict": "OPEN_SINGLE_MECHANISM_TRANSFER_GATE",
+  "r4_verdict_confirmed": true,
+  "bdc_supported": true,
+  "bdc_recommended_variant_id": "single_mechanism_transfer_gate",
+  "bdc_strategy_mode": "direct_architecture_selection",
+  "bdc_confidence_band": "high",
+  "bdc_selective_outcome_class": "recommend_ready",
+  "interpretation": {
+    "narrower_honest_path": "single_mechanism_transfer_gate",
+    "broader_path": "minimal_multi_mechanism_micro_assembly",
+    "reason": "R4 confirms single-mechanism generalization, but there is still zero measured second-mechanism or interaction evidence."
+  }
+}

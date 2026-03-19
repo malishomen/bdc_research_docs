@@ -1,0 +1,5 @@
+runtime_component,logical_bdc_role,status,why_mapped_this_way
+post_r4_scope,orchestrator,active,Keeps the gate below micro-assembly and broader claim scope until evidence exists.
+evidence_asymmetry_surface,planner,active,Serializes the asymmetry between confirmed single-mechanism evidence and absent interaction evidence.
+decision_packet,editor,active,Carries the bounded options and the packet surface for BDC narrowing.
+post_r4_gate,guardian,active,Determines the next honest bounded gate after R4 confirmation.

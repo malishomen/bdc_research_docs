@@ -1,0 +1,4 @@
+stage_id,stage_name,objective,measured_output,evidence_status
+r4_confirmation,single-mechanism generalization confirmation,Provide the measured R4 base state.,r4_generalization_gate_decision.json,measured
+decision_surface,post-r4 option comparison,Compare transfer vs micro-assembly as the next bounded move.,unified_variant_comparison.csv,inferred_only
+decision_gate,post-r4 gate verdict,Choose the next bounded package after R4 confirmation.,post_r4_gate_decision.json,mixed

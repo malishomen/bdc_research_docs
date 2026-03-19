@@ -1,0 +1,33 @@
+{
+  "packet_version": "POST_R4_DECISION_V1",
+  "packet_id": "BDC_POST_R4_DECISION",
+  "project": "Bio_Digital_Core",
+  "system_name": "BDC_Scientific_Line",
+  "base_packet_reference": "TASK-7620",
+  "evidence_policy": {
+    "measured": [
+      "bounded_working_memory_candidate has two bounded positive signals",
+      "one of those signals is control-resistant",
+      "single-mechanism generalization is now canonically confirmed across the bounded R4 pressure surface"
+    ],
+    "inferred": [
+      "single_mechanism_transfer_gate is the narrower next gate because it preserves single-mechanism scope while broadening environment exposure",
+      "minimal_multi_mechanism_micro_assembly is a plausible later gate but currently adds a second mechanism and interaction complexity without measured support"
+    ],
+    "missing": [
+      "any measured second mechanism",
+      "any measured mechanism interaction surface",
+      "any measured micro-assembly behavior",
+      "any measured out-of-family transfer for the same mechanism"
+    ]
+  },
+  "positioning": {
+    "historical_best_prior": "bounded_working_memory_candidate_r4_confirmed_state",
+    "bdc_recommendation_mode": "scientific_next_gate_decision"
+  },
+  "explicit_requests_to_bdc": [
+    "Interpret whether the next bounded gate should be single_mechanism_transfer_gate or minimal_multi_mechanism_micro_assembly",
+    "Prefer the narrowest honest next gate supported by current evidence",
+    "Do not allow organism or cell scope expansion"
+  ]
+}

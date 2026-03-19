@@ -1,0 +1,3 @@
+variant_id,slice_id,accepted_rewrite_rate,revert_rate,no_op_rate,semantic_pass_proxy,useful_output_rate,latency,cost,evidence_status,notes
+single_mechanism_transfer_gate,r4_generalization_confirmed,100.0000,0.0000,0.0000,100.0000,100.0000,0.0000,0.0000,measured,Backed by confirmed single-mechanism generalization and still preserves one-mechanism scope.
+minimal_multi_mechanism_micro_assembly,missing_second_mechanism_evidence,0.0000,0.0000,100.0000,0.0000,0.0000,0.0000,0.0000,missing,No measured second mechanism or interaction surface exists yet.

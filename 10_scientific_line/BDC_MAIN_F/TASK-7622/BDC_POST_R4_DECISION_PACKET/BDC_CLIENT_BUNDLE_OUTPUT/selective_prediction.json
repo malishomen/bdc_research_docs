@@ -1,0 +1,13 @@
+{
+  "outcome_class": "recommend_ready",
+  "abstain": false,
+  "operator_action": "direct_recommendation",
+  "reasons": [
+    "recommendation_ready"
+  ],
+  "confidence_band": "high",
+  "deployability_confidence_band": "high",
+  "strategy_mode": "direct_architecture_selection",
+  "tested_variant_count": 2,
+  "calibration_audit_status": "single_case_not_audited"
+}

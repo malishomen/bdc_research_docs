@@ -1,0 +1,2 @@
+case_id,failure_mode,severity,status,note
+POST_R4_SCOPE_GUARD,premature_widening,high,controlled,The gate must not let confirmed R4 single-mechanism generalization masquerade as micro-assembly evidence.
