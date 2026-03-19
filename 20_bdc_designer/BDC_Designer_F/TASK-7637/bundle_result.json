@@ -1,0 +1,28 @@
+{
+  "schema_version": "bdc_designer_cli_v2",
+  "bundle": {
+    "supported": false,
+    "bundle_files": [
+      "calibration.json",
+      "evidence_state_summary.json",
+      "explanation.json",
+      "intake_manifest.json",
+      "measurement_gaps.json",
+      "normalized_packet.json",
+      "recommendation.json",
+      "redesign.json",
+      "selective_prediction.json",
+      "sparse_runtime_support.json",
+      "validation.json",
+      "redesign_memo.md",
+      "client_request_template.md"
+    ],
+    "recommended_variant_id": null,
+    "strategy_mode": "full_hybrid_search",
+    "confidence_band": "low",
+    "calibration_audit_status": "single_case_not_audited",
+    "selective_outcome_class": "abstain_need_more_evidence",
+    "evidence_state_class": "missing_only",
+    "recommended_logical_split": "3_role_logical_redesign"
+  }
+}

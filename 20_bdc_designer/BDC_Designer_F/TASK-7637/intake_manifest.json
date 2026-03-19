@@ -1,0 +1,236 @@
+{
+  "folder_path": "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_PREP",
+  "registry": {
+    "folder_path": "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_PREP",
+    "readme_path": null,
+    "packet_json_path": null,
+    "unified_variant_comparison_csv": null,
+    "provider_comparison_csv": null,
+    "stability_run_metrics_csv": null,
+    "rollout_case_index_csv": null,
+    "guardian_audit_csv": null,
+    "current_runtime_role_mapping_csv": null,
+    "current_slice_metrics_csv": null,
+    "failure_case_registry_csv": null,
+    "prompt_stage_matrix_csv": null,
+    "lead_architect_design_priorities_md": null,
+    "extras": [
+      "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_PREP\\01_WORKFLOW_DESCRIPTOR.md",
+      "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_PREP\\02_RUNTIME_TRUTH.json",
+      "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_PREP\\03_CURRENT_ARCHITECTURE_MAPPING.md",
+      "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_PREP\\04_TESTED_VARIANTS.csv",
+      "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_PREP\\05_SLICE_METRICS.csv",
+      "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_PREP\\06_FAILURE_REGISTRY.md",
+      "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_PREP\\07_RAW_EVIDENCE_MANIFEST.md",
+      "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_PREP\\08_DESIGN_PRIORITIES.md",
+      "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_PREP\\09_OPEN_GAPS_AND_MISSING_DATA.md",
+      "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_PREP\\10_BDC_PACKET_READINESS_SUMMARY.md"
+    ]
+  },
+  "required_inputs": [
+    "readme_path",
+    "packet_json_path",
+    "unified_variant_comparison_csv",
+    "current_runtime_role_mapping_csv",
+    "current_slice_metrics_csv",
+    "failure_case_registry_csv",
+    "prompt_stage_matrix_csv",
+    "lead_architect_design_priorities_md"
+  ],
+  "missing_required_inputs": [
+    "readme_path",
+    "packet_json_path",
+    "unified_variant_comparison_csv",
+    "current_runtime_role_mapping_csv",
+    "current_slice_metrics_csv",
+    "failure_case_registry_csv",
+    "prompt_stage_matrix_csv",
+    "lead_architect_design_priorities_md"
+  ],
+  "normalized_packet": {
+    "schema_version": "BDC_PACKET_V2",
+    "case_id": "Bdc_Packet_Prep_FOLDER_INTAKE",
+    "system_name": "Bdc_Packet_Prep",
+    "task_type": "current_runtime_logical_redesign_decision",
+    "workflow_summary": "Folder intake normalization for current-runtime logical redesign using historical prior evidence and current runtime measurements.",
+    "primary_objective": "Choose the minimum logical redesign for current runtime that improves semantic safety and useful rewrite rate without premature coordination overhead.",
+    "functional_decomposition": [
+      {
+        "function_id": "F1",
+        "name": "planner-like routing and family selection",
+        "level": "system",
+        "criticality": "high"
+      },
+      {
+        "function_id": "F2",
+        "name": "editor path execution",
+        "level": "system",
+        "criticality": "very_high"
+      },
+      {
+        "function_id": "F3",
+        "name": "guardian-like accept/revert/retry logic",
+        "level": "system",
+        "criticality": "very_high"
+      },
+      {
+        "function_id": "F4",
+        "name": "orchestration and bounded iteration",
+        "level": "system",
+        "criticality": "high"
+      }
+    ],
+    "hard_constraints": [
+      "Do not conflate historical measured multi-agent evidence with current stage-based runtime truth.",
+      "Do not optimize for detector score over semantic safety and useful rewrite rate.",
+      "Do not introduce harmonizer-like overhead without positive evidence.",
+      "Preserve semantics, terminology, citations, and academic structure."
+    ],
+    "soft_constraints": [
+      "Increase accepted useful rewrites on forensic_high_ai_5.",
+      "Break the no-op gap on mid_ai_4.",
+      "Reduce revert-heavy aggressive families.",
+      "Keep runtime and coordination overhead controlled."
+    ],
+    "candidate_roles": [],
+    "tested_variants": [],
+    "quality_targets": {
+      "historical_best_prior": null,
+      "recommended_mode_from_previous_run": null,
+      "forensic_high_ai_target_accept_rate_pct": 60,
+      "mid_ai_useful_output_must_be_gt_zero": true
+    },
+    "risk_map": {
+      "highest_risks": [
+        "semantic_reconstruction_damage",
+        "ru_lexical_fusion",
+        "mid_ai_no_op_gap",
+        "historical_current_truth_conflation"
+      ],
+      "moderate_risks": [
+        "premature_harmonizer_overhead",
+        "pre_edit_guard_without_same_slice_evidence"
+      ]
+    },
+    "document_families": [],
+    "failure_examples": [],
+    "variant_metrics_by_slice": [],
+    "open_questions": [
+      "Should guardian-like logic stay post-edit only or also become pre-edit gating?",
+      "What is the minimum additional measurement set needed to move beyond warm_start?"
+    ],
+    "known_implementation_limits": [
+      "Current runtime metrics remain sparse relative to historical batch metrics.",
+      "Useful rewrite rate is still missing on several current slices.",
+      "Current logical role map is measured at system level, not yet isolated by ablation."
+    ],
+    "role_intervention_evidence": [
+      {
+        "role": "planner",
+        "status": "measured",
+        "reason": "Current runtime already contains measured planner-like decisions via AI% routing, prompt family selection, and skip_stages controls."
+      },
+      {
+        "role": "editor",
+        "status": "measured",
+        "reason": "Current pipeline stages constitute the active editor path."
+      },
+      {
+        "role": "guardian",
+        "status": "measured",
+        "reason": "Current safety gate and revert behavior implement guardian-like post-edit validation."
+      },
+      {
+        "role": "harmonizer",
+        "status": "measured_from_historical_report_negative",
+        "reason": "Historical over-segmented variant E regressed naturalness and efficiency."
+      }
+    ],
+    "source_labels": {
+      "case_id": "inferred",
+      "system_name": "user_provided",
+      "task_type": "inferred",
+      "workflow_summary": "inferred",
+      "primary_objective": "inferred",
+      "functional_decomposition": "inferred",
+      "hard_constraints": "user_provided",
+      "soft_constraints": "inferred",
+      "candidate_roles": "inferred",
+      "tested_variants": "user_provided",
+      "quality_targets": "user_provided",
+      "risk_map": "inferred"
+    },
+    "packet_quality_level": "Q4",
+    "metadata": {
+      "input_packet_version": "unknown",
+      "normalization_mode": "folder_intake_role_mapped",
+      "current_runtime_role_mapping": [],
+      "prompt_stage_matrix": [],
+      "design_priorities": "",
+      "intake_manifest": {
+        "folder_path": "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_PREP",
+        "readme_path": null,
+        "packet_json_path": null,
+        "unified_variant_comparison_csv": null,
+        "provider_comparison_csv": null,
+        "stability_run_metrics_csv": null,
+        "rollout_case_index_csv": null,
+        "guardian_audit_csv": null,
+        "current_runtime_role_mapping_csv": null,
+        "current_slice_metrics_csv": null,
+        "failure_case_registry_csv": null,
+        "prompt_stage_matrix_csv": null,
+        "lead_architect_design_priorities_md": null,
+        "extras": [
+          "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_PREP\\01_WORKFLOW_DESCRIPTOR.md",
+          "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_PREP\\02_RUNTIME_TRUTH.json",
+          "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_PREP\\03_CURRENT_ARCHITECTURE_MAPPING.md",
+          "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_PREP\\04_TESTED_VARIANTS.csv",
+          "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_PREP\\05_SLICE_METRICS.csv",
+          "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_PREP\\06_FAILURE_REGISTRY.md",
+          "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_PREP\\07_RAW_EVIDENCE_MANIFEST.md",
+          "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_PREP\\08_DESIGN_PRIORITIES.md",
+          "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_PREP\\09_OPEN_GAPS_AND_MISSING_DATA.md",
+          "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_PREP\\10_BDC_PACKET_READINESS_SUMMARY.md"
+        ]
+      },
+      "evidence_policy": {},
+      "base_packet_reference": null,
+      "sparse_runtime_support_summary": {
+        "supported": true,
+        "verdict_like_metric_cells": 0,
+        "missing_metric_cells": 0,
+        "aggregate_variant_rows": 0
+      }
+    }
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "weak_evidence_no_tested_variants"
+    ],
+    "contradiction_flags": [],
+    "required_field_count": 12,
+    "present_required_field_count": 12,
+    "base_packet_quality_level": "Q4",
+    "validated_packet_quality_level": "Q3",
+    "packet_quality_score": 0.75,
+    "source_label_coverage": {
+      "required_fields_labeled": 12,
+      "total_required_fields": 12
+    },
+    "optional_fields_present": [
+      "document_families",
+      "failure_examples",
+      "variant_metrics_by_slice",
+      "open_questions",
+      "known_implementation_limits",
+      "role_intervention_evidence",
+      "source_labels",
+      "packet_quality_level",
+      "metadata"
+    ]
+  },
+  "supported": false
+}

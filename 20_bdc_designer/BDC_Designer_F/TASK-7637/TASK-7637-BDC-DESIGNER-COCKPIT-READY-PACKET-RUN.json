@@ -1,0 +1,9 @@
+{
+  "task_id": "TASK-7637",
+  "title": "BDC Designer cockpit ready packet run",
+  "change_class": "R0",
+  "objective": "Review the incoming Cockpit BDC_PACKET_READY packet, determine whether it is measured enough for an honest BDC Designer run, execute the run, and record the exact native intake result.",
+  "depends_on": [
+    "TASK-7636"
+  ]
+}
