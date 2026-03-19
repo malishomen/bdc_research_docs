@@ -1,0 +1,7 @@
+{
+  "task_id": "TASK-7628",
+  "title": "R5 transfer execution readiness gate",
+  "change_class": "R1",
+  "objective": "Use a final BDC-linked execution gate to confirm that the approved R5 long-run can be executed without reopening scientific scope.",
+  "depends_on": ["TASK-7627"]
+}
