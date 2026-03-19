@@ -32,7 +32,7 @@
 
 ## Current Scientific State
 - Canonical active scientific phase:
-  - `R5 - single-mechanism transfer long-run`
+  - `post-R5 bounded decision gate`
 - Current canonical scientific truth:
   - `R1 = PASS_TO_R2`
   - `R2 = APPROVE_R2_ENVIRONMENT`
@@ -42,6 +42,7 @@
   - `Post-R4 decision = OPEN_SINGLE_MECHANISM_TRANSFER_GATE`
   - `R5 target = APPROVE_R5_TRANSFER_TARGET`
   - `R5 execution gate = READY_TO_EXECUTE_R5_LONGRUN`
+  - `R5 measured transfer = CONFIRM_SINGLE_MECHANISM_TRANSFER_SIGNAL`
 - Approved canonical bounded environment:
   - `controlled_sequence_memory`
 - Approved mechanism family with bounded evidence:
@@ -62,18 +63,18 @@
 - `BDC Designer` must not overwrite or replace measured scientific gate truth.
 
 ## Current Next Executable Action
-- The next executable project action may now be the actual canonical `R5` long-run.
-- Canonical operator reference:
-  - `docs/experiments/R5_TRANSFER_LONGRUN_EXECUTION_RUNBOOK.md`
-- Canonical launch surface:
-  - `docs/experiments/BDC_R5_TRANSFER_EXECUTION_PACKET/r5_transfer_execution_decision.json`
+- The next executable project action should now be the bounded post-`R5` decision gate.
+- Canonical measured-transfer reference:
+  - `docs/experiments/R5_TRANSFER_MEASURED_GATE_DECISION.md`
+- Canonical measured gate artifact:
+  - `results/r5_cloze_transfer_longrun/r5_transfer_measured_gate_decision.json`
 
 ## Current Scope Limits
 - No multi-mechanism claim is open.
 - No organism claim is open.
 - No cell claim is open.
 - No SuperCell claim is open.
-- No post-`R5` scientific widening is authorized before the measured `R5` long-run result exists.
+- No post-`R5` scientific widening is authorized before an explicit bounded post-`R5` decision gate approves it.
 
 ## Primary Canonical References
 - `CANON.md`

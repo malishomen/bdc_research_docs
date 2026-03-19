@@ -1,0 +1,98 @@
+{
+  "phase": "R5",
+  "task": "single_mechanism_transfer_measured_gate",
+  "verdict": "CONFIRM_SINGLE_MECHANISM_TRANSFER_SIGNAL",
+  "candidate_id": "bounded_working_memory_candidate",
+  "approved_target_id": "symbolic_micro_corpus_cloze_transfer",
+  "required_slice_ids": [
+    "base_cloze_transfer",
+    "combined_bounded_cloze_transfer",
+    "gap_extension_cloze_transfer",
+    "lexicon_extension_cloze_transfer"
+  ],
+  "observed_slice_ids": [
+    "base_cloze_transfer",
+    "combined_bounded_cloze_transfer",
+    "gap_extension_cloze_transfer",
+    "lexicon_extension_cloze_transfer"
+  ],
+  "approval_conditions": {
+    "phase_matches": true,
+    "approved_target_matches": true,
+    "candidate_identity_preserved": true,
+    "total_runs_match": true,
+    "slice_count_matches": true,
+    "required_slices_present": true,
+    "all_slice_counts_match": true,
+    "all_deterministic_replay": true,
+    "all_candidate_gt_no_memory": true,
+    "all_candidate_gt_trivial": true,
+    "all_candidate_gt_random": true
+  },
+  "measured_summary": {
+    "overall_candidate_accuracy_mean": 1.0,
+    "overall_no_memory_control_accuracy_mean": 0.007486979166666667,
+    "overall_trivial_last_symbol_memory_accuracy_mean": 0.0,
+    "overall_random_symbol_accuracy_mean": 0.04602864583333333,
+    "overall_best_control_accuracy_mean": 0.04602864583333333,
+    "min_margin_vs_best_control": 0.90234375,
+    "slice_summaries": [
+      {
+        "slice_id": "base_cloze_transfer",
+        "run_count": 30,
+        "candidate_accuracy_mean": 1.0,
+        "no_memory_control_accuracy_mean": 0.012890625,
+        "trivial_last_symbol_memory_accuracy_mean": 0.0,
+        "random_symbol_accuracy_mean": 0.046484375,
+        "best_control_accuracy_mean": 0.046484375,
+        "all_deterministic_replay": true,
+        "all_candidate_gt_no_memory": true,
+        "all_candidate_gt_trivial": true,
+        "all_candidate_gt_random": true,
+        "min_margin_vs_best_control": 0.90234375
+      },
+      {
+        "slice_id": "combined_bounded_cloze_transfer",
+        "run_count": 30,
+        "candidate_accuracy_mean": 1.0,
+        "no_memory_control_accuracy_mean": 0.0006510416666666666,
+        "trivial_last_symbol_memory_accuracy_mean": 0.0,
+        "random_symbol_accuracy_mean": 0.04296875,
+        "best_control_accuracy_mean": 0.04296875,
+        "all_deterministic_replay": true,
+        "all_candidate_gt_no_memory": true,
+        "all_candidate_gt_trivial": true,
+        "all_candidate_gt_random": true,
+        "min_margin_vs_best_control": 0.91015625
+      },
+      {
+        "slice_id": "gap_extension_cloze_transfer",
+        "run_count": 30,
+        "candidate_accuracy_mean": 1.0,
+        "no_memory_control_accuracy_mean": 0.000390625,
+        "trivial_last_symbol_memory_accuracy_mean": 0.0,
+        "random_symbol_accuracy_mean": 0.048046875,
+        "best_control_accuracy_mean": 0.048046875,
+        "all_deterministic_replay": true,
+        "all_candidate_gt_no_memory": true,
+        "all_candidate_gt_trivial": true,
+        "all_candidate_gt_random": true,
+        "min_margin_vs_best_control": 0.91015625
+      },
+      {
+        "slice_id": "lexicon_extension_cloze_transfer",
+        "run_count": 30,
+        "candidate_accuracy_mean": 1.0,
+        "no_memory_control_accuracy_mean": 0.016015625,
+        "trivial_last_symbol_memory_accuracy_mean": 0.0,
+        "random_symbol_accuracy_mean": 0.046614583333333334,
+        "best_control_accuracy_mean": 0.046614583333333334,
+        "all_deterministic_replay": true,
+        "all_candidate_gt_no_memory": true,
+        "all_candidate_gt_trivial": true,
+        "all_candidate_gt_random": true,
+        "min_margin_vs_best_control": 0.92578125
+      }
+    ]
+  }
+}

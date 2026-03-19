@@ -1,0 +1,7 @@
+{
+  "task_id": "TASK-7631",
+  "title": "R5 measured transfer gate",
+  "change_class": "R1",
+  "objective": "Build the canonical measured post-R5 gate from the completed 120-run transfer surface, run the resulting packet through BDC Designer, and record the official post-R5 scientific verdict.",
+  "depends_on": ["TASK-7628", "TASK-7630"]
+}
