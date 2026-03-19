@@ -1,0 +1,7 @@
+{
+  "task_id": "TASK-7630",
+  "title": "BDC hierarchy and execution guard",
+  "change_class": "R1",
+  "objective": "Add a canonical source-of-truth and execution hierarchy protocol plus a preflight verifier so the project cannot drift away from the current bounded strategy or forget the authorized next action.",
+  "depends_on": ["TASK-7629"]
+}
