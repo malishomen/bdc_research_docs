@@ -1,0 +1,88 @@
+﻿{
+    "collected_at_utc":  "2026-03-19T00:09:55Z",
+    "execute":  true,
+    "codex_protected":  true,
+    "target_count":  7,
+    "targets":  [
+                    {
+                        "name":  "wslservice.exe",
+                        "process_id":  4732,
+                        "command_line":  "\"C:\\Program Files\\WSL\\wslservice.exe\"",
+                        "action":  "terminate"
+                    },
+                    {
+                        "name":  "node.exe",
+                        "process_id":  250180,
+                        "command_line":  "\"C:\\Program Files\\nodejs\\node.exe\" \"C:\\Program Files\\nodejs/node_modules/npm/bin/npx-cli.js\" next dev -p 3001",
+                        "action":  "terminate"
+                    },
+                    {
+                        "name":  "node.exe",
+                        "process_id":  117176,
+                        "command_line":  "\"node\"   \"C:\\Users\\user\\.claude.work\\Capstory.ru\\capstory_main_project\\frontend\\node_modules\\.bin\\\\..\\next\\dist\\bin\\next\" dev -p 3001",
+                        "action":  "terminate"
+                    },
+                    {
+                        "name":  "node.exe",
+                        "process_id":  62032,
+                        "command_line":  "\"C:\\Program Files\\nodejs\\\\node.exe\"  \"C:\\Program Files\\nodejs\\\\node_modules\\npm\\bin\\npx-cli.js\" @playwright/mcp@latest",
+                        "action":  "terminate"
+                    },
+                    {
+                        "name":  "com.docker.backend.exe",
+                        "process_id":  21272,
+                        "command_line":  "\"C:\\Program Files\\Docker\\Docker\\resources\\com.docker.backend.exe\"",
+                        "action":  "terminate"
+                    },
+                    {
+                        "name":  "com.docker.backend.exe",
+                        "process_id":  178784,
+                        "command_line":  "\"C:\\Program Files\\Docker\\Docker\\resources\\com.docker.backend.exe\" services",
+                        "action":  "terminate"
+                    },
+                    {
+                        "name":  "vmmemWSL",
+                        "process_id":  46208,
+                        "command_line":  "",
+                        "action":  "terminate"
+                    }
+                ],
+    "terminated":  [
+                       {
+                           "process_id":  4732,
+                           "name":  "wslservice.exe",
+                           "terminated":  true
+                       },
+                       {
+                           "process_id":  250180,
+                           "name":  "node.exe",
+                           "terminated":  true
+                       },
+                       {
+                           "process_id":  117176,
+                           "name":  "node.exe",
+                           "terminated":  true
+                       },
+                       {
+                           "process_id":  62032,
+                           "name":  "node.exe",
+                           "terminated":  true
+                       },
+                       {
+                           "process_id":  21272,
+                           "name":  "com.docker.backend.exe",
+                           "terminated":  true
+                       },
+                       {
+                           "process_id":  178784,
+                           "name":  "com.docker.backend.exe",
+                           "terminated":  true
+                       },
+                       {
+                           "process_id":  46208,
+                           "name":  "vmmemWSL",
+                           "terminated":  false,
+                           "error":  "Cannot stop process \"vmmemWSL (46208)\" because of the following error: Access is denied"
+                       }
+                   ]
+}

@@ -1,0 +1,182 @@
+﻿{
+    "collected_at_utc":  "2026-03-19T00:10:03Z",
+    "logical_cpu":  8,
+    "total_cpu_percent":  17,
+    "free_memory_mb":  15563,
+    "gpu":  [
+                {
+                    "name":  "NVIDIA GeForce GTX 1080 Ti",
+                    "utilization_gpu":  "2 %",
+                    "utilization_memory":  "0 %",
+                    "memory_used":  "673 MiB",
+                    "memory_total":  "11264 MiB",
+                    "temperature_gpu":  "54"
+                }
+            ],
+    "python_process_count":  0,
+    "python_processes":  {
+
+                         },
+    "top_processes":  [
+                          {
+                              "Id":  113296,
+                              "ProcessName":  "cowork-svc",
+                              "CPU":  163362.953125,
+                              "WS_MB":  31.8,
+                              "PM_MB":  32,
+                              "StartTime":  "\/Date(1773653664974)\/"
+                          },
+                          {
+                              "Id":  4644,
+                              "ProcessName":  "MsMpEng",
+                              "CPU":  26562.984375,
+                              "WS_MB":  340.6,
+                              "PM_MB":  426.9,
+                              "StartTime":  "\/Date(1772695359007)\/"
+                          },
+                          {
+                              "Id":  4,
+                              "ProcessName":  "System",
+                              "CPU":  15631.625,
+                              "WS_MB":  0.9,
+                              "PM_MB":  0,
+                              "StartTime":  "\/Date(1772695343430)\/"
+                          },
+                          {
+                              "Id":  1768,
+                              "ProcessName":  "dwm",
+                              "CPU":  7540.5,
+                              "WS_MB":  58.3,
+                              "PM_MB":  126.1,
+                              "StartTime":  "\/Date(1772695357394)\/"
+                          },
+                          {
+                              "Id":  182712,
+                              "ProcessName":  "dllhost",
+                              "CPU":  7372.09375,
+                              "WS_MB":  8.8,
+                              "PM_MB":  3.8,
+                              "StartTime":  "\/Date(1773699558680)\/"
+                          },
+                          {
+                              "Id":  8636,
+                              "ProcessName":  "RGBFusion",
+                              "CPU":  5287.59375,
+                              "WS_MB":  30.8,
+                              "PM_MB":  159.8,
+                              "StartTime":  "\/Date(1772695364536)\/"
+                          },
+                          {
+                              "Id":  4372,
+                              "ProcessName":  "MacriumService",
+                              "CPU":  3142.5,
+                              "WS_MB":  20.1,
+                              "PM_MB":  70,
+                              "StartTime":  "\/Date(1772695358891)\/"
+                          },
+                          {
+                              "Id":  267812,
+                              "ProcessName":  "Codex",
+                              "CPU":  2744,
+                              "WS_MB":  553.6,
+                              "PM_MB":  658.9,
+                              "StartTime":  "\/Date(1773677970915)\/"
+                          },
+                          {
+                              "Id":  15348,
+                              "ProcessName":  "svchost",
+                              "CPU":  2722.125,
+                              "WS_MB":  21.9,
+                              "PM_MB":  21.6,
+                              "StartTime":  "\/Date(1772695404222)\/"
+                          },
+                          {
+                              "Id":  2844,
+                              "ProcessName":  "svchost",
+                              "CPU":  2591.4375,
+                              "WS_MB":  5.9,
+                              "PM_MB":  2.7,
+                              "StartTime":  "\/Date(1772695357834)\/"
+                          },
+                          {
+                              "Id":  148988,
+                              "ProcessName":  "msedge",
+                              "CPU":  1814.25,
+                              "WS_MB":  55.4,
+                              "PM_MB":  42,
+                              "StartTime":  "\/Date(1773637899801)\/"
+                          },
+                          {
+                              "Id":  2912,
+                              "ProcessName":  "Memory Compression",
+                              "CPU":  1678.171875,
+                              "WS_MB":  957.8,
+                              "PM_MB":  13.9,
+                              "StartTime":  "\/Date(1772695357859)\/"
+                          },
+                          {
+                              "Id":  1176,
+                              "ProcessName":  "svchost",
+                              "CPU":  1436.953125,
+                              "WS_MB":  46.1,
+                              "PM_MB":  30.4,
+                              "StartTime":  "\/Date(1772695357006)\/"
+                          },
+                          {
+                              "Id":  135728,
+                              "ProcessName":  "msedge",
+                              "CPU":  1219,
+                              "WS_MB":  210.8,
+                              "PM_MB":  412.4,
+                              "StartTime":  "\/Date(1773637899509)\/"
+                          },
+                          {
+                              "Id":  21580,
+                              "ProcessName":  "audiodg",
+                              "CPU":  1185.640625,
+                              "WS_MB":  13.9,
+                              "PM_MB":  7.2,
+                              "StartTime":  "\/Date(1772704710369)\/"
+                          },
+                          {
+                              "Id":  130916,
+                              "ProcessName":  "Codex",
+                              "CPU":  1172.359375,
+                              "WS_MB":  155.3,
+                              "PM_MB":  239.9,
+                              "StartTime":  "\/Date(1773677969838)\/"
+                          },
+                          {
+                              "Id":  9284,
+                              "ProcessName":  "nvcontainer",
+                              "CPU":  1048.6875,
+                              "WS_MB":  66.6,
+                              "PM_MB":  68.8,
+                              "StartTime":  "\/Date(1772695366323)\/"
+                          },
+                          {
+                              "Id":  4168,
+                              "ProcessName":  "svchost",
+                              "CPU":  972.671875,
+                              "WS_MB":  48.3,
+                              "PM_MB":  45.1,
+                              "StartTime":  "\/Date(1772695358820)\/"
+                          },
+                          {
+                              "Id":  988,
+                              "ProcessName":  "csrss",
+                              "CPU":  816.6875,
+                              "WS_MB":  6.2,
+                              "PM_MB":  3.8,
+                              "StartTime":  "\/Date(1772695356505)\/"
+                          },
+                          {
+                              "Id":  269548,
+                              "ProcessName":  "msedge",
+                              "CPU":  737.578125,
+                              "WS_MB":  449.8,
+                              "PM_MB":  311.8,
+                              "StartTime":  "\/Date(1773637899281)\/"
+                          }
+                      ]
+}
