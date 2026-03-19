@@ -99,5 +99,6 @@ If a new session starts, the correct next action is:
 1. treat `controlled_sequence_memory` as the approved canonical bounded `R2` environment,
 2. treat `bounded_working_memory_candidate` as a mechanism with two bounded positive signals inside the same environment family,
 3. treat `single_mechanism_generalization` as the selected and already opened next bounded gate,
-4. execute `TASK-7618` next,
-5. do not open micro-assembly until it gets its own explicit bounded evidence gate.
+4. treat `docs/experiments/R4_SINGLE_MECHANISM_GENERALIZATION_PRESSURE_MATRIX.md` as the canonical bounded `R4` pressure surface,
+5. execute `TASK-7619` next,
+6. do not open micro-assembly until it gets its own explicit bounded evidence gate.
