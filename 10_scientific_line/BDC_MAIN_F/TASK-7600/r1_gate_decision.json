@@ -1,0 +1,9 @@
+{
+  "task": "selection_physics_reboot_r1_gate_audit",
+  "generated_at_utc": "2026-03-19T07:17:44Z",
+  "in_root": "results\\selection_physics_reboot_r1_full",
+  "out_dir": "results\\selection_physics_reboot_r1_full\\aggregates",
+  "verdict": "PASS_TO_R2",
+  "required_legacy_control_present": true,
+  "records_evaluated": 6
+}

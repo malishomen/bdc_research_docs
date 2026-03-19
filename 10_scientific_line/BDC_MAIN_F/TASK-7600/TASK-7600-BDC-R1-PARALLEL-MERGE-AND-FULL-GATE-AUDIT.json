@@ -1,0 +1,31 @@
+{
+  "task_id": "TASK-7600",
+  "title": "Merge canonical R1 parallel outputs and compute full gate verdict",
+  "change_class": "R1",
+  "objective": "Create the minimum merge step required to turn completed parallel R1 worker outputs into a root-level aggregate-ready output set, then run the canonical gate audit on the full completed run.",
+  "depends_on": [
+    "TASK-7593",
+    "TASK-7599"
+  ],
+  "deliverables": [
+    "scripts/edp1/merge_selection_physics_parallel_outputs.py",
+    "reports/analysis/TASK-7600-BDC-R1-PARALLEL-MERGE-AND-FULL-GATE-AUDIT/TASK-7600_BRIEF_REPORT.md",
+    "results/selection_physics_reboot_r1_full/merged_run_index.csv",
+    "results/selection_physics_reboot_r1_full/merged_resolved_manifest.json",
+    "results/selection_physics_reboot_r1_full/merged_runner_summary.json",
+    "results/selection_physics_reboot_r1_full/aggregates/r1_gate_decision.json"
+  ],
+  "verification": [
+    "python scripts/edp1/merge_selection_physics_parallel_outputs.py --in_root results/selection_physics_reboot_r1_full",
+    "python scripts/edp1/aggregate_selection_physics_reboot.py --in_root results/selection_physics_reboot_r1_full --out_dir results/selection_physics_reboot_r1_full/aggregates"
+  ],
+  "definition_of_done": [
+    "The merge step creates a root-level run index and resolved manifest from completed worker outputs.",
+    "The canonical aggregate gate audit runs successfully on the merged full output root.",
+    "The resulting verdict is documented without overclaiming beyond the R1 gate contract."
+  ],
+  "notes": [
+    "Do not rewrite or mutate worker-level scientific outputs.",
+    "Only add the minimum root-level merge artifacts required for canonical aggregation."
+  ]
+}
