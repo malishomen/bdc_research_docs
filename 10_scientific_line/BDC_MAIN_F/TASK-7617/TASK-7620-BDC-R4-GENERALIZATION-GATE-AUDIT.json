@@ -1,0 +1,7 @@
+{
+  "task_id": "TASK-7620",
+  "title": "R4 generalization gate audit",
+  "change_class": "R1",
+  "objective": "Decide whether single-mechanism generalization is confirmed or the project remains in R4 generalization.",
+  "depends_on": ["TASK-7619"]
+}

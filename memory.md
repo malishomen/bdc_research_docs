@@ -62,6 +62,10 @@
   - `docs/experiments/R3_SEQUENCE_MEMORY_MECHANISM_GATE_DECISION.md`
   - `docs/experiments/R3_SECOND_BOUNDED_SIGNAL_GATE_DECISION.md`
   - `docs/experiments/POST_SECOND_SIGNAL_GATE_DECISION.md`
+- Canonical R4 docs:
+  - `docs/experiments/EXP-0810_R4_SINGLE_MECHANISM_GENERALIZATION.md`
+  - `docs/experiments/BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PREEXPERIMENT_GATE.md`
+  - `docs/experiments/EXP-0811_R4_SINGLE_MECHANISM_GENERALIZATION_IMPLEMENTATION_PACKAGE.md`
 
 ## Current Task Chain
 - `TASK-7608` - R3 mechanism package
@@ -73,7 +77,10 @@
 - `TASK-7614` - second bounded signal gate
 - `TASK-7615` - post-second-signal decision package
 - `TASK-7616` - post-second-signal decision gate
-- next bounded task not yet opened: single-mechanism generalization gate
+- `TASK-7617` - single-mechanism generalization package
+- `TASK-7618` - generalization pressure matrix
+- `TASK-7619` - generalization implementation and measurement
+- `TASK-7620` - generalization gate audit
 
 ## BDC Designer Rule
 - For scientific reboot work, `BDC Designer` must be used first as pre-experiment narrowing/evidence discipline.
@@ -91,6 +98,6 @@
 If a new session starts, the correct next action is:
 1. treat `controlled_sequence_memory` as the approved canonical bounded `R2` environment,
 2. treat `bounded_working_memory_candidate` as a mechanism with two bounded positive signals inside the same environment family,
-3. treat `single_mechanism_generalization` as the selected next bounded gate,
-4. do not open micro-assembly until it gets its own explicit bounded evidence gate,
-5. keep organism/cell/multi-mechanism claims closed until that later gate is explicit.
+3. treat `single_mechanism_generalization` as the selected and already opened next bounded gate,
+4. execute `TASK-7618` next,
+5. do not open micro-assembly until it gets its own explicit bounded evidence gate.

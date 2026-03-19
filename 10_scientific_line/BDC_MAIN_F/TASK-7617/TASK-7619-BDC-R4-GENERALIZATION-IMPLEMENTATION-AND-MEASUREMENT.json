@@ -1,0 +1,7 @@
+{
+  "task_id": "TASK-7619",
+  "title": "R4 generalization implementation and measurement",
+  "change_class": "R1",
+  "objective": "Implement deterministic generalization artifacts and measure the same FIFO mechanism against the same controls.",
+  "depends_on": ["TASK-7618"]
+}

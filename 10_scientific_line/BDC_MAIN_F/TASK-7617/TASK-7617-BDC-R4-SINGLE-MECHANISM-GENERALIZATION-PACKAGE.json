@@ -1,0 +1,12 @@
+{
+  "task_id": "TASK-7617",
+  "title": "R4 single-mechanism generalization package",
+  "change_class": "R1",
+  "objective": "Open the bounded single-mechanism generalization phase selected by the post-second-signal decision gate.",
+  "depends_on": ["TASK-7616"],
+  "deliverables": [
+    "docs/experiments/EXP-0810_R4_SINGLE_MECHANISM_GENERALIZATION.md",
+    "docs/experiments/BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PREEXPERIMENT_GATE.md",
+    "docs/experiments/EXP-0811_R4_SINGLE_MECHANISM_GENERALIZATION_IMPLEMENTATION_PACKAGE.md"
+  ]
+}
