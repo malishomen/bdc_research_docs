@@ -1,0 +1,5 @@
+"runtime_component","logical_bdc_role","status","why_mapped_this_way"
+"phase_scope","orchestrator","active","Owns the bounded R2 question and blocks organism-level drift."
+"candidate_matrix","planner","active","Defines candidate environment families and comparison dimensions."
+"baseline_harness","editor","active","Defines deterministic generation, baseline tables, and failure exposure rules."
+"r2_gate_audit","guardian","active","Converts the bounded evidence surface into APPROVE_R2_ENVIRONMENT or REMAIN_IN_R2."

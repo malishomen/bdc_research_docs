@@ -1,0 +1,23 @@
+{
+  "phase": "R2",
+  "task": "controlled_task_environment_gate",
+  "generated_at_utc": "2026-03-19T00:00:00Z",
+  "verdict": "REMAIN_IN_R2",
+  "reason": "No candidate environment has deterministic implemented generation proof and measured baseline execution yet.",
+  "measured_support": [
+    "candidate matrix exists",
+    "baseline and measurement harness exists",
+    "R1 previously passed and unblocked R2"
+  ],
+  "blocking_missing_evidence": [
+    "implemented deterministic environment generation",
+    "executed baseline table",
+    "measured trivial-strategy exposure",
+    "candidate-specific failure observations"
+  ],
+  "next_required_task": "TASK-7603_plus_TASK-7604_outputs must be converted into executable candidate-specific artifacts before any APPROVE_R2_ENVIRONMENT verdict is allowed.",
+  "forbidden_interpretations": [
+    "R1 PASS does not approve an R2 environment by itself",
+    "BDC Designer support does not replace measured environment evidence"
+  ]
+}

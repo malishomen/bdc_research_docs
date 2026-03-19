@@ -1,0 +1,25 @@
+{
+  "supported": true,
+  "bundle_files": [
+    "calibration.json",
+    "evidence_state_summary.json",
+    "explanation.json",
+    "intake_manifest.json",
+    "measurement_gaps.json",
+    "normalized_packet.json",
+    "recommendation.json",
+    "redesign.json",
+    "selective_prediction.json",
+    "sparse_runtime_support.json",
+    "validation.json",
+    "redesign_memo.md",
+    "client_request_template.md"
+  ],
+  "recommended_variant_id": "controlled_sequence_memory",
+  "strategy_mode": "full_hybrid_search",
+  "confidence_band": "medium",
+  "calibration_audit_status": "single_case_not_audited",
+  "selective_outcome_class": "recommend_with_guardrails",
+  "evidence_state_class": "inferred_only",
+  "recommended_logical_split": "4_role_logical_redesign"
+}

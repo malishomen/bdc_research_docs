@@ -1,0 +1,28 @@
+{
+  "valid": true,
+  "errors": [],
+  "warnings": [
+    "sparse_runtime_missing_metric_cells_present"
+  ],
+  "contradiction_flags": [],
+  "required_field_count": 12,
+  "present_required_field_count": 12,
+  "base_packet_quality_level": "Q4",
+  "validated_packet_quality_level": "Q4",
+  "packet_quality_score": 1.0,
+  "source_label_coverage": {
+    "required_fields_labeled": 12,
+    "total_required_fields": 12
+  },
+  "optional_fields_present": [
+    "document_families",
+    "failure_examples",
+    "variant_metrics_by_slice",
+    "open_questions",
+    "known_implementation_limits",
+    "role_intervention_evidence",
+    "source_labels",
+    "packet_quality_level",
+    "metadata"
+  ]
+}

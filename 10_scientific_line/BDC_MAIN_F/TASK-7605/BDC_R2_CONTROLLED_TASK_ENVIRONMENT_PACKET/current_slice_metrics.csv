@@ -1,0 +1,4 @@
+variant_id,slice_id,accepted_rewrite_rate,revert_rate,no_op_rate,semantic_pass_proxy,useful_output_rate,latency,cost,evidence_status,notes
+controlled_sequence_memory,r2_candidate_matrix,0.0000,0.0000,100.0000,100.0000,0.0000,0.0000,0.0000,inferred_only,deterministic generation not yet implemented; baseline plan exists
+controlled_uncertainty_abstention,r2_candidate_matrix,0.0000,0.0000,100.0000,100.0000,0.0000,0.0000,0.0000,inferred_only,ambiguity constructor not yet implemented; metric plan exists
+micro_corpus_cloze,r2_candidate_matrix,0.0000,0.0000,100.0000,100.0000,0.0000,0.0000,0.0000,inferred_only,corpus/masking contract not yet implemented; metric plan exists

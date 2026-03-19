@@ -1,0 +1,4 @@
+"stage_id","stage_name","objective","measured_output","evidence_status"
+"matrix","candidate environment matrix","Define the bounded candidate family surface.","R2_CANDIDATE_ENVIRONMENT_MATRIX.json","measured"
+"harness","baseline and measurement harness","Define baselines, trivial strategies, and failure registry.","R2_BASELINE_AND_MEASUREMENT_HARNESS.json","measured"
+"gate","R2 environment gate","Choose APPROVE_R2_ENVIRONMENT or REMAIN_IN_R2.","r2_gate_decision.json","not_yet_measured"

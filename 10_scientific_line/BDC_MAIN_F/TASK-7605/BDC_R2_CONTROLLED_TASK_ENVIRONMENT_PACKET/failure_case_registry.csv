@@ -1,0 +1,4 @@
+"case_id","failure_mode","severity","status","note"
+"R2_NO_IMPLEMENTED_ENVIRONMENT","missing_measured_environment","high","open","No candidate environment has deterministic implemented generation proof yet."
+"R2_NO_BASELINE_EXECUTION","missing_measured_baselines","high","open","Baseline and metric contracts are defined but not yet executed."
+"R2_PREMATURE_APPROVAL_RISK","forbidden_overclaim","high","controlled","R2 must not approve an environment on documentation-only evidence."
