@@ -1,0 +1,7 @@
+{
+  "task_id": "TASK-7616",
+  "title": "post-second-signal decision gate",
+  "change_class": "R1",
+  "objective": "Use a bounded BDC-facing packet to decide whether the next gate should be single-mechanism generalization or minimal multi-mechanism micro-assembly.",
+  "depends_on": ["TASK-7615"]
+}

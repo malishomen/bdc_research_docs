@@ -1,0 +1,12 @@
+{
+  "task_id": "TASK-7615",
+  "title": "post-second-signal decision package",
+  "change_class": "R1",
+  "objective": "Open a bounded post-second-signal decision gate to choose the next honest scientific package without widening scope automatically.",
+  "depends_on": ["TASK-7614"],
+  "deliverables": [
+    "docs/experiments/EXP-0808_POST_SECOND_SIGNAL_BOUNDED_DECISION_GATE.md",
+    "docs/experiments/BDC_POST_SECOND_SIGNAL_PREEXPERIMENT_GATE.md",
+    "docs/experiments/EXP-0809_POST_SECOND_SIGNAL_DECISION_IMPLEMENTATION_PACKAGE.md"
+  ]
+}

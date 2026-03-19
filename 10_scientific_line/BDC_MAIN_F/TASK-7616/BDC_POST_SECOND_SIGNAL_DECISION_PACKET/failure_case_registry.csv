@@ -1,0 +1,4 @@
+"case_id","failure_mode","severity","status","note"
+"POST_SECOND_SIGNAL_PREMATURE_ASSEMBLY","forbidden_overclaim","high","open","Two single-mechanism signals do not equal measured assembly evidence."
+"POST_SECOND_SIGNAL_NO_SECOND_MECHANISM","missing_component_evidence","high","open","No second mechanism candidate has been implemented or measured."
+"POST_SECOND_SIGNAL_GENERALIZATION_UNMEASURED","generalization_still_future_work","medium","controlled","Single-mechanism generalization is still a next gate, not a measured result."

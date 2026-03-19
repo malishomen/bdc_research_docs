@@ -32,6 +32,11 @@
   - `CONFIRM_SECOND_BOUNDED_SIGNAL`
 - Continuation gate artifact:
   - `results/r3_control_resistant_sequence_memory/second_bounded_signal_decision.json`
+- Post-second-signal decision gate is complete.
+- Canonical decision verdict:
+  - `OPEN_SINGLE_MECHANISM_GENERALIZATION_GATE`
+- Decision artifact:
+  - `docs/experiments/POST_SECOND_SIGNAL_GATE_DECISION.md`
 
 ## Current Analytical State
 - Full `R1` packet was run through `BDC Designer`.
@@ -49,13 +54,14 @@
 
 ## Current Next Phase
 - Active scientific target:
-  - `R3 - Post-Second-Signal Bounded Decision`
+  - `R4 - Single-Mechanism Generalization Gate`
 - Canonical R3 docs:
   - `docs/experiments/EXP-0804_R3_SEQUENCE_MEMORY_MECHANISM_VALIDATION.md`
   - `docs/experiments/BDC_R3_SEQUENCE_MEMORY_MECHANISM_PREEXPERIMENT_GATE.md`
   - `docs/experiments/EXP-0805_R3_SEQUENCE_MEMORY_MECHANISM_IMPLEMENTATION_PACKAGE.md`
   - `docs/experiments/R3_SEQUENCE_MEMORY_MECHANISM_GATE_DECISION.md`
   - `docs/experiments/R3_SECOND_BOUNDED_SIGNAL_GATE_DECISION.md`
+  - `docs/experiments/POST_SECOND_SIGNAL_GATE_DECISION.md`
 
 ## Current Task Chain
 - `TASK-7608` - R3 mechanism package
@@ -65,7 +71,9 @@
 - `TASK-7612` - control-resistant continuation package
 - `TASK-7613` - control-resistant artifact
 - `TASK-7614` - second bounded signal gate
-- next bounded task not yet opened: post-second-signal decision gate
+- `TASK-7615` - post-second-signal decision package
+- `TASK-7616` - post-second-signal decision gate
+- next bounded task not yet opened: single-mechanism generalization gate
 
 ## BDC Designer Rule
 - For scientific reboot work, `BDC Designer` must be used first as pre-experiment narrowing/evidence discipline.
@@ -83,6 +91,6 @@
 If a new session starts, the correct next action is:
 1. treat `controlled_sequence_memory` as the approved canonical bounded `R2` environment,
 2. treat `bounded_working_memory_candidate` as a mechanism with two bounded positive signals inside the same environment family,
-3. do not widen scope automatically just because the second signal exists,
-4. open the next broader claim only through a new bounded pre-experiment gate,
-5. keep organism/cell/multi-mechanism claims closed until that gate is explicit.
+3. treat `single_mechanism_generalization` as the selected next bounded gate,
+4. do not open micro-assembly until it gets its own explicit bounded evidence gate,
+5. keep organism/cell/multi-mechanism claims closed until that later gate is explicit.

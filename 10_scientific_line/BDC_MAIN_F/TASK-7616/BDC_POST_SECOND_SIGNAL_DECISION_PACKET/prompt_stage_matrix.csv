@@ -1,0 +1,4 @@
+"stage_id","stage_name","objective","measured_output","evidence_status"
+"r3_mechanism_gate","first bounded mechanism gate","Establish a first bounded mechanism signal.","R3_SEQUENCE_MEMORY_MECHANISM_GATE_DECISION.md","measured"
+"r3_second_signal","control-resistant continuation","Confirm a second bounded signal on a stricter slice.","R3_SECOND_BOUNDED_SIGNAL_GATE_DECISION.md","measured"
+"post_signal_decision","next bounded gate selection","Choose the next honest bounded gate.","post_second_signal_gate_decision.json","inferred_only"

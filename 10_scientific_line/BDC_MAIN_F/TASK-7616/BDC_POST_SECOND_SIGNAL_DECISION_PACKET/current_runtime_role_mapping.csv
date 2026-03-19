@@ -1,0 +1,5 @@
+"runtime_component","logical_bdc_role","status","why_mapped_this_way"
+"decision_scope","orchestrator","active","Keeps the next-step question bounded after the second signal."
+"evidence_asymmetry","planner","active","Represents two measured single-mechanism signals versus zero measured assembly evidence."
+"packet_surface","editor","active","Carries the explicit next-gate comparison and evidence labels."
+"decision_gate","guardian","active","Chooses the narrowest honest next gate."

@@ -1,0 +1,32 @@
+{
+  "packet_version": "POST_SECOND_SIGNAL_DECISION_V1",
+  "packet_id": "BDC_POST_SECOND_SIGNAL_DECISION",
+  "project": "Bio_Digital_Core",
+  "system_name": "BDC_Scientific_Line",
+  "base_packet_reference": "TASK-7614",
+  "evidence_policy": {
+    "measured": [
+      "two bounded positive signals exist for bounded_working_memory_candidate",
+      "one of those signals is control-resistant",
+      "no multi-mechanism artifact has been measured"
+    ],
+    "inferred": [
+      "single_mechanism_generalization is a plausible next gate because it preserves the validated mechanism family",
+      "minimal_multi_mechanism_micro_assembly is a plausible future gate but not yet empirically supported"
+    ],
+    "missing": [
+      "any measured second mechanism",
+      "any measured mechanism interaction surface",
+      "any measured micro-assembly behavior"
+    ]
+  },
+  "positioning": {
+    "historical_best_prior": "bounded_working_memory_candidate_two_signal_state",
+    "bdc_recommendation_mode": "scientific_next_gate_decision"
+  },
+  "explicit_requests_to_bdc": [
+    "Interpret whether the next bounded gate should remain single-mechanism and broaden pressure, or open minimal multi-mechanism micro-assembly",
+    "Prefer the narrowest honest next gate supported by current evidence",
+    "Do not allow organism or cell scope expansion"
+  ]
+}
