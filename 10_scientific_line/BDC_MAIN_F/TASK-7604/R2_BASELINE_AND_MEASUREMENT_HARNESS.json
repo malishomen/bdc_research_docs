@@ -1,0 +1,125 @@
+{
+  "phase": "R2",
+  "task": "baseline_and_measurement_harness",
+  "generated_at_utc": "2026-03-19T00:00:00Z",
+  "global_rules": {
+    "determinism_required": true,
+    "minimum_baselines": [
+      "random",
+      "trivial_no_op_or_constant",
+      "task_specific_simple_heuristic"
+    ],
+    "required_fields_per_candidate": [
+      "environment_id",
+      "deterministic_generation_proof",
+      "baseline_table",
+      "trivial_strategy_registry",
+      "failure_registry",
+      "primary_metric",
+      "gate_blockers"
+    ],
+    "forbidden": [
+      "post_hoc_threshold_tuning",
+      "implicit baselines",
+      "vague interpretability claims",
+      "organism-level rhetoric"
+    ]
+  },
+  "candidates": [
+    {
+      "environment_id": "controlled_sequence_memory",
+      "deterministic_generation_proof": "seeded sequence constructor with explicit alphabet, length bounds, and target-generation rule",
+      "primary_metric": "sequence_recall_accuracy",
+      "secondary_metrics": [
+        "position_sensitive_recall",
+        "state_retention_length",
+        "trivial_strategy_advantage_gap"
+      ],
+      "baseline_table": [
+        "random_symbol_predictor",
+        "always_repeat_last_symbol",
+        "majority_symbol_predictor"
+      ],
+      "trivial_strategy_registry": [
+        "always_zero_memory",
+        "constant_symbol_output",
+        "copy_last_symbol_only"
+      ],
+      "failure_registry": [
+        "sequence_shortcut_solution",
+        "memory_not_needed",
+        "dataset_generation_drift"
+      ],
+      "gate_blockers": [
+        "if task can be solved by last-token heuristic alone",
+        "if sequence generator is not fully reproducible"
+      ]
+    },
+    {
+      "environment_id": "controlled_uncertainty_abstention",
+      "deterministic_generation_proof": "seeded ambiguous-case constructor with explicit ambiguity labels and non-ambiguous controls",
+      "primary_metric": "utility_weighted_abstention_score",
+      "secondary_metrics": [
+        "false_confident_error_rate",
+        "abstention_precision",
+        "non_ambiguous_accuracy"
+      ],
+      "baseline_table": [
+        "always_decide_no_abstain",
+        "always_abstain",
+        "simple_threshold_heuristic"
+      ],
+      "trivial_strategy_registry": [
+        "abstain_everything",
+        "decide_everything_as_one_class",
+        "memorize_ambiguity_marker_only"
+      ],
+      "failure_registry": [
+        "ambiguity_marker_leakage",
+        "abstention_reward_hacking",
+        "non_causal ambiguity construction"
+      ],
+      "gate_blockers": [
+        "if ambiguity can be detected by a leaked shortcut",
+        "if abstention score can be optimized by abstaining everywhere"
+      ]
+    },
+    {
+      "environment_id": "micro_corpus_cloze",
+      "deterministic_generation_proof": "seeded micro-corpus selection with explicit snippet list, masking rule, and token normalization contract",
+      "primary_metric": "bounded_cloze_accuracy",
+      "secondary_metrics": [
+        "baseline_delta",
+        "lexical_shortcut_rate",
+        "context_window_sensitivity"
+      ],
+      "baseline_table": [
+        "random_token_baseline",
+        "most_frequent_token_baseline",
+        "local_context_frequency_heuristic"
+      ],
+      "trivial_strategy_registry": [
+        "always_most_common_token",
+        "always_copy_neighbor_token",
+        "position_only_guess"
+      ],
+      "failure_registry": [
+        "dataset_shortcut_via_frequency_only",
+        "masking_rule_instability",
+        "premature_language_complexity drift"
+      ],
+      "gate_blockers": [
+        "if deterministic snippet/mask construction is not explicit",
+        "if baseline discipline is too weak to distinguish real progress from lexical shortcuts"
+      ]
+    }
+  ],
+  "shared_gate_readiness_rule": {
+    "ready_for_task_7605_only_if": [
+      "all candidates have explicit deterministic generation proof",
+      "all candidates have at least three named baselines",
+      "all candidates expose at least three trivial/failure modes",
+      "no candidate relies on undefined metrics"
+    ]
+  }
+}
