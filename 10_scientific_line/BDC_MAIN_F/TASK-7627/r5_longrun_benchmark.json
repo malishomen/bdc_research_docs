@@ -1,0 +1,5 @@
+{
+  "benchmark_seconds": 0.453,
+  "benchmark_runs": 2,
+  "benchmark_root": "results/r5_cloze_transfer_longrun_monitor_smoke"
+}

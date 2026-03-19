@@ -1,0 +1,130 @@
+﻿{
+    "collected_at_utc":  "2026-03-19T13:10:12Z",
+    "phase":  "r5_single_mechanism_transfer",
+    "approved_target_id":  "symbolic_micro_corpus_cloze_transfer",
+    "preferred_device":  "cpu",
+    "total_runs":  120,
+    "benchmark_seconds":  0.453,
+    "benchmark_runs":  2,
+    "estimated_runtime_seconds":  27.18,
+    "logical_cpu":  8,
+    "total_cpu_percent":  7,
+    "free_memory_mb":  10836,
+    "gpu":  [
+                {
+                    "name":  "NVIDIA GeForce GTX 1080 Ti",
+                    "utilization_gpu":  "26 %",
+                    "utilization_memory":  "9 %",
+                    "memory_used":  "1231 MiB",
+                    "memory_total":  "11264 MiB",
+                    "temperature_gpu":  "52"
+                }
+            ],
+    "top_processes":  [
+                          {
+                              "Id":  113296,
+                              "ProcessName":  "cowork-svc",
+                              "CPU":  163557.375,
+                              "WS_MB":  30.9,
+                              "PM_MB":  32.4
+                          },
+                          {
+                              "Id":  4644,
+                              "ProcessName":  "MsMpEng",
+                              "CPU":  27302.265625,
+                              "WS_MB":  346.3,
+                              "PM_MB":  426.6
+                          },
+                          {
+                              "Id":  4,
+                              "ProcessName":  "System",
+                              "CPU":  16216.65625,
+                              "WS_MB":  1.4,
+                              "PM_MB":  0
+                          },
+                          {
+                              "Id":  1768,
+                              "ProcessName":  "dwm",
+                              "CPU":  8087.453125,
+                              "WS_MB":  59.3,
+                              "PM_MB":  150
+                          },
+                          {
+                              "Id":  8636,
+                              "ProcessName":  "RGBFusion",
+                              "CPU":  5384.75,
+                              "WS_MB":  31.6,
+                              "PM_MB":  161.5
+                          },
+                          {
+                              "Id":  267812,
+                              "ProcessName":  "Codex",
+                              "CPU":  4921.34375,
+                              "WS_MB":  894.1,
+                              "PM_MB":  1061
+                          },
+                          {
+                              "Id":  4372,
+                              "ProcessName":  "MacriumService",
+                              "CPU":  3202.34375,
+                              "WS_MB":  20.2,
+                              "PM_MB":  70
+                          },
+                          {
+                              "Id":  15348,
+                              "ProcessName":  "svchost",
+                              "CPU":  2769.9375,
+                              "WS_MB":  21.2,
+                              "PM_MB":  21.8
+                          },
+                          {
+                              "Id":  2844,
+                              "ProcessName":  "svchost",
+                              "CPU":  2658.890625,
+                              "WS_MB":  6,
+                              "PM_MB":  2.6
+                          },
+                          {
+                              "Id":  130916,
+                              "ProcessName":  "Codex",
+                              "CPU":  1857.28125,
+                              "WS_MB":  167.8,
+                              "PM_MB":  232.7
+                          },
+                          {
+                              "Id":  2912,
+                              "ProcessName":  "Memory Compression",
+                              "CPU":  1707.609375,
+                              "WS_MB":  2070.9,
+                              "PM_MB":  9.8
+                          },
+                          {
+                              "Id":  1176,
+                              "ProcessName":  "svchost",
+                              "CPU":  1471.859375,
+                              "WS_MB":  47.1,
+                              "PM_MB":  31.8
+                          },
+                          {
+                              "Id":  21580,
+                              "ProcessName":  "audiodg",
+                              "CPU":  1200.3125,
+                              "WS_MB":  14,
+                              "PM_MB":  7.4
+                          },
+                          {
+                              "Id":  9284,
+                              "ProcessName":  "nvcontainer",
+                              "CPU":  1099.875,
+                              "WS_MB":  42.3,
+                              "PM_MB":  71.8
+                          },
+                          {
+                              "Id":  4168,
+                              "ProcessName":  "svchost",
+                              "CPU":  999.765625,
+                              "WS_MB":  46.2,
+                              "PM_MB":  44.4
+                          }
+                      ]
+}

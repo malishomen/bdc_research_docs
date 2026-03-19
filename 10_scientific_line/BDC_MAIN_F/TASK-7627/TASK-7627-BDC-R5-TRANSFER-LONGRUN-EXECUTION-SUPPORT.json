@@ -1,0 +1,7 @@
+{
+  "task_id": "TASK-7627",
+  "title": "R5 transfer long-run execution support",
+  "change_class": "R1",
+  "objective": "Prepare the operational execution layer for the approved R5 long-run: host snapshot, launcher preview, progress/ETA monitoring, and execution runbook without starting the canonical run.",
+  "depends_on": ["TASK-7626"]
+}
