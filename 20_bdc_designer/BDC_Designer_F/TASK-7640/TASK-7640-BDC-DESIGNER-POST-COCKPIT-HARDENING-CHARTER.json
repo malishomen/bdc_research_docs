@@ -1,0 +1,10 @@
+{
+  "task_id": "TASK-7640",
+  "title": "BDC Designer post-Cockpit hardening charter",
+  "change_class": "R0",
+  "objective": "Open a bounded BDC Designer hardening program after the Cockpit external case, preserve scientific hierarchy, and define the product-side execution chain through rerun gate closure.",
+  "depends_on": [
+    "TASK-7639"
+  ]
+}
+

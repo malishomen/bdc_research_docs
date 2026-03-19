@@ -1,0 +1,32 @@
+{
+  "supported": true,
+  "native_intake_supported": true,
+  "packet_supported": true,
+  "bundle_files": [
+    "calibration.json",
+    "evidence_state_summary.json",
+    "explanation.json",
+    "intake_manifest.json",
+    "measurement_gaps.json",
+    "normalized_packet.json",
+    "recommendation.json",
+    "redesign.json",
+    "selective_prediction.json",
+    "sparse_runtime_support.json",
+    "trust_assessment.json",
+    "validation.json",
+    "redesign_memo.md",
+    "client_request_template.md"
+  ],
+  "recommended_variant_id": "GEMINI_HARDENED_LINE",
+  "strategy_mode": "direct_architecture_selection",
+  "confidence_band": "high",
+  "calibration_audit_status": "single_case_not_audited",
+  "selective_outcome_class": "recommend_ready",
+  "evidence_state_class": "supported",
+  "recommended_logical_split": "4_role_logical_redesign",
+  "recommendation_trust_class": "trustworthy",
+  "recommendation_trustworthy": true,
+  "winner_deployable": true,
+  "winner_eligible": true
+}

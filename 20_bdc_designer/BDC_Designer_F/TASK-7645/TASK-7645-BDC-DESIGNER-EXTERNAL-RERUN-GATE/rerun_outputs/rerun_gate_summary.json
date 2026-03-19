@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "failures": [],
+  "cockpit": {
+    "status": "WARN",
+    "folder_path": "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_NATIVE_READY",
+    "native_intake_supported": true,
+    "packet_supported": true,
+    "required_inputs_bound": true,
+    "missing_required_inputs": [],
+    "recommended_variant_id": "normalized_event_relay",
+    "strategy_mode": "full_hybrid_search",
+    "selective_outcome_class": "recommend_with_guardrails",
+    "confidence_band": "medium",
+    "recommendation_trust_class": "guarded",
+    "recommendation_trustworthy": false,
+    "winner_deployable": true,
+    "winner_eligible": true,
+    "blocking_gap_count": 2,
+    "warnings": [
+      "trust_class:guarded",
+      "blocking_gap_count:2",
+      "caution:non_deployable_variants_present",
+      "caution:broad_search_required"
+    ]
+  },
+  "textai": {
+    "status": "PASS",
+    "folder_path": "tests\\data\\textai_auto_packet_v2_6",
+    "native_intake_supported": true,
+    "packet_supported": true,
+    "required_inputs_bound": true,
+    "missing_required_inputs": [],
+    "recommended_variant_id": "GEMINI_HARDENED_LINE",
+    "strategy_mode": "direct_architecture_selection",
+    "selective_outcome_class": "recommend_ready",
+    "confidence_band": "high",
+    "recommendation_trust_class": "trustworthy",
+    "recommendation_trustworthy": true,
+    "winner_deployable": true,
+    "winner_eligible": true,
+    "blocking_gap_count": 7,
+    "warnings": []
+  },
+  "gate_verdict": "PASS_EXTERNAL_RERUN_GATE",
+  "next_product_action": "open_cockpit_session_continuity_hardening_cycle"
+}

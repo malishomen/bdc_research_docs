@@ -1,0 +1,46 @@
+{
+  "recommended_logical_split": "3_role_logical_redesign",
+  "deployment_mode": "full_hybrid_search",
+  "prior_confidence_band": "high",
+  "deployability_confidence_band": "medium",
+  "recommended_reference_architecture": {
+    "variant_id": "normalized_event_relay",
+    "role_names": [
+      "orchestrator",
+      "editor"
+    ],
+    "role_count": 2
+  },
+  "current_component_mapping": {
+    "orchestrator": [
+      "ws/handler.py \u2014 WebSocket action dispatch"
+    ],
+    "planner": [
+      "session_manager.py \u2014 in-memory session dict"
+    ],
+    "editor": [
+      "cli_runner.py \u2014 subprocess execution and stdout relay"
+    ],
+    "guardian": [
+      "permission_bridge.py \u2014 approval release logic"
+    ]
+  },
+  "guardian_placement": {
+    "recommended_mode": "post_edit_validation",
+    "pre_edit_guard_recommended_now": false,
+    "reason": "Current evidence supports planner-like pre-edit routing and guardian-like post-edit accept/revert logic, but does not yet justify a separate pre-edit guardian gate."
+  },
+  "next_architecture_test": {
+    "baseline_arm": "current_best_stage_runtime",
+    "redesign_arm": "3_role_logical_redesign",
+    "what_to_formalize_first": [
+      "planner-like routing and family selection",
+      "editor path as explicit execution layer",
+      "guardian-like post-edit accept/revert/retry layer",
+      "orchestrator lifecycle and bounded iteration control"
+    ],
+    "what_not_to_add_yet": [
+      "harmonizer_role"
+    ]
+  }
+}

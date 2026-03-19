@@ -1,0 +1,23 @@
+{
+  "status": "WARN",
+  "folder_path": "tests\\data\\cockpit_packet_native_ready",
+  "native_intake_supported": true,
+  "packet_supported": true,
+  "required_inputs_bound": true,
+  "missing_required_inputs": [],
+  "recommended_variant_id": "normalized_event_relay",
+  "strategy_mode": "full_hybrid_search",
+  "selective_outcome_class": "recommend_with_guardrails",
+  "confidence_band": "medium",
+  "recommendation_trust_class": "guarded",
+  "recommendation_trustworthy": false,
+  "winner_deployable": true,
+  "winner_eligible": true,
+  "blocking_gap_count": 2,
+  "warnings": [
+    "trust_class:guarded",
+    "blocking_gap_count:2",
+    "caution:non_deployable_variants_present",
+    "caution:broad_search_required"
+  ]
+}

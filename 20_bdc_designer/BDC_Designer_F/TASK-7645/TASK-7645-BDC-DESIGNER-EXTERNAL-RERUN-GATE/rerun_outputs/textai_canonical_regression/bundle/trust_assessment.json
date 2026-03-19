@@ -1,0 +1,11 @@
+{
+  "native_intake_supported": true,
+  "packet_supported": true,
+  "recommendation_trust_class": "trustworthy",
+  "recommendation_trustworthy": true,
+  "winner_deployable": true,
+  "winner_eligible": true,
+  "reasons": [
+    "deployable_high_confidence_winner"
+  ]
+}

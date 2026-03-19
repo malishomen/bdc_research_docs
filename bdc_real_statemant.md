@@ -1,7 +1,7 @@
 # BDC Real Statemant
 
 **Status:** CANONICAL LIVE STATE  
-**Last Updated:** 2026-03-19  
+**Last Updated:** 2026-03-20  
 **Scope:** scientific reboot line + `BDC Designer`
 
 ## Update Rule
@@ -55,6 +55,18 @@
 - It is frozen as the mainline-ready operator/client subsystem.
 - It remains the mandatory pre-experiment narrowing and evidence-discipline layer for the scientific reboot line.
 - It does not replace the canonical scientific gate.
+- Active product execution focus is now:
+  - post-Cockpit `BDC Designer` hardening on real external packets
+- Canonical product hardening reference:
+  - `docs/project/BDC_DESIGNER_POST_COCKPIT_HARDENING_PLAN.md`
+- Hardened baseline now includes:
+  - winner-eligibility guard
+  - domain-safe generic normalization
+  - explicit output trust split
+  - packet preflight
+  - cross-domain benchmark suite
+- Product rerun gate status:
+  - `PASS_EXTERNAL_RERUN_GATE`
 
 ## Current Line Interaction Rule
 - Scientific truth is established by the canonical reboot gates and measured artifacts.
@@ -68,6 +80,19 @@
   - `docs/experiments/R5_TRANSFER_MEASURED_GATE_DECISION.md`
 - Canonical measured gate artifact:
   - `results/r5_cloze_transfer_longrun/r5_transfer_measured_gate_decision.json`
+
+## Current Product Execution Focus
+- The active product-side execution line is:
+  - `BDC Designer` hardening after the Cockpit external case
+- Product-side bounded task chain:
+  - `TASK-7640 -> TASK-7645`
+- Product-side success condition:
+  - external packets stay native-supported
+  - no non-deployable winner is emitted
+  - recommendation trust is explicit
+  - cross-domain rerun gate passes
+- Current product next action:
+  - open the bounded Cockpit session-continuity hardening cycle
 
 ## Current Scope Limits
 - No multi-mechanism claim is open.

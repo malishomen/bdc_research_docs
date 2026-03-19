@@ -1,0 +1,10 @@
+{
+  "task_id": "TASK-7643",
+  "title": "BDC Designer output trust split",
+  "change_class": "R0",
+  "objective": "Separate native intake success, packet support, recommendation trustworthiness, and winner deployability in the BDC Designer delivery surface.",
+  "depends_on": [
+    "TASK-7642"
+  ]
+}
+

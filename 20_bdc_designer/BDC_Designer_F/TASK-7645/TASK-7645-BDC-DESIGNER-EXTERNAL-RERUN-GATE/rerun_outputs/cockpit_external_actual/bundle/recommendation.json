@@ -1,0 +1,53 @@
+{
+  "recommended_variant_id": "normalized_event_relay",
+  "recommended_variant_name": "stdout_json_parse_relay::normalized_event_relay",
+  "recommended_role_names": [
+    "orchestrator",
+    "editor"
+  ],
+  "recommended_role_count": 2,
+  "strategy_mode": "full_hybrid_search",
+  "confidence_score": 0.77,
+  "confidence_band": "medium",
+  "prior_confidence_score": 0.8,
+  "prior_confidence_band": "high",
+  "deployability_confidence_score": 0.77,
+  "deployability_confidence_band": "medium",
+  "calibration": {
+    "audit_status": "single_case_not_audited",
+    "audited": false,
+    "predicted_correctness_probability": 0.77,
+    "calibration_bucket": "0.6-0.8",
+    "uses_benchmark_calibration": false,
+    "recommended_next_step": "run_phase53_bdc_designer_calibration_layer",
+    "caution_flags": [
+      "non_deployable_variants_present",
+      "broad_search_required"
+    ]
+  },
+  "selective_prediction": {
+    "outcome_class": "recommend_with_guardrails",
+    "abstain": false,
+    "operator_action": "bounded_search_around_prior",
+    "reasons": [
+      "search_mode_requires_operator_guardrails"
+    ],
+    "confidence_band": "medium",
+    "deployability_confidence_band": "medium",
+    "strategy_mode": "full_hybrid_search",
+    "tested_variant_count": 5,
+    "eligible_variant_count": 2,
+    "calibration_audit_status": "single_case_not_audited"
+  },
+  "trust_assessment": {
+    "native_intake_supported": true,
+    "packet_supported": true,
+    "recommendation_trust_class": "guarded",
+    "recommendation_trustworthy": false,
+    "winner_deployable": true,
+    "winner_eligible": true,
+    "reasons": [
+      "guardrailed_recommendation"
+    ]
+  }
+}

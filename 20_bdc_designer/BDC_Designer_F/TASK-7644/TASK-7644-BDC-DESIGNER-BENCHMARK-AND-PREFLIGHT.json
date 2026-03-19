@@ -1,0 +1,10 @@
+{
+  "task_id": "TASK-7644",
+  "title": "BDC Designer benchmark and preflight",
+  "change_class": "R0",
+  "objective": "Add a cross-domain benchmark suite and a packet preflight linter so BDC Designer hardening can be regression-tested before real external runs.",
+  "depends_on": [
+    "TASK-7643"
+  ]
+}
+

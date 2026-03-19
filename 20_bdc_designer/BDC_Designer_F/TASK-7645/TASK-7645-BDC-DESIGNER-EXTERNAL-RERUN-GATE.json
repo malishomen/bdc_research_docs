@@ -1,0 +1,10 @@
+{
+  "task_id": "TASK-7645",
+  "title": "BDC Designer external rerun gate",
+  "change_class": "R0",
+  "objective": "Re-run the hardened BDC Designer baseline on Cockpit and TextAI, record whether the trust defects are fixed, and produce partner-ready guidance from measured results.",
+  "depends_on": [
+    "TASK-7644"
+  ]
+}
+

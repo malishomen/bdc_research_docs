@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "folder_path": "tests\\data\\textai_auto_packet_v2_6",
+  "native_intake_supported": true,
+  "packet_supported": true,
+  "required_inputs_bound": true,
+  "missing_required_inputs": [],
+  "recommended_variant_id": "GEMINI_HARDENED_LINE",
+  "strategy_mode": "direct_architecture_selection",
+  "selective_outcome_class": "recommend_ready",
+  "confidence_band": "high",
+  "recommendation_trust_class": "trustworthy",
+  "recommendation_trustworthy": true,
+  "winner_deployable": true,
+  "winner_eligible": true,
+  "blocking_gap_count": 7,
+  "warnings": []
+}

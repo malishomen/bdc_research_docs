@@ -1,0 +1,1189 @@
+{
+  "folder_path": "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_NATIVE_READY",
+  "registry": {
+    "folder_path": "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_NATIVE_READY",
+    "readme_path": "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_NATIVE_READY\\README.md",
+    "packet_json_path": "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_NATIVE_READY\\BDC_INPUT_PACKET_COCKPIT_RUNTIME_AUDIT.json",
+    "unified_variant_comparison_csv": "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_NATIVE_READY\\unified_variant_comparison.csv",
+    "provider_comparison_csv": null,
+    "stability_run_metrics_csv": null,
+    "rollout_case_index_csv": null,
+    "guardian_audit_csv": null,
+    "current_runtime_role_mapping_csv": "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_NATIVE_READY\\current_runtime_role_mapping.csv",
+    "current_slice_metrics_csv": "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_NATIVE_READY\\current_slice_metrics.csv",
+    "failure_case_registry_csv": "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_NATIVE_READY\\failure_case_registry.csv",
+    "prompt_stage_matrix_csv": "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_NATIVE_READY\\prompt_stage_matrix.csv",
+    "lead_architect_design_priorities_md": "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_NATIVE_READY\\lead_architect_design_priorities.md",
+    "extras": [
+      "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_NATIVE_READY\\BDC_INPUT_PACKET_COCKPIT_RUNTIME_AUDIT.json",
+      "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_NATIVE_READY\\bdc_packet_readiness_summary.md",
+      "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_NATIVE_READY\\current_runtime_role_mapping.csv",
+      "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_NATIVE_READY\\current_slice_metrics.csv",
+      "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_NATIVE_READY\\failure_case_registry.csv",
+      "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_NATIVE_READY\\lead_architect_design_priorities.md",
+      "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_NATIVE_READY\\open_gaps_and_missing_data.md",
+      "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_NATIVE_READY\\prompt_stage_matrix.csv",
+      "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_NATIVE_READY\\README.md",
+      "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_NATIVE_READY\\runtime_truth.json",
+      "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_NATIVE_READY\\unified_variant_comparison.csv"
+    ]
+  },
+  "required_inputs": [
+    "readme_path",
+    "packet_json_path",
+    "unified_variant_comparison_csv",
+    "current_runtime_role_mapping_csv",
+    "current_slice_metrics_csv",
+    "failure_case_registry_csv",
+    "prompt_stage_matrix_csv",
+    "lead_architect_design_priorities_md"
+  ],
+  "missing_required_inputs": [],
+  "normalized_packet": {
+    "schema_version": "BDC_PACKET_V2",
+    "case_id": "cockpit_runtime_audit_2026_03_20",
+    "system_name": "Cockpit",
+    "task_type": "current_runtime_logical_redesign_decision",
+    "workflow_summary": "Real-time operator cockpit over a local filesystem project, facilitating AI CLI execution with an interactive authorization boundary (human-in-the-loop). The system creates claude subprocess sessions, relays structured JSON streams over WebSocket to a React/Zustand frontend, and bridges tool_use permission events back to the operator.",
+    "primary_objective": "Evaluate the current runtime orchestration of Cockpit for architectural redesign decisions, based on measured evidence from live subprocess execution.",
+    "functional_decomposition": [
+      {
+        "function": "session_create",
+        "description": "Generates a new claude subprocess linked to a unique session UUID",
+        "status": "implemented_and_measured",
+        "evidence": "3/3 success, RAW_EVIDENCE/session_trace_01.jsonl"
+      },
+      {
+        "function": "permission_approval",
+        "description": "Bridges tool_use events to operator, pauses execution until REST endpoint releases the block",
+        "status": "implemented_and_measured",
+        "evidence": "3/3 round-trips successful, RAW_EVIDENCE/session_trace_05.jsonl"
+      },
+      {
+        "function": "follow_up_query",
+        "description": "Sends successive prompts into an ongoing conversational frame",
+        "status": "implemented_but_broken",
+        "evidence": "3/3 lost prior context \u2014 new subprocess spawned each time, RAW_EVIDENCE/session_trace_04.jsonl"
+      },
+      {
+        "function": "session_recovery_after_reload",
+        "description": "Re-hydrating active states if the operator refreshes the browser tab",
+        "status": "not_implemented",
+        "evidence": "0/3 recovery, STATE_LOSS_ON_TCP_RESET"
+      },
+      {
+        "function": "file_write_verification",
+        "description": "Bounding filesystem outputs to the specified cwd directory",
+        "status": "implemented_not_measured",
+        "evidence": "No isolated measurement, relies on claude CLI internal sandboxing"
+      }
+    ],
+    "hard_constraints": [
+      "No mocks \u2014 all evidence from real claude CLI subprocess execution",
+      "No invented git hashes \u2014 workspace is LOCAL_UNVERSIONED_WORKSPACE_NO_GIT",
+      "API keys via .env only, never hardcoded",
+      "All file actions bounded to project cwd"
+    ],
+    "soft_constraints": [
+      "Streaming JSON preferred over batching for latency",
+      "Session persistence currently in-memory dict, planned for SQLite",
+      "Multi-session support constrained by cli_runner architecture"
+    ],
+    "candidate_roles": [
+      {
+        "role_name": "editor",
+        "source": "inferred"
+      },
+      {
+        "role_name": "guardian",
+        "source": "inferred"
+      },
+      {
+        "role_name": "orchestrator",
+        "source": "inferred"
+      },
+      {
+        "role_name": "planner",
+        "source": "inferred"
+      }
+    ],
+    "tested_variants": [
+      {
+        "variant_id": "print_single_turn",
+        "name": "subprocess_stdin_close::print_single_turn",
+        "roles": [
+          "orchestrator",
+          "planner",
+          "editor",
+          "guardian"
+        ],
+        "description": "3/3 end-to-end completions; median 7431ms; 48/48 JSON parse integrity",
+        "role_count": 4,
+        "metrics": {
+          "semantic_pass_pct": 100.0,
+          "runtime_min": 7.43,
+          "llm_calls": 1.0
+        },
+        "source": "measured_from_raw_traces",
+        "implemented": true,
+        "measured": true,
+        "metadata": {
+          "runtime_type": "claude --print stream-json",
+          "raw_role_set": "orchestrator+planner+editor+guardian",
+          "logical_mapping_mode": "folder_intake_role_mapped",
+          "sparse_runtime_annotations": {
+            "raw_metric_text": {
+              "docs_improved_pct": "N/A",
+              "naturalness_delta": "N/A",
+              "semantic_pass_pct": "100",
+              "runtime_min": "7.43",
+              "cost_usd": "N/A",
+              "llm_calls": "1",
+              "revert_rate_pct": "missing",
+              "gate_pass_rate_pct": "missing",
+              "useful_rewrite_rate_pct": "missing"
+            },
+            "metric_status": {
+              "docs_improved_pct": "missing",
+              "naturalness_delta": "missing",
+              "semantic_pass_pct": "measured_numeric",
+              "runtime_min": "measured_numeric",
+              "cost_usd": "missing",
+              "llm_calls": "measured_numeric",
+              "revert_rate_pct": "missing",
+              "gate_pass_rate_pct": "missing",
+              "useful_rewrite_rate_pct": "missing"
+            },
+            "verdict_tags": {},
+            "missing_metric_keys": [
+              "docs_improved_pct",
+              "naturalness_delta",
+              "cost_usd",
+              "revert_rate_pct",
+              "gate_pass_rate_pct",
+              "useful_rewrite_rate_pct"
+            ]
+          }
+        }
+      },
+      {
+        "variant_id": "resume_flow",
+        "name": "not_implemented::resume_flow",
+        "roles": [],
+        "description": "Codebase uses --print exclusively; --resume never invoked",
+        "role_count": 0,
+        "metrics": {},
+        "source": "not_implemented",
+        "implemented": false,
+        "measured": false,
+        "metadata": {
+          "runtime_type": "--resume flag",
+          "raw_role_set": "N/A",
+          "logical_mapping_mode": "folder_intake_role_mapped",
+          "sparse_runtime_annotations": {
+            "raw_metric_text": {
+              "docs_improved_pct": "N/A",
+              "naturalness_delta": "N/A",
+              "semantic_pass_pct": "N/A",
+              "runtime_min": "N/A",
+              "cost_usd": "N/A",
+              "llm_calls": "N/A",
+              "revert_rate_pct": "missing",
+              "gate_pass_rate_pct": "missing",
+              "useful_rewrite_rate_pct": "missing"
+            },
+            "metric_status": {
+              "docs_improved_pct": "missing",
+              "naturalness_delta": "missing",
+              "semantic_pass_pct": "missing",
+              "runtime_min": "missing",
+              "cost_usd": "missing",
+              "llm_calls": "missing",
+              "revert_rate_pct": "missing",
+              "gate_pass_rate_pct": "missing",
+              "useful_rewrite_rate_pct": "missing"
+            },
+            "verdict_tags": {},
+            "missing_metric_keys": [
+              "docs_improved_pct",
+              "naturalness_delta",
+              "semantic_pass_pct",
+              "runtime_min",
+              "cost_usd",
+              "llm_calls",
+              "revert_rate_pct",
+              "gate_pass_rate_pct",
+              "useful_rewrite_rate_pct"
+            ]
+          }
+        }
+      },
+      {
+        "variant_id": "interactive_flow",
+        "name": "not_implemented::interactive_flow",
+        "roles": [],
+        "description": "Stdin is closed immediately after writing query to prevent hanging",
+        "role_count": 0,
+        "metrics": {},
+        "source": "not_implemented",
+        "implemented": false,
+        "measured": false,
+        "metadata": {
+          "runtime_type": "stdin pipeline",
+          "raw_role_set": "N/A",
+          "logical_mapping_mode": "folder_intake_role_mapped",
+          "sparse_runtime_annotations": {
+            "raw_metric_text": {
+              "docs_improved_pct": "N/A",
+              "naturalness_delta": "N/A",
+              "semantic_pass_pct": "N/A",
+              "runtime_min": "N/A",
+              "cost_usd": "N/A",
+              "llm_calls": "N/A",
+              "revert_rate_pct": "missing",
+              "gate_pass_rate_pct": "missing",
+              "useful_rewrite_rate_pct": "missing"
+            },
+            "metric_status": {
+              "docs_improved_pct": "missing",
+              "naturalness_delta": "missing",
+              "semantic_pass_pct": "missing",
+              "runtime_min": "missing",
+              "cost_usd": "missing",
+              "llm_calls": "missing",
+              "revert_rate_pct": "missing",
+              "gate_pass_rate_pct": "missing",
+              "useful_rewrite_rate_pct": "missing"
+            },
+            "verdict_tags": {},
+            "missing_metric_keys": [
+              "docs_improved_pct",
+              "naturalness_delta",
+              "semantic_pass_pct",
+              "runtime_min",
+              "cost_usd",
+              "llm_calls",
+              "revert_rate_pct",
+              "gate_pass_rate_pct",
+              "useful_rewrite_rate_pct"
+            ]
+          }
+        }
+      },
+      {
+        "variant_id": "normalized_event_relay",
+        "name": "stdout_json_parse_relay::normalized_event_relay",
+        "roles": [
+          "orchestrator",
+          "editor"
+        ],
+        "description": "48/48 parse integrity; _relay_event function in cli_runner.py; tool_event_pairing 3/3",
+        "role_count": 2,
+        "metrics": {
+          "semantic_pass_pct": 100.0
+        },
+        "source": "measured_from_raw_traces",
+        "implemented": true,
+        "measured": true,
+        "metadata": {
+          "runtime_type": "stream-json mapped events",
+          "raw_role_set": "orchestrator+editor",
+          "logical_mapping_mode": "folder_intake_role_mapped",
+          "sparse_runtime_annotations": {
+            "raw_metric_text": {
+              "docs_improved_pct": "N/A",
+              "naturalness_delta": "N/A",
+              "semantic_pass_pct": "100",
+              "runtime_min": "N/A",
+              "cost_usd": "N/A",
+              "llm_calls": "N/A",
+              "revert_rate_pct": "missing",
+              "gate_pass_rate_pct": "missing",
+              "useful_rewrite_rate_pct": "missing"
+            },
+            "metric_status": {
+              "docs_improved_pct": "missing",
+              "naturalness_delta": "missing",
+              "semantic_pass_pct": "measured_numeric",
+              "runtime_min": "missing",
+              "cost_usd": "missing",
+              "llm_calls": "missing",
+              "revert_rate_pct": "missing",
+              "gate_pass_rate_pct": "missing",
+              "useful_rewrite_rate_pct": "missing"
+            },
+            "verdict_tags": {},
+            "missing_metric_keys": [
+              "docs_improved_pct",
+              "naturalness_delta",
+              "runtime_min",
+              "cost_usd",
+              "llm_calls",
+              "revert_rate_pct",
+              "gate_pass_rate_pct",
+              "useful_rewrite_rate_pct"
+            ]
+          }
+        }
+      },
+      {
+        "variant_id": "multi_client_broadcast",
+        "name": "ws_broadcast_all::multi_client_broadcast",
+        "roles": [
+          "orchestrator"
+        ],
+        "description": "broadcast() sends to all _connections blindly; no isolation test performed",
+        "role_count": 1,
+        "metrics": {},
+        "source": "inferred_only",
+        "implemented": true,
+        "measured": false,
+        "metadata": {
+          "runtime_type": "websocket broadcast",
+          "raw_role_set": "orchestrator",
+          "logical_mapping_mode": "folder_intake_role_mapped",
+          "sparse_runtime_annotations": {
+            "raw_metric_text": {
+              "docs_improved_pct": "N/A",
+              "naturalness_delta": "N/A",
+              "semantic_pass_pct": "N/A",
+              "runtime_min": "N/A",
+              "cost_usd": "N/A",
+              "llm_calls": "N/A",
+              "revert_rate_pct": "missing",
+              "gate_pass_rate_pct": "missing",
+              "useful_rewrite_rate_pct": "missing"
+            },
+            "metric_status": {
+              "docs_improved_pct": "missing",
+              "naturalness_delta": "missing",
+              "semantic_pass_pct": "missing",
+              "runtime_min": "missing",
+              "cost_usd": "missing",
+              "llm_calls": "missing",
+              "revert_rate_pct": "missing",
+              "gate_pass_rate_pct": "missing",
+              "useful_rewrite_rate_pct": "missing"
+            },
+            "verdict_tags": {},
+            "missing_metric_keys": [
+              "docs_improved_pct",
+              "naturalness_delta",
+              "semantic_pass_pct",
+              "runtime_min",
+              "cost_usd",
+              "llm_calls",
+              "revert_rate_pct",
+              "gate_pass_rate_pct",
+              "useful_rewrite_rate_pct"
+            ]
+          }
+        }
+      }
+    ],
+    "quality_targets": {
+      "session_creation_success_rate": "100% (3/3)",
+      "stdout_parse_integrity": "100% (48/48)",
+      "tool_event_pairing": "100% (3/3)",
+      "end_to_end_completion": "100% (3/3)",
+      "follow_up_context_preservation": "0% (0/3) \u2014 CRITICAL FAILURE",
+      "session_recovery_after_reload": "0% (0/3) \u2014 HIGH FAILURE",
+      "ws_reconnect_recovery": "0% (0/3) \u2014 HIGH FAILURE"
+    },
+    "risk_map": [
+      {
+        "risk": "follow_up_context_loss",
+        "severity": "critical",
+        "probability": "certain",
+        "evidence": "3/3 observed failures"
+      },
+      {
+        "risk": "page_reload_session_loss",
+        "severity": "high",
+        "probability": "certain",
+        "evidence": "0/3 recovery attempts"
+      },
+      {
+        "risk": "ws_reconnect_state_loss",
+        "severity": "high",
+        "probability": "certain",
+        "evidence": "0/3 recovery attempts"
+      },
+      {
+        "risk": "invalid_project_path_acceptance",
+        "severity": "medium",
+        "probability": "likely",
+        "evidence": "No validation implemented"
+      },
+      {
+        "risk": "permission_deadlock",
+        "severity": "high",
+        "probability": "possible",
+        "evidence": "Not observed in measured run but architecturally possible"
+      }
+    ],
+    "document_families": [
+      "browse_flow_success",
+      "end_to_end_real_task_completion",
+      "first_visible_token_latency",
+      "follow_up_success",
+      "new_session_success",
+      "permission_round_trip",
+      "project_path_validation",
+      "session_completion",
+      "session_created_ack_latency",
+      "session_recovery_after_reload",
+      "stdout_json_parse_integrity",
+      "tool_event_pairing_integrity",
+      "ws_reconnect_recovery"
+    ],
+    "failure_examples": [
+      {
+        "case_id": "FOLLOW_UP_CONTEXT_LOSS",
+        "failure_mode": "send_query spawns new subprocess destroying conversational continuity",
+        "severity": "critical",
+        "status": "observed_3_of_3",
+        "note": "3/3 follow-ups lost prior context. New cli_runner subprocess has no memory of previous turns. RAW_EVIDENCE/session_trace_04.jsonl"
+      },
+      {
+        "case_id": "PAGE_RELOAD_SESSION_LOSS",
+        "failure_mode": "No replay/hydration mechanism for browser reload",
+        "severity": "high",
+        "status": "observed_3_of_3",
+        "note": "0/3 recovery after page reload. Backend _sessions dict has no persistence layer. STATE_LOSS_ON_TCP_RESET."
+      },
+      {
+        "case_id": "WS_RECONNECT_STATE_LOSS",
+        "failure_mode": "Frontend reconnect hooks do not restore session state",
+        "severity": "high",
+        "status": "observed_3_of_3",
+        "note": "0/3 recovery on WS reconnect. useWebSocket.ts reconnects transport but not application state. STATE_LOSS_ON_TCP_RESET."
+      },
+      {
+        "case_id": "INVALID_PROJECT_PATH_HANDLING",
+        "failure_mode": "Backend accepts arbitrary paths without validation",
+        "severity": "medium",
+        "status": "architectural_gap",
+        "note": "No observed crash in measured run but backend blindly takes path \u2014 OS throws on invalid. No validation guard implemented."
+      },
+      {
+        "case_id": "PERMISSION_DEADLOCK",
+        "failure_mode": "Potential deadlock if operator never responds to permission request",
+        "severity": "high",
+        "status": "not_observed_in_measured_run",
+        "note": "0 occurrences in measured run. Architecturally possible if permission_bridge awaits indefinitely. Latent risk."
+      }
+    ],
+    "variant_metrics_by_slice": [
+      {
+        "variant_id": "print_single_turn",
+        "slice": "new_session_success",
+        "metrics": {
+          "accepted_rewrite_rate_pct": 100.0,
+          "revert_rate_pct": 0.0,
+          "no_op_rate_pct": 0.0,
+          "semantic_pass_proxy_pct": 100.0,
+          "useful_output_rate_pct": 100.0
+        },
+        "notes": "3/3 sessions created successfully",
+        "evidence_annotations": {
+          "raw_metric_text": {
+            "accepted_rewrite_rate_pct": "100",
+            "revert_rate_pct": "0",
+            "no_op_rate_pct": "0",
+            "semantic_pass_proxy_pct": "100",
+            "useful_output_rate_pct": "100",
+            "runtime_min": "N/A",
+            "cost_usd": "N/A"
+          },
+          "metric_status": {
+            "accepted_rewrite_rate_pct": "measured_numeric",
+            "revert_rate_pct": "measured_numeric",
+            "no_op_rate_pct": "measured_numeric",
+            "semantic_pass_proxy_pct": "measured_numeric",
+            "useful_output_rate_pct": "measured_numeric",
+            "runtime_min": "missing",
+            "cost_usd": "missing"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [
+            "runtime_min",
+            "cost_usd"
+          ],
+          "aggregate_runtime_variant": false,
+          "evidence_status": "measured"
+        }
+      },
+      {
+        "variant_id": "print_single_turn",
+        "slice": "session_created_ack_latency",
+        "metrics": {
+          "accepted_rewrite_rate_pct": 100.0,
+          "revert_rate_pct": 0.0,
+          "no_op_rate_pct": 0.0,
+          "semantic_pass_proxy_pct": 100.0,
+          "useful_output_rate_pct": 100.0
+        },
+        "notes": "3/3 ACKs received",
+        "evidence_annotations": {
+          "raw_metric_text": {
+            "accepted_rewrite_rate_pct": "100",
+            "revert_rate_pct": "0",
+            "no_op_rate_pct": "0",
+            "semantic_pass_proxy_pct": "100",
+            "useful_output_rate_pct": "100",
+            "runtime_min": "N/A",
+            "cost_usd": "N/A"
+          },
+          "metric_status": {
+            "accepted_rewrite_rate_pct": "measured_numeric",
+            "revert_rate_pct": "measured_numeric",
+            "no_op_rate_pct": "measured_numeric",
+            "semantic_pass_proxy_pct": "measured_numeric",
+            "useful_output_rate_pct": "measured_numeric",
+            "runtime_min": "missing",
+            "cost_usd": "missing"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [
+            "runtime_min",
+            "cost_usd"
+          ],
+          "aggregate_runtime_variant": false,
+          "evidence_status": "measured"
+        }
+      },
+      {
+        "variant_id": "print_single_turn",
+        "slice": "first_visible_token_latency",
+        "metrics": {
+          "accepted_rewrite_rate_pct": 100.0,
+          "revert_rate_pct": 0.0,
+          "no_op_rate_pct": 0.0,
+          "semantic_pass_proxy_pct": 100.0,
+          "useful_output_rate_pct": 100.0,
+          "runtime_min": 3886.0
+        },
+        "notes": "6/6 attempts delivered first token",
+        "evidence_annotations": {
+          "raw_metric_text": {
+            "accepted_rewrite_rate_pct": "100",
+            "revert_rate_pct": "0",
+            "no_op_rate_pct": "0",
+            "semantic_pass_proxy_pct": "100",
+            "useful_output_rate_pct": "100",
+            "runtime_min": "3886ms median / 4565ms p95",
+            "cost_usd": "N/A"
+          },
+          "metric_status": {
+            "accepted_rewrite_rate_pct": "measured_numeric",
+            "revert_rate_pct": "measured_numeric",
+            "no_op_rate_pct": "measured_numeric",
+            "semantic_pass_proxy_pct": "measured_numeric",
+            "useful_output_rate_pct": "measured_numeric",
+            "runtime_min": "measured_numeric",
+            "cost_usd": "missing"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [
+            "cost_usd"
+          ],
+          "aggregate_runtime_variant": false,
+          "evidence_status": "measured"
+        }
+      },
+      {
+        "variant_id": "print_single_turn",
+        "slice": "follow_up_success",
+        "metrics": {
+          "accepted_rewrite_rate_pct": 0.0,
+          "revert_rate_pct": 100.0,
+          "no_op_rate_pct": 0.0,
+          "semantic_pass_proxy_pct": 0.0,
+          "useful_output_rate_pct": 0.0
+        },
+        "notes": "3/3 follow-ups LOST context \u2014 new subprocess spawned each time destroying conversational continuity",
+        "evidence_annotations": {
+          "raw_metric_text": {
+            "accepted_rewrite_rate_pct": "0",
+            "revert_rate_pct": "100",
+            "no_op_rate_pct": "0",
+            "semantic_pass_proxy_pct": "0",
+            "useful_output_rate_pct": "0",
+            "runtime_min": "N/A",
+            "cost_usd": "N/A"
+          },
+          "metric_status": {
+            "accepted_rewrite_rate_pct": "measured_numeric",
+            "revert_rate_pct": "measured_numeric",
+            "no_op_rate_pct": "measured_numeric",
+            "semantic_pass_proxy_pct": "measured_numeric",
+            "useful_output_rate_pct": "measured_numeric",
+            "runtime_min": "missing",
+            "cost_usd": "missing"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [
+            "runtime_min",
+            "cost_usd"
+          ],
+          "aggregate_runtime_variant": false,
+          "evidence_status": "measured_negative"
+        }
+      },
+      {
+        "variant_id": "print_single_turn",
+        "slice": "permission_round_trip",
+        "metrics": {
+          "accepted_rewrite_rate_pct": 100.0,
+          "revert_rate_pct": 0.0,
+          "no_op_rate_pct": 0.0,
+          "semantic_pass_proxy_pct": 100.0,
+          "useful_output_rate_pct": 100.0
+        },
+        "notes": "3/3 permission cycles completed",
+        "evidence_annotations": {
+          "raw_metric_text": {
+            "accepted_rewrite_rate_pct": "100",
+            "revert_rate_pct": "0",
+            "no_op_rate_pct": "0",
+            "semantic_pass_proxy_pct": "100",
+            "useful_output_rate_pct": "100",
+            "runtime_min": "N/A",
+            "cost_usd": "N/A"
+          },
+          "metric_status": {
+            "accepted_rewrite_rate_pct": "measured_numeric",
+            "revert_rate_pct": "measured_numeric",
+            "no_op_rate_pct": "measured_numeric",
+            "semantic_pass_proxy_pct": "measured_numeric",
+            "useful_output_rate_pct": "measured_numeric",
+            "runtime_min": "missing",
+            "cost_usd": "missing"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [
+            "runtime_min",
+            "cost_usd"
+          ],
+          "aggregate_runtime_variant": false,
+          "evidence_status": "measured"
+        }
+      },
+      {
+        "variant_id": "print_single_turn",
+        "slice": "session_completion",
+        "metrics": {
+          "accepted_rewrite_rate_pct": 100.0,
+          "revert_rate_pct": 0.0,
+          "no_op_rate_pct": 0.0,
+          "semantic_pass_proxy_pct": 100.0,
+          "useful_output_rate_pct": 100.0,
+          "runtime_min": 7400.0
+        },
+        "notes": "6/6 sessions completed end-to-end",
+        "evidence_annotations": {
+          "raw_metric_text": {
+            "accepted_rewrite_rate_pct": "100",
+            "revert_rate_pct": "0",
+            "no_op_rate_pct": "0",
+            "semantic_pass_proxy_pct": "100",
+            "useful_output_rate_pct": "100",
+            "runtime_min": "7400ms median / 8369ms p95",
+            "cost_usd": "N/A"
+          },
+          "metric_status": {
+            "accepted_rewrite_rate_pct": "measured_numeric",
+            "revert_rate_pct": "measured_numeric",
+            "no_op_rate_pct": "measured_numeric",
+            "semantic_pass_proxy_pct": "measured_numeric",
+            "useful_output_rate_pct": "measured_numeric",
+            "runtime_min": "measured_numeric",
+            "cost_usd": "missing"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [
+            "cost_usd"
+          ],
+          "aggregate_runtime_variant": false,
+          "evidence_status": "measured"
+        }
+      },
+      {
+        "variant_id": "print_single_turn",
+        "slice": "session_recovery_after_reload",
+        "metrics": {
+          "accepted_rewrite_rate_pct": 0.0,
+          "revert_rate_pct": 100.0,
+          "no_op_rate_pct": 0.0,
+          "semantic_pass_proxy_pct": 0.0,
+          "useful_output_rate_pct": 0.0
+        },
+        "notes": "0/3 recovery \u2014 NO replay/hydration mechanism exists. STATE_LOSS_ON_TCP_RESET.",
+        "evidence_annotations": {
+          "raw_metric_text": {
+            "accepted_rewrite_rate_pct": "0",
+            "revert_rate_pct": "100",
+            "no_op_rate_pct": "0",
+            "semantic_pass_proxy_pct": "0",
+            "useful_output_rate_pct": "0",
+            "runtime_min": "N/A",
+            "cost_usd": "N/A"
+          },
+          "metric_status": {
+            "accepted_rewrite_rate_pct": "measured_numeric",
+            "revert_rate_pct": "measured_numeric",
+            "no_op_rate_pct": "measured_numeric",
+            "semantic_pass_proxy_pct": "measured_numeric",
+            "useful_output_rate_pct": "measured_numeric",
+            "runtime_min": "missing",
+            "cost_usd": "missing"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [
+            "runtime_min",
+            "cost_usd"
+          ],
+          "aggregate_runtime_variant": false,
+          "evidence_status": "measured_negative"
+        }
+      },
+      {
+        "variant_id": "print_single_turn",
+        "slice": "ws_reconnect_recovery",
+        "metrics": {
+          "accepted_rewrite_rate_pct": 0.0,
+          "revert_rate_pct": 100.0,
+          "no_op_rate_pct": 0.0,
+          "semantic_pass_proxy_pct": 0.0,
+          "useful_output_rate_pct": 0.0
+        },
+        "notes": "0/3 recovery \u2014 frontend reconnect hooks do not restore session state. STATE_LOSS_ON_TCP_RESET.",
+        "evidence_annotations": {
+          "raw_metric_text": {
+            "accepted_rewrite_rate_pct": "0",
+            "revert_rate_pct": "100",
+            "no_op_rate_pct": "0",
+            "semantic_pass_proxy_pct": "0",
+            "useful_output_rate_pct": "0",
+            "runtime_min": "N/A",
+            "cost_usd": "N/A"
+          },
+          "metric_status": {
+            "accepted_rewrite_rate_pct": "measured_numeric",
+            "revert_rate_pct": "measured_numeric",
+            "no_op_rate_pct": "measured_numeric",
+            "semantic_pass_proxy_pct": "measured_numeric",
+            "useful_output_rate_pct": "measured_numeric",
+            "runtime_min": "missing",
+            "cost_usd": "missing"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [
+            "runtime_min",
+            "cost_usd"
+          ],
+          "aggregate_runtime_variant": false,
+          "evidence_status": "measured_negative"
+        }
+      },
+      {
+        "variant_id": "normalized_event_relay",
+        "slice": "stdout_json_parse_integrity",
+        "metrics": {
+          "accepted_rewrite_rate_pct": 100.0,
+          "revert_rate_pct": 0.0,
+          "no_op_rate_pct": 0.0,
+          "semantic_pass_proxy_pct": 100.0,
+          "useful_output_rate_pct": 100.0
+        },
+        "notes": "48/48 JSON lines parsed correctly",
+        "evidence_annotations": {
+          "raw_metric_text": {
+            "accepted_rewrite_rate_pct": "100",
+            "revert_rate_pct": "0",
+            "no_op_rate_pct": "0",
+            "semantic_pass_proxy_pct": "100",
+            "useful_output_rate_pct": "100",
+            "runtime_min": "N/A",
+            "cost_usd": "N/A"
+          },
+          "metric_status": {
+            "accepted_rewrite_rate_pct": "measured_numeric",
+            "revert_rate_pct": "measured_numeric",
+            "no_op_rate_pct": "measured_numeric",
+            "semantic_pass_proxy_pct": "measured_numeric",
+            "useful_output_rate_pct": "measured_numeric",
+            "runtime_min": "missing",
+            "cost_usd": "missing"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [
+            "runtime_min",
+            "cost_usd"
+          ],
+          "aggregate_runtime_variant": false,
+          "evidence_status": "measured"
+        }
+      },
+      {
+        "variant_id": "normalized_event_relay",
+        "slice": "tool_event_pairing_integrity",
+        "metrics": {
+          "accepted_rewrite_rate_pct": 100.0,
+          "revert_rate_pct": 0.0,
+          "no_op_rate_pct": 0.0,
+          "semantic_pass_proxy_pct": 100.0,
+          "useful_output_rate_pct": 100.0
+        },
+        "notes": "3/3 tool_use/tool_result pairs matched",
+        "evidence_annotations": {
+          "raw_metric_text": {
+            "accepted_rewrite_rate_pct": "100",
+            "revert_rate_pct": "0",
+            "no_op_rate_pct": "0",
+            "semantic_pass_proxy_pct": "100",
+            "useful_output_rate_pct": "100",
+            "runtime_min": "N/A",
+            "cost_usd": "N/A"
+          },
+          "metric_status": {
+            "accepted_rewrite_rate_pct": "measured_numeric",
+            "revert_rate_pct": "measured_numeric",
+            "no_op_rate_pct": "measured_numeric",
+            "semantic_pass_proxy_pct": "measured_numeric",
+            "useful_output_rate_pct": "measured_numeric",
+            "runtime_min": "missing",
+            "cost_usd": "missing"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [
+            "runtime_min",
+            "cost_usd"
+          ],
+          "aggregate_runtime_variant": false,
+          "evidence_status": "measured"
+        }
+      },
+      {
+        "variant_id": "print_single_turn",
+        "slice": "project_path_validation",
+        "metrics": {
+          "accepted_rewrite_rate_pct": 100.0,
+          "revert_rate_pct": 0.0,
+          "no_op_rate_pct": 0.0,
+          "semantic_pass_proxy_pct": 100.0,
+          "useful_output_rate_pct": 100.0,
+          "runtime_min": 12.0
+        },
+        "notes": "3/3 valid paths accepted; no invalid path rejection implemented",
+        "evidence_annotations": {
+          "raw_metric_text": {
+            "accepted_rewrite_rate_pct": "100",
+            "revert_rate_pct": "0",
+            "no_op_rate_pct": "0",
+            "semantic_pass_proxy_pct": "100",
+            "useful_output_rate_pct": "100",
+            "runtime_min": "12ms median / 15ms p95",
+            "cost_usd": "N/A"
+          },
+          "metric_status": {
+            "accepted_rewrite_rate_pct": "measured_numeric",
+            "revert_rate_pct": "measured_numeric",
+            "no_op_rate_pct": "measured_numeric",
+            "semantic_pass_proxy_pct": "measured_numeric",
+            "useful_output_rate_pct": "measured_numeric",
+            "runtime_min": "measured_numeric",
+            "cost_usd": "missing"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [
+            "cost_usd"
+          ],
+          "aggregate_runtime_variant": false,
+          "evidence_status": "measured"
+        }
+      },
+      {
+        "variant_id": "print_single_turn",
+        "slice": "end_to_end_real_task_completion",
+        "metrics": {
+          "accepted_rewrite_rate_pct": 100.0,
+          "revert_rate_pct": 0.0,
+          "no_op_rate_pct": 0.0,
+          "semantic_pass_proxy_pct": 100.0,
+          "useful_output_rate_pct": 100.0,
+          "runtime_min": 7431.0
+        },
+        "notes": "3/3 real tasks completed successfully",
+        "evidence_annotations": {
+          "raw_metric_text": {
+            "accepted_rewrite_rate_pct": "100",
+            "revert_rate_pct": "0",
+            "no_op_rate_pct": "0",
+            "semantic_pass_proxy_pct": "100",
+            "useful_output_rate_pct": "100",
+            "runtime_min": "7431ms median / 8369ms p95",
+            "cost_usd": "N/A"
+          },
+          "metric_status": {
+            "accepted_rewrite_rate_pct": "measured_numeric",
+            "revert_rate_pct": "measured_numeric",
+            "no_op_rate_pct": "measured_numeric",
+            "semantic_pass_proxy_pct": "measured_numeric",
+            "useful_output_rate_pct": "measured_numeric",
+            "runtime_min": "measured_numeric",
+            "cost_usd": "missing"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [
+            "cost_usd"
+          ],
+          "aggregate_runtime_variant": false,
+          "evidence_status": "measured"
+        }
+      },
+      {
+        "variant_id": "multi_client_broadcast",
+        "slice": "browse_flow_success",
+        "metrics": {},
+        "notes": "Browse flow not implemented in current runtime",
+        "evidence_annotations": {
+          "raw_metric_text": {
+            "accepted_rewrite_rate_pct": "N/A",
+            "revert_rate_pct": "N/A",
+            "no_op_rate_pct": "N/A",
+            "semantic_pass_proxy_pct": "N/A",
+            "useful_output_rate_pct": "N/A",
+            "runtime_min": "N/A",
+            "cost_usd": "N/A"
+          },
+          "metric_status": {
+            "accepted_rewrite_rate_pct": "missing",
+            "revert_rate_pct": "missing",
+            "no_op_rate_pct": "missing",
+            "semantic_pass_proxy_pct": "missing",
+            "useful_output_rate_pct": "missing",
+            "runtime_min": "missing",
+            "cost_usd": "missing"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [
+            "accepted_rewrite_rate_pct",
+            "revert_rate_pct",
+            "no_op_rate_pct",
+            "semantic_pass_proxy_pct",
+            "useful_output_rate_pct",
+            "runtime_min",
+            "cost_usd"
+          ],
+          "aggregate_runtime_variant": false,
+          "evidence_status": "not_implemented"
+        }
+      }
+    ],
+    "open_questions": [
+      "What is the narrowest measured next fix that resolves the dominant runtime failure?",
+      "What additional measured evidence is required before a higher-confidence recommendation is justified?"
+    ],
+    "known_implementation_limits": [
+      "Current logical role mapping is runtime-level and not yet ablated by isolated architecture experiments.",
+      "Prompt and stage surfaces are present, but not all runtime behaviors are isolated as deployable architecture alternatives."
+    ],
+    "role_intervention_evidence": [
+      {
+        "role": "orchestrator",
+        "status": "measured",
+        "reason": "Current runtime maps `ws/handler.py \u2014 WebSocket action dispatch` to `orchestrator` in the supplied role map."
+      },
+      {
+        "role": "planner",
+        "status": "measured",
+        "reason": "Current runtime maps `session_manager.py \u2014 in-memory session dict` to `planner` in the supplied role map."
+      },
+      {
+        "role": "editor",
+        "status": "measured",
+        "reason": "Current runtime maps `cli_runner.py \u2014 subprocess execution and stdout relay` to `editor` in the supplied role map."
+      },
+      {
+        "role": "guardian",
+        "status": "measured",
+        "reason": "Current runtime maps `permission_bridge.py \u2014 approval release logic` to `guardian` in the supplied role map."
+      }
+    ],
+    "source_labels": {
+      "case_id": "user_provided",
+      "system_name": "user_provided",
+      "task_type": "user_provided",
+      "workflow_summary": "user_provided",
+      "primary_objective": "user_provided",
+      "functional_decomposition": "user_provided",
+      "hard_constraints": "user_provided",
+      "soft_constraints": "user_provided",
+      "candidate_roles": "inferred",
+      "tested_variants": "user_provided",
+      "quality_targets": "user_provided",
+      "risk_map": "user_provided"
+    },
+    "packet_quality_level": "Q4",
+    "metadata": {
+      "input_packet_version": "1.0.0",
+      "normalization_mode": "folder_intake_domain_safe_generic",
+      "current_runtime_role_mapping": [
+        {
+          "runtime_component": "ws/handler.py \u2014 WebSocket action dispatch",
+          "logical_bdc_role": "orchestrator",
+          "status": "active",
+          "why_mapped_this_way": "Parses inbound JSON actions into async function dispatches (session_create permission_response etc). Acts as the traffic cop router for all client-server communication."
+        },
+        {
+          "runtime_component": "session_manager.py \u2014 in-memory session dict",
+          "logical_bdc_role": "planner",
+          "status": "active",
+          "why_mapped_this_way": "Generates and manages internal session dictionary state _sessions per-UUID. Decides session lifecycle transitions. Currently transient \u2014 state dies on worker reboot."
+        },
+        {
+          "runtime_component": "cli_runner.py \u2014 subprocess execution and stdout relay",
+          "logical_bdc_role": "editor",
+          "status": "active",
+          "why_mapped_this_way": "Instantiates asyncio.create_subprocess_exec for claude binary. Parses stream-json stdout and relays structured events. The actual work execution layer."
+        },
+        {
+          "runtime_component": "permission_bridge.py \u2014 approval release logic",
+          "logical_bdc_role": "guardian",
+          "status": "active",
+          "why_mapped_this_way": "Bridges tool_use permission events to operator. Pauses execution until REST endpoint releases the block. Bounds file actions to project cwd scope."
+        }
+      ],
+      "prompt_stage_matrix": [
+        {
+          "stage_id": "session_create",
+          "stage_name": "Session Create",
+          "objective": "Generate new claude subprocess linked to unique session UUID",
+          "measured_output": "3/3 success \u2014 subprocess spawned and session UUID assigned",
+          "evidence_status": "measured"
+        },
+        {
+          "stage_id": "session_created",
+          "stage_name": "Session Created ACK",
+          "objective": "Acknowledge session creation to frontend via WebSocket",
+          "measured_output": "3/3 ACKs received by frontend Zustand store",
+          "evidence_status": "measured"
+        },
+        {
+          "stage_id": "stream_text",
+          "stage_name": "Stream Text Relay",
+          "objective": "Relay structured JSON stream events from subprocess stdout to WS",
+          "measured_output": "48/48 JSON parse integrity; first token median 3886ms p95 4565ms",
+          "evidence_status": "measured"
+        },
+        {
+          "stage_id": "tool_use_tool_result_relay",
+          "stage_name": "Tool Use / Tool Result Relay",
+          "objective": "Bridge tool_use events to operator and return tool_result after permission",
+          "measured_output": "3/3 permission round-trips completed; tool_event_pairing 3/3",
+          "evidence_status": "measured"
+        },
+        {
+          "stage_id": "session_completion",
+          "stage_name": "Session Completion",
+          "objective": "Resolve session when claude subprocess exits",
+          "measured_output": "6/6 completed; median 7400ms p95 8369ms",
+          "evidence_status": "measured"
+        },
+        {
+          "stage_id": "follow_up_session_query",
+          "stage_name": "Follow-Up Session Query",
+          "objective": "Send successive prompts preserving conversational context",
+          "measured_output": "3/3 FAILED \u2014 new subprocess spawned each time; context destroyed",
+          "evidence_status": "measured_negative"
+        },
+        {
+          "stage_id": "reconnect_or_reload_behavior",
+          "stage_name": "Reconnect / Reload Behavior",
+          "objective": "Recover session state after browser reload or WS disconnect",
+          "measured_output": "0/3 reload recovery; 0/3 WS reconnect recovery \u2014 STATE_LOSS_ON_TCP_RESET",
+          "evidence_status": "measured_negative"
+        }
+      ],
+      "design_priorities": "# Lead Architect Design Priorities\n\nOwner-confirmed priority ranking (from final corrective checklist):\n\n1. **Reliability** \u2014 First-class constraint to prevent crashes and execution halts.\n2. **Operator continuity** \u2014 Visual session tracing and user-in-the-loop loops.\n3. **Safe file actions** \u2014 Bounding scopes to project directories and mandating permission responses.\n4. **Latency** \u2014 Streaming JSON natively instead of batching to reduce first-token bounds.\n5. **Auditability** \u2014 Logging inputs/outputs over structured JSON lines.\n6. **Session persistence** \u2014 Currently secondary/in-memory, but intended to expand to durable storage.\n7. **Multi-session support** \u2014 Currently constrained natively by `cli_runner` single-subprocess model.\n",
+      "intake_manifest": {
+        "folder_path": "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_NATIVE_READY",
+        "readme_path": "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_NATIVE_READY\\README.md",
+        "packet_json_path": "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_NATIVE_READY\\BDC_INPUT_PACKET_COCKPIT_RUNTIME_AUDIT.json",
+        "unified_variant_comparison_csv": "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_NATIVE_READY\\unified_variant_comparison.csv",
+        "provider_comparison_csv": null,
+        "stability_run_metrics_csv": null,
+        "rollout_case_index_csv": null,
+        "guardian_audit_csv": null,
+        "current_runtime_role_mapping_csv": "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_NATIVE_READY\\current_runtime_role_mapping.csv",
+        "current_slice_metrics_csv": "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_NATIVE_READY\\current_slice_metrics.csv",
+        "failure_case_registry_csv": "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_NATIVE_READY\\failure_case_registry.csv",
+        "prompt_stage_matrix_csv": "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_NATIVE_READY\\prompt_stage_matrix.csv",
+        "lead_architect_design_priorities_md": "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_NATIVE_READY\\lead_architect_design_priorities.md",
+        "extras": [
+          "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_NATIVE_READY\\BDC_INPUT_PACKET_COCKPIT_RUNTIME_AUDIT.json",
+          "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_NATIVE_READY\\bdc_packet_readiness_summary.md",
+          "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_NATIVE_READY\\current_runtime_role_mapping.csv",
+          "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_NATIVE_READY\\current_slice_metrics.csv",
+          "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_NATIVE_READY\\failure_case_registry.csv",
+          "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_NATIVE_READY\\lead_architect_design_priorities.md",
+          "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_NATIVE_READY\\open_gaps_and_missing_data.md",
+          "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_NATIVE_READY\\prompt_stage_matrix.csv",
+          "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_NATIVE_READY\\README.md",
+          "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_NATIVE_READY\\runtime_truth.json",
+          "D:\\projects\\Bio_Digital_Core\\Designer\\Agent_Studio\\IN\\BDC_PACKET_NATIVE_READY\\unified_variant_comparison.csv"
+        ]
+      },
+      "evidence_policy": {},
+      "base_packet_reference": null,
+      "sparse_runtime_support_summary": {
+        "supported": true,
+        "verdict_like_metric_cells": 0,
+        "missing_metric_cells": 68,
+        "aggregate_variant_rows": 0
+      },
+      "runtime_truth": {
+        "measured_commit": "LOCAL_UNVERSIONED_WORKSPACE_NO_GIT",
+        "current_head_deployed_commit": "LOCAL_UNVERSIONED_WORKSPACE_NO_GIT",
+        "packet_state_commit": "LOCAL_UNVERSIONED_WORKSPACE_NO_GIT",
+        "exact_cli_invocation_command": "claude --print --output-format stream-json --verbose --max-turns 50",
+        "current_execution_mode": "--print",
+        "follow_up_behavior": "Creates a new CLI subprocess for follow-ups via send_query. Missing contextual preservation entirely.",
+        "session_completion_rule": "Session completes when claude subprocess exits and backend resolves session_ended via websocket relay.",
+        "stdin_close": "Intentional. After writing query string, process.stdin.close() runs immediately."
+      },
+      "generic_domain_safe_fallback": true
+    }
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "sparse_runtime_missing_metric_cells_present"
+    ],
+    "contradiction_flags": [],
+    "required_field_count": 12,
+    "present_required_field_count": 12,
+    "base_packet_quality_level": "Q4",
+    "validated_packet_quality_level": "Q4",
+    "packet_quality_score": 1.0,
+    "source_label_coverage": {
+      "required_fields_labeled": 12,
+      "total_required_fields": 12
+    },
+    "optional_fields_present": [
+      "document_families",
+      "failure_examples",
+      "variant_metrics_by_slice",
+      "open_questions",
+      "known_implementation_limits",
+      "role_intervention_evidence",
+      "source_labels",
+      "packet_quality_level",
+      "metadata"
+    ]
+  },
+  "supported": true
+}

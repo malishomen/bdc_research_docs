@@ -4,6 +4,8 @@
 - Path: `D:\projects\Bio_Digital_Core\Bio_digital_core`
 - Main working branch: `test`
 - Research mirror repo: `D:\projects\Bio_Digital_Core\bdc_research_docs`
+- Primary live-state reference: `bdc_real_statemant.md`
+- Hierarchy/governance reference: `docs/project/BDC_SOURCE_OF_TRUTH_AND_EXECUTION_HIERARCHY.md`
 
 ## Current Scientific State
 - `R1` selection-physics reboot is complete.
@@ -65,6 +67,11 @@
   - `READY_FOR_R5_TRANSFER_LONGRUN`
 - Launch-prep artifact:
   - `docs/experiments/BDC_R5_TRANSFER_LAUNCH_PREP_PACKET/r5_transfer_launch_prep_decision.json`
+- `R5` measured transfer gate is now complete.
+- Canonical `R5` verdict:
+  - `CONFIRM_SINGLE_MECHANISM_TRANSFER_SIGNAL`
+- Canonical gate artifact:
+  - `results/r5_cloze_transfer_longrun/r5_transfer_measured_gate_decision.json`
 
 ## Current Analytical State
 - Full `R1` packet was run through `BDC Designer`.
@@ -82,7 +89,7 @@
 
 ## Current Next Phase
 - Active scientific target:
-  - `R5 - Single-Mechanism Transfer Gate`
+  - `Post-R5 Bounded Decision Gate`
 - Canonical R3 docs:
   - `docs/experiments/EXP-0804_R3_SEQUENCE_MEMORY_MECHANISM_VALIDATION.md`
   - `docs/experiments/BDC_R3_SEQUENCE_MEMORY_MECHANISM_PREEXPERIMENT_GATE.md`
@@ -117,6 +124,8 @@
 - `TASK-7624` - R5 transfer target matrix
 - `TASK-7625` - R5 transfer target decision gate
 - `TASK-7626` - R5 transfer long-run launch prep
+- `TASK-7627` - R5 transfer long-run execution support
+- `TASK-7628` - R5 transfer execution readiness gate
 
 ## Current R5 Transfer State
 - `R5` transfer target is now approved.
@@ -128,10 +137,47 @@
   - still documentation-only, so it is not honest for immediate long-run preparation.
 - Launch-ready status:
   - `READY_FOR_R5_TRANSFER_LONGRUN`
+- Operational execution support:
+  - launcher preview exists,
+  - incremental progress + ETA monitor exists,
+  - host snapshot is captured,
+  - projected full runtime is about `27.18s` on the current host.
+- Execution-ready status:
+  - `READY_TO_EXECUTE_R5_LONGRUN`
+- Measured long-run status:
+  - `120 / 120` completed runs
+- Measured transfer verdict:
+  - `CONFIRM_SINGLE_MECHANISM_TRANSFER_SIGNAL`
+- Measured transfer reading:
+  - candidate mean accuracy remained `1.0` on the full bounded transfer surface,
+  - deterministic replay remained true,
+  - the same FIFO mechanism remained above all three controls.
 
 ## BDC Designer Rule
 - For scientific reboot work, `BDC Designer` must be used first as pre-experiment narrowing/evidence discipline.
 - Direct experiment execution comes after that gate, not before.
+
+## Current Product Hardening State
+- Active product execution focus:
+  - post-Cockpit `BDC Designer` hardening
+- Canonical product hardening reference:
+  - `docs/project/BDC_DESIGNER_POST_COCKPIT_HARDENING_PLAN.md`
+- Active task chain:
+  - `TASK-7640`
+  - `TASK-7641`
+  - `TASK-7642`
+  - `TASK-7643`
+  - `TASK-7644`
+  - `TASK-7645`
+- Hardening target:
+  - keep native intake working on external packets
+  - eliminate non-deployable winners
+  - eliminate cross-domain fallback contamination
+  - separate intake success from recommendation trust
+- Hardening outcome:
+  - `PASS_EXTERNAL_RERUN_GATE`
+- Product next honest step:
+  - open a bounded Cockpit session-continuity hardening cycle
 
 ## Research Mirrors
 - Temp mirror:
@@ -143,14 +189,22 @@
 
 ## Current Stop Point
 If a new session starts, the correct next action is:
-1. treat `controlled_sequence_memory` as the approved canonical bounded `R2` environment,
-2. treat `bounded_working_memory_candidate` as a mechanism with two bounded positive signals inside the same environment family,
-3. treat `CONFIRM_SINGLE_MECHANISM_GENERALIZATION` as the current canonical scientific truth,
-4. treat `BDC Designer` as a secondary confirming layer, not a replacement for the scientific gate,
-5. treat `OPEN_SINGLE_MECHANISM_TRANSFER_GATE` as the current canonical next-step verdict,
-6. treat `docs/experiments/EXP-0814_R5_SINGLE_MECHANISM_TRANSFER.md` as the active bounded `R5` package,
-7. treat `symbolic_micro_corpus_cloze_transfer` as the approved `R5` transfer target,
-8. treat `docs/experiments/R5_CLOZE_TRANSFER_LAUNCH_PREP.md` as the canonical pre-run reference,
-9. the next executable action may now be the actual `R5` long-run,
-10. do not open organism or cell claims,
-11. do not open micro-assembly until it gets its own explicit bounded evidence gate.
+1. read `bdc_real_statemant.md` first as the canonical live-state summary,
+2. read `docs/project/BDC_SOURCE_OF_TRUTH_AND_EXECUTION_HIERARCHY.md` as the conflict-resolution and execution-discipline rule,
+3. run `python scripts/analysis/verify_bdc_state_hierarchy.py` before major execution,
+4. treat `controlled_sequence_memory` as the approved canonical bounded `R2` environment,
+5. treat `bounded_working_memory_candidate` as a mechanism with two bounded positive signals inside the same environment family,
+6. treat `CONFIRM_SINGLE_MECHANISM_TRANSFER_SIGNAL` as the current canonical scientific truth,
+7. treat `BDC Designer` as a secondary confirming layer, not a replacement for the scientific gate,
+8. treat `docs/experiments/EXP-0814_R5_SINGLE_MECHANISM_TRANSFER.md` as the active bounded `R5` package that produced the measured result,
+9. treat `symbolic_micro_corpus_cloze_transfer` as the approved `R5` transfer target,
+10. treat `docs/experiments/R5_TRANSFER_LONGRUN_EXECUTION_RUNBOOK.md` as the canonical operator reference that governed launch and monitoring,
+11. treat `docs/experiments/R5_TRANSFER_EXECUTION_GATE_DECISION.md` as the canonical pre-run execution gate outcome,
+12. treat `docs/experiments/R5_TRANSFER_MEASURED_GATE_DECISION.md` as the canonical measured-transfer reference,
+13. the next honest step is now a bounded post-`R5` decision gate,
+14. in parallel, the active product execution focus is now the bounded post-Cockpit `BDC Designer` hardening chain,
+15. treat `PASS_EXTERNAL_RERUN_GATE` as the current product truth for `BDC Designer`,
+16. the next honest product step is a bounded Cockpit session-continuity hardening cycle,
+17. do not let product hardening overwrite canonical scientific truth,
+18. do not open organism or cell claims,
+19. do not open micro-assembly until it gets its own explicit bounded evidence gate.

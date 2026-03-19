@@ -1,0 +1,31 @@
+{
+  "case_count": 3,
+  "rows": [
+    {
+      "case_id": "textai_v26",
+      "status": "PASS",
+      "native_intake_supported": true,
+      "recommended_variant_id": "GEMINI_HARDENED_LINE",
+      "recommendation_trust_class": "trustworthy",
+      "selective_outcome_class": "recommend_ready"
+    },
+    {
+      "case_id": "cockpit_external",
+      "status": "WARN",
+      "native_intake_supported": true,
+      "recommended_variant_id": "normalized_event_relay",
+      "recommendation_trust_class": "guarded",
+      "selective_outcome_class": "recommend_with_guardrails"
+    },
+    {
+      "case_id": "synthetic_abstain",
+      "status": "WARN",
+      "native_intake_supported": true,
+      "recommended_variant_id": null,
+      "recommendation_trust_class": "untrustworthy",
+      "selective_outcome_class": "abstain_need_more_evidence"
+    }
+  ],
+  "failures": [],
+  "status": "PASS"
+}

@@ -1,0 +1,21 @@
+{
+  "decision_mode": "full_hybrid_search",
+  "confidence_band": "medium",
+  "priority_slices": [
+    "follow_up_success",
+    "session_recovery_after_reload",
+    "ws_reconnect_recovery"
+  ],
+  "minimum_additional_measurement_set": [
+    {
+      "metric_key": "runtime_min",
+      "description": "runtime by slice or variant"
+    },
+    {
+      "metric_key": "semantic_pass_pct",
+      "description": "semantic pass rate by variant"
+    }
+  ],
+  "blocking_gap_count": 2,
+  "supported": true
+}

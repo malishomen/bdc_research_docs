@@ -1,0 +1,10 @@
+{
+  "task_id": "TASK-7642",
+  "title": "BDC Designer domain-safe normalization",
+  "change_class": "R0",
+  "objective": "Remove TextAI-specific fallback priors from generic folder intake so external packets are normalized with domain-safe defaults instead of legacy assumptions.",
+  "depends_on": [
+    "TASK-7641"
+  ]
+}
+

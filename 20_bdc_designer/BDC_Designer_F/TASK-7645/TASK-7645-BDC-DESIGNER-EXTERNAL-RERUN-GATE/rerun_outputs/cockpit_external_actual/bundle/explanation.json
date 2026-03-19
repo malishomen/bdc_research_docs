@@ -1,0 +1,135 @@
+{
+  "summary": {
+    "recommended_variant_id": "normalized_event_relay",
+    "recommended_variant_name": "stdout_json_parse_relay::normalized_event_relay",
+    "recommended_role_names": [
+      "orchestrator",
+      "editor"
+    ],
+    "recommended_role_count": 2,
+    "strategy_mode": "full_hybrid_search",
+    "confidence_band": "medium",
+    "confidence_score": 0.77,
+    "prior_confidence_band": "high",
+    "prior_confidence_score": 0.8,
+    "deployability_confidence_band": "medium",
+    "deployability_confidence_score": 0.77
+  },
+  "evidence_interpretation": {
+    "winner_margin": 0.3556,
+    "role_contributions": {
+      "editor": -0.45,
+      "guardian": -0.8056,
+      "orchestrator": -0.305,
+      "planner": -0.8056
+    },
+    "evidence_status_summary": {
+      "counts": {
+        "measured": 0,
+        "measured_from_raw_traces": 2,
+        "measured_negative": 0,
+        "measured_from_historical_report": 0,
+        "measured_from_historical_report_negative": 0,
+        "inferred": 0,
+        "inferred_only": 1,
+        "not_implemented": 2,
+        "missing": 0
+      },
+      "current_runtime_variant_count": 2,
+      "historical_variant_count": 0,
+      "winner_evidence_status": "measured_from_raw_traces",
+      "winner_is_historical_prior": false
+    },
+    "evidence_state_summary": {
+      "packet_state_class": "supported",
+      "winner_state": "measured_support",
+      "variant_state_counts": {
+        "measured_support": 0,
+        "measured_raw_trace_support": 2,
+        "measured_negative_support": 0,
+        "historical_support": 0,
+        "historical_negative_support": 0,
+        "inferred_support": 1,
+        "not_implemented": 2,
+        "missing_evidence": 0,
+        "contradicted_evidence": 0
+      },
+      "has_missing_evidence": false,
+      "has_contradicted_evidence": false,
+      "contradiction_flags": []
+    }
+  },
+  "cautions": {
+    "caution_flags": [
+      "non_deployable_variants_present",
+      "broad_search_required"
+    ],
+    "conflict_flags": [],
+    "insufficiency_mode": false,
+    "validation_errors": [],
+    "validation_warnings": [
+      "sparse_runtime_missing_metric_cells_present"
+    ],
+    "evidence_state_summary": {
+      "packet_state_class": "supported",
+      "winner_state": "measured_support",
+      "variant_state_counts": {
+        "measured_support": 0,
+        "measured_raw_trace_support": 2,
+        "measured_negative_support": 0,
+        "historical_support": 0,
+        "historical_negative_support": 0,
+        "inferred_support": 1,
+        "not_implemented": 2,
+        "missing_evidence": 0,
+        "contradicted_evidence": 0
+      },
+      "has_missing_evidence": false,
+      "has_contradicted_evidence": false,
+      "contradiction_flags": []
+    }
+  },
+  "selective_prediction": {
+    "outcome_class": "recommend_with_guardrails",
+    "abstain": false,
+    "operator_action": "bounded_search_around_prior",
+    "reasons": [
+      "search_mode_requires_operator_guardrails"
+    ],
+    "confidence_band": "medium",
+    "deployability_confidence_band": "medium",
+    "strategy_mode": "full_hybrid_search",
+    "tested_variant_count": 5,
+    "eligible_variant_count": 2,
+    "calibration_audit_status": "single_case_not_audited"
+  },
+  "rejected_alternatives": [
+    {
+      "variant_id": "print_single_turn",
+      "reason_summary": [
+        "role_inflation_penalty"
+      ]
+    },
+    {
+      "variant_id": "multi_client_broadcast",
+      "reason_summary": [
+        "measured_competitor_outranks_inferred_variant"
+      ]
+    },
+    {
+      "variant_id": "resume_flow",
+      "reason_summary": [
+        "not_implemented_variant",
+        "non_deployable_variant"
+      ]
+    },
+    {
+      "variant_id": "interactive_flow",
+      "reason_summary": [
+        "not_implemented_variant",
+        "non_deployable_variant"
+      ]
+    }
+  ],
+  "markdown": "# Architecture Recommendation: Cockpit\n\n- Recommended variant: `normalized_event_relay` / `stdout_json_parse_relay::normalized_event_relay`\n- Recommended roles: orchestrator, editor\n- Recommended role count: `2`\n- Strategy mode: `full_hybrid_search`\n- Confidence: `medium` (0.77)\n- Prior confidence: `high` (0.8)\n- Deployability confidence: `medium` (0.77)\n- Outcome class: `recommend_with_guardrails`\n- Abstain: `False`\n\n## Evidence Interpretation\n- Winner margin: `0.3556`\n- Tested variants: `5`\n- Role contributions: `{'editor': -0.45, 'guardian': -0.8056, 'orchestrator': -0.305, 'planner': -0.8056}`\n- Evidence status summary: `{'counts': {'measured': 0, 'measured_from_raw_traces': 2, 'measured_negative': 0, 'measured_from_historical_report': 0, 'measured_from_historical_report_negative': 0, 'inferred': 0, 'inferred_only': 1, 'not_implemented': 2, 'missing': 0}, 'current_runtime_variant_count': 2, 'historical_variant_count': 0, 'winner_evidence_status': 'measured_from_raw_traces', 'winner_is_historical_prior': False}`\n- Evidence state summary: `{'packet_state_class': 'supported', 'winner_state': 'measured_support', 'variant_state_counts': {'measured_support': 0, 'measured_raw_trace_support': 2, 'measured_negative_support': 0, 'historical_support': 0, 'historical_negative_support': 0, 'inferred_support': 1, 'not_implemented': 2, 'missing_evidence': 0, 'contradicted_evidence': 0}, 'has_missing_evidence': False, 'has_contradicted_evidence': False, 'contradiction_flags': []}`\n\n## Cautions\n- Caution flags: `['non_deployable_variants_present', 'broad_search_required']`\n- Conflict flags: `[]`\n- Insufficiency mode: `False`\n\n## Rejected Alternatives\n- `print_single_turn`: role_inflation_penalty\n- `multi_client_broadcast`: measured_competitor_outranks_inferred_variant\n- `resume_flow`: not_implemented_variant, non_deployable_variant\n- `interactive_flow`: not_implemented_variant, non_deployable_variant"
+}

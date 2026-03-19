@@ -1,0 +1,10 @@
+{
+  "task_id": "TASK-7641",
+  "title": "BDC Designer winner eligibility guard",
+  "change_class": "R0",
+  "objective": "Prevent BDC Designer from selecting non-deployable winners such as not-implemented, missing-evidence, or otherwise ineligible variants when measured deployable competitors exist.",
+  "depends_on": [
+    "TASK-7640"
+  ]
+}
+

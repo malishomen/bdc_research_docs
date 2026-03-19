@@ -1,0 +1,1384 @@
+{
+  "folder_path": "tests\\data\\textai_auto_packet_v2_6",
+  "registry": {
+    "folder_path": "tests\\data\\textai_auto_packet_v2_6",
+    "readme_path": "tests\\data\\textai_auto_packet_v2_6\\README.md",
+    "packet_json_path": "tests\\data\\textai_auto_packet_v2_6\\TEXTAI_AUTO_BDC_INPUT_PACKET_V2_6.json",
+    "unified_variant_comparison_csv": null,
+    "provider_comparison_csv": null,
+    "stability_run_metrics_csv": null,
+    "rollout_case_index_csv": "tests\\data\\textai_auto_packet_v2_6\\rollout_case_index.csv",
+    "guardian_audit_csv": "tests\\data\\textai_auto_packet_v2_6\\guardian_audit.csv",
+    "current_runtime_role_mapping_csv": "tests\\data\\textai_auto_packet_v2_6\\current_runtime_role_mapping.csv",
+    "current_slice_metrics_csv": "tests\\data\\textai_auto_packet_v2_6\\current_slice_metrics.csv",
+    "failure_case_registry_csv": "tests\\data\\textai_auto_packet_v2_6\\failure_case_registry.csv",
+    "prompt_stage_matrix_csv": null,
+    "lead_architect_design_priorities_md": "tests\\data\\textai_auto_packet_v2_6\\lead_architect_design_priorities.md",
+    "extras": [
+      "tests\\data\\textai_auto_packet_v2_6\\control_config_note.md",
+      "tests\\data\\textai_auto_packet_v2_6\\current_runtime_role_mapping.csv",
+      "tests\\data\\textai_auto_packet_v2_6\\current_slice_metrics.csv",
+      "tests\\data\\textai_auto_packet_v2_6\\deploy_runtime_truth.md",
+      "tests\\data\\textai_auto_packet_v2_6\\en_split_report.md",
+      "tests\\data\\textai_auto_packet_v2_6\\failure_case_registry.csv",
+      "tests\\data\\textai_auto_packet_v2_6\\fallback_rollback_policy.md",
+      "tests\\data\\textai_auto_packet_v2_6\\guardian_audit.csv",
+      "tests\\data\\textai_auto_packet_v2_6\\guardian_consistency_report.md",
+      "tests\\data\\textai_auto_packet_v2_6\\lead_architect_design_priorities.md",
+      "tests\\data\\textai_auto_packet_v2_6\\lead_architect_hardening_verdict.md",
+      "tests\\data\\textai_auto_packet_v2_6\\operational_constraints.md",
+      "tests\\data\\textai_auto_packet_v2_6\\provider_operations_report.md",
+      "tests\\data\\textai_auto_packet_v2_6\\README.md",
+      "tests\\data\\textai_auto_packet_v2_6\\revision_truth_note.md",
+      "tests\\data\\textai_auto_packet_v2_6\\rollout_case_index.csv",
+      "tests\\data\\textai_auto_packet_v2_6\\ru_split_report.md",
+      "tests\\data\\textai_auto_packet_v2_6\\slice_manifest.md",
+      "tests\\data\\textai_auto_packet_v2_6\\stability_report.md",
+      "tests\\data\\textai_auto_packet_v2_6\\TEXTAI_AUTO_BDC_INPUT_PACKET_V2_6.json"
+    ]
+  },
+  "required_inputs": [
+    "readme_path",
+    "packet_json_path",
+    "current_runtime_role_mapping_csv",
+    "current_slice_metrics_csv",
+    "failure_case_registry_csv",
+    "rollout_case_index_csv",
+    "guardian_audit_csv",
+    "lead_architect_design_priorities_md"
+  ],
+  "missing_required_inputs": [],
+  "normalized_packet": {
+    "schema_version": "BDC_PACKET_V2",
+    "case_id": "TEXTAI_AUTO_BDC_INPUT_PACKET_V2_6",
+    "system_name": "TextAI_Auto",
+    "task_type": "production_hardening_audit_inside_fixed_four_role_architecture",
+    "workflow_summary": "Production hardening audit normalized from TextAI_Auto V2.6 for the fixed four-role Gemini line.",
+    "primary_objective": "Confirm that the fixed four-role Gemini line is operationally stable enough to justify controlled rollout expansion without reopening architecture search.",
+    "functional_decomposition": [
+      {
+        "function_id": "F1",
+        "name": "planner routing discipline on AI-tier splits",
+        "level": "system",
+        "criticality": "high"
+      },
+      {
+        "function_id": "F2",
+        "name": "Gemini editor execution on high-AI traffic",
+        "level": "system",
+        "criticality": "very_high"
+      },
+      {
+        "function_id": "F3",
+        "name": "guardian consistency and rollback discipline",
+        "level": "system",
+        "criticality": "very_high"
+      },
+      {
+        "function_id": "F4",
+        "name": "operational hardening, fallback, and constraints management",
+        "level": "system",
+        "criticality": "high"
+      }
+    ],
+    "hard_constraints": [
+      "Keep the 4-role frame fixed: orchestrator, planner, editor, guardian.",
+      "Do not add harmonizer or any extra role.",
+      "Treat V2.6 as a hardening audit, not a new architecture-search cycle.",
+      "Maintain zero harmful accepted outputs and zero lexical fusion on accepted outputs."
+    ],
+    "soft_constraints": [
+      "Preserve 80% high-AI acceptance under the Gemini line.",
+      "Preserve guardian consistency and rollback discipline.",
+      "Treat broader rollout as conditional on operational fixes, not architecture changes."
+    ],
+    "candidate_roles": [
+      {
+        "role_name": "editor",
+        "source": "inferred"
+      },
+      {
+        "role_name": "guardian",
+        "source": "inferred"
+      },
+      {
+        "role_name": "orchestrator",
+        "source": "inferred"
+      },
+      {
+        "role_name": "planner",
+        "source": "inferred"
+      }
+    ],
+    "tested_variants": [
+      {
+        "variant_id": "GEMINI_HARDENED_LINE",
+        "name": "gemini_hardened_line",
+        "roles": [
+          "editor",
+          "guardian",
+          "orchestrator",
+          "planner"
+        ],
+        "description": "Production hardening audit for the fixed four-role Gemini line.",
+        "role_count": 4,
+        "metrics": {
+          "docs_improved_pct": 80.0,
+          "naturalness_delta": 0.6,
+          "runtime_min": 0.1,
+          "cost_usd": 0.0,
+          "semantic_pass_pct": 100.0,
+          "accepted_rewrite_rate_pct": 80.0,
+          "useful_output_rate_pct": 80.0,
+          "revert_rate_pct": 20.0,
+          "provider_error_rate_pct": 0.0
+        },
+        "source": "measured",
+        "metadata": {
+          "provider": "gemini-2.5-flash",
+          "variant_profile": "textai_v26_production_hardening",
+          "hardening_verdict": "PRODUCTION_HARDENING_SUCCESSFUL_WITH_LIMITATIONS",
+          "expansion_decision": "Ready for controlled rollout expansion"
+        }
+      },
+      {
+        "variant_id": "OPENAI_HIGH_AI_REFERENCE",
+        "name": "openai_high_ai_reference",
+        "roles": [
+          "editor",
+          "guardian",
+          "orchestrator",
+          "planner"
+        ],
+        "description": "OpenAI high-AI reference retained as comparative measured baseline.",
+        "role_count": 4,
+        "metrics": {
+          "docs_improved_pct": 20.0,
+          "naturalness_delta": 0.0,
+          "runtime_min": 0.1867,
+          "cost_usd": 0.2,
+          "semantic_pass_pct": 100.0,
+          "accepted_rewrite_rate_pct": 20.0,
+          "useful_output_rate_pct": 20.0,
+          "revert_rate_pct": 80.0
+        },
+        "source": "measured",
+        "metadata": {
+          "provider": "gpt-4o-mini",
+          "variant_profile": "textai_v26_reference_arm"
+        }
+      }
+    ],
+    "quality_targets": {
+      "high_ai_target_accept_rate_pct": 80,
+      "controlled_rollout_gate": "Ready for controlled rollout expansion",
+      "production_hardening_verdict": "PRODUCTION_HARDENING_SUCCESSFUL_WITH_LIMITATIONS"
+    },
+    "risk_map": {
+      "highest_risks": [
+        "provider_fallback_absent",
+        "retry_backoff_absent",
+        "free_tier_rate_limit_constraint",
+        "persistent_hard_case_ru_econ_10"
+      ],
+      "moderate_risks": [
+        "timeout_config_absent",
+        "editor_fallback_unproven_on_production_path"
+      ]
+    },
+    "document_families": [
+      "high_ai",
+      "high_ai_en",
+      "high_ai_ru",
+      "mid_ai"
+    ],
+    "failure_examples": [
+      {
+        "failure_id": "F001",
+        "case_id": "ru_econ_10",
+        "language": "ru",
+        "provider": "gemini-2.5-flash",
+        "symptom": "safety_gate_revert",
+        "revert_trigger": "safety_gate",
+        "reason_code": "SC-6",
+        "severity": "high",
+        "cross_provider": "yes",
+        "cross_cycle": "yes",
+        "cycles_failing": "V2.2-V2.5.1",
+        "notes": "universal hard case -- fails ALL providers ALL cycles. Register preservation drops below 40% threshold. Structural -- not recoverable without prompt/policy changes.",
+        "evidence_status": "measured"
+      },
+      {
+        "failure_id": "F002",
+        "case_id": "ru_econ_10",
+        "language": "ru",
+        "provider": "gpt-4o-mini",
+        "symptom": "invariant_and_safety_revert",
+        "revert_trigger": "invariant_check",
+        "reason_code": "char_ratio_bounded+no_lexical_fusion",
+        "severity": "high",
+        "cross_provider": "yes",
+        "cross_cycle": "yes",
+        "cycles_failing": "V2.2-V2.5.1",
+        "notes": "same universal failure on OpenAI -- different trigger (invariant vs safety_gate)",
+        "evidence_status": "measured"
+      },
+      {
+        "failure_id": "F003",
+        "case_id": "ru_econ_05",
+        "language": "ru",
+        "provider": "gpt-4o-mini",
+        "symptom": "invariant_revert",
+        "revert_trigger": "invariant_check",
+        "reason_code": "no_lexical_fusion",
+        "severity": "medium",
+        "cross_provider": "no",
+        "cross_cycle": "V2.5.1_only",
+        "cycles_failing": "V2.5.1",
+        "notes": "OpenAI introduces lexical fusion in RU output -- Gemini does not",
+        "evidence_status": "measured"
+      },
+      {
+        "failure_id": "F004",
+        "case_id": "en_econ_21",
+        "language": "en",
+        "provider": "gpt-4o-mini",
+        "symptom": "safety_gate_revert",
+        "revert_trigger": "safety_gate",
+        "reason_code": "SC-2",
+        "severity": "medium",
+        "cross_provider": "no",
+        "cross_cycle": "intermittent",
+        "cycles_failing": "V2.5.1",
+        "notes": "Gemini accepts consistently -- OpenAI fails SC-2 (factual integrity)",
+        "evidence_status": "measured"
+      }
+    ],
+    "variant_metrics_by_slice": [
+      {
+        "variant_id": "GEMINI_HARDENED_LINE",
+        "slice": "high_ai",
+        "metrics": {
+          "accepted_rewrite_rate_pct": 0.8,
+          "revert_rate_pct": 0.19999999999999996,
+          "semantic_pass_proxy_pct": 1.0,
+          "useful_output_rate_pct": 0.8,
+          "runtime_min": 0.1
+        },
+        "notes": "provider=gemini-2.5-flash; accepted=16; observations=20",
+        "evidence_annotations": {
+          "raw_metric_text": {
+            "accepted_rewrite_rate_pct": "0.8",
+            "revert_rate_pct": "0.19999999999999996",
+            "no_op_rate_pct": "missing",
+            "semantic_pass_proxy_pct": "1.0",
+            "useful_output_rate_pct": "0.8",
+            "runtime_min": "0.1",
+            "cost_usd": "missing"
+          },
+          "metric_status": {
+            "accepted_rewrite_rate_pct": "measured_numeric",
+            "revert_rate_pct": "measured_numeric",
+            "no_op_rate_pct": "missing",
+            "semantic_pass_proxy_pct": "measured_numeric",
+            "useful_output_rate_pct": "measured_numeric",
+            "runtime_min": "measured_numeric",
+            "cost_usd": "missing"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [
+            "no_op_rate_pct",
+            "cost_usd"
+          ],
+          "aggregate_runtime_variant": true,
+          "evidence_status": "measured"
+        }
+      },
+      {
+        "variant_id": "GEMINI_HARDENED_LINE",
+        "slice": "high_ai_ru",
+        "metrics": {
+          "accepted_rewrite_rate_pct": 0.67,
+          "revert_rate_pct": 0.32999999999999996,
+          "semantic_pass_proxy_pct": 1.0,
+          "useful_output_rate_pct": 0.67,
+          "runtime_min": 0.10166666666666666
+        },
+        "notes": "provider=gemini-2.5-flash; accepted=8; observations=12",
+        "evidence_annotations": {
+          "raw_metric_text": {
+            "accepted_rewrite_rate_pct": "0.67",
+            "revert_rate_pct": "0.32999999999999996",
+            "no_op_rate_pct": "missing",
+            "semantic_pass_proxy_pct": "1.0",
+            "useful_output_rate_pct": "0.67",
+            "runtime_min": "0.10166666666666666",
+            "cost_usd": "missing"
+          },
+          "metric_status": {
+            "accepted_rewrite_rate_pct": "measured_numeric",
+            "revert_rate_pct": "measured_numeric",
+            "no_op_rate_pct": "missing",
+            "semantic_pass_proxy_pct": "measured_numeric",
+            "useful_output_rate_pct": "measured_numeric",
+            "runtime_min": "measured_numeric",
+            "cost_usd": "missing"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [
+            "no_op_rate_pct",
+            "cost_usd"
+          ],
+          "aggregate_runtime_variant": true,
+          "evidence_status": "measured"
+        }
+      },
+      {
+        "variant_id": "GEMINI_HARDENED_LINE",
+        "slice": "high_ai_en",
+        "metrics": {
+          "accepted_rewrite_rate_pct": 1.0,
+          "semantic_pass_proxy_pct": 1.0,
+          "useful_output_rate_pct": 1.0,
+          "runtime_min": 0.09666666666666666
+        },
+        "notes": "provider=gemini-2.5-flash; accepted=8; observations=8",
+        "evidence_annotations": {
+          "raw_metric_text": {
+            "accepted_rewrite_rate_pct": "1.0",
+            "revert_rate_pct": "missing",
+            "no_op_rate_pct": "missing",
+            "semantic_pass_proxy_pct": "1.0",
+            "useful_output_rate_pct": "1.0",
+            "runtime_min": "0.09666666666666666",
+            "cost_usd": "missing"
+          },
+          "metric_status": {
+            "accepted_rewrite_rate_pct": "measured_numeric",
+            "revert_rate_pct": "missing",
+            "no_op_rate_pct": "missing",
+            "semantic_pass_proxy_pct": "measured_numeric",
+            "useful_output_rate_pct": "measured_numeric",
+            "runtime_min": "measured_numeric",
+            "cost_usd": "missing"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [
+            "revert_rate_pct",
+            "no_op_rate_pct",
+            "cost_usd"
+          ],
+          "aggregate_runtime_variant": true,
+          "evidence_status": "measured"
+        }
+      },
+      {
+        "variant_id": "OPENAI_HIGH_AI_REFERENCE",
+        "slice": "high_ai",
+        "metrics": {
+          "accepted_rewrite_rate_pct": 0.2,
+          "revert_rate_pct": 0.8,
+          "semantic_pass_proxy_pct": 1.0,
+          "useful_output_rate_pct": 0.2,
+          "runtime_min": 0.18666666666666665
+        },
+        "notes": "provider=gpt-4o-mini; accepted=4; observations=20",
+        "evidence_annotations": {
+          "raw_metric_text": {
+            "accepted_rewrite_rate_pct": "0.2",
+            "revert_rate_pct": "0.8",
+            "no_op_rate_pct": "missing",
+            "semantic_pass_proxy_pct": "1.0",
+            "useful_output_rate_pct": "0.2",
+            "runtime_min": "0.18666666666666665",
+            "cost_usd": "missing"
+          },
+          "metric_status": {
+            "accepted_rewrite_rate_pct": "measured_numeric",
+            "revert_rate_pct": "measured_numeric",
+            "no_op_rate_pct": "missing",
+            "semantic_pass_proxy_pct": "measured_numeric",
+            "useful_output_rate_pct": "measured_numeric",
+            "runtime_min": "measured_numeric",
+            "cost_usd": "missing"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [
+            "no_op_rate_pct",
+            "cost_usd"
+          ],
+          "aggregate_runtime_variant": true,
+          "evidence_status": "measured"
+        }
+      },
+      {
+        "variant_id": "GEMINI_HARDENED_LINE",
+        "slice": "mid_ai",
+        "metrics": {
+          "revert_rate_pct": 1.0,
+          "no_op_rate_pct": 1.0,
+          "runtime_min": 0.05
+        },
+        "notes": "provider=gemini-2.5-flash; accepted=0; observations=4",
+        "evidence_annotations": {
+          "raw_metric_text": {
+            "accepted_rewrite_rate_pct": "missing",
+            "revert_rate_pct": "1.0",
+            "no_op_rate_pct": "1.0",
+            "semantic_pass_proxy_pct": "missing",
+            "useful_output_rate_pct": "missing",
+            "runtime_min": "0.05",
+            "cost_usd": "missing"
+          },
+          "metric_status": {
+            "accepted_rewrite_rate_pct": "missing",
+            "revert_rate_pct": "measured_numeric",
+            "no_op_rate_pct": "measured_numeric",
+            "semantic_pass_proxy_pct": "missing",
+            "useful_output_rate_pct": "missing",
+            "runtime_min": "measured_numeric",
+            "cost_usd": "missing"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [
+            "accepted_rewrite_rate_pct",
+            "semantic_pass_proxy_pct",
+            "useful_output_rate_pct",
+            "cost_usd"
+          ],
+          "aggregate_runtime_variant": true,
+          "evidence_status": "measured (planner_skip)"
+        }
+      },
+      {
+        "variant_id": "GEMINI_HARDENED_LINE",
+        "slice": "low_ai",
+        "metrics": {
+          "revert_rate_pct": 1.0,
+          "no_op_rate_pct": 1.0,
+          "runtime_min": 0.03833333333333333
+        },
+        "notes": "provider=gemini-2.5-flash; accepted=0; observations=16",
+        "evidence_annotations": {
+          "raw_metric_text": {
+            "accepted_rewrite_rate_pct": "missing",
+            "revert_rate_pct": "1.0",
+            "no_op_rate_pct": "1.0",
+            "semantic_pass_proxy_pct": "missing",
+            "useful_output_rate_pct": "missing",
+            "runtime_min": "0.03833333333333333",
+            "cost_usd": "missing"
+          },
+          "metric_status": {
+            "accepted_rewrite_rate_pct": "missing",
+            "revert_rate_pct": "measured_numeric",
+            "no_op_rate_pct": "measured_numeric",
+            "semantic_pass_proxy_pct": "missing",
+            "useful_output_rate_pct": "missing",
+            "runtime_min": "measured_numeric",
+            "cost_usd": "missing"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [
+            "accepted_rewrite_rate_pct",
+            "semantic_pass_proxy_pct",
+            "useful_output_rate_pct",
+            "cost_usd"
+          ],
+          "aggregate_runtime_variant": true,
+          "evidence_status": "measured (planner_skip)"
+        }
+      },
+      {
+        "variant_id": "GEMINI_HARDENED_LINE",
+        "slice": "high_ai:ru:ru_econ_05",
+        "metrics": {
+          "accepted_rewrite_rate_pct": 1.0,
+          "semantic_pass_proxy_pct": 1.0,
+          "useful_output_rate_pct": 1.0
+        },
+        "notes": "planner_action=process; persistent_failure=no",
+        "evidence_annotations": {
+          "raw_metric_text": {
+            "accepted_rewrite_rate_pct": "1.0",
+            "revert_rate_pct": "missing",
+            "no_op_rate_pct": "missing",
+            "semantic_pass_proxy_pct": "1.0",
+            "useful_output_rate_pct": "1.0",
+            "runtime_min": "missing",
+            "cost_usd": "missing"
+          },
+          "metric_status": {
+            "accepted_rewrite_rate_pct": "measured_numeric",
+            "revert_rate_pct": "missing",
+            "no_op_rate_pct": "missing",
+            "semantic_pass_proxy_pct": "measured_numeric",
+            "useful_output_rate_pct": "measured_numeric",
+            "runtime_min": "missing",
+            "cost_usd": "missing"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [
+            "revert_rate_pct",
+            "no_op_rate_pct",
+            "runtime_min",
+            "cost_usd"
+          ],
+          "aggregate_runtime_variant": false,
+          "evidence_status": "measured"
+        }
+      },
+      {
+        "variant_id": "GEMINI_HARDENED_LINE",
+        "slice": "high_ai:ru:ru_econ_10",
+        "metrics": {
+          "revert_rate_pct": 1.0
+        },
+        "notes": "planner_action=process; persistent_failure=yes (universal)",
+        "evidence_annotations": {
+          "raw_metric_text": {
+            "accepted_rewrite_rate_pct": "missing",
+            "revert_rate_pct": "1.0",
+            "no_op_rate_pct": "missing",
+            "semantic_pass_proxy_pct": "missing",
+            "useful_output_rate_pct": "missing",
+            "runtime_min": "missing",
+            "cost_usd": "missing"
+          },
+          "metric_status": {
+            "accepted_rewrite_rate_pct": "missing",
+            "revert_rate_pct": "measured_numeric",
+            "no_op_rate_pct": "missing",
+            "semantic_pass_proxy_pct": "missing",
+            "useful_output_rate_pct": "missing",
+            "runtime_min": "missing",
+            "cost_usd": "missing"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [
+            "accepted_rewrite_rate_pct",
+            "no_op_rate_pct",
+            "semantic_pass_proxy_pct",
+            "useful_output_rate_pct",
+            "runtime_min",
+            "cost_usd"
+          ],
+          "aggregate_runtime_variant": false,
+          "evidence_status": "measured"
+        }
+      },
+      {
+        "variant_id": "GEMINI_HARDENED_LINE",
+        "slice": "high_ai:ru:ru_phil_11",
+        "metrics": {
+          "accepted_rewrite_rate_pct": 1.0,
+          "semantic_pass_proxy_pct": 1.0,
+          "useful_output_rate_pct": 1.0
+        },
+        "notes": "planner_action=process; persistent_failure=no",
+        "evidence_annotations": {
+          "raw_metric_text": {
+            "accepted_rewrite_rate_pct": "1.0",
+            "revert_rate_pct": "missing",
+            "no_op_rate_pct": "missing",
+            "semantic_pass_proxy_pct": "1.0",
+            "useful_output_rate_pct": "1.0",
+            "runtime_min": "missing",
+            "cost_usd": "missing"
+          },
+          "metric_status": {
+            "accepted_rewrite_rate_pct": "measured_numeric",
+            "revert_rate_pct": "missing",
+            "no_op_rate_pct": "missing",
+            "semantic_pass_proxy_pct": "measured_numeric",
+            "useful_output_rate_pct": "measured_numeric",
+            "runtime_min": "missing",
+            "cost_usd": "missing"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [
+            "revert_rate_pct",
+            "no_op_rate_pct",
+            "runtime_min",
+            "cost_usd"
+          ],
+          "aggregate_runtime_variant": false,
+          "evidence_status": "measured"
+        }
+      },
+      {
+        "variant_id": "GEMINI_HARDENED_LINE",
+        "slice": "high_ai:en:en_econ_21",
+        "metrics": {
+          "accepted_rewrite_rate_pct": 1.0,
+          "semantic_pass_proxy_pct": 1.0,
+          "useful_output_rate_pct": 1.0
+        },
+        "notes": "planner_action=process; persistent_failure=no",
+        "evidence_annotations": {
+          "raw_metric_text": {
+            "accepted_rewrite_rate_pct": "1.0",
+            "revert_rate_pct": "missing",
+            "no_op_rate_pct": "missing",
+            "semantic_pass_proxy_pct": "1.0",
+            "useful_output_rate_pct": "1.0",
+            "runtime_min": "missing",
+            "cost_usd": "missing"
+          },
+          "metric_status": {
+            "accepted_rewrite_rate_pct": "measured_numeric",
+            "revert_rate_pct": "missing",
+            "no_op_rate_pct": "missing",
+            "semantic_pass_proxy_pct": "measured_numeric",
+            "useful_output_rate_pct": "measured_numeric",
+            "runtime_min": "missing",
+            "cost_usd": "missing"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [
+            "revert_rate_pct",
+            "no_op_rate_pct",
+            "runtime_min",
+            "cost_usd"
+          ],
+          "aggregate_runtime_variant": false,
+          "evidence_status": "measured"
+        }
+      },
+      {
+        "variant_id": "GEMINI_HARDENED_LINE",
+        "slice": "high_ai:en:en_hist_29",
+        "metrics": {
+          "accepted_rewrite_rate_pct": 1.0,
+          "semantic_pass_proxy_pct": 1.0,
+          "useful_output_rate_pct": 1.0
+        },
+        "notes": "planner_action=process; persistent_failure=no",
+        "evidence_annotations": {
+          "raw_metric_text": {
+            "accepted_rewrite_rate_pct": "1.0",
+            "revert_rate_pct": "missing",
+            "no_op_rate_pct": "missing",
+            "semantic_pass_proxy_pct": "1.0",
+            "useful_output_rate_pct": "1.0",
+            "runtime_min": "missing",
+            "cost_usd": "missing"
+          },
+          "metric_status": {
+            "accepted_rewrite_rate_pct": "measured_numeric",
+            "revert_rate_pct": "missing",
+            "no_op_rate_pct": "missing",
+            "semantic_pass_proxy_pct": "measured_numeric",
+            "useful_output_rate_pct": "measured_numeric",
+            "runtime_min": "missing",
+            "cost_usd": "missing"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [
+            "revert_rate_pct",
+            "no_op_rate_pct",
+            "runtime_min",
+            "cost_usd"
+          ],
+          "aggregate_runtime_variant": false,
+          "evidence_status": "measured"
+        }
+      },
+      {
+        "variant_id": "GEMINI_HARDENED_LINE",
+        "slice": "mid_ai:ru:ru_mid_01",
+        "metrics": {
+          "no_op_rate_pct": 1.0
+        },
+        "notes": "planner_action=skip; persistent_failure=n/a",
+        "evidence_annotations": {
+          "raw_metric_text": {
+            "accepted_rewrite_rate_pct": "missing",
+            "revert_rate_pct": "missing",
+            "no_op_rate_pct": "1.0",
+            "semantic_pass_proxy_pct": "missing",
+            "useful_output_rate_pct": "missing",
+            "runtime_min": "missing",
+            "cost_usd": "missing"
+          },
+          "metric_status": {
+            "accepted_rewrite_rate_pct": "missing",
+            "revert_rate_pct": "missing",
+            "no_op_rate_pct": "measured_numeric",
+            "semantic_pass_proxy_pct": "missing",
+            "useful_output_rate_pct": "missing",
+            "runtime_min": "missing",
+            "cost_usd": "missing"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [
+            "accepted_rewrite_rate_pct",
+            "revert_rate_pct",
+            "semantic_pass_proxy_pct",
+            "useful_output_rate_pct",
+            "runtime_min",
+            "cost_usd"
+          ],
+          "aggregate_runtime_variant": false,
+          "evidence_status": "measured"
+        }
+      },
+      {
+        "variant_id": "GEMINI_HARDENED_LINE",
+        "slice": "mid_ai:ru:ru_mid_02",
+        "metrics": {
+          "no_op_rate_pct": 1.0
+        },
+        "notes": "planner_action=skip; persistent_failure=n/a",
+        "evidence_annotations": {
+          "raw_metric_text": {
+            "accepted_rewrite_rate_pct": "missing",
+            "revert_rate_pct": "missing",
+            "no_op_rate_pct": "1.0",
+            "semantic_pass_proxy_pct": "missing",
+            "useful_output_rate_pct": "missing",
+            "runtime_min": "missing",
+            "cost_usd": "missing"
+          },
+          "metric_status": {
+            "accepted_rewrite_rate_pct": "missing",
+            "revert_rate_pct": "missing",
+            "no_op_rate_pct": "measured_numeric",
+            "semantic_pass_proxy_pct": "missing",
+            "useful_output_rate_pct": "missing",
+            "runtime_min": "missing",
+            "cost_usd": "missing"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [
+            "accepted_rewrite_rate_pct",
+            "revert_rate_pct",
+            "semantic_pass_proxy_pct",
+            "useful_output_rate_pct",
+            "runtime_min",
+            "cost_usd"
+          ],
+          "aggregate_runtime_variant": false,
+          "evidence_status": "measured"
+        }
+      },
+      {
+        "variant_id": "GEMINI_HARDENED_LINE",
+        "slice": "mid_ai:en:en_mid_01",
+        "metrics": {
+          "no_op_rate_pct": 1.0
+        },
+        "notes": "planner_action=skip; persistent_failure=n/a",
+        "evidence_annotations": {
+          "raw_metric_text": {
+            "accepted_rewrite_rate_pct": "missing",
+            "revert_rate_pct": "missing",
+            "no_op_rate_pct": "1.0",
+            "semantic_pass_proxy_pct": "missing",
+            "useful_output_rate_pct": "missing",
+            "runtime_min": "missing",
+            "cost_usd": "missing"
+          },
+          "metric_status": {
+            "accepted_rewrite_rate_pct": "missing",
+            "revert_rate_pct": "missing",
+            "no_op_rate_pct": "measured_numeric",
+            "semantic_pass_proxy_pct": "missing",
+            "useful_output_rate_pct": "missing",
+            "runtime_min": "missing",
+            "cost_usd": "missing"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [
+            "accepted_rewrite_rate_pct",
+            "revert_rate_pct",
+            "semantic_pass_proxy_pct",
+            "useful_output_rate_pct",
+            "runtime_min",
+            "cost_usd"
+          ],
+          "aggregate_runtime_variant": false,
+          "evidence_status": "measured"
+        }
+      },
+      {
+        "variant_id": "GEMINI_HARDENED_LINE",
+        "slice": "mid_ai:en:en_mid_02",
+        "metrics": {
+          "no_op_rate_pct": 1.0
+        },
+        "notes": "planner_action=skip; persistent_failure=n/a",
+        "evidence_annotations": {
+          "raw_metric_text": {
+            "accepted_rewrite_rate_pct": "missing",
+            "revert_rate_pct": "missing",
+            "no_op_rate_pct": "1.0",
+            "semantic_pass_proxy_pct": "missing",
+            "useful_output_rate_pct": "missing",
+            "runtime_min": "missing",
+            "cost_usd": "missing"
+          },
+          "metric_status": {
+            "accepted_rewrite_rate_pct": "missing",
+            "revert_rate_pct": "missing",
+            "no_op_rate_pct": "measured_numeric",
+            "semantic_pass_proxy_pct": "missing",
+            "useful_output_rate_pct": "missing",
+            "runtime_min": "missing",
+            "cost_usd": "missing"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [
+            "accepted_rewrite_rate_pct",
+            "revert_rate_pct",
+            "semantic_pass_proxy_pct",
+            "useful_output_rate_pct",
+            "runtime_min",
+            "cost_usd"
+          ],
+          "aggregate_runtime_variant": false,
+          "evidence_status": "measured"
+        }
+      }
+    ],
+    "open_questions": [
+      "Should the next cycle be controlled rollout expansion or provider operational hardening implementation?",
+      "Can ru_econ_10 be classified as permanent limitation without reopening the architecture frame?"
+    ],
+    "known_implementation_limits": [
+      "ru_econ_10 universal structural failure (SC-6)",
+      "no provider-level fallback chain",
+      "no retry/backoff on Gemini errors",
+      "no explicit timeout in Gemini client",
+      "editor fallback (TextHumanizer) untested in production",
+      "free tier rate limits (15 RPM) would bottleneck broader rollout"
+    ],
+    "role_intervention_evidence": [
+      {
+        "role": "planner",
+        "status": "measured",
+        "reason": "Current runtime role mapping and rollout case index preserve planner bucketing and skip/process decisions."
+      },
+      {
+        "role": "editor",
+        "status": "measured",
+        "reason": "Gemini remains the primary editor line in the production hardening audit."
+      },
+      {
+        "role": "guardian",
+        "status": "measured",
+        "reason": "Guardian audit confirms consistent accept/revert behavior and rollback discipline."
+      },
+      {
+        "role": "harmonizer",
+        "status": "measured_from_historical_report_negative",
+        "reason": "No hardening evidence justifies role expansion beyond the fixed four-role line."
+      }
+    ],
+    "source_labels": {
+      "case_id": "user_provided",
+      "system_name": "user_provided",
+      "task_type": "inferred",
+      "workflow_summary": "inferred",
+      "primary_objective": "inferred",
+      "functional_decomposition": "inferred",
+      "hard_constraints": "user_provided",
+      "soft_constraints": "inferred",
+      "candidate_roles": "user_provided",
+      "tested_variants": "user_provided",
+      "quality_targets": "user_provided",
+      "risk_map": "inferred"
+    },
+    "packet_quality_level": "Q4",
+    "metadata": {
+      "input_packet_version": "TEXTAI_AUTO_BDC_INPUT_PACKET_V2_6",
+      "normalization_mode": "textai_v26_production_hardening",
+      "current_runtime_role_mapping": [
+        {
+          "role": "orchestrator",
+          "file": "app/roles/orchestrator.py",
+          "responsibility": "request lifecycle + role coordination + iteration loop",
+          "substrate": "direct",
+          "evidence_status": "measured"
+        },
+        {
+          "role": "planner",
+          "file": "app/roles/planner.py",
+          "responsibility": "AI% bucketing + skip/process routing + prompt family selection",
+          "substrate": "direct",
+          "evidence_status": "measured"
+        },
+        {
+          "role": "editor",
+          "file": "app/roles/editor.py",
+          "responsibility": "pipeline execution with fallback to TextHumanizer",
+          "substrate": "textai_auto/pipelines/humanize_pipeline.py",
+          "evidence_status": "measured"
+        },
+        {
+          "role": "guardian",
+          "file": "app/roles/guardian.py",
+          "responsibility": "post-edit invariant checks + safety gate accept/revert",
+          "substrate": "app/humanization/safety_gate.py + app/humanization/safety_constraints.py",
+          "evidence_status": "measured"
+        },
+        {
+          "role": "planner_input",
+          "file": "app/services/ai_detection_service.py",
+          "responsibility": "3-level ensemble AI detection feeding planner",
+          "substrate": "direct",
+          "evidence_status": "measured"
+        },
+        {
+          "role": "editor_llm",
+          "file": "textai_auto/providers/gemini_client.py",
+          "responsibility": "gemini-2.5-flash primary editor LLM",
+          "substrate": "google-generativeai SDK",
+          "evidence_status": "measured"
+        }
+      ],
+      "guardian_audit_rows": [
+        {
+          "case_id": "ru_econ_05",
+          "language": "ru",
+          "provider": "gemini",
+          "cycle": "V2.5",
+          "run": "1",
+          "decision": "accept",
+          "revert_trigger": "",
+          "reason_code": "all_checks_passed",
+          "char_ratio": "0.98",
+          "fusion": "no",
+          "near_miss": "no",
+          "evidence_status": "measured"
+        },
+        {
+          "case_id": "ru_econ_05",
+          "language": "ru",
+          "provider": "gemini",
+          "cycle": "V2.5",
+          "run": "2",
+          "decision": "accept",
+          "revert_trigger": "",
+          "reason_code": "all_checks_passed",
+          "char_ratio": "0.98",
+          "fusion": "no",
+          "near_miss": "no",
+          "evidence_status": "measured"
+        },
+        {
+          "case_id": "ru_econ_05",
+          "language": "ru",
+          "provider": "gemini",
+          "cycle": "V2.5",
+          "run": "3",
+          "decision": "accept",
+          "revert_trigger": "",
+          "reason_code": "all_checks_passed",
+          "char_ratio": "0.98",
+          "fusion": "no",
+          "near_miss": "no",
+          "evidence_status": "measured"
+        },
+        {
+          "case_id": "ru_econ_05",
+          "language": "ru",
+          "provider": "gemini",
+          "cycle": "V2.5.1",
+          "run": "1",
+          "decision": "accept",
+          "revert_trigger": "",
+          "reason_code": "all_checks_passed",
+          "char_ratio": "0.98",
+          "fusion": "no",
+          "near_miss": "no",
+          "evidence_status": "measured"
+        },
+        {
+          "case_id": "ru_econ_10",
+          "language": "ru",
+          "provider": "gemini",
+          "cycle": "V2.5",
+          "run": "1",
+          "decision": "revert",
+          "revert_trigger": "safety_gate",
+          "reason_code": "SC-6",
+          "char_ratio": "1.0",
+          "fusion": "no",
+          "near_miss": "no",
+          "evidence_status": "measured"
+        },
+        {
+          "case_id": "ru_econ_10",
+          "language": "ru",
+          "provider": "gemini",
+          "cycle": "V2.5",
+          "run": "2",
+          "decision": "revert",
+          "revert_trigger": "safety_gate",
+          "reason_code": "SC-6",
+          "char_ratio": "1.0",
+          "fusion": "no",
+          "near_miss": "no",
+          "evidence_status": "measured"
+        },
+        {
+          "case_id": "ru_econ_10",
+          "language": "ru",
+          "provider": "gemini",
+          "cycle": "V2.5",
+          "run": "3",
+          "decision": "revert",
+          "revert_trigger": "safety_gate",
+          "reason_code": "SC-6",
+          "char_ratio": "1.0",
+          "fusion": "no",
+          "near_miss": "no",
+          "evidence_status": "measured"
+        },
+        {
+          "case_id": "ru_econ_10",
+          "language": "ru",
+          "provider": "gemini",
+          "cycle": "V2.5.1",
+          "run": "1",
+          "decision": "revert",
+          "revert_trigger": "safety_gate",
+          "reason_code": "SC-6",
+          "char_ratio": "1.0",
+          "fusion": "no",
+          "near_miss": "no",
+          "evidence_status": "measured"
+        },
+        {
+          "case_id": "ru_phil_11",
+          "language": "ru",
+          "provider": "gemini",
+          "cycle": "V2.5",
+          "run": "1",
+          "decision": "accept",
+          "revert_trigger": "",
+          "reason_code": "all_checks_passed",
+          "char_ratio": "0.94",
+          "fusion": "no",
+          "near_miss": "no",
+          "evidence_status": "measured"
+        },
+        {
+          "case_id": "ru_phil_11",
+          "language": "ru",
+          "provider": "gemini",
+          "cycle": "V2.5",
+          "run": "2",
+          "decision": "accept",
+          "revert_trigger": "",
+          "reason_code": "all_checks_passed",
+          "char_ratio": "0.94",
+          "fusion": "no",
+          "near_miss": "no",
+          "evidence_status": "measured"
+        },
+        {
+          "case_id": "ru_phil_11",
+          "language": "ru",
+          "provider": "gemini",
+          "cycle": "V2.5",
+          "run": "3",
+          "decision": "accept",
+          "revert_trigger": "",
+          "reason_code": "all_checks_passed",
+          "char_ratio": "0.94",
+          "fusion": "no",
+          "near_miss": "no",
+          "evidence_status": "measured"
+        },
+        {
+          "case_id": "ru_phil_11",
+          "language": "ru",
+          "provider": "gemini",
+          "cycle": "V2.5.1",
+          "run": "1",
+          "decision": "accept",
+          "revert_trigger": "",
+          "reason_code": "all_checks_passed",
+          "char_ratio": "0.94",
+          "fusion": "no",
+          "near_miss": "no",
+          "evidence_status": "measured"
+        },
+        {
+          "case_id": "en_econ_21",
+          "language": "en",
+          "provider": "gemini",
+          "cycle": "V2.5",
+          "run": "1",
+          "decision": "accept",
+          "revert_trigger": "",
+          "reason_code": "all_checks_passed",
+          "char_ratio": "0.99",
+          "fusion": "no",
+          "near_miss": "no",
+          "evidence_status": "measured"
+        },
+        {
+          "case_id": "en_econ_21",
+          "language": "en",
+          "provider": "gemini",
+          "cycle": "V2.5",
+          "run": "2",
+          "decision": "accept",
+          "revert_trigger": "",
+          "reason_code": "all_checks_passed",
+          "char_ratio": "0.99",
+          "fusion": "no",
+          "near_miss": "no",
+          "evidence_status": "measured"
+        },
+        {
+          "case_id": "en_econ_21",
+          "language": "en",
+          "provider": "gemini",
+          "cycle": "V2.5",
+          "run": "3",
+          "decision": "accept",
+          "revert_trigger": "",
+          "reason_code": "all_checks_passed",
+          "char_ratio": "0.99",
+          "fusion": "no",
+          "near_miss": "no",
+          "evidence_status": "measured"
+        },
+        {
+          "case_id": "en_econ_21",
+          "language": "en",
+          "provider": "gemini",
+          "cycle": "V2.5.1",
+          "run": "1",
+          "decision": "accept",
+          "revert_trigger": "",
+          "reason_code": "all_checks_passed",
+          "char_ratio": "0.99",
+          "fusion": "no",
+          "near_miss": "no",
+          "evidence_status": "measured"
+        },
+        {
+          "case_id": "en_hist_29",
+          "language": "en",
+          "provider": "gemini",
+          "cycle": "V2.5",
+          "run": "1",
+          "decision": "accept",
+          "revert_trigger": "",
+          "reason_code": "all_checks_passed",
+          "char_ratio": "1.02",
+          "fusion": "no",
+          "near_miss": "no",
+          "evidence_status": "measured"
+        },
+        {
+          "case_id": "en_hist_29",
+          "language": "en",
+          "provider": "gemini",
+          "cycle": "V2.5",
+          "run": "2",
+          "decision": "accept",
+          "revert_trigger": "",
+          "reason_code": "all_checks_passed",
+          "char_ratio": "1.02",
+          "fusion": "no",
+          "near_miss": "no",
+          "evidence_status": "measured"
+        },
+        {
+          "case_id": "en_hist_29",
+          "language": "en",
+          "provider": "gemini",
+          "cycle": "V2.5",
+          "run": "3",
+          "decision": "accept",
+          "revert_trigger": "",
+          "reason_code": "all_checks_passed",
+          "char_ratio": "1.02",
+          "fusion": "no",
+          "near_miss": "no",
+          "evidence_status": "measured"
+        },
+        {
+          "case_id": "en_hist_29",
+          "language": "en",
+          "provider": "gemini",
+          "cycle": "V2.5.1",
+          "run": "1",
+          "decision": "accept",
+          "revert_trigger": "",
+          "reason_code": "all_checks_passed",
+          "char_ratio": "1.02",
+          "fusion": "no",
+          "near_miss": "no",
+          "evidence_status": "measured"
+        },
+        {
+          "case_id": "ru_econ_05",
+          "language": "ru",
+          "provider": "openai",
+          "cycle": "V2.5.1",
+          "run": "1",
+          "decision": "revert",
+          "revert_trigger": "invariant_check",
+          "reason_code": "no_lexical_fusion",
+          "char_ratio": "1.0",
+          "fusion": "no",
+          "near_miss": "no",
+          "evidence_status": "measured"
+        },
+        {
+          "case_id": "ru_econ_10",
+          "language": "ru",
+          "provider": "openai",
+          "cycle": "V2.5.1",
+          "run": "1",
+          "decision": "revert",
+          "revert_trigger": "invariant_check",
+          "reason_code": "char_ratio_bounded+no_lexical_fusion",
+          "char_ratio": "1.0",
+          "fusion": "no",
+          "near_miss": "no",
+          "evidence_status": "measured"
+        },
+        {
+          "case_id": "ru_phil_11",
+          "language": "ru",
+          "provider": "openai",
+          "cycle": "V2.5.1",
+          "run": "1",
+          "decision": "accept",
+          "revert_trigger": "",
+          "reason_code": "all_checks_passed",
+          "char_ratio": "1.32",
+          "fusion": "no",
+          "near_miss": "no",
+          "evidence_status": "measured"
+        },
+        {
+          "case_id": "en_econ_21",
+          "language": "en",
+          "provider": "openai",
+          "cycle": "V2.5.1",
+          "run": "1",
+          "decision": "revert",
+          "revert_trigger": "safety_gate",
+          "reason_code": "SC-2",
+          "char_ratio": "1.0",
+          "fusion": "no",
+          "near_miss": "no",
+          "evidence_status": "measured"
+        },
+        {
+          "case_id": "en_hist_29",
+          "language": "en",
+          "provider": "openai",
+          "cycle": "V2.5.1",
+          "run": "1",
+          "decision": "accept",
+          "revert_trigger": "",
+          "reason_code": "all_checks_passed",
+          "char_ratio": "0.96",
+          "fusion": "no",
+          "near_miss": "no",
+          "evidence_status": "measured"
+        }
+      ],
+      "design_priorities": "# V2.6 Lead Architect Design Priorities\n\n## Current priorities (in order)\n\n### P1: Production operational hardening (before expansion)\n- Add retry/backoff to gemini_client.py\n- Add explicit timeout configuration\n- Add provider-level fallback chain (Gemini \u2192 OpenAI)\n- Add rate limit awareness / queueing\n- Priority: **high** \u2014 required before broader rollout\n\n### P2: ru_econ_10 investigation (bounded)\n- Diagnose why SC-6 (register preservation) always fails for this case\n- Determine if it is recoverable with bounded prompt refinement\n- If not recoverable: accept as permanent known limitation\n- Priority: **medium** \u2014 does not block expansion, but affects RU acceptance rate\n\n### P3: Monitoring / observability\n- Add structured logging for fallback triggers\n- Add latency histograms per provider\n- Add guardian decision counters (accept/revert by reason)\n- Add rate limit proximity alerting\n- Priority: **medium** \u2014 required for production confidence\n\n### P4: Broader case coverage\n- Expand eval set beyond 5 high-AI cases\n- Include more diverse RU and EN domains\n- Validate that 80% acceptance holds on larger case set\n- Priority: **medium** \u2014 required before full production\n\n## What is explicitly NOT a priority\n- Architecture expansion (locked at 4-role)\n- Harmonizer introduction (excluded)\n- New role addition (excluded)\n- Mid-AI processing (secondary, not primary target)\n- Provider search (Gemini validated as primary)\n- Detector optimization (not in scope)\n\n## Design constraints\n- All changes must stay inside the `4-role + Gemini` frame\n- Guardian policy cannot be loosened without measured justification\n- Prompt changes allowed only if bounded and measurable\n- No changes that require BDC re-evaluation of the architecture frame\n",
+      "intake_manifest": {
+        "folder_path": "tests\\data\\textai_auto_packet_v2_6",
+        "readme_path": "tests\\data\\textai_auto_packet_v2_6\\README.md",
+        "packet_json_path": "tests\\data\\textai_auto_packet_v2_6\\TEXTAI_AUTO_BDC_INPUT_PACKET_V2_6.json",
+        "unified_variant_comparison_csv": null,
+        "provider_comparison_csv": null,
+        "stability_run_metrics_csv": null,
+        "rollout_case_index_csv": "tests\\data\\textai_auto_packet_v2_6\\rollout_case_index.csv",
+        "guardian_audit_csv": "tests\\data\\textai_auto_packet_v2_6\\guardian_audit.csv",
+        "current_runtime_role_mapping_csv": "tests\\data\\textai_auto_packet_v2_6\\current_runtime_role_mapping.csv",
+        "current_slice_metrics_csv": "tests\\data\\textai_auto_packet_v2_6\\current_slice_metrics.csv",
+        "failure_case_registry_csv": "tests\\data\\textai_auto_packet_v2_6\\failure_case_registry.csv",
+        "prompt_stage_matrix_csv": null,
+        "lead_architect_design_priorities_md": "tests\\data\\textai_auto_packet_v2_6\\lead_architect_design_priorities.md",
+        "extras": [
+          "tests\\data\\textai_auto_packet_v2_6\\control_config_note.md",
+          "tests\\data\\textai_auto_packet_v2_6\\current_runtime_role_mapping.csv",
+          "tests\\data\\textai_auto_packet_v2_6\\current_slice_metrics.csv",
+          "tests\\data\\textai_auto_packet_v2_6\\deploy_runtime_truth.md",
+          "tests\\data\\textai_auto_packet_v2_6\\en_split_report.md",
+          "tests\\data\\textai_auto_packet_v2_6\\failure_case_registry.csv",
+          "tests\\data\\textai_auto_packet_v2_6\\fallback_rollback_policy.md",
+          "tests\\data\\textai_auto_packet_v2_6\\guardian_audit.csv",
+          "tests\\data\\textai_auto_packet_v2_6\\guardian_consistency_report.md",
+          "tests\\data\\textai_auto_packet_v2_6\\lead_architect_design_priorities.md",
+          "tests\\data\\textai_auto_packet_v2_6\\lead_architect_hardening_verdict.md",
+          "tests\\data\\textai_auto_packet_v2_6\\operational_constraints.md",
+          "tests\\data\\textai_auto_packet_v2_6\\provider_operations_report.md",
+          "tests\\data\\textai_auto_packet_v2_6\\README.md",
+          "tests\\data\\textai_auto_packet_v2_6\\revision_truth_note.md",
+          "tests\\data\\textai_auto_packet_v2_6\\rollout_case_index.csv",
+          "tests\\data\\textai_auto_packet_v2_6\\ru_split_report.md",
+          "tests\\data\\textai_auto_packet_v2_6\\slice_manifest.md",
+          "tests\\data\\textai_auto_packet_v2_6\\stability_report.md",
+          "tests\\data\\textai_auto_packet_v2_6\\TEXTAI_AUTO_BDC_INPUT_PACKET_V2_6.json"
+        ]
+      },
+      "revision_truth": {
+        "measured_run_commit": "5edf9db",
+        "experiment_results_commit": "15e940b",
+        "packet_state_commit": "48219b1",
+        "deployed_revision": "5edf9db",
+        "current_head_at_review": "48219b1",
+        "note": "V2.6 is a hardening audit \u2014 no new API calls made. Measured data is from V2.5 (81e492b) and V2.5.1 (5edf9db) runs."
+      },
+      "hardening_verdict": "PRODUCTION_HARDENING_SUCCESSFUL_WITH_LIMITATIONS",
+      "expansion_decision": "Ready for controlled rollout expansion",
+      "guardian_consistency_confirmed": true,
+      "persistent_hard_cases": [
+        "en_econ_21",
+        "ru_econ_05",
+        "ru_econ_10"
+      ],
+      "sparse_runtime_support_summary": {
+        "supported": true,
+        "verdict_like_metric_cells": 0,
+        "missing_metric_cells": 63,
+        "aggregate_variant_rows": 6
+      },
+      "expected_best_variant_id": "GEMINI_HARDENED_LINE"
+    }
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "sparse_runtime_missing_metric_cells_present"
+    ],
+    "contradiction_flags": [],
+    "required_field_count": 12,
+    "present_required_field_count": 12,
+    "base_packet_quality_level": "Q4",
+    "validated_packet_quality_level": "Q4",
+    "packet_quality_score": 1.0,
+    "source_label_coverage": {
+      "required_fields_labeled": 12,
+      "total_required_fields": 12
+    },
+    "optional_fields_present": [
+      "document_families",
+      "failure_examples",
+      "variant_metrics_by_slice",
+      "open_questions",
+      "known_implementation_limits",
+      "role_intervention_evidence",
+      "source_labels",
+      "packet_quality_level",
+      "metadata"
+    ]
+  },
+  "supported": true
+}
