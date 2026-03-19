@@ -1,0 +1,39 @@
+{
+  "recommended_variant_id": "resume_flow",
+  "recommended_variant_name": "not_implemented::resume_flow",
+  "recommended_role_names": [
+    "N/A"
+  ],
+  "recommended_role_count": 1,
+  "strategy_mode": "full_hybrid_search",
+  "confidence_score": 0.77,
+  "confidence_band": "medium",
+  "prior_confidence_score": 0.8,
+  "prior_confidence_band": "high",
+  "deployability_confidence_score": 0.77,
+  "deployability_confidence_band": "medium",
+  "calibration": {
+    "audit_status": "single_case_not_audited",
+    "audited": false,
+    "predicted_correctness_probability": 0.77,
+    "calibration_bucket": "0.6-0.8",
+    "uses_benchmark_calibration": false,
+    "recommended_next_step": "run_phase53_bdc_designer_calibration_layer",
+    "caution_flags": [
+      "broad_search_required"
+    ]
+  },
+  "selective_prediction": {
+    "outcome_class": "recommend_with_guardrails",
+    "abstain": false,
+    "operator_action": "bounded_search_around_prior",
+    "reasons": [
+      "search_mode_requires_operator_guardrails"
+    ],
+    "confidence_band": "medium",
+    "deployability_confidence_band": "medium",
+    "strategy_mode": "full_hybrid_search",
+    "tested_variant_count": 5,
+    "calibration_audit_status": "single_case_not_audited"
+  }
+}

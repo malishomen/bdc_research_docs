@@ -1,0 +1,9 @@
+{
+  "task_id": "TASK-7639",
+  "title": "BDC Designer cockpit native packet run and findings",
+  "change_class": "R0",
+  "objective": "Run BDC Designer on the Cockpit native-ready packet, record the actual native intake result, and document the product-level findings about where the current Designer output is trustworthy versus where it is contaminated by fallback logic.",
+  "depends_on": [
+    "TASK-7638"
+  ]
+}
