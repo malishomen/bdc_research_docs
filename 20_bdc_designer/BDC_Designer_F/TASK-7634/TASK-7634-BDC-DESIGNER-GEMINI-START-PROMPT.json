@@ -1,0 +1,9 @@
+{
+  "task_id": "TASK-7634",
+  "title": "BDC Designer Gemini start prompt",
+  "change_class": "R0",
+  "objective": "Prepare a start prompt for the client's Gemini coder agent so it can work from BDC_DESIGNER_RESPONSE_TO_COCKPIT.md and assemble a proper BDC evidence packet.",
+  "depends_on": [
+    "TASK-7633"
+  ]
+}
