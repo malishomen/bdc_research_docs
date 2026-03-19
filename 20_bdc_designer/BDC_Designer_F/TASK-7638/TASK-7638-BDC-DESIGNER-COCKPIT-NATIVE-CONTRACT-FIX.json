@@ -1,0 +1,9 @@
+{
+  "task_id": "TASK-7638",
+  "title": "BDC Designer cockpit native contract fix package",
+  "change_class": "R0",
+  "objective": "Prepare an exact native-intake contract-fix plan and a start prompt so the Cockpit team can remap the already measured packet into current BDC Designer schema without another measurement cycle.",
+  "depends_on": [
+    "TASK-7637"
+  ]
+}
