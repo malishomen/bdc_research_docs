@@ -1,0 +1,7 @@
+{
+  "task_id": "TASK-7629",
+  "title": "BDC real-state statemant canon",
+  "change_class": "R1",
+  "objective": "Create a single canonical live-state document for the scientific reboot line and BDC Designer, and make its targeted in-place maintenance a mandatory governance rule.",
+  "depends_on": ["TASK-7628"]
+}
