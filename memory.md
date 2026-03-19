@@ -37,6 +37,14 @@
   - `OPEN_SINGLE_MECHANISM_GENERALIZATION_GATE`
 - Decision artifact:
   - `docs/experiments/POST_SECOND_SIGNAL_GATE_DECISION.md`
+- `R4` single-mechanism generalization gate is now complete.
+- Canonical `R4` verdict:
+  - `CONFIRM_SINGLE_MECHANISM_GENERALIZATION`
+- Canonical gate artifact:
+  - `results/r4_single_mechanism_generalization/generalization_gate_decision.json`
+- Secondary analytical `BDC Designer` packet verdict:
+  - `supported = true`
+  - `recommended_variant_id = bounded_working_memory_candidate`
 
 ## Current Analytical State
 - Full `R1` packet was run through `BDC Designer`.
@@ -54,7 +62,7 @@
 
 ## Current Next Phase
 - Active scientific target:
-  - `R4 - Single-Mechanism Generalization Gate`
+  - `POST-R4 BOUNDED DECISION GATE`
 - Canonical R3 docs:
   - `docs/experiments/EXP-0804_R3_SEQUENCE_MEMORY_MECHANISM_VALIDATION.md`
   - `docs/experiments/BDC_R3_SEQUENCE_MEMORY_MECHANISM_PREEXPERIMENT_GATE.md`
@@ -66,6 +74,7 @@
   - `docs/experiments/EXP-0810_R4_SINGLE_MECHANISM_GENERALIZATION.md`
   - `docs/experiments/BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PREEXPERIMENT_GATE.md`
   - `docs/experiments/EXP-0811_R4_SINGLE_MECHANISM_GENERALIZATION_IMPLEMENTATION_PACKAGE.md`
+  - `docs/experiments/R4_SINGLE_MECHANISM_GENERALIZATION_GATE_DECISION.md`
 
 ## Current Task Chain
 - `TASK-7608` - R3 mechanism package
@@ -98,8 +107,8 @@
 If a new session starts, the correct next action is:
 1. treat `controlled_sequence_memory` as the approved canonical bounded `R2` environment,
 2. treat `bounded_working_memory_candidate` as a mechanism with two bounded positive signals inside the same environment family,
-3. treat `single_mechanism_generalization` as the selected and already opened next bounded gate,
-4. treat `docs/experiments/R4_SINGLE_MECHANISM_GENERALIZATION_PRESSURE_MATRIX.md` as the canonical bounded `R4` pressure surface,
-5. treat `docs/experiments/R4_SINGLE_MECHANISM_GENERALIZATION_MEASUREMENT_NOTE.md` as the measured `R4` implementation result,
-6. execute `TASK-7620` next,
+3. treat `CONFIRM_SINGLE_MECHANISM_GENERALIZATION` as the current canonical scientific truth,
+4. treat `BDC Designer` as a secondary confirming layer, not a replacement for the scientific gate,
+5. open the next bounded post-R4 decision package explicitly rather than jumping straight to micro-assembly,
+6. do not open organism or cell claims,
 7. do not open micro-assembly until it gets its own explicit bounded evidence gate.

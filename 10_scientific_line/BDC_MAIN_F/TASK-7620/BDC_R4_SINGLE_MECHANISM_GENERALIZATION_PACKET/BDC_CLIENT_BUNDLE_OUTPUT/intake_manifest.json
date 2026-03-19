@@ -1,0 +1,945 @@
+{
+  "folder_path": "docs\\experiments\\BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PACKET",
+  "registry": {
+    "folder_path": "docs\\experiments\\BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PACKET",
+    "readme_path": "docs\\experiments\\BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PACKET\\README.md",
+    "packet_json_path": "docs\\experiments\\BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PACKET\\BDC_INPUT_PACKET_R4_SINGLE_MECHANISM_GENERALIZATION.json",
+    "unified_variant_comparison_csv": "docs\\experiments\\BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PACKET\\unified_variant_comparison.csv",
+    "provider_comparison_csv": null,
+    "stability_run_metrics_csv": null,
+    "rollout_case_index_csv": null,
+    "guardian_audit_csv": null,
+    "current_runtime_role_mapping_csv": "docs\\experiments\\BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PACKET\\current_runtime_role_mapping.csv",
+    "current_slice_metrics_csv": "docs\\experiments\\BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PACKET\\current_slice_metrics.csv",
+    "failure_case_registry_csv": "docs\\experiments\\BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PACKET\\failure_case_registry.csv",
+    "prompt_stage_matrix_csv": "docs\\experiments\\BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PACKET\\prompt_stage_matrix.csv",
+    "lead_architect_design_priorities_md": "docs\\experiments\\BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PACKET\\lead_architect_design_priorities.md",
+    "extras": [
+      "docs\\experiments\\BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PACKET\\BDC_INPUT_PACKET_R4_SINGLE_MECHANISM_GENERALIZATION.json",
+      "docs\\experiments\\BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PACKET\\current_runtime_role_mapping.csv",
+      "docs\\experiments\\BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PACKET\\current_slice_metrics.csv",
+      "docs\\experiments\\BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PACKET\\failure_case_registry.csv",
+      "docs\\experiments\\BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PACKET\\generalization_matrix_snapshot.json",
+      "docs\\experiments\\BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PACKET\\generalization_summary.json",
+      "docs\\experiments\\BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PACKET\\lead_architect_design_priorities.md",
+      "docs\\experiments\\BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PACKET\\prompt_stage_matrix.csv",
+      "docs\\experiments\\BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PACKET\\r4_generalization_gate_decision.json",
+      "docs\\experiments\\BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PACKET\\README.md",
+      "docs\\experiments\\BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PACKET\\unified_variant_comparison.csv"
+    ]
+  },
+  "required_inputs": [
+    "readme_path",
+    "packet_json_path",
+    "unified_variant_comparison_csv",
+    "current_runtime_role_mapping_csv",
+    "current_slice_metrics_csv",
+    "failure_case_registry_csv",
+    "prompt_stage_matrix_csv",
+    "lead_architect_design_priorities_md"
+  ],
+  "missing_required_inputs": [],
+  "normalized_packet": {
+    "schema_version": "BDC_PACKET_V2",
+    "case_id": "BDC_R4_SINGLE_MECHANISM_GENERALIZATION",
+    "system_name": "Bio_Digital_Core",
+    "task_type": "current_runtime_logical_redesign_decision",
+    "workflow_summary": "Folder intake normalization for current-runtime logical redesign using historical prior evidence and current runtime measurements.",
+    "primary_objective": "Choose the minimum logical redesign for current runtime that improves semantic safety and useful rewrite rate without premature coordination overhead.",
+    "functional_decomposition": [
+      {
+        "function_id": "F1",
+        "name": "planner-like routing and family selection",
+        "level": "system",
+        "criticality": "high"
+      },
+      {
+        "function_id": "F2",
+        "name": "editor path execution",
+        "level": "system",
+        "criticality": "very_high"
+      },
+      {
+        "function_id": "F3",
+        "name": "guardian-like accept/revert/retry logic",
+        "level": "system",
+        "criticality": "very_high"
+      },
+      {
+        "function_id": "F4",
+        "name": "orchestration and bounded iteration",
+        "level": "system",
+        "criticality": "high"
+      }
+    ],
+    "hard_constraints": [
+      "Do not conflate historical measured multi-agent evidence with current stage-based runtime truth.",
+      "Do not optimize for detector score over semantic safety and useful rewrite rate.",
+      "Do not introduce harmonizer-like overhead without positive evidence.",
+      "Preserve semantics, terminology, citations, and academic structure."
+    ],
+    "soft_constraints": [
+      "Increase accepted useful rewrites on forensic_high_ai_5.",
+      "Break the no-op gap on mid_ai_4.",
+      "Reduce revert-heavy aggressive families.",
+      "Keep runtime and coordination overhead controlled."
+    ],
+    "candidate_roles": [
+      {
+        "role_name": "editor",
+        "source": "inferred"
+      },
+      {
+        "role_name": "guardian",
+        "source": "inferred"
+      },
+      {
+        "role_name": "orchestrator",
+        "source": "inferred"
+      },
+      {
+        "role_name": "planner",
+        "source": "inferred"
+      }
+    ],
+    "tested_variants": [
+      {
+        "variant_id": "bounded_working_memory_candidate",
+        "name": "scientific_mechanism_candidate::bounded_working_memory_candidate",
+        "roles": [
+          "orchestrator",
+          "planner",
+          "editor",
+          "guardian"
+        ],
+        "description": "Measured single FIFO mechanism across all required R4 generalization slices.",
+        "role_count": 4,
+        "metrics": {
+          "docs_improved_pct": 100.0,
+          "naturalness_delta": 100.0,
+          "semantic_pass_pct": 100.0,
+          "runtime_min": 0.0,
+          "cost_usd": 0.0,
+          "llm_calls": 0.0
+        },
+        "source": "measured",
+        "metadata": {
+          "runtime_type": "generalization_gate",
+          "raw_role_set": "orchestrator+planner+editor+guardian",
+          "logical_mapping_mode": "folder_intake_role_mapped",
+          "sparse_runtime_annotations": {
+            "raw_metric_text": {
+              "docs_improved_pct": "100.0000",
+              "naturalness_delta": "100.0000",
+              "semantic_pass_pct": "100.0000",
+              "runtime_min": "0.0000",
+              "cost_usd": "0.0000",
+              "llm_calls": "0",
+              "revert_rate_pct": "missing",
+              "gate_pass_rate_pct": "missing",
+              "useful_rewrite_rate_pct": "missing"
+            },
+            "metric_status": {
+              "docs_improved_pct": "measured_numeric",
+              "naturalness_delta": "measured_numeric",
+              "semantic_pass_pct": "measured_numeric",
+              "runtime_min": "measured_numeric",
+              "cost_usd": "measured_numeric",
+              "llm_calls": "measured_numeric",
+              "revert_rate_pct": "missing",
+              "gate_pass_rate_pct": "missing",
+              "useful_rewrite_rate_pct": "missing"
+            },
+            "verdict_tags": {},
+            "missing_metric_keys": [
+              "revert_rate_pct",
+              "gate_pass_rate_pct",
+              "useful_rewrite_rate_pct"
+            ]
+          }
+        }
+      },
+      {
+        "variant_id": "majority_symbol_predictor",
+        "name": "no_memory_control::majority_symbol_predictor",
+        "roles": [
+          "orchestrator",
+          "planner",
+          "editor",
+          "guardian"
+        ],
+        "description": "Strongest no-memory control aggregated over all required R4 slices.",
+        "role_count": 4,
+        "metrics": {
+          "docs_improved_pct": 0.0,
+          "naturalness_delta": 0.0,
+          "semantic_pass_pct": 0.0,
+          "runtime_min": 0.0,
+          "cost_usd": 0.0,
+          "llm_calls": 0.0
+        },
+        "source": "measured",
+        "metadata": {
+          "runtime_type": "generalization_gate",
+          "raw_role_set": "orchestrator+planner+editor+guardian",
+          "logical_mapping_mode": "folder_intake_role_mapped",
+          "sparse_runtime_annotations": {
+            "raw_metric_text": {
+              "docs_improved_pct": "0.0000",
+              "naturalness_delta": "0.0000",
+              "semantic_pass_pct": "0.0000",
+              "runtime_min": "0.0000",
+              "cost_usd": "0.0000",
+              "llm_calls": "0",
+              "revert_rate_pct": "missing",
+              "gate_pass_rate_pct": "missing",
+              "useful_rewrite_rate_pct": "missing"
+            },
+            "metric_status": {
+              "docs_improved_pct": "measured_numeric",
+              "naturalness_delta": "measured_numeric",
+              "semantic_pass_pct": "measured_numeric",
+              "runtime_min": "measured_numeric",
+              "cost_usd": "measured_numeric",
+              "llm_calls": "measured_numeric",
+              "revert_rate_pct": "missing",
+              "gate_pass_rate_pct": "missing",
+              "useful_rewrite_rate_pct": "missing"
+            },
+            "verdict_tags": {},
+            "missing_metric_keys": [
+              "revert_rate_pct",
+              "gate_pass_rate_pct",
+              "useful_rewrite_rate_pct"
+            ]
+          }
+        }
+      },
+      {
+        "variant_id": "trivial_last_symbol_memory",
+        "name": "trivial_memory_control::trivial_last_symbol_memory",
+        "roles": [
+          "orchestrator",
+          "planner",
+          "editor",
+          "guardian"
+        ],
+        "description": "Trivial replayable control aggregated over all required R4 slices.",
+        "role_count": 4,
+        "metrics": {
+          "docs_improved_pct": 0.0,
+          "naturalness_delta": 0.0,
+          "semantic_pass_pct": 0.0,
+          "runtime_min": 0.0,
+          "cost_usd": 0.0,
+          "llm_calls": 0.0
+        },
+        "source": "measured",
+        "metadata": {
+          "runtime_type": "generalization_gate",
+          "raw_role_set": "orchestrator+planner+editor+guardian",
+          "logical_mapping_mode": "folder_intake_role_mapped",
+          "sparse_runtime_annotations": {
+            "raw_metric_text": {
+              "docs_improved_pct": "0.0000",
+              "naturalness_delta": "0.0000",
+              "semantic_pass_pct": "0.0000",
+              "runtime_min": "0.0000",
+              "cost_usd": "0.0000",
+              "llm_calls": "0",
+              "revert_rate_pct": "missing",
+              "gate_pass_rate_pct": "missing",
+              "useful_rewrite_rate_pct": "missing"
+            },
+            "metric_status": {
+              "docs_improved_pct": "measured_numeric",
+              "naturalness_delta": "measured_numeric",
+              "semantic_pass_pct": "measured_numeric",
+              "runtime_min": "measured_numeric",
+              "cost_usd": "measured_numeric",
+              "llm_calls": "measured_numeric",
+              "revert_rate_pct": "missing",
+              "gate_pass_rate_pct": "missing",
+              "useful_rewrite_rate_pct": "missing"
+            },
+            "verdict_tags": {},
+            "missing_metric_keys": [
+              "revert_rate_pct",
+              "gate_pass_rate_pct",
+              "useful_rewrite_rate_pct"
+            ]
+          }
+        }
+      }
+    ],
+    "quality_targets": {
+      "historical_best_prior": "bounded_working_memory_candidate_r4_generalization_prior",
+      "recommended_mode_from_previous_run": "scientific_generalization_gate",
+      "forensic_high_ai_target_accept_rate_pct": 60,
+      "mid_ai_useful_output_must_be_gt_zero": true
+    },
+    "risk_map": {
+      "highest_risks": [
+        "semantic_reconstruction_damage",
+        "ru_lexical_fusion",
+        "mid_ai_no_op_gap",
+        "historical_current_truth_conflation"
+      ],
+      "moderate_risks": [
+        "premature_harmonizer_overhead",
+        "pre_edit_guard_without_same_slice_evidence"
+      ]
+    },
+    "document_families": [
+      "r4_alphabet_extension",
+      "r4_combined_bounded",
+      "r4_gap_extension",
+      "r4_length_extension"
+    ],
+    "failure_examples": [
+      {
+        "case_id": "R4_SCOPE_GUARD",
+        "failure_mode": "forbidden_overclaim",
+        "severity": "high",
+        "status": "controlled",
+        "note": "R4 confirmation authorizes single-mechanism generalization only and does not authorize multi-mechanism, organism, or cell claims."
+      }
+    ],
+    "variant_metrics_by_slice": [
+      {
+        "variant_id": "bounded_working_memory_candidate",
+        "slice": "r4_length_extension",
+        "metrics": {
+          "accepted_rewrite_rate_pct": 100.0,
+          "revert_rate_pct": 0.0,
+          "no_op_rate_pct": 0.0,
+          "semantic_pass_proxy_pct": 100.0,
+          "useful_output_rate_pct": 100.0,
+          "runtime_min": 0.0,
+          "cost_usd": 0.0
+        },
+        "notes": "Measured FIFO mechanism performance on the bounded R4 slice.",
+        "evidence_annotations": {
+          "raw_metric_text": {
+            "accepted_rewrite_rate_pct": "100.0000",
+            "revert_rate_pct": "0.0000",
+            "no_op_rate_pct": "0.0000",
+            "semantic_pass_proxy_pct": "100.0000",
+            "useful_output_rate_pct": "100.0000",
+            "runtime_min": "0.0000",
+            "cost_usd": "0.0000"
+          },
+          "metric_status": {
+            "accepted_rewrite_rate_pct": "measured_numeric",
+            "revert_rate_pct": "measured_numeric",
+            "no_op_rate_pct": "measured_numeric",
+            "semantic_pass_proxy_pct": "measured_numeric",
+            "useful_output_rate_pct": "measured_numeric",
+            "runtime_min": "measured_numeric",
+            "cost_usd": "measured_numeric"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [],
+          "aggregate_runtime_variant": false,
+          "evidence_status": "measured"
+        }
+      },
+      {
+        "variant_id": "majority_symbol_predictor",
+        "slice": "r4_length_extension",
+        "metrics": {
+          "accepted_rewrite_rate_pct": 0.0,
+          "revert_rate_pct": 0.0,
+          "no_op_rate_pct": 0.0,
+          "semantic_pass_proxy_pct": 0.0,
+          "useful_output_rate_pct": 0.0,
+          "runtime_min": 0.0,
+          "cost_usd": 0.0
+        },
+        "notes": "Measured no-memory control performance on the bounded R4 slice.",
+        "evidence_annotations": {
+          "raw_metric_text": {
+            "accepted_rewrite_rate_pct": "0.0000",
+            "revert_rate_pct": "0.0000",
+            "no_op_rate_pct": "0.0000",
+            "semantic_pass_proxy_pct": "0.0000",
+            "useful_output_rate_pct": "0.0000",
+            "runtime_min": "0.0000",
+            "cost_usd": "0.0000"
+          },
+          "metric_status": {
+            "accepted_rewrite_rate_pct": "measured_numeric",
+            "revert_rate_pct": "measured_numeric",
+            "no_op_rate_pct": "measured_numeric",
+            "semantic_pass_proxy_pct": "measured_numeric",
+            "useful_output_rate_pct": "measured_numeric",
+            "runtime_min": "measured_numeric",
+            "cost_usd": "measured_numeric"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [],
+          "aggregate_runtime_variant": false,
+          "evidence_status": "measured"
+        }
+      },
+      {
+        "variant_id": "trivial_last_symbol_memory",
+        "slice": "r4_length_extension",
+        "metrics": {
+          "accepted_rewrite_rate_pct": 0.0,
+          "revert_rate_pct": 0.0,
+          "no_op_rate_pct": 0.0,
+          "semantic_pass_proxy_pct": 0.0,
+          "useful_output_rate_pct": 0.0,
+          "runtime_min": 0.0,
+          "cost_usd": 0.0
+        },
+        "notes": "Measured trivial-memory control performance on the bounded R4 slice.",
+        "evidence_annotations": {
+          "raw_metric_text": {
+            "accepted_rewrite_rate_pct": "0.0000",
+            "revert_rate_pct": "0.0000",
+            "no_op_rate_pct": "0.0000",
+            "semantic_pass_proxy_pct": "0.0000",
+            "useful_output_rate_pct": "0.0000",
+            "runtime_min": "0.0000",
+            "cost_usd": "0.0000"
+          },
+          "metric_status": {
+            "accepted_rewrite_rate_pct": "measured_numeric",
+            "revert_rate_pct": "measured_numeric",
+            "no_op_rate_pct": "measured_numeric",
+            "semantic_pass_proxy_pct": "measured_numeric",
+            "useful_output_rate_pct": "measured_numeric",
+            "runtime_min": "measured_numeric",
+            "cost_usd": "measured_numeric"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [],
+          "aggregate_runtime_variant": false,
+          "evidence_status": "measured"
+        }
+      },
+      {
+        "variant_id": "bounded_working_memory_candidate",
+        "slice": "r4_gap_extension",
+        "metrics": {
+          "accepted_rewrite_rate_pct": 100.0,
+          "revert_rate_pct": 0.0,
+          "no_op_rate_pct": 0.0,
+          "semantic_pass_proxy_pct": 100.0,
+          "useful_output_rate_pct": 100.0,
+          "runtime_min": 0.0,
+          "cost_usd": 0.0
+        },
+        "notes": "Measured FIFO mechanism performance on the bounded R4 slice.",
+        "evidence_annotations": {
+          "raw_metric_text": {
+            "accepted_rewrite_rate_pct": "100.0000",
+            "revert_rate_pct": "0.0000",
+            "no_op_rate_pct": "0.0000",
+            "semantic_pass_proxy_pct": "100.0000",
+            "useful_output_rate_pct": "100.0000",
+            "runtime_min": "0.0000",
+            "cost_usd": "0.0000"
+          },
+          "metric_status": {
+            "accepted_rewrite_rate_pct": "measured_numeric",
+            "revert_rate_pct": "measured_numeric",
+            "no_op_rate_pct": "measured_numeric",
+            "semantic_pass_proxy_pct": "measured_numeric",
+            "useful_output_rate_pct": "measured_numeric",
+            "runtime_min": "measured_numeric",
+            "cost_usd": "measured_numeric"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [],
+          "aggregate_runtime_variant": false,
+          "evidence_status": "measured"
+        }
+      },
+      {
+        "variant_id": "majority_symbol_predictor",
+        "slice": "r4_gap_extension",
+        "metrics": {
+          "accepted_rewrite_rate_pct": 0.0,
+          "revert_rate_pct": 0.0,
+          "no_op_rate_pct": 0.0,
+          "semantic_pass_proxy_pct": 0.0,
+          "useful_output_rate_pct": 0.0,
+          "runtime_min": 0.0,
+          "cost_usd": 0.0
+        },
+        "notes": "Measured no-memory control performance on the bounded R4 slice.",
+        "evidence_annotations": {
+          "raw_metric_text": {
+            "accepted_rewrite_rate_pct": "0.0000",
+            "revert_rate_pct": "0.0000",
+            "no_op_rate_pct": "0.0000",
+            "semantic_pass_proxy_pct": "0.0000",
+            "useful_output_rate_pct": "0.0000",
+            "runtime_min": "0.0000",
+            "cost_usd": "0.0000"
+          },
+          "metric_status": {
+            "accepted_rewrite_rate_pct": "measured_numeric",
+            "revert_rate_pct": "measured_numeric",
+            "no_op_rate_pct": "measured_numeric",
+            "semantic_pass_proxy_pct": "measured_numeric",
+            "useful_output_rate_pct": "measured_numeric",
+            "runtime_min": "measured_numeric",
+            "cost_usd": "measured_numeric"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [],
+          "aggregate_runtime_variant": false,
+          "evidence_status": "measured"
+        }
+      },
+      {
+        "variant_id": "trivial_last_symbol_memory",
+        "slice": "r4_gap_extension",
+        "metrics": {
+          "accepted_rewrite_rate_pct": 0.0,
+          "revert_rate_pct": 0.0,
+          "no_op_rate_pct": 0.0,
+          "semantic_pass_proxy_pct": 0.0,
+          "useful_output_rate_pct": 0.0,
+          "runtime_min": 0.0,
+          "cost_usd": 0.0
+        },
+        "notes": "Measured trivial-memory control performance on the bounded R4 slice.",
+        "evidence_annotations": {
+          "raw_metric_text": {
+            "accepted_rewrite_rate_pct": "0.0000",
+            "revert_rate_pct": "0.0000",
+            "no_op_rate_pct": "0.0000",
+            "semantic_pass_proxy_pct": "0.0000",
+            "useful_output_rate_pct": "0.0000",
+            "runtime_min": "0.0000",
+            "cost_usd": "0.0000"
+          },
+          "metric_status": {
+            "accepted_rewrite_rate_pct": "measured_numeric",
+            "revert_rate_pct": "measured_numeric",
+            "no_op_rate_pct": "measured_numeric",
+            "semantic_pass_proxy_pct": "measured_numeric",
+            "useful_output_rate_pct": "measured_numeric",
+            "runtime_min": "measured_numeric",
+            "cost_usd": "measured_numeric"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [],
+          "aggregate_runtime_variant": false,
+          "evidence_status": "measured"
+        }
+      },
+      {
+        "variant_id": "bounded_working_memory_candidate",
+        "slice": "r4_alphabet_extension",
+        "metrics": {
+          "accepted_rewrite_rate_pct": 100.0,
+          "revert_rate_pct": 0.0,
+          "no_op_rate_pct": 0.0,
+          "semantic_pass_proxy_pct": 100.0,
+          "useful_output_rate_pct": 100.0,
+          "runtime_min": 0.0,
+          "cost_usd": 0.0
+        },
+        "notes": "Measured FIFO mechanism performance on the bounded R4 slice.",
+        "evidence_annotations": {
+          "raw_metric_text": {
+            "accepted_rewrite_rate_pct": "100.0000",
+            "revert_rate_pct": "0.0000",
+            "no_op_rate_pct": "0.0000",
+            "semantic_pass_proxy_pct": "100.0000",
+            "useful_output_rate_pct": "100.0000",
+            "runtime_min": "0.0000",
+            "cost_usd": "0.0000"
+          },
+          "metric_status": {
+            "accepted_rewrite_rate_pct": "measured_numeric",
+            "revert_rate_pct": "measured_numeric",
+            "no_op_rate_pct": "measured_numeric",
+            "semantic_pass_proxy_pct": "measured_numeric",
+            "useful_output_rate_pct": "measured_numeric",
+            "runtime_min": "measured_numeric",
+            "cost_usd": "measured_numeric"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [],
+          "aggregate_runtime_variant": false,
+          "evidence_status": "measured"
+        }
+      },
+      {
+        "variant_id": "majority_symbol_predictor",
+        "slice": "r4_alphabet_extension",
+        "metrics": {
+          "accepted_rewrite_rate_pct": 0.0,
+          "revert_rate_pct": 0.0,
+          "no_op_rate_pct": 0.0,
+          "semantic_pass_proxy_pct": 0.0,
+          "useful_output_rate_pct": 0.0,
+          "runtime_min": 0.0,
+          "cost_usd": 0.0
+        },
+        "notes": "Measured no-memory control performance on the bounded R4 slice.",
+        "evidence_annotations": {
+          "raw_metric_text": {
+            "accepted_rewrite_rate_pct": "0.0000",
+            "revert_rate_pct": "0.0000",
+            "no_op_rate_pct": "0.0000",
+            "semantic_pass_proxy_pct": "0.0000",
+            "useful_output_rate_pct": "0.0000",
+            "runtime_min": "0.0000",
+            "cost_usd": "0.0000"
+          },
+          "metric_status": {
+            "accepted_rewrite_rate_pct": "measured_numeric",
+            "revert_rate_pct": "measured_numeric",
+            "no_op_rate_pct": "measured_numeric",
+            "semantic_pass_proxy_pct": "measured_numeric",
+            "useful_output_rate_pct": "measured_numeric",
+            "runtime_min": "measured_numeric",
+            "cost_usd": "measured_numeric"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [],
+          "aggregate_runtime_variant": false,
+          "evidence_status": "measured"
+        }
+      },
+      {
+        "variant_id": "trivial_last_symbol_memory",
+        "slice": "r4_alphabet_extension",
+        "metrics": {
+          "accepted_rewrite_rate_pct": 0.0,
+          "revert_rate_pct": 0.0,
+          "no_op_rate_pct": 0.0,
+          "semantic_pass_proxy_pct": 0.0,
+          "useful_output_rate_pct": 0.0,
+          "runtime_min": 0.0,
+          "cost_usd": 0.0
+        },
+        "notes": "Measured trivial-memory control performance on the bounded R4 slice.",
+        "evidence_annotations": {
+          "raw_metric_text": {
+            "accepted_rewrite_rate_pct": "0.0000",
+            "revert_rate_pct": "0.0000",
+            "no_op_rate_pct": "0.0000",
+            "semantic_pass_proxy_pct": "0.0000",
+            "useful_output_rate_pct": "0.0000",
+            "runtime_min": "0.0000",
+            "cost_usd": "0.0000"
+          },
+          "metric_status": {
+            "accepted_rewrite_rate_pct": "measured_numeric",
+            "revert_rate_pct": "measured_numeric",
+            "no_op_rate_pct": "measured_numeric",
+            "semantic_pass_proxy_pct": "measured_numeric",
+            "useful_output_rate_pct": "measured_numeric",
+            "runtime_min": "measured_numeric",
+            "cost_usd": "measured_numeric"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [],
+          "aggregate_runtime_variant": false,
+          "evidence_status": "measured"
+        }
+      },
+      {
+        "variant_id": "bounded_working_memory_candidate",
+        "slice": "r4_combined_bounded",
+        "metrics": {
+          "accepted_rewrite_rate_pct": 100.0,
+          "revert_rate_pct": 0.0,
+          "no_op_rate_pct": 0.0,
+          "semantic_pass_proxy_pct": 100.0,
+          "useful_output_rate_pct": 100.0,
+          "runtime_min": 0.0,
+          "cost_usd": 0.0
+        },
+        "notes": "Measured FIFO mechanism performance on the bounded R4 slice.",
+        "evidence_annotations": {
+          "raw_metric_text": {
+            "accepted_rewrite_rate_pct": "100.0000",
+            "revert_rate_pct": "0.0000",
+            "no_op_rate_pct": "0.0000",
+            "semantic_pass_proxy_pct": "100.0000",
+            "useful_output_rate_pct": "100.0000",
+            "runtime_min": "0.0000",
+            "cost_usd": "0.0000"
+          },
+          "metric_status": {
+            "accepted_rewrite_rate_pct": "measured_numeric",
+            "revert_rate_pct": "measured_numeric",
+            "no_op_rate_pct": "measured_numeric",
+            "semantic_pass_proxy_pct": "measured_numeric",
+            "useful_output_rate_pct": "measured_numeric",
+            "runtime_min": "measured_numeric",
+            "cost_usd": "measured_numeric"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [],
+          "aggregate_runtime_variant": false,
+          "evidence_status": "measured"
+        }
+      },
+      {
+        "variant_id": "majority_symbol_predictor",
+        "slice": "r4_combined_bounded",
+        "metrics": {
+          "accepted_rewrite_rate_pct": 0.0,
+          "revert_rate_pct": 0.0,
+          "no_op_rate_pct": 0.0,
+          "semantic_pass_proxy_pct": 0.0,
+          "useful_output_rate_pct": 0.0,
+          "runtime_min": 0.0,
+          "cost_usd": 0.0
+        },
+        "notes": "Measured no-memory control performance on the bounded R4 slice.",
+        "evidence_annotations": {
+          "raw_metric_text": {
+            "accepted_rewrite_rate_pct": "0.0000",
+            "revert_rate_pct": "0.0000",
+            "no_op_rate_pct": "0.0000",
+            "semantic_pass_proxy_pct": "0.0000",
+            "useful_output_rate_pct": "0.0000",
+            "runtime_min": "0.0000",
+            "cost_usd": "0.0000"
+          },
+          "metric_status": {
+            "accepted_rewrite_rate_pct": "measured_numeric",
+            "revert_rate_pct": "measured_numeric",
+            "no_op_rate_pct": "measured_numeric",
+            "semantic_pass_proxy_pct": "measured_numeric",
+            "useful_output_rate_pct": "measured_numeric",
+            "runtime_min": "measured_numeric",
+            "cost_usd": "measured_numeric"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [],
+          "aggregate_runtime_variant": false,
+          "evidence_status": "measured"
+        }
+      },
+      {
+        "variant_id": "trivial_last_symbol_memory",
+        "slice": "r4_combined_bounded",
+        "metrics": {
+          "accepted_rewrite_rate_pct": 0.0,
+          "revert_rate_pct": 0.0,
+          "no_op_rate_pct": 0.0,
+          "semantic_pass_proxy_pct": 0.0,
+          "useful_output_rate_pct": 0.0,
+          "runtime_min": 0.0,
+          "cost_usd": 0.0
+        },
+        "notes": "Measured trivial-memory control performance on the bounded R4 slice.",
+        "evidence_annotations": {
+          "raw_metric_text": {
+            "accepted_rewrite_rate_pct": "0.0000",
+            "revert_rate_pct": "0.0000",
+            "no_op_rate_pct": "0.0000",
+            "semantic_pass_proxy_pct": "0.0000",
+            "useful_output_rate_pct": "0.0000",
+            "runtime_min": "0.0000",
+            "cost_usd": "0.0000"
+          },
+          "metric_status": {
+            "accepted_rewrite_rate_pct": "measured_numeric",
+            "revert_rate_pct": "measured_numeric",
+            "no_op_rate_pct": "measured_numeric",
+            "semantic_pass_proxy_pct": "measured_numeric",
+            "useful_output_rate_pct": "measured_numeric",
+            "runtime_min": "measured_numeric",
+            "cost_usd": "measured_numeric"
+          },
+          "verdict_tags": {},
+          "missing_metric_keys": [],
+          "aggregate_runtime_variant": false,
+          "evidence_status": "measured"
+        }
+      }
+    ],
+    "open_questions": [
+      "Interpret whether the same bounded FIFO mechanism truly generalizes across the required R4 pressure matrix",
+      "Assess whether the honest measured verdict is CONFIRM_SINGLE_MECHANISM_GENERALIZATION or REMAIN_IN_R4_GENERALIZATION",
+      "Should guardian-like logic stay post-edit only or also become pre-edit gating?",
+      "What is the minimum additional measurement set needed to move beyond warm_start?"
+    ],
+    "known_implementation_limits": [
+      "Current runtime metrics remain sparse relative to historical batch metrics.",
+      "Useful rewrite rate is still missing on several current slices.",
+      "Current logical role map is measured at system level, not yet isolated by ablation."
+    ],
+    "role_intervention_evidence": [
+      {
+        "role": "planner",
+        "status": "measured",
+        "reason": "Current runtime already contains measured planner-like decisions via AI% routing, prompt family selection, and skip_stages controls."
+      },
+      {
+        "role": "editor",
+        "status": "measured",
+        "reason": "Current pipeline stages constitute the active editor path."
+      },
+      {
+        "role": "guardian",
+        "status": "measured",
+        "reason": "Current safety gate and revert behavior implement guardian-like post-edit validation."
+      },
+      {
+        "role": "harmonizer",
+        "status": "measured_from_historical_report_negative",
+        "reason": "Historical over-segmented variant E regressed naturalness and efficiency."
+      }
+    ],
+    "source_labels": {
+      "case_id": "inferred",
+      "system_name": "user_provided",
+      "task_type": "inferred",
+      "workflow_summary": "inferred",
+      "primary_objective": "inferred",
+      "functional_decomposition": "inferred",
+      "hard_constraints": "user_provided",
+      "soft_constraints": "inferred",
+      "candidate_roles": "inferred",
+      "tested_variants": "user_provided",
+      "quality_targets": "user_provided",
+      "risk_map": "inferred"
+    },
+    "packet_quality_level": "Q4",
+    "metadata": {
+      "input_packet_version": "R4_SINGLE_MECHANISM_GENERALIZATION_V1",
+      "normalization_mode": "folder_intake_role_mapped",
+      "current_runtime_role_mapping": [
+        {
+          "runtime_component": "generalization_scope",
+          "logical_bdc_role": "orchestrator",
+          "status": "active",
+          "why_mapped_this_way": "Keeps the cycle inside single-mechanism generalization and blocks premature widening."
+        },
+        {
+          "runtime_component": "pressure_matrix",
+          "logical_bdc_role": "planner",
+          "status": "active",
+          "why_mapped_this_way": "Defines the bounded R4 pressure surface and preserves the trace-width invariant."
+        },
+        {
+          "runtime_component": "measured_slice_surface",
+          "logical_bdc_role": "editor",
+          "status": "active",
+          "why_mapped_this_way": "Carries the deterministic slice artifacts and measured scorecards."
+        },
+        {
+          "runtime_component": "generalization_gate_audit",
+          "logical_bdc_role": "guardian",
+          "status": "active",
+          "why_mapped_this_way": "Determines whether R4 confirms single-mechanism generalization or remains in R4."
+        }
+      ],
+      "prompt_stage_matrix": [
+        {
+          "stage_id": "matrix",
+          "stage_name": "pressure matrix",
+          "objective": "Define the bounded R4 pressure surface without widening mechanism identity.",
+          "measured_output": "R4_SINGLE_MECHANISM_GENERALIZATION_PRESSURE_MATRIX.json",
+          "evidence_status": "measured"
+        },
+        {
+          "stage_id": "measurement",
+          "stage_name": "generalization measurement",
+          "objective": "Measure the same FIFO mechanism on all required R4 slices against the same controls.",
+          "measured_output": "generalization_summary.json",
+          "evidence_status": "measured"
+        },
+        {
+          "stage_id": "gate",
+          "stage_name": "generalization gate audit",
+          "objective": "Choose CONFIRM_SINGLE_MECHANISM_GENERALIZATION vs REMAIN_IN_R4_GENERALIZATION.",
+          "measured_output": "r4_generalization_gate_decision.json",
+          "evidence_status": "measured"
+        }
+      ],
+      "design_priorities": "# Lead Architect Design Priorities\n\n1. Preserve the same bounded FIFO mechanism on every required R4 slice.\n2. Treat superiority over both controls on every slice and hardest gap as mandatory.\n3. Keep the combined slice bounded and single-shot; do not open factorial escalation here.\n4. Scope any approval to single-mechanism generalization only.\n",
+      "intake_manifest": {
+        "folder_path": "docs\\experiments\\BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PACKET",
+        "readme_path": "docs\\experiments\\BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PACKET\\README.md",
+        "packet_json_path": "docs\\experiments\\BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PACKET\\BDC_INPUT_PACKET_R4_SINGLE_MECHANISM_GENERALIZATION.json",
+        "unified_variant_comparison_csv": "docs\\experiments\\BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PACKET\\unified_variant_comparison.csv",
+        "provider_comparison_csv": null,
+        "stability_run_metrics_csv": null,
+        "rollout_case_index_csv": null,
+        "guardian_audit_csv": null,
+        "current_runtime_role_mapping_csv": "docs\\experiments\\BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PACKET\\current_runtime_role_mapping.csv",
+        "current_slice_metrics_csv": "docs\\experiments\\BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PACKET\\current_slice_metrics.csv",
+        "failure_case_registry_csv": "docs\\experiments\\BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PACKET\\failure_case_registry.csv",
+        "prompt_stage_matrix_csv": "docs\\experiments\\BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PACKET\\prompt_stage_matrix.csv",
+        "lead_architect_design_priorities_md": "docs\\experiments\\BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PACKET\\lead_architect_design_priorities.md",
+        "extras": [
+          "docs\\experiments\\BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PACKET\\BDC_INPUT_PACKET_R4_SINGLE_MECHANISM_GENERALIZATION.json",
+          "docs\\experiments\\BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PACKET\\current_runtime_role_mapping.csv",
+          "docs\\experiments\\BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PACKET\\current_slice_metrics.csv",
+          "docs\\experiments\\BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PACKET\\failure_case_registry.csv",
+          "docs\\experiments\\BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PACKET\\generalization_matrix_snapshot.json",
+          "docs\\experiments\\BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PACKET\\generalization_summary.json",
+          "docs\\experiments\\BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PACKET\\lead_architect_design_priorities.md",
+          "docs\\experiments\\BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PACKET\\prompt_stage_matrix.csv",
+          "docs\\experiments\\BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PACKET\\r4_generalization_gate_decision.json",
+          "docs\\experiments\\BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PACKET\\README.md",
+          "docs\\experiments\\BDC_R4_SINGLE_MECHANISM_GENERALIZATION_PACKET\\unified_variant_comparison.csv"
+        ]
+      },
+      "evidence_policy": {
+        "measured": [
+          "R4 pressure matrix instantiated on four required slices",
+          "measured FIFO mechanism superiority against the same two controls on every required slice",
+          "hardest-gap superiority preserved on every required slice"
+        ],
+        "inferred": [],
+        "missing": [
+          "no multi-mechanism interaction evidence exists",
+          "no organism or cell-level assembly evidence exists"
+        ]
+      },
+      "base_packet_reference": "TASK-7619",
+      "sparse_runtime_support_summary": {
+        "supported": true,
+        "verdict_like_metric_cells": 0,
+        "missing_metric_cells": 9,
+        "aggregate_variant_rows": 0
+      }
+    }
+  },
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "sparse_runtime_missing_metric_cells_present"
+    ],
+    "contradiction_flags": [],
+    "required_field_count": 12,
+    "present_required_field_count": 12,
+    "base_packet_quality_level": "Q4",
+    "validated_packet_quality_level": "Q4",
+    "packet_quality_score": 1.0,
+    "source_label_coverage": {
+      "required_fields_labeled": 12,
+      "total_required_fields": 12
+    },
+    "optional_fields_present": [
+      "document_families",
+      "failure_examples",
+      "variant_metrics_by_slice",
+      "open_questions",
+      "known_implementation_limits",
+      "role_intervention_evidence",
+      "source_labels",
+      "packet_quality_level",
+      "metadata"
+    ]
+  },
+  "supported": true
+}

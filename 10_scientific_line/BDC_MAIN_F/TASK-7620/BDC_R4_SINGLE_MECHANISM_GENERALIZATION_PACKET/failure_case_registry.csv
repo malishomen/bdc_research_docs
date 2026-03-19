@@ -1,0 +1,2 @@
+case_id,failure_mode,severity,status,note
+R4_SCOPE_GUARD,forbidden_overclaim,high,controlled,"R4 confirmation authorizes single-mechanism generalization only and does not authorize multi-mechanism, organism, or cell claims."

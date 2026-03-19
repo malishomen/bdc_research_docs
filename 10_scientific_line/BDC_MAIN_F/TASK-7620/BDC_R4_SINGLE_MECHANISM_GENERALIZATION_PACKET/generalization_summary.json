@@ -1,0 +1,104 @@
+{
+  "phase": "R4",
+  "task_id": "TASK-7619",
+  "environment_family": "controlled_sequence_memory",
+  "mechanism_candidate_id": "bounded_working_memory_candidate",
+  "matrix_path": "docs/experiments/R4_SINGLE_MECHANISM_GENERALIZATION_PRESSURE_MATRIX.json",
+  "slice_count": 4,
+  "slice_summaries": [
+    {
+      "slice_id": "r4_length_extension",
+      "pressure_axes": [
+        "longer_sequence_length"
+      ],
+      "trace_width": 7,
+      "dataset_size": 192,
+      "control_resistant": true,
+      "candidate_accuracy": 1.0,
+      "no_memory_control_accuracy": 0.0,
+      "trivial_last_symbol_memory_accuracy": 0.0,
+      "delta_vs_no_memory": 1.0,
+      "delta_vs_trivial_memory": 1.0,
+      "hardest_recall_gap": 6,
+      "hardest_gap_candidate_accuracy": 1.0,
+      "hardest_gap_no_memory_control_accuracy": 0.0,
+      "hardest_gap_trivial_last_symbol_memory_accuracy": 0.0,
+      "deterministic_replay_status": true,
+      "candidate_gt_no_memory": true,
+      "candidate_gt_trivial": true,
+      "hardest_gap_gt_no_memory": true,
+      "hardest_gap_gt_trivial": true
+    },
+    {
+      "slice_id": "r4_gap_extension",
+      "pressure_axes": [
+        "larger_recall_gap"
+      ],
+      "trace_width": 9,
+      "dataset_size": 192,
+      "control_resistant": true,
+      "candidate_accuracy": 1.0,
+      "no_memory_control_accuracy": 0.0,
+      "trivial_last_symbol_memory_accuracy": 0.0,
+      "delta_vs_no_memory": 1.0,
+      "delta_vs_trivial_memory": 1.0,
+      "hardest_recall_gap": 8,
+      "hardest_gap_candidate_accuracy": 1.0,
+      "hardest_gap_no_memory_control_accuracy": 0.0,
+      "hardest_gap_trivial_last_symbol_memory_accuracy": 0.0,
+      "deterministic_replay_status": true,
+      "candidate_gt_no_memory": true,
+      "candidate_gt_trivial": true,
+      "hardest_gap_gt_no_memory": true,
+      "hardest_gap_gt_trivial": true
+    },
+    {
+      "slice_id": "r4_alphabet_extension",
+      "pressure_axes": [
+        "larger_alphabet_size"
+      ],
+      "trace_width": 7,
+      "dataset_size": 224,
+      "control_resistant": true,
+      "candidate_accuracy": 1.0,
+      "no_memory_control_accuracy": 0.0,
+      "trivial_last_symbol_memory_accuracy": 0.0,
+      "delta_vs_no_memory": 1.0,
+      "delta_vs_trivial_memory": 1.0,
+      "hardest_recall_gap": 6,
+      "hardest_gap_candidate_accuracy": 1.0,
+      "hardest_gap_no_memory_control_accuracy": 0.0,
+      "hardest_gap_trivial_last_symbol_memory_accuracy": 0.0,
+      "deterministic_replay_status": true,
+      "candidate_gt_no_memory": true,
+      "candidate_gt_trivial": true,
+      "hardest_gap_gt_no_memory": true,
+      "hardest_gap_gt_trivial": true
+    },
+    {
+      "slice_id": "r4_combined_bounded",
+      "pressure_axes": [
+        "longer_sequence_length",
+        "larger_recall_gap",
+        "larger_alphabet_size"
+      ],
+      "trace_width": 9,
+      "dataset_size": 256,
+      "control_resistant": true,
+      "candidate_accuracy": 1.0,
+      "no_memory_control_accuracy": 0.0,
+      "trivial_last_symbol_memory_accuracy": 0.0,
+      "delta_vs_no_memory": 1.0,
+      "delta_vs_trivial_memory": 1.0,
+      "hardest_recall_gap": 8,
+      "hardest_gap_candidate_accuracy": 1.0,
+      "hardest_gap_no_memory_control_accuracy": 0.0,
+      "hardest_gap_trivial_last_symbol_memory_accuracy": 0.0,
+      "deterministic_replay_status": true,
+      "candidate_gt_no_memory": true,
+      "candidate_gt_trivial": true,
+      "hardest_gap_gt_no_memory": true,
+      "hardest_gap_gt_trivial": true
+    }
+  ]
+}

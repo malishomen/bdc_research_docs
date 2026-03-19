@@ -1,0 +1,4 @@
+stage_id,stage_name,objective,measured_output,evidence_status
+matrix,pressure matrix,Define the bounded R4 pressure surface without widening mechanism identity.,R4_SINGLE_MECHANISM_GENERALIZATION_PRESSURE_MATRIX.json,measured
+measurement,generalization measurement,Measure the same FIFO mechanism on all required R4 slices against the same controls.,generalization_summary.json,measured
+gate,generalization gate audit,Choose CONFIRM_SINGLE_MECHANISM_GENERALIZATION vs REMAIN_IN_R4_GENERALIZATION.,r4_generalization_gate_decision.json,measured

@@ -1,0 +1,27 @@
+{
+  "packet_version": "R4_SINGLE_MECHANISM_GENERALIZATION_V1",
+  "packet_id": "BDC_R4_SINGLE_MECHANISM_GENERALIZATION",
+  "project": "Bio_Digital_Core",
+  "system_name": "BDC_Scientific_Line",
+  "base_packet_reference": "TASK-7619",
+  "evidence_policy": {
+    "measured": [
+      "R4 pressure matrix instantiated on four required slices",
+      "measured FIFO mechanism superiority against the same two controls on every required slice",
+      "hardest-gap superiority preserved on every required slice"
+    ],
+    "inferred": [],
+    "missing": [
+      "no multi-mechanism interaction evidence exists",
+      "no organism or cell-level assembly evidence exists"
+    ]
+  },
+  "positioning": {
+    "historical_best_prior": "bounded_working_memory_candidate_r4_generalization_prior",
+    "bdc_recommendation_mode": "scientific_generalization_gate"
+  },
+  "explicit_requests_to_bdc": [
+    "Interpret whether the same bounded FIFO mechanism truly generalizes across the required R4 pressure matrix",
+    "Assess whether the honest measured verdict is CONFIRM_SINGLE_MECHANISM_GENERALIZATION or REMAIN_IN_R4_GENERALIZATION"
+  ]
+}

@@ -1,0 +1,5 @@
+runtime_component,logical_bdc_role,status,why_mapped_this_way
+generalization_scope,orchestrator,active,Keeps the cycle inside single-mechanism generalization and blocks premature widening.
+pressure_matrix,planner,active,Defines the bounded R4 pressure surface and preserves the trace-width invariant.
+measured_slice_surface,editor,active,Carries the deterministic slice artifacts and measured scorecards.
+generalization_gate_audit,guardian,active,Determines whether R4 confirms single-mechanism generalization or remains in R4.

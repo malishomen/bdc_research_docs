@@ -1,0 +1,158 @@
+{
+  "phase": "R4",
+  "task": "TASK-7618",
+  "generated_at_utc": "2026-03-19T11:45:15Z",
+  "environment_family": "controlled_sequence_memory",
+  "mechanism_candidate_id": "bounded_working_memory_candidate",
+  "decision_contract": {
+    "allowed_outcomes_later": [
+      "CONFIRM_SINGLE_MECHANISM_GENERALIZATION",
+      "REMAIN_IN_R4_GENERALIZATION"
+    ],
+    "note": "This matrix defines the bounded deterministic pressure surface only. It does not measure or approve generalization by itself."
+  },
+  "mechanism_identity_invariants": [
+    "single bounded FIFO working-memory trace",
+    "append-right and evict-left update rule",
+    "prediction by replay-only lookup at depth recall_gap + 1",
+    "no second state channel",
+    "no adaptive learning or training loop",
+    "no multi-buffer or multi-mechanism widening"
+  ],
+  "allowed_parameter_scaling": {
+    "trace_width_rule": "trace_width = max_gap + 1",
+    "rationale": "Scale only to the minimum replay width required by the slice so the same mechanism identity is preserved."
+  },
+  "required_controls": [
+    {
+      "control_id": "majority_symbol_predictor",
+      "role": "no_memory_control"
+    },
+    {
+      "control_id": "always_repeat_last_symbol",
+      "role": "trivial_last_symbol_memory"
+    }
+  ],
+  "reference_measured_slices": [
+    {
+      "slice_id": "r3_reference_narrow",
+      "source_task": "TASK-7610",
+      "seq_len": 8,
+      "alphabet_size": 4,
+      "min_gap": 2,
+      "max_gap": 4,
+      "trace_width": 5,
+      "dataset_size": 128,
+      "control_resistant": false
+    },
+    {
+      "slice_id": "r3_reference_control_resistant",
+      "source_task": "TASK-7613",
+      "seq_len": 10,
+      "alphabet_size": 5,
+      "min_gap": 3,
+      "max_gap": 6,
+      "trace_width": 7,
+      "dataset_size": 128,
+      "control_resistant": true,
+      "required_constraints": [
+        "target_symbol != last_symbol",
+        "target_symbol != majority_symbol"
+      ]
+    }
+  ],
+  "required_r4_slices": [
+    {
+      "slice_id": "r4_length_extension",
+      "pressure_axes": [
+        "longer_sequence_length"
+      ],
+      "purpose": "Test endurance under longer irrelevant context while preserving the same replay rule.",
+      "seed": 20260320,
+      "dataset_size": 192,
+      "seq_len": 14,
+      "alphabet_size": 5,
+      "min_gap": 3,
+      "max_gap": 6,
+      "trace_width": 7,
+      "control_resistant": true
+    },
+    {
+      "slice_id": "r4_gap_extension",
+      "pressure_axes": [
+        "larger_recall_gap"
+      ],
+      "purpose": "Test deeper recall without changing mechanism identity.",
+      "seed": 20260321,
+      "dataset_size": 192,
+      "seq_len": 12,
+      "alphabet_size": 5,
+      "min_gap": 4,
+      "max_gap": 8,
+      "trace_width": 9,
+      "control_resistant": true
+    },
+    {
+      "slice_id": "r4_alphabet_extension",
+      "pressure_axes": [
+        "larger_alphabet_size"
+      ],
+      "purpose": "Test symbol-space broadening without adding a new mechanism.",
+      "seed": 20260322,
+      "dataset_size": 224,
+      "seq_len": 10,
+      "alphabet_size": 7,
+      "min_gap": 3,
+      "max_gap": 6,
+      "trace_width": 7,
+      "control_resistant": true
+    },
+    {
+      "slice_id": "r4_combined_bounded",
+      "pressure_axes": [
+        "longer_sequence_length",
+        "larger_recall_gap",
+        "larger_alphabet_size"
+      ],
+      "purpose": "Test one strict but still bounded combined slice rather than an unbounded factorial sweep.",
+      "seed": 20260323,
+      "dataset_size": 256,
+      "seq_len": 14,
+      "alphabet_size": 7,
+      "min_gap": 4,
+      "max_gap": 8,
+      "trace_width": 9,
+      "control_resistant": true
+    }
+  ],
+  "required_outputs_per_slice": [
+    "manifest",
+    "dataset artifact",
+    "candidate_accuracy",
+    "no_memory_control_accuracy",
+    "trivial_last_symbol_memory_accuracy",
+    "delta_vs_no_memory",
+    "delta_vs_trivial_memory",
+    "gap_accuracy_by_recall_gap",
+    "hardest_gap_accuracy",
+    "deterministic_replay_status"
+  ],
+  "bounded_limits": {
+    "max_seq_len": 14,
+    "max_alphabet_size": 7,
+    "max_recall_gap": 8,
+    "max_combined_pressure_slices": 1
+  },
+  "current_matrix_interpretation": {
+    "cleanest_endurance_check": "r4_length_extension",
+    "strongest_depth_check": "r4_gap_extension",
+    "cleanest_symbol_space_check": "r4_alphabet_extension",
+    "strictest_bounded_slice": "r4_combined_bounded"
+  },
+  "forbidden_premature_claims": [
+    "No multi-mechanism assembly claim is authorized.",
+    "No second memory structure is authorized.",
+    "No organism or cell claim is authorized.",
+    "No generalization verdict is authorized before TASK-7620."
+  ]
+}

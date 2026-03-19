@@ -1,0 +1,35 @@
+{
+  "phase": "R4",
+  "task": "single_mechanism_generalization_gate",
+  "verdict": "CONFIRM_SINGLE_MECHANISM_GENERALIZATION",
+  "mechanism_candidate_id": "bounded_working_memory_candidate",
+  "required_slice_ids": [
+    "r4_alphabet_extension",
+    "r4_combined_bounded",
+    "r4_gap_extension",
+    "r4_length_extension"
+  ],
+  "observed_slice_ids": [
+    "r4_alphabet_extension",
+    "r4_combined_bounded",
+    "r4_gap_extension",
+    "r4_length_extension"
+  ],
+  "approval_conditions": {
+    "slice_count_matches": true,
+    "required_slices_present": true,
+    "mechanism_identity_preserved": true,
+    "all_deterministic_replay": true,
+    "all_candidate_gt_no_memory": true,
+    "all_candidate_gt_trivial": true,
+    "all_hardest_gap_gt_no_memory": true,
+    "all_hardest_gap_gt_trivial": true
+  },
+  "measured_summary": {
+    "slice_count": 4,
+    "candidate_accuracy_mean": 1.0,
+    "no_memory_control_accuracy_mean": 0.0,
+    "trivial_last_symbol_memory_accuracy_mean": 0.0,
+    "max_hardest_recall_gap": 8
+  }
+}
